@@ -24,16 +24,18 @@ $app->get('/', function() use($app) {
 
 $app->get('/fenetres-CCU0003/fenetres-CCN0036', function($name) use($app) {
   // return 'Hello '.$app->escape($name);
-  return $app['twig']->render('fenetre.twig');
+  return $app['twig']->render('windows.twig');
 });
 
 $app->get('/univers/{name}', function($name) use($app) {
   // return 'Hello '.$app->escape($name);
-  return $app['twig']->render('univers.twig');
+  return $app['twig']->render('family.twig');
 });
 
-
-
+$app->get('/univers/{name}', function($name) use($app) {
+  // return 'Hello '.$app->escape($name);
+  return $app['twig']->render('universe.twig');
+});
 
 $app->run();
 
