@@ -22,12 +22,12 @@ $app->get('/', function() use($app) {
   return $app['twig']->render('index.twig');
 });
 
-$app->get('/{UniverseName}-CCU{UniverseId}/', function($name) use($app) {
+$app->get('/{UniverseName}-CCU{UniverseId}/', function($UniverseId) use($app) {
   // return 'Hello '.$app->escape($name);
   return $app['twig']->render('universe.twig');
 });
 
-$app->get('/{UniverseName}-CCU{UniverseId}/{FamilyName}-CCU{FamilyId}/', function($name) use($app) {
+$app->get('/{UniverseName}-CCU{UniverseId}/{FamilyName}-CCU{FamilyId}/', function($FamilyId) use($app) {
   // return 'Hello '.$app->escape($name);
   return $app['twig']->render('family.twig');
 });
