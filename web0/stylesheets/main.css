@@ -1,3 +1,4 @@
+/*
 .jumbotron {
   background: #532F8C;
   color: white;
@@ -34,3 +35,427 @@
 .jumbotron .lang-logo img {
   max-width: 100%;
 }
+*/
+  
+    html, body, div, span, applet, object, iframe,
+    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+    a, abbr, acronym, address, big, cite, code,
+    del, dfn, em, img, ins, kbd, q, s, samp,
+    small, strike, strong, sub, sup, tt, var,
+    b, u, i, center,
+    dl, dt, dd, ol, ul, li,
+    fieldset, form, label, legend,
+    table, caption, tbody, tfoot, thead, tr, th, td,
+    article, aside, canvas, details, embed, 
+    figure, figcaption, footer, header, hgroup, 
+    menu, nav, output, ruby, section, summary,
+    time, mark, audio, video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+    }
+    /* HTML5 display-role reset for older browsers */
+    article, aside, details, figcaption, figure, 
+    footer, header, hgroup, menu, nav, section {
+        display: block;
+    }
+    body {
+        line-height: 1;
+    }
+    ol, ul {
+        list-style: none;
+    }
+    blockquote, q {
+        quotes: none;
+    }
+    blockquote:before, blockquote:after,
+    q:before, q:after {
+        content: '';
+        content: none;
+    }
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+    }    
+    
+    .famille {
+        font-weight: 700;
+        padding: 60px 40px;
+        background: url(degrade.jpg) top center repeat-x #f6f7f7;
+        clear: both;
+    }
+    
+    .familleLeft {
+        width: 300px;
+        float: left;
+        min-height: 200px;
+    }
+    
+    .familleRight {
+        display: inline-block;
+        width: 880px;
+        padding-top: 20px;
+    }
+    
+    h2 {
+        color: #646665;
+        font-size: 24px;
+        font-weight: bold;
+        padding-bottom: 20px;
+        line-height: 1.3em;
+        position: relative;
+    }
+    
+    .container {
+        position: absolute;
+        left: 50%;
+        margin-left: -640px;
+    }
+    
+    .famille p {
+        font-weight: 400;
+        font-size: 14px;
+        padding: 10px 0;
+        line-height: 1.6em;
+    }
+    
+    .ssfamille {
+        font-weight: 100;
+        padding: 20px;
+        text-align: center;
+        margin: 20px;
+        height: 150px;
+        background-repeat: no-repeat !important;
+        background-position: center center !important;
+    }
+    
+    .ssfamille span {
+        background: #fff;
+        width: 180px;
+        display: block;
+        left: 15px;
+        position: absolute;
+        padding: 0 10px;
+        top: -15px;
+        font-weight: 700;
+        color: #444;
+    }
+    
+    .ssfamilleBloc {
+        border: 10px solid #f1f1f1;
+        width: 230px;
+        display: inline-block;
+        margin: 19px;
+        position: relative;
+    }
+    
+    .ssfamilleBloc:hover {
+        text-decoration: underline;
+        cursor: pointer;
+    }
+
+    legend {
+        text-align: center;
+        width: 80%;
+        padding: 0 10px;
+    }
+    
+    header img, footer img {
+        display: block;
+    }
+    
+    body {
+        font-family: roboto;
+    }
+    
+    .ancre {
+        position: absolute;
+        top: 441px;
+        width: 100%;
+        text-align: center;
+        cursor: pointer;
+    }
+    
+    .ancres {
+        display: inline-block;
+        background: #FE8005;
+        color: #fff;
+        padding: 20px 18px 18px 18px;
+        margin: 0 1px 1px 0;
+        font-size: 14px;
+    }
+    
+    .ancres:hover {
+        background: #e66100;
+        cursor: pointer;
+    } 
+    
+    .ancres:last-of-type {
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+    }
+
+    .ancres:first-of-type {
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+    }
+    
+    .ancres img {
+        display: inline-block;
+        vertical-align: middle;
+        padding: 0 0 0 10px;
+    }
+    
+    .pinterest {
+        box-shadow: 3px 4px 15px #eaeaea;
+        border: 1px solid #eee;
+        width: 230px;
+        padding: 20px;
+        margin-top: 40px;
+        height: 200px;
+        position: relative;
+    }
+    
+    .pinterestVoir {
+        background: #efefef;
+        display: inline-block;
+        padding: 12px 17px;
+        width: 40px;
+        text-align: center;
+        font-size: 13px;
+        vertical-align: middle;
+    }
+    
+    .pinterestTitre {
+        position: absolute;
+        top: 183px;
+        left: 0;
+        font-size: 15px;
+        width: 270px;
+    }
+    
+    .pinterestTitre img {
+        vertical-align: middle;
+        padding: 0 10px 0 0;
+    }
+    
+    .pinterestTitre p:nth-of-type(1) {
+        display: inline-flex;
+        padding: 0 0 0 20px;
+    }
+    
+    .pinterestTitre p:nth-of-type(2) {
+        display: inline-flex;
+        vertical-align: middle;
+        width: 110px;
+        line-height: 1.2em;
+        padding: 10px 10px 10px 0px !important;
+    }
+    
+    .pinterestImage1 {
+        width: 158px;
+        height: 142px;
+        float: left;
+        background-size: cover !important;
+    }
+    
+    .pinterestImage2 {
+        width: 70px;
+        float: right;
+        height: 70px;
+        margin: 0 0 2px 2px;
+    }
+    
+    .pinterestImage3 {
+        width: 70px;
+        height: 70px;
+        float: right;
+        margin: 0 0 0 2px;
+    }
+    
+    .menu {
+        position: absolute;
+        top: 100px;
+        z-index: 2;
+    }
+    
+    .menuBtn {
+        cursor: pointer;
+        height: 50px;
+        display: inline-block;
+        width: 50px;
+    }
+    
+    .headerUnivers p {
+        position: absolute;
+        top: 100px;
+        color: #fff;
+        width: 100%;
+        text-align: center;
+        font-weight: 700;
+        font-size: 22px;
+        letter-spacing: 1px;
+        text-shadow: 0px 0px 12px #000;
+    }
+
+    .megamenu {
+        display: none;   
+        z-index: 2;
+        width: 100%;
+        position: absolute;
+        top: 149px;
+        background: #f7f7f7;
+        min-height: 290px;
+        border-top: 1px solid #c9c9c9;
+    }
+
+    .megamenuCenter li p:nth-of-type(1) {
+        font-size: 20px;
+        padding: 20px 0 10px;
+    }
+
+    .megamenuLeft, .megamenuCenter, .megamenuRight {
+        float: left;
+    }
+
+    .megamenuRight {
+        width: 220px;
+        border-left: 1px solid #c9c9c9;
+        float: right;
+        padding: 5px 35px;
+        margin: 30px 30px 30px 0;
+    }
+
+    .megamenuCenter li p:nth-of-type(1) {
+        font-size: 16px;
+        color: #212121;
+        padding: 35px 0 10px;
+        font-weight: 700;
+    }
+
+    .megamenuRight p:nth-of-type(1) {
+        font-size: 16px;
+        color: #212121;
+        padding: 0px 0 10px;
+        font-weight: 700;
+    }
+
+    .megamenuRight p:nth-of-type(2) {
+        clear: both;
+        font-weight: 700;
+        font-size: 13px;
+        text-decoration: underline;
+        padding-top: 15px;
+        color: #212121;
+    }
+
+    .megamenuCenter li p {
+        padding: 6px 0 10px;
+        font-size: 13px;
+    }
+
+    .megamenuRight li {
+        font-size: 13px;
+        padding-bottom: 10px;
+        clear: both;
+        color: #666;
+    }
+
+    .megamenuRight li span {
+        width: 80px;
+        height: 45px;
+        background-size: cover !important;
+        float: left;
+        margin: 0 10px 10px 0;
+    }
+
+    .megamenuRight li:nth-of-type(1) span {
+        background: url(https://www.lapeyre.fr/img/contrib/3035cb15c68028da/d_SHOWPRESS_LAPEYRE0.jpg) no-repeat;
+    }
+
+    .megamenuRight li:nth-of-type(2) span {
+        background: url(https://www.lapeyre.fr/img/contrib/30ed7cf663804c0a/MEA_e-publiredac_mod%C3%A8le_porte_entr%C3%A9e.jpg) no-repeat;
+    }
+
+    .megamenuRight li:nth-of-type(3) span {
+        background: url(https://www.lapeyre.fr/img/contrib/2c2f8e21408004e3/Desktop_BienvenueIdeeConseils.jpg) no-repeat;
+    }
+
+    .megamenuCenter li {
+        float: left;
+        display: block;
+        width: 200px;
+        font-size: 14px;
+        padding-right: 20px;
+        position: relative;
+        height: 257px;
+        line-height: 1.2em;
+    }
+
+    .megamenuCenter li span {
+        position: absolute;
+        bottom: 0;
+        text-decoration: underline;
+        font-weight: 700;
+        color: #212121;
+        font-size: 13px;
+    }
+
+    .megamenuOverlay {
+        background: rgba(0,0,0,0.5);
+        height: 100%;
+        display: none;
+        z-index: 1;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+    }
+
+    .megamenuLeft img {
+        width: 154px;
+        padding: 30px;
+        background: #fff;
+        margin: 40px;
+    }
+    
+    .headerUnivers span {
+        position: absolute;
+        top: 150px;
+        color: #fff;
+        width: 60%;
+        font-weight: lighter;
+        margin: 0 20%;
+        line-height: 1.6em;
+        font-size: 14px;
+        text-align: center;
+        text-shadow: 0px 0px 12px #000;
+    }
+    
+    .headerUnivers {
+        position: relative;
+    }
+    
+    .CuisinesLapeyre .ssfamilleBloc:nth-of-type(1), .Crdencesetplansdetravail .ssfamilleBloc:nth-of-type(1) {
+        width: 520px;
+    }
+    
+    .CuisinesLapeyre .ssfamilleBloc:nth-of-type(1) .ssfamille, .Crdencesetplansdetravail .ssfamilleBloc:nth-of-type(1) .ssfamille {
+        background-size: cover !important;
+    }
+    
+    .CuisinesLapeyre h2:after {
+        width: 30px;
+        height: 20px;
+        display: inline-block;
+        margin: 5px 0 0 15px;
+        content: " ";
+        position: absolute;
+        right: 70px;
+        top: 2px;
+        background: url(france.png) no-repeat;
+        background-size: contain;
+    }
