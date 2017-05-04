@@ -1,0 +1,590 @@
+
+<!DOCTYPE html>
+<!-- xlsx.js (C) 2013-present SheetJS http://sheetjs.com -->
+<!-- vim: set ts=2: -->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title></title>
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+<style>
+  
+    html, body, div, span, applet, object, iframe,
+    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+    a, abbr, acronym, address, big, cite, code,
+    del, dfn, em, img, ins, kbd, q, s, samp,
+    small, strike, strong, sub, sup, tt, var,
+    b, u, i, center,
+    dl, dt, dd, ol, ul, li,
+    fieldset, form, label, legend,
+    table, caption, tbody, tfoot, thead, tr, th, td,
+    article, aside, canvas, details, embed, 
+    figure, figcaption, footer, header, hgroup, 
+    menu, nav, output, ruby, section, summary,
+    time, mark, audio, video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+    }
+    /* HTML5 display-role reset for older browsers */
+    article, aside, details, figcaption, figure, 
+    footer, header, hgroup, menu, nav, section {
+        display: block;
+    }
+    body {
+        line-height: 1;
+    }
+    ol, ul {
+        list-style: none;
+    }
+    blockquote, q {
+        quotes: none;
+    }
+    blockquote:before, blockquote:after,
+    q:before, q:after {
+        content: '';
+        content: none;
+    }
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+    }    
+    
+    .famille {
+        font-weight: 700;
+        padding: 60px 40px;
+        background: url(degrade.jpg) top center repeat-x #f6f7f7;
+        clear: both;
+    }
+    
+    .familleLeft {
+        width: 300px;
+        float: left;
+        min-height: 200px;
+    }
+    
+    .familleRight {
+        display: inline-block;
+        width: 880px;
+        padding-top: 20px;
+    }
+    
+    h2 {
+        color: #646665;
+        font-size: 24px;
+        font-weight: bold;
+        padding-bottom: 20px;
+        line-height: 1.3em;
+        position: relative;
+    }
+    
+    .container {
+        position: absolute;
+        left: 50%;
+        margin-left: -640px;
+    }
+    
+    .famille p {
+        font-weight: 400;
+        font-size: 14px;
+        padding: 10px 0;
+        line-height: 1.6em;
+    }
+    
+    .ssfamille {
+        font-weight: 100;
+        padding: 20px;
+        text-align: center;
+        margin: 20px;
+        height: 150px;
+        background-repeat: no-repeat !important;
+        background-position: center center !important;
+    }
+    
+    .ssfamille span {
+        background: #fff;
+        width: 180px;
+        display: block;
+        left: 15px;
+        position: absolute;
+        padding: 0 10px;
+        top: -15px;
+        font-weight: 700;
+        color: #444;
+    }
+    
+    .ssfamilleBloc {
+        border: 10px solid #f1f1f1;
+        width: 230px;
+        display: inline-block;
+        margin: 19px;
+        position: relative;
+    }
+    
+    .ssfamilleBloc:hover {
+        text-decoration: underline;
+        cursor: pointer;
+    }
+
+    legend {
+        text-align: center;
+        width: 80%;
+        padding: 0 10px;
+    }
+    
+    header img, footer img {
+        display: block;
+    }
+    
+    body {
+        font-family: roboto;
+    }
+    
+    .ancre {
+        position: absolute;
+        top: 441px;
+        width: 100%;
+        text-align: center;
+        cursor: pointer;
+    }
+    
+    .ancres {
+        display: inline-block;
+        background: #FE8005;
+        color: #fff;
+        padding: 20px 18px 18px 18px;
+        margin: 0 1px 1px 0;
+        font-size: 14px;
+    }
+    
+    .ancres:hover {
+        background: #e66100;
+        cursor: pointer;
+    } 
+    
+    .ancres:last-of-type {
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+    }
+
+    .ancres:first-of-type {
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+    }
+    
+    .ancres img {
+        display: inline-block;
+        vertical-align: middle;
+        padding: 0 0 0 10px;
+    }
+    
+    .pinterest {
+        box-shadow: 3px 4px 15px #eaeaea;
+        border: 1px solid #eee;
+        width: 230px;
+        padding: 20px;
+        margin-top: 40px;
+        height: 200px;
+        position: relative;
+    }
+    
+    .pinterestVoir {
+        background: #efefef;
+        display: inline-block;
+        padding: 12px 17px;
+        width: 40px;
+        text-align: center;
+        font-size: 13px;
+        vertical-align: middle;
+    }
+    
+    .pinterestTitre {
+        position: absolute;
+        top: 183px;
+        left: 0;
+        font-size: 15px;
+        width: 270px;
+    }
+    
+    .pinterestTitre img {
+        vertical-align: middle;
+        padding: 0 10px 0 0;
+    }
+    
+    .pinterestTitre p:nth-of-type(1) {
+        display: inline-flex;
+        padding: 0 0 0 20px;
+    }
+    
+    .pinterestTitre p:nth-of-type(2) {
+        display: inline-flex;
+        vertical-align: middle;
+        width: 110px;
+        line-height: 1.2em;
+        padding: 10px 10px 10px 0px !important;
+    }
+    
+    .pinterestImage1 {
+        width: 158px;
+        height: 142px;
+        float: left;
+        background-size: cover !important;
+    }
+    
+    .pinterestImage2 {
+        width: 70px;
+        float: right;
+        height: 70px;
+        margin: 0 0 2px 2px;
+    }
+    
+    .pinterestImage3 {
+        width: 70px;
+        height: 70px;
+        float: right;
+        margin: 0 0 0 2px;
+    }
+    
+    .menu {
+        position: absolute;
+        top: 100px;
+        z-index: 2;
+    }
+    
+    .menuBtn {
+        cursor: pointer;
+        height: 50px;
+        display: inline-block;
+        width: 50px;
+    }
+    
+    .headerUnivers p {
+        position: absolute;
+        top: 100px;
+        color: #fff;
+        width: 100%;
+        text-align: center;
+        font-weight: 700;
+        font-size: 22px;
+        letter-spacing: 1px;
+        text-shadow: 0px 0px 12px #000;
+    }
+
+    .megamenu {
+        display: none;   
+        z-index: 2;
+        width: 100%;
+        position: absolute;
+        top: 149px;
+        background: #f7f7f7;
+        min-height: 290px;
+        border-top: 1px solid #c9c9c9;
+    }
+
+    .megamenuCenter li p:nth-of-type(1) {
+        font-size: 20px;
+        padding: 20px 0 10px;
+    }
+
+    .megamenuLeft, .megamenuCenter, .megamenuRight {
+        float: left;
+    }
+
+    .megamenuRight {
+        width: 220px;
+        border-left: 1px solid #c9c9c9;
+        float: right;
+        padding: 5px 35px;
+        margin: 30px 30px 30px 0;
+    }
+
+    .megamenuCenter li p:nth-of-type(1) {
+        font-size: 16px;
+        color: #212121;
+        padding: 35px 0 10px;
+        font-weight: 700;
+    }
+
+    .megamenuRight p:nth-of-type(1) {
+        font-size: 16px;
+        color: #212121;
+        padding: 0px 0 10px;
+        font-weight: 700;
+    }
+
+    .megamenuRight p:nth-of-type(2) {
+        clear: both;
+        font-weight: 700;
+        font-size: 13px;
+        text-decoration: underline;
+        padding-top: 15px;
+        color: #212121;
+    }
+
+    .megamenuCenter li p {
+        padding: 6px 0 10px;
+        font-size: 13px;
+    }
+
+    .megamenuRight li {
+        font-size: 13px;
+        padding-bottom: 10px;
+        clear: both;
+        color: #666;
+    }
+
+    .megamenuRight li span {
+        width: 80px;
+        height: 45px;
+        background-size: cover !important;
+        float: left;
+        margin: 0 10px 10px 0;
+    }
+
+    .megamenuRight li:nth-of-type(1) span {
+        background: url(https://www.lapeyre.fr/img/contrib/3035cb15c68028da/d_SHOWPRESS_LAPEYRE0.jpg) no-repeat;
+    }
+
+    .megamenuRight li:nth-of-type(2) span {
+        background: url(https://www.lapeyre.fr/img/contrib/30ed7cf663804c0a/MEA_e-publiredac_mod%C3%A8le_porte_entr%C3%A9e.jpg) no-repeat;
+    }
+
+    .megamenuRight li:nth-of-type(3) span {
+        background: url(https://www.lapeyre.fr/img/contrib/2c2f8e21408004e3/Desktop_BienvenueIdeeConseils.jpg) no-repeat;
+    }
+
+    .megamenuCenter li {
+        float: left;
+        display: block;
+        width: 200px;
+        font-size: 14px;
+        padding-right: 20px;
+        position: relative;
+        height: 257px;
+        line-height: 1.2em;
+    }
+
+    .megamenuCenter li span {
+        position: absolute;
+        bottom: 0;
+        text-decoration: underline;
+        font-weight: 700;
+        color: #212121;
+        font-size: 13px;
+    }
+
+    .megamenuOverlay {
+        background: rgba(0,0,0,0.5);
+        height: 100%;
+        display: none;
+        z-index: 1;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+    }
+
+    .megamenuLeft img {
+        width: 154px;
+        padding: 30px;
+        background: #fff;
+        margin: 40px;
+    }
+    
+    .headerUnivers span {
+        position: absolute;
+        top: 150px;
+        color: #fff;
+        width: 60%;
+        font-weight: lighter;
+        margin: 0 20%;
+        line-height: 1.6em;
+        font-size: 14px;
+        text-align: center;
+        text-shadow: 0px 0px 12px #000;
+    }
+    
+    .headerUnivers {
+        position: relative;
+    }
+    
+    .CuisinesLapeyre .ssfamilleBloc:nth-of-type(1), .Crdencesetplansdetravail .ssfamilleBloc:nth-of-type(1) {
+        width: 520px;
+    }
+    
+    .CuisinesLapeyre .ssfamilleBloc:nth-of-type(1) .ssfamille, .Crdencesetplansdetravail .ssfamilleBloc:nth-of-type(1) .ssfamille {
+        background-size: cover !important;
+    }
+    
+    .CuisinesLapeyre h2:after {
+        width: 30px;
+        height: 20px;
+        display: inline-block;
+        margin: 5px 0 0 15px;
+        content: " ";
+        position: absolute;
+        right: 70px;
+        top: 2px;
+        background: url(france.png) no-repeat;
+        background-size: contain;
+    }
+</style>
+</head>
+<body>
+
+<!--<script src="dist/cpexcel.js"></script>-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="http://oss.sheetjs.com/js-xlsx/iemagic.js"></script>
+<script src="http://oss.sheetjs.com/js-xlsx/shim.js"></script>
+<script src="http://oss.sheetjs.com/js-xlsx/jszip.js"></script>
+<script src="http://oss.sheetjs.com/js-xlsx/xlsx.js"></script>
+<script>
+var arrayExcel = [], univers = [], familles = [], ssfamilles = [], ssssfamilles = [], visuels = [];
+
+function animationScroll(destination) {
+    $('html, body').animate({
+        scrollTop: $( destination ).offset().top
+    }, 500);
+} 
+    
+function to_csv(workbook) {
+	var result = [];
+	workbook.SheetNames.forEach(function(sheetName) {
+		var csv = XLSX.utils.sheet_to_csv(workbook.Sheets[sheetName]);
+		if(csv.length > 0){
+			result.push("SHEET: " + sheetName);
+			result.push("");
+			result.push(csv);
+		}
+	});
+	return result.join("\n");
+}
+
+function uniq(a) {
+    var seen = {};
+    return a.filter(function(item) {
+        return seen.hasOwnProperty(item) ? false : (seen[item] = true);
+    });
+}  
+
+function uniqbis(a) {
+    var seen = {};
+    return a.filter(function(item) {
+        return seen.hasOwnProperty(item.split('|')[0]) ? false : (seen[item.split('|')[0]] = true);
+    });
+}   
+
+function getParameterByName(name) {
+    return decodeURIComponent(location.search.replace('?univers=', ''));
+};
+    
+function process_wb(wb) {
+	var output = wb;
+    var lines = output.split(';');
+    $.each(lines, function(i){
+     if (i>2) {
+      var element = {};
+      if (typeof this.split(',')[0]!=='undefined') element.univers=(this.split(',')[0]).replace(/\|/g , ",");
+      if (typeof this.split(',')[1]!=='undefined') element.familles=(this.split(',')[1]).replace(/\|/g , ",");
+      if (typeof this.split(',')[2]!=='undefined') element.ssfamilles=(this.split(',')[2]).replace(/\|/g , ",");
+      if (typeof this.split(',')[3]!=='undefined') element.ssssfamilles=(this.split(',')[3]).replace(/\|/g , ",");
+      if (typeof this.split(',')[4]!=='undefined') element.visuels=(this.split(',')[4]).replace(/ /g , "%20");
+      arrayExcel.push(element);    
+     }
+    });
+
+    $.each(arrayExcel, function(i){
+        if (arrayExcel[i].univers==getParameterByName('univers') && arrayExcel[i].familles!='') {
+            familles.push(arrayExcel[i].familles);
+        }
+    });
+    
+    familles = uniq(familles);
+
+    $.each(familles, function(i){
+        var familleCss = familles[i].replace(/[`~!@#$%^&*()_|+\-=?; éèàùêç:'",.<>\{\}\[\]\\\/]/gi, '');
+        $('header .ancre').append('<div class="ancres" onclick="javascript:animationScroll(\'#famille' + i + '\')">' + familles[i] + '<img src="fleche.png"/></div>');
+        $('section#univers').append('<div class="famille ' + familleCss + '" id="famille' + i + '"><div class="familleLeft"><h2>' + familles[i] + '</h2><p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.</p><div class="pinterest"><div class="pinterestImage1"></div><div class="pinterestImage2"></div><div class="pinterestImage3"></div><div class="pinterestTitre"><p><br/><img src="pin.png" /></p><p>' + familles[i] + '</p><span class="pinterestVoir">Voir</span></div></div></div><div class="familleRight"></div></div>');
+        $.each(arrayExcel, function(j){
+            if (arrayExcel[j].univers==getParameterByName('univers') && arrayExcel[j].familles==familles[i] && arrayExcel[j].ssfamilles!='') {
+                ssfamilles.push(arrayExcel[j].ssfamilles + '|' + arrayExcel[j].visuels);
+            }
+        });
+        ssfamilles = uniqbis(ssfamilles);
+        $.each(ssfamilles, function(k){
+            if (ssfamilles.length<4) $('#famille' + i + ' .pinterest').hide();
+            $('#famille' + i + ' .pinterestImage' + k).attr('style','background:url(' + ssfamilles[k].split('|')[1] + ')');
+            $('#famille' + i + ' .familleRight').append('<fieldset class="ssfamilleBloc"><legend>' + ssfamilles[k].split('|')[0] + '</legend><div class="ssfamille" style="background:url(' + ssfamilles[k].split('|')[1] + ')"></div></fieldset');
+        });
+        ssfamilles = [];
+    });
+}
+    
+$( document ).ready(function() {
+   $('.mag img').attr('src','edito/EDITO_'+getParameterByName('univers')+'.jpg');
+   $('.headerUnivers img').attr('src','edito/'+getParameterByName('univers')+'.jpg');
+   $('.headerUnivers p').html(getParameterByName('univers'));
+
+   //MegaMenu
+   $('.menuBtn').mouseenter(function() {
+      $('.megamenu, .megamenuOverlay').show();
+   });
+   $('.megamenu').mouseleave(function() {
+      $('.megamenu, .megamenuOverlay').hide();
+   });
+   $('.megamenuOverlay').mouseover(function() {
+      $('.megamenu, .megamenuOverlay').hide();
+   });
+});
+    
+    
+    
+var url = "http://serveurlnb.fr/temp/napoleon/csv.php";
+
+jQuery.get(url, function(data) {
+   process_wb(data);
+});    
+    
+
+</script>
+<div class="container">
+<header>
+   <div><img src="header.jpg" /></div>
+   <div class="headerUnivers"><p></p><span>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam. Accusantium doloremque laudantium, totam rem aperiam</span><img src="" /></div>
+   <div class="mag"><img src="" /></div>
+   <div class="menu">
+       <div class="menuBtn" style="width:130px;" data-univers="Fenêtres" onclick="javascript:location.href = 'index.html?univers=Fenêtres%20&%20Volets'"></div>
+       <div class="menuBtn" style="width:100px;" data-univers="Portes" onclick="javascript:location.href = 'index.html?univers=Portes'"></div>
+       <div class="menuBtn" style="width:100px;" data-univers="Cuisine" onclick="javascript:location.href = 'index.html?univers=Cuisine'"></div>
+       <div class="menuBtn" style="width:145px;" data-univers="Salle de bains" onclick="javascript:location.href = 'index.html?univers=Salle%20de%20bains'"></div>
+       <div class="menuBtn" style="width:137px;" data-univers="Rangements" onclick="javascript:location.href = 'index.html?univers=Rangements'"></div>
+       <div class="menuBtn" style="width:124px;" data-univers="Escaliers" onclick="javascript:location.href = 'index.html?univers=Escaliers'"></div>
+       <div class="menuBtn" style="width:130px;" data-univers="Sols & murs" onclick="javascript:location.href = 'index.html?univers=Sols%20&%20murs'"></div>
+       <div class="menuBtn" style="width:120px;" data-univers="Extérieur" onclick="javascript:location.href = 'index.html?univers=Extérieur'"></div>
+   </div>
+
+   <div class="megamenu">
+       <div class="megamenuLeft"><img src="https://static.lapeyre.fr/img/catalogue/desktopList/514/242/VN-201514242.jpg" /></div>
+       <div class="megamenuCenter"><ul><li><p>Fenêtres</p><p>Auvents et marquise</p><p>Motorisations de porte de garage</p><p>La maison connectée</p><p>Poignées et serrure</p></li><li><p>Fenêtres de toit</p><p>Auvents et marquise</p><p>Motorisations de porte de garage</p><p>La maison connectée</p><p>Poignées et serrure</p></li><li><p>Accessoires</p><p>Auvents et marquise</p><p>Motorisations de porte de garage</p><p>La maison connectée</p><p>Poignées et serrure</p><span>Voir tous les produits</span></li></ul></div>
+       <div class="megamenuRight"><p>Le Mag</p><ul><li><span></span>Porte Standard ou sur mesure?</li><li><span></span>Personnalisez votre porte</li><li><span></span>Sécurité des portes d'entrée</li></ul><p><a>Voir tous les articles</a></p></div>
+   </div>
+
+   <div class="ancre"></div>
+</header>
+
+
+<section id="univers">
+    
+</section>  
+
+<footer>
+   <div><img src="footerFenetres.jpg" /></div>
+   <div><img src="footer.jpg" /></div>
+</footer>
+</div>
+   <div class="megamenuOverlay"></div>
+</body>
+</html>
