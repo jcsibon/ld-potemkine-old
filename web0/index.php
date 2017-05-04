@@ -37,7 +37,6 @@ $app->get('/{universeName}-CCU{universeId}/{familyName}-CCN{familyId}/{subfamily
   return $app['twig']->render('family.twig');
 });
 
-
 $app->get('this-is-a-product-FPC{productId}', function($productId) use($app) {
   // return 'Hello '.$app->escape($name);
   return $app['twig']->render('product.twig');
@@ -53,8 +52,4 @@ $app->get('/fenetres-CCU0003/fenetres-CCN0036', function() use($app) {
   return $app['twig']->render('windows.twig');
 });
 
-
 $app->run();
-
-
-
