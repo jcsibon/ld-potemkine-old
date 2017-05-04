@@ -108,13 +108,13 @@
         line-height: 1.3em;
         position: relative;
     }
-    
+    /*
     .container {
         position: absolute;
         left: 50%;
         margin-left: -640px;
     }
-    
+    */
     .famille p {
         font-weight: 400;
         font-size: 14px;
