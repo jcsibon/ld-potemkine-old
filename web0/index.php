@@ -22,7 +22,7 @@ $app->get('/', function() use($app) {
   return $app['twig']->render('index.twig');
 });
 
-$app->get('/{universeName}-CCU{universeId}/', function($universeId) use($app) {
+$app->get('/{universeName}-CCU{universeId}/', function($universeName, $universeId) use($app) {
   // return 'Hello '.$app->escape($name);
   return $app['twig']->render('universe.twig');
 });

@@ -4,12 +4,15 @@
 
 <section id="univers">
     <div class="container-fluid">
+		<img src="/images/headers/{{ global.request.get('universeName') }}.jpg" />
        <div class="headerUnivers"><p></p><span>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam. Accusantium doloremque laudantium, totam rem aperiam</span><img src="" /></div>
-	   <div><img src="/images/footerFenetres.jpg" /></div>
+	   <img src="/images/contents/{{ global.request.get('universeName') }}.jpg" />
+	   <img src="/images/footerFenetres.jpg" />
     </div>
 </section>  
 
 {{ global.request.uri }}
-{{ global.request.get('universeId') }}
+
+
 
 {% endblock %}
