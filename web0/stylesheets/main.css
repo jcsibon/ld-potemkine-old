@@ -115,6 +115,11 @@
         margin-left: -640px;
     }
     */
+
+    .container-fluid {
+        padding-right: 30px;
+        padding-left: 30px;
+    }
     .famille p {
         font-weight: 400;
         font-size: 14px;
