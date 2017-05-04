@@ -22,16 +22,31 @@ $app->get('/', function() use($app) {
   return $app['twig']->render('index.twig');
 });
 
-$app->get('/{UniverseName}-CCU{UniverseId}/', function($UniverseId) use($app) {
+$app->get('/{universeName}-CCU{universeId}/', function($universeId) use($app) {
   // return 'Hello '.$app->escape($name);
   return $app['twig']->render('universe.twig');
 });
 
-$app->get('/{UniverseName}-CCU{UniverseId}/{FamilyName}-CCU{FamilyId}/', function($FamilyId) use($app) {
+$app->get('/{universeName}-CCU{universeId}/{familyName}-CCN{familyId}/', function($familyId) use($app) {
   // return 'Hello '.$app->escape($name);
   return $app['twig']->render('family.twig');
 });
 
+$app->get('/{universeName}-CCU{universeId}/{familyName}-CCN{familyId}/{subfamilyName}-CCN{subfamilyId}', function($subfamilyId) use($app) {
+  // return 'Hello '.$app->escape($name);
+  return $app['twig']->render('family.twig');
+});
+
+
+$app->get('this-is-a-product-FPC{productId}', function($productId) use($app) {
+  // return 'Hello '.$app->escape($name);
+  return $app['twig']->render('product.twig');
+});
+
+$app->get('this-is-an-article-{articleId}', function($articleId) use($app) {
+  // return 'Hello '.$app->escape($name);
+  return $app['twig']->render('article.twig');
+});
 
 $app->get('/fenetres-CCU0003/fenetres-CCN0036', function() use($app) {
   // return 'Hello '.$app->escape($name);
