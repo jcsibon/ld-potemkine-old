@@ -37,12 +37,12 @@ $app->get('/{universeName}-CCU{universeId}/{familyName}-CCN{familyId}/{subfamily
   return $app['twig']->render('family.twig');
 });
 
-$app->get('this-is-a-product-FPC{productId}', function($productId) use($app) {
+$app->get('product-FPC{productId}', function($productId) use($app) {
   // return 'Hello '.$app->escape($name);
   return $app['twig']->render('product.twig');
 });
 
-$app->get('this-is-an-article-{articleId}', function($articleId) use($app) {
+$app->get('article-{articleId}', function($articleId) use($app) {
   // return 'Hello '.$app->escape($name);
   return $app['twig']->render('article.twig');
 });
