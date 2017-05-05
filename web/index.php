@@ -134,7 +134,7 @@ $app->get('/fenetres-CCU0000/fenetres-CCN0000', function() use($app) {
 
 $app->run();
 
-$app->get('configurateur', function($articleId) use($app) {
+$app->get('/configurateur', function($articleId) use($app) {
 
   return $app['twig']->render('configurateur.twig');
 });
