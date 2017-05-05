@@ -132,9 +132,8 @@ $app->get('/fenetres-CCU0000/fenetres-CCN0000', function() use($app) {
   return $app['twig']->render('windows.twig');
 });
 
-$app->run();
-
 $app->get('/configurateur', function() use($app) {
-
   return $app['twig']->render('configurateur.twig');
 });
+
+$app->run();
