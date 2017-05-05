@@ -4,8 +4,8 @@
 
 	<section id="univers">
 		<div class="container-fluid">
-			<img src="/images/headers/{{ global.request.get('universeName') }}.jpg" />
 			<div class="headerUnivers">
+				<img src="/images/headers/{{ global.request.get('universeName') }}.jpg" />
 				<p>{{ global.request.get('universeName') }}</p>
 				<span>
 					Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam. Accusantium doloremque laudantium, totam rem aperiam</span>
@@ -54,11 +54,7 @@ Voir</span>
 ');
 -->
 
-
-
-
-
-{% for i in 0..10 %}
+{% for i in 0..3 %}
 
 	<div class="famille"  id="famille' + i + '"> <!-- ' + familleCss + '-->
 		<div class="familleLeft">
