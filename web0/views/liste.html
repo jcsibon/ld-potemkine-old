@@ -1,8 +1,38 @@
-{% extends "layout.html" %}
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title></title>
+<link rel="stylesheet" type="text/css" href="css/styles_liste.css">
+<link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body>
 
-{% block content %}
+<!--<script src="dist/cpexcel.js"></script>-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="http://oss.sheetjs.com/js-xlsx/iemagic.js"></script>
+<script src="http://oss.sheetjs.com/js-xlsx/shim.js"></script>
+<script src="http://oss.sheetjs.com/js-xlsx/jszip.js"></script>
+<script src="http://oss.sheetjs.com/js-xlsx/xlsx.js"></script>
+<script src="scripts/script.js"></script>
+<script src="scripts/script_liste.js"></script>
+<script>
 
+$( document ).ready(function() {
+//   $('.mag img').attr('src','images/edito/EDITO_'+getParameterByName('univers')+'.jpg'); 
+});
+    
+jQuery.get(url, function(data) {
+   process_wb(data);    
+   megaMenu();
+});    
+    
+</script>
 <div class="container">
+<header>
+   <div><img src="images/header.jpg" /></div>   
+</header>
+
 <div class="list">
     <nav> <a href="javascript:history.back()"><strong>&lt; Retour </strong></a><span>|</span> <a href="https://www.lapeyre.fr">Accueil</a> <span>></span> <a href="" id="breadcrumbUnivers"></a><span>></span> <strong></strong></nav>
 
@@ -65,6 +95,13 @@
     <img src="images/bloc_product1.png" />
     <img src="images/liste_bottom.png" class="liste_bottom"/>
 </div>
-</div>
+   
+</div>  
 
-{% endblock %}
+<footer>
+   <div><img src="images/footer.jpg" /></div>
+</footer>
+</div>
+   <div class="megamenuOverlay"></div>
+</body>
+</html>
