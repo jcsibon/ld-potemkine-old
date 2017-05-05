@@ -59,6 +59,9 @@ $app->get('/{universeName}-CCU{universeId}/', function($universeName, $universeI
       $subfamilies[$row[0]][] = array_combine($keys, $row);
   }
   
+print_r($subfamilies);
+die();
+
   $app["twig"]->addGlobal("data", $data);
   $app["twig"]->addGlobal("subfamilies", $subfamilies);
   return $app['twig']->render('universe.twig');
