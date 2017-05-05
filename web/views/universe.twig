@@ -5,13 +5,21 @@
 <section id="univers">
     <div class="container-fluid">
 		<img src="/images/headers/{{ global.request.get('universeName') }}.jpg" />
-{{ data }}
+
 
        <div class="headerUnivers"><p></p><span>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam. Accusantium doloremque laudantium, totam rem aperiam</span><img src="" /></div>
 	   <img src="/images/contents/{{ global.request.get('universeName') }}.jpg" />
 	   <img src="/images/footerFenetres.jpg" />
     </div>
 </section>  
+
+<ul>
+    {% for row in data %}
+        <li>{{ data }}</li>
+    {% endfor %}
+</ul>
+
+
 
 {{ global.request.uri }}
 
