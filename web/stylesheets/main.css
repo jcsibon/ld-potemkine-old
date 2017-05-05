@@ -108,6 +108,14 @@
         line-height: 1.3em;
         position: relative;
     }
+
+    .h3 {
+        color: #646665;
+        font-size: 24px;
+        font-weight: bold;
+        line-height: 1.3em;
+        position: relative;
+    }
     /*
     .container-fluid {
         position: absolute;
