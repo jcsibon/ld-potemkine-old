@@ -24,7 +24,7 @@ $app->get('/', function() use($app) {
 
 $app->get('/{universeName}-CCU{universeId}/', function($universeName, $universeId) use($app) {
 
-  $handle = fopen('https://docs.google.com/spreadsheets/d/1s10qJviUHayRFRHxSbMGNDKaIg7-gyYAjz6kOPhPm6g/pub?gid=0&single=true&output=csv', "r");
+  $handle = fopen('https://docs.google.com/spreadsheets/d/1s10qJviUHayRFRHxSbMGNDKaIg7-gyYAjz6kOPhPm6g/pub?gid=1971894571&single=true&output=csv', "r");
   if(empty($handle) === false) {
       while(($row = fgetcsv($handle, 1000, ",")) !== FALSE){
           $data[] = $row[0] . "," . $row[1] . "," . $row[2] . "," . $row[3] . "," . $row[4] . "," . $row[5] . ";";
