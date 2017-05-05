@@ -23,27 +23,56 @@ $app->get('/', function() use($app) {
 });
 
 $app->get('/{universeName}-CCU{universeId}/', function($universeName, $universeId) use($app) {
-  // return 'Hello '.$app->escape($name);
+
+  $handle = fopen('https://docs.google.com/spreadsheets/d/1s10qJviUHayRFRHxSbMGNDKaIg7-gyYAjz6kOPhPm6g/pub?gid=0&single=true&output=csv', "r");
+  if(empty($handle) === false) {
+      while(($row = fgetcsv($handle, 1000, ",")) !== FALSE){
+          $data[] = $row[0] . "," . $row[1] . "," . $row[2] . "," . $row[3] . "," . $row[4] . "," . $row[5] . ";";
+      }
+      fclose($handle);
+  }
+  
+  $app["twig"]->addGlobal("data", $data);
   return $app['twig']->render('universe.twig');
 });
 
 $app->get('/{universeName}-CCU{universeId}/{familyName}-CCN{familyId}/', function($familyId) use($app) {
-  // return 'Hello '.$app->escape($name);
+
+
+
+
+
+
   return $app['twig']->render('family.twig');
 });
 
 $app->get('/{universeName}-CCU{universeId}/{familyName}-CCN{familyId}/{subfamilyName}-CCN{subfamilyId}', function($subfamilyId) use($app) {
-  // return 'Hello '.$app->escape($name);
+
+
+
+
+
+
   return $app['twig']->render('family.twig');
 });
 
 $app->get('product-FPC{productId}', function($productId) use($app) {
-  // return 'Hello '.$app->escape($name);
+
+
+
+
+
+
   return $app['twig']->render('product.twig');
 });
 
 $app->get('article-{articleId}', function($articleId) use($app) {
-  // return 'Hello '.$app->escape($name);
+
+
+
+
+
+
   return $app['twig']->render('article.twig');
 });
 
