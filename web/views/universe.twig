@@ -2,26 +2,116 @@
 
 {% block content %}
 
-<section id="univers">
-    <div class="container-fluid">
-		<img src="/images/headers/{{ global.request.get('universeName') }}.jpg" />
+	<section id="univers">
+		<div class="container-fluid">
+			<img src="/images/headers/{{ global.request.get('universeName') }}.jpg" />
+			<div class="headerUnivers">
+				<p>{{ global.request.get('universeName') }}</p>
+				<span>
+					Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam. Accusantium doloremque laudantium, totam rem aperiam</span>
+					<img src="" />
+				</div>
+				<img src="/images/contents/{{ global.request.get('universeName') }}.jpg" />
 
 
-       <div class="headerUnivers"><p></p><span>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam. Accusantium doloremque laudantium, totam rem aperiam</span><img src="" /></div>
-	   <img src="/images/contents/{{ global.request.get('universeName') }}.jpg" />
-	   <img src="/images/footerFenetres.jpg" />
-    </div>
-</section>  
+
+
+
+
+<!--
+        $('header .ancre').append('<div class="ancres" onclick="javascript:animationScroll(\'#famille' + i + '\')">
+        ' + familles[i] + '<img src="fleche.png"/>
+        </div>
+        ');
+        $('section#univers').append('<div class="famille ' + familleCss + '" id="famille' + i + '">
+        <div class="familleLeft">
+        <h2>
+        ' + familles[i] + '</h2>
+        <p>
+        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.</p>
+        <div class="pinterest">
+        <div class="pinterestImage1">
+        </div>
+        <div class="pinterestImage2">
+        </div>
+        <div class="pinterestImage3">
+        </div>
+        <div class="pinterestTitre">
+        <p>
+        <br/>
+        <img src="pin.png" />
+        </p>
+        <p>
+        ' + familles[i] + '</p>
+        <span class="pinterestVoir">
+        Voir</span>
+        </div>
+        </div>
+        </div>
+        <div class="familleRight">
+        </div>
+        </div>
+        ');
+    -->
+
+
+
+
+
+{% for i in 0..10 %}
+
+	<div class="famille"  id="famille' + i + '"> <!-- ' + familleCss + '-->
+		<div class="familleLeft">
+			<h2>familles[i]</h2>
+			<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.</p>
+			<div class="pinterest">
+				<div class="pinterestImage1">
+				</div>
+				<div class="pinterestImage2">
+				</div>
+				<div class="pinterestImage3">
+				</div>
+				<div class="pinterestTitre">
+					<p>
+						<br/>
+						<img src="pin.png" />
+					</p>
+					<p>
+						' + familles[i] + '</p>
+						<span class="pinterestVoir">
+							Voir</span>
+						</div>
+					</div>
+				</div>
+				<div class="familleRight">
+				</div>
+			</div>
+{% endfor %}
+
+
+
+
+    <img src="/images/footerFenetres.jpg" />
+
+</div>
+
+</section>
+
+
 
 <ul>
-    {% for row in data %}
-        <li>{{ row }}</li>
-    {% endfor %}
-</ul>
+
+	{% for row in data %}
+		<li>
+			{{ row }}</li>
+
+		{% endfor %}
+	</ul>
 
 
 
-{{ global.request.uri }}
+
+	{{ global.request.uri }}
 
 
 
