@@ -24,6 +24,34 @@ $app->get('/', function() use($app) {
 
 $app->get('/{universeName}-CCU{universeId}/', function($universeName, $universeId) use($app) {
 
+  // Génération des Univers
+  $handle = fopen('https://docs.google.com/spreadsheets/d/1s10qJviUHayRFRHxSbMGNDKaIg7-gyYAjz6kOPhPm6g/pub?gid=1971894571&single=true&output=csv', "r");
+  if(empty($handle) === false) {
+      while(($row = fgetcsv($handle, 1000, ",")) !== FALSE){
+          $data[] = $row[0] . "," . $row[1] . "," . $row[2] . "," . $row[3] . "," . $row[4] . "," . $row[5] . ";";
+      }
+      fclose($handle);
+  }
+
+  // Génération des Sous-univers
+  $handle = fopen('https://docs.google.com/spreadsheets/d/1s10qJviUHayRFRHxSbMGNDKaIg7-gyYAjz6kOPhPm6g/pub?gid=1971894571&single=true&output=csv', "r");
+  if(empty($handle) === false) {
+      while(($row = fgetcsv($handle, 1000, ",")) !== FALSE){
+          $data[] = $row[0] . "," . $row[1] . "," . $row[2] . "," . $row[3] . "," . $row[4] . "," . $row[5] . ";";
+      }
+      fclose($handle);
+  }
+
+  // Génération des Familles
+  $handle = fopen('https://docs.google.com/spreadsheets/d/1s10qJviUHayRFRHxSbMGNDKaIg7-gyYAjz6kOPhPm6g/pub?gid=1971894571&single=true&output=csv', "r");
+  if(empty($handle) === false) {
+      while(($row = fgetcsv($handle, 1000, ",")) !== FALSE){
+          $data[] = $row[0] . "," . $row[1] . "," . $row[2] . "," . $row[3] . "," . $row[4] . "," . $row[5] . ";";
+      }
+      fclose($handle);
+  }
+
+  // Génération des Sous-familles
   $handle = fopen('https://docs.google.com/spreadsheets/d/1s10qJviUHayRFRHxSbMGNDKaIg7-gyYAjz6kOPhPm6g/pub?gid=1971894571&single=true&output=csv', "r");
   if(empty($handle) === false) {
       while(($row = fgetcsv($handle, 1000, ",")) !== FALSE){
@@ -76,7 +104,7 @@ $app->get('article-{articleId}', function($articleId) use($app) {
   return $app['twig']->render('article.twig');
 });
 
-$app->get('/fenetres-CCU0003/fenetres-CCN0036', function() use($app) {
+$app->get('/fenetres-CCU0000/fenetres-CCN0000', function() use($app) {
   // return 'Hello '.$app->escape($name);
   return $app['twig']->render('windows.twig');
 });
