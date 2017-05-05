@@ -34,7 +34,7 @@ $app->get('/{universeName}-CCU{universeId}/', function($universeName, $universeI
   }
 
   // Génération des Sous-univers
-  $handle = fopen('https://docs.google.com/spreadsheets/d/1s10qJviUHayRFRHxSbMGNDKaIg7-gyYAjz6kOPhPm6g/pub?gid=1971894571&single=true&output=csv', "r");
+  $handle = fopen('https://docs.google.com/spreadsheets/d/1s10qJviUHayRFRHxSbMGNDKaIg7-gyYAjz6kOPhPm6g/pub?gid=1121908549&single=true&output=csv', "r");
   if(empty($handle) === false) {
       while(($row = fgetcsv($handle, 1000, ",")) !== FALSE){
           $data[] = $row[0] . "," . $row[1] . "," . $row[2] . "," . $row[3] . "," . $row[4] . "," . $row[5] . ";";
@@ -43,7 +43,7 @@ $app->get('/{universeName}-CCU{universeId}/', function($universeName, $universeI
   }
 
   // Génération des Familles
-  $handle = fopen('https://docs.google.com/spreadsheets/d/1s10qJviUHayRFRHxSbMGNDKaIg7-gyYAjz6kOPhPm6g/pub?gid=1971894571&single=true&output=csv', "r");
+  $handle = fopen('https://docs.google.com/spreadsheets/d/1s10qJviUHayRFRHxSbMGNDKaIg7-gyYAjz6kOPhPm6g/pub?gid=1183165030&single=true&output=csv', "r");
   if(empty($handle) === false) {
       while(($row = fgetcsv($handle, 1000, ",")) !== FALSE){
           $data[] = $row[0] . "," . $row[1] . "," . $row[2] . "," . $row[3] . "," . $row[4] . "," . $row[5] . ";";
@@ -52,7 +52,7 @@ $app->get('/{universeName}-CCU{universeId}/', function($universeName, $universeI
   }
 
   // Génération des Sous-familles
-  $handle = fopen('https://docs.google.com/spreadsheets/d/1s10qJviUHayRFRHxSbMGNDKaIg7-gyYAjz6kOPhPm6g/pub?gid=1971894571&single=true&output=csv', "r");
+  $handle = fopen('https://docs.google.com/spreadsheets/d/1s10qJviUHayRFRHxSbMGNDKaIg7-gyYAjz6kOPhPm6g/pub?gid=1976579302&single=true&output=csv', "r");
   if(empty($handle) === false) {
       while(($row = fgetcsv($handle, 1000, ",")) !== FALSE){
           $data[] = $row[0] . "," . $row[1] . "," . $row[2] . "," . $row[3] . "," . $row[4] . "," . $row[5] . ";";
