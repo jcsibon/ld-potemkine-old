@@ -52,6 +52,7 @@ $app->get('/{universeName}-CCU{universeId}/', function($universeName, $universeI
   }
 
   // Génération des Sous-familles
+  $subfamilies = array();
   $file = array_map("str_getcsv", file("https://docs.google.com/spreadsheets/d/1s10qJviUHayRFRHxSbMGNDKaIg7-gyYAjz6kOPhPm6g/pub?gid=1976579302&single=true&output=csv",FILE_SKIP_EMPTY_LINES));
   $keys = array_shift($file);
   foreach ($file as $i=>$row) {
@@ -59,7 +60,7 @@ $app->get('/{universeName}-CCU{universeId}/', function($universeName, $universeI
   }
   
   $app["twig"]->addGlobal("data", $data);
-  $app["twig"]->addGlobal("data", $subfamilies);
+  $app["twig"]->addGlobal("subfamilies", $subfamilies);
   return $app['twig']->render('universe.twig');
 });
 
