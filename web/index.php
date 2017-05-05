@@ -127,7 +127,7 @@ $app->get('article-{articleId}', function($articleId) use($app) {
   return $app['twig']->render('article.twig');
 });
 
-$app->get('/fenetres-CCU0000/fenetres-CCN0000', function() use($app) {
+$app->get('/fenetres-CCU0000/fenetres-{familyUrlName}-CCN{familyId}/', function($familyUrlName) use($app) {
   // return 'Hello '.$app->escape($name);
   return $app['twig']->render('windows.twig');
 });
