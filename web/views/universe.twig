@@ -19,40 +19,40 @@
 
 
 <!--
-        $('header .ancre').append('<div class="ancres" onclick="javascript:animationScroll(\'#famille' + i + '\')">
-        ' + familles[i] + '<img src="fleche.png"/>
-        </div>
-        ');
-        $('section#univers').append('<div class="famille ' + familleCss + '" id="famille' + i + '">
-        <div class="familleLeft">
-        <h2>
-        ' + familles[i] + '</h2>
-        <p>
-        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.</p>
-        <div class="pinterest">
-        <div class="pinterestImage1">
-        </div>
-        <div class="pinterestImage2">
-        </div>
-        <div class="pinterestImage3">
-        </div>
-        <div class="pinterestTitre">
-        <p>
-        <br/>
-        <img src="pin.png" />
-        </p>
-        <p>
-        ' + familles[i] + '</p>
-        <span class="pinterestVoir">
-        Voir</span>
-        </div>
-        </div>
-        </div>
-        <div class="familleRight">
-        </div>
-        </div>
-        ');
-    -->
+$('header .ancre').append('<div class="ancres" onclick="javascript:animationScroll(\'#famille' + i + '\')">
+' + familles[i] + '<img src="fleche.png"/>
+</div>
+');
+$('section#univers').append('<div class="famille ' + familleCss + '" id="famille' + i + '">
+<div class="familleLeft">
+<h2>
+' + familles[i] + '</h2>
+<p>
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.</p>
+<div class="pinterest">
+<div class="pinterestImage1">
+</div>
+<div class="pinterestImage2">
+</div>
+<div class="pinterestImage3">
+</div>
+<div class="pinterestTitre">
+<p>
+<br/>
+<img src="pin.png" />
+</p>
+<p>
+' + familles[i] + '</p>
+<span class="pinterestVoir">
+Voir</span>
+</div>
+</div>
+</div>
+<div class="familleRight">
+</div>
+</div>
+');
+-->
 
 
 
@@ -84,35 +84,18 @@
 					</div>
 				</div>
 				<div class="familleRight">
+					<ul>
+					{% for row in data %}
+						<li>
+							{{ row }}</li>
+
+						{% endfor %}
+					</ul>
 				</div>
 			</div>
-{% endfor %}
-
-
-
-
-    <img src="/images/footerFenetres.jpg" />
-
-</div>
-
-</section>
-
-
-
-<ul>
-
-	{% for row in data %}
-		<li>
-			{{ row }}</li>
-
 		{% endfor %}
-	</ul>
-
-
-
-
-	{{ global.request.uri }}
-
-
+		<img src="/images/footerFenetres.jpg" />
+	</div>
+</section>
 
 {% endblock %}
