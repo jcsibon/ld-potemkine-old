@@ -58,9 +58,9 @@ $app->get('/{universeName}-CCU{universeId}/', function($universeName, $universeI
   foreach ($file as $i=>$row) {
       $subfamilies[$row[0]][] = array_combine($keys, $row);
   }
-  
-print_r($subfamilies);
-die();
+  $catalog = $subfamilies;
+  header('Content-type: application/json');
+  die(json_encode( $catalog ));
 
   $app["twig"]->addGlobal("data", $data);
   $app["twig"]->addGlobal("subfamilies", $subfamilies);
