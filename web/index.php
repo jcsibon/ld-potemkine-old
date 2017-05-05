@@ -52,15 +52,14 @@ $app->get('/{universeName}-CCU{universeId}/', function($universeName, $universeI
   }
 
   // Génération des Sous-familles
-  $handle = fopen('https://docs.google.com/spreadsheets/d/1s10qJviUHayRFRHxSbMGNDKaIg7-gyYAjz6kOPhPm6g/pub?gid=1976579302&single=true&output=csv', "r");
-  if(empty($handle) === false) {
-      while(($row = fgetcsv($handle, 1000, ",")) !== FALSE){
-          $data[] = $row[0] . "," . $row[1] . "," . $row[2] . "," . $row[3] . "," . $row[4] . "," . $row[5] . ";";
-      }
-      fclose($handle);
+  $file = array_map("str_getcsv", file("https://docs.google.com/spreadsheets/d/1s10qJviUHayRFRHxSbMGNDKaIg7-gyYAjz6kOPhPm6g/pub?gid=1976579302&single=true&output=csv",FILE_SKIP_EMPTY_LINES));
+  $keys = array_shift($file);
+  foreach ($file as $i=>$row) {
+      $subfamilies[$row[0]][] = array_combine($keys, $row);
   }
   
   $app["twig"]->addGlobal("data", $data);
+  $app["twig"]->addGlobal("data", $subfamilies);
   return $app['twig']->render('universe.twig');
 });
 
