@@ -22,7 +22,7 @@ $app->get('/', function() use($app) {
   return $app['twig']->render('index.twig');
 });
 
-$app->get('/{universeName}-CCU{universeId}/', function($universeName, $universeId) use($app) {
+$app->get('/{universeUrlName}-CCU{universeId}/', function($universeUrlName, $universeId) use($app) {
 
   // Génération des Univers
   $handle = fopen('https://docs.google.com/spreadsheets/d/1s10qJviUHayRFRHxSbMGNDKaIg7-gyYAjz6kOPhPm6g/pub?gid=1971894571&single=true&output=csv', "r");
@@ -51,6 +51,9 @@ $app->get('/{universeName}-CCU{universeId}/', function($universeName, $universeI
       fclose($handle);
   }
 
+
+
+
   // Génération des Sous-familles
   $subfamilies = array();
   $file = array_map("str_getcsv", file("https://docs.google.com/spreadsheets/d/1s10qJviUHayRFRHxSbMGNDKaIg7-gyYAjz6kOPhPm6g/pub?gid=1976579302&single=true&output=csv",FILE_SKIP_EMPTY_LINES));
@@ -58,7 +61,24 @@ $app->get('/{universeName}-CCU{universeId}/', function($universeName, $universeI
   foreach ($file as $i=>$row) {
       $subfamilies[$row[0]][] = array_combine($keys, $row);
   }
-  $catalog = $subfamilies;
+
+  $families = array();
+  $file = array_map("str_getcsv", file("https://docs.google.com/spreadsheets/d/1s10qJviUHayRFRHxSbMGNDKaIg7-gyYAjz6kOPhPm6g/pub?gid=1183165030&single=true&output=csv",FILE_SKIP_EMPTY_LINES));
+  $keys = array_shift($file);
+  foreach ($file as $i=>$row) {
+      $families[$row[0]][] = array_combine($keys, $row);
+  }
+
+
+  $universes = array();
+  $file = array_map("str_getcsv", file("https://docs.google.com/spreadsheets/d/1s10qJviUHayRFRHxSbMGNDKaIg7-gyYAjz6kOPhPm6g/pub?gid=1971894571&single=true&output=csv",FILE_SKIP_EMPTY_LINES));
+  $keys = array_shift($file);
+  foreach ($file as $i=>$row) {
+      $universes[$row[0]][] = array_combine($keys, $row);
+  }
+
+
+  $catalog = $universes;
   header('Content-type: application/json');
   die(json_encode( $catalog ));
 
@@ -67,7 +87,7 @@ $app->get('/{universeName}-CCU{universeId}/', function($universeName, $universeI
   return $app['twig']->render('universe.twig');
 });
 
-$app->get('/{universeName}-CCU{universeId}/{familyName}-CCN{familyId}/', function($familyId) use($app) {
+$app->get('/{universeUrlName}-CCU{universeId}/{familyUrlName}-CCN{familyId}/', function($familyId) use($app) {
 
 
 
@@ -77,7 +97,7 @@ $app->get('/{universeName}-CCU{universeId}/{familyName}-CCN{familyId}/', functio
   return $app['twig']->render('family.twig');
 });
 
-$app->get('/{universeName}-CCU{universeId}/{familyName}-CCN{familyId}/{subfamilyName}-CCN{subfamilyId}', function($subfamilyId) use($app) {
+$app->get('/{universeUrlName}-CCU{universeId}/{familyUrlName}-CCN{familyId}/{subfamilyUrlName}-CCN{subfamilyId}', function($subfamilyId) use($app) {
 
 
 
