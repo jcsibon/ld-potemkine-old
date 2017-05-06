@@ -120,7 +120,7 @@ $app->get('/{universeUrlName}-CCU0000/', function($universeUrlName) use($app) {
   $app["twig"]->addGlobal("catalog", $catalog);
   $app["twig"]->addGlobal("subfamilies", $subfamilies);
   return $app['twig']->render('universe.twig');
-})->assert('universeUrlName', '/[a-z-]*[a-z-]/');
+})->assert('universeUrlName', '[a-zA-Z1-9\-_\/]+');
 
 $app->get('/{universeUrlName}-CCU0000/{familyUrlName}-CCN0000/', function($universeUrlName, $familyUrlName) use($app) {
 
