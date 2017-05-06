@@ -22,6 +22,41 @@ $app->get('/', function() use($app) {
   return $app['twig']->render('index.twig');
 });
 
+
+$app->get('/catalog', function($universeUrlName) use($app) {
+
+  // Génération des Sous-familles
+  $subfamilies = array();
+  $file = array_map("str_getcsv", file("https://docs.google.com/spreadsheets/d/1s10qJviUHayRFRHxSbMGNDKaIg7-gyYAjz6kOPhPm6g/pub?gid=1976579302&single=true&output=csv",FILE_SKIP_EMPTY_LINES));
+  $keys = array_shift($file);
+  foreach ($file as $i=>$row) {
+      $subfamilies[$row[0]][] = array_combine($keys, $row);
+  }
+
+  $families = array();
+  $file = array_map("str_getcsv", file("https://docs.google.com/spreadsheets/d/1s10qJviUHayRFRHxSbMGNDKaIg7-gyYAjz6kOPhPm6g/pub?gid=1183165030&single=true&output=csv",FILE_SKIP_EMPTY_LINES));
+  $keys = array_shift($file);
+  foreach ($file as $i=>$row) {
+      $families[$row[0]][] = array_combine($keys, $row);
+  }
+
+
+  $universes = array();
+  $file = array_map("str_getcsv", file("https://docs.google.com/spreadsheets/d/1s10qJviUHayRFRHxSbMGNDKaIg7-gyYAjz6kOPhPm6g/pub?gid=1971894571&single=true&output=csv",FILE_SKIP_EMPTY_LINES));
+  $keys = array_shift($file);
+  foreach ($file as $i=>$row) {
+      $universes[$row[0]] = array_combine($keys, $row);
+  }
+
+
+  $catalog = $universes;
+  header('Content-type: application/json');
+  die(json_encode( $catalog ));
+
+});
+
+
+
 $app->get('/{universeUrlName}-CCU0000/', function($universeUrlName) use($app) {
 
   // Génération des Univers
