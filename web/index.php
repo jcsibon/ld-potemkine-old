@@ -164,7 +164,7 @@ $app->get('article-{articleId}', function($articleId) use($app) {
 $app->get('/fenetres-CCU0000/fenetres-{familyUrlname}-CCN0000/', function($familyUrlname) use($app) {
 
   return $app['twig']->render('windows.twig');
-})->assert('universeUrlName', 'pvc|pin|chene');
+})->assert('familyUrlname', 'pvc|pin|chene');
 
 $app->get('/configurateur', function() use($app) {
   return $app['twig']->render('configurateur.twig');
