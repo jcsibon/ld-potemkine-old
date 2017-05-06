@@ -51,7 +51,7 @@ $app->get('/catalog', function() use($app) {
 
   $catalog = $universes;
   header('Content-type: application/json');
-  die(json_encode( $catalog ));
+  die(json_encode( $catalog, true ));
 
 });
 
