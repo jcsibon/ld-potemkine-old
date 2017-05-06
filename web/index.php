@@ -22,7 +22,7 @@ $app->get('/', function() use($app) {
   return $app['twig']->render('index.twig');
 });
 
-$app->get('/{universeUrlName}-CCU{universeId}/', function($universeUrlName, $universeId) use($app) {
+$app->get('/{universeUrlName}-CCU0000/', function($universeUrlName, $universeId) use($app) {
 
   // Génération des Univers
   $handle = fopen('https://docs.google.com/spreadsheets/d/1s10qJviUHayRFRHxSbMGNDKaIg7-gyYAjz6kOPhPm6g/pub?gid=1971894571&single=true&output=csv', "r");
@@ -79,15 +79,15 @@ $app->get('/{universeUrlName}-CCU{universeId}/', function($universeUrlName, $uni
 
 
   $catalog = $universes;
-  header('Content-type: application/json');
-  die(json_encode( $catalog ));
+  // header('Content-type: application/json');
+  // die(json_encode( $catalog ));
 
   $app["twig"]->addGlobal("data", $data);
   $app["twig"]->addGlobal("subfamilies", $subfamilies);
   return $app['twig']->render('universe.twig');
 });
 
-$app->get('/{universeUrlName}-CCU{universeId}/{familyUrlName}-CCN{familyId}/', function($familyId) use($app) {
+$app->get('/{universeUrlName}-CCU0000/{familyUrlName}-CCN0000/', function($familyId) use($app) {
 
 
 
@@ -97,7 +97,7 @@ $app->get('/{universeUrlName}-CCU{universeId}/{familyUrlName}-CCN{familyId}/', f
   return $app['twig']->render('family.twig');
 });
 
-$app->get('/{universeUrlName}-CCU{universeId}/{familyUrlName}-CCN{familyId}/{subfamilyUrlName}-CCN{subfamilyId}', function($subfamilyId) use($app) {
+$app->get('/{universeUrlName}-CCU0000/{familyUrlName}-CCN0000/{subfamilyUrlName}-CCN0000', function($subfamilyId) use($app) {
 
 
 
