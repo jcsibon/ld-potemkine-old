@@ -290,6 +290,7 @@
     }
     
     .logolap {
+        cursor: pointer;
         position: absolute;
         top: 45px;
         left: 65px;
