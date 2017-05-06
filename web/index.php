@@ -130,7 +130,7 @@ $app->get('/{universeUrlName}-CCU0000/{familyUrlName}-CCN0000/', function($unive
 
 
   return $app['twig']->render('family.twig');
-});
+})->assert('universeUrlName', '[a-zA-Z1-9\-_\/]+')->assert('familyUrlName', '[a-zA-Z1-9\-_\/]+');
 
 $app->get('/{universeUrlName}-CCU0000/{familyUrlName}-CCN0000/{subfamilyUrlName}-CCN0000', function($universeUrlName, $familyUrlName, $subfamilyUrlName) use($app) {
 
@@ -139,7 +139,7 @@ $app->get('/{universeUrlName}-CCU0000/{familyUrlName}-CCN0000/{subfamilyUrlName}
 
 
   return $app['twig']->render('family.twig');
-});
+})->assert('universeUrlName', '[a-zA-Z1-9\-_\/]+')->assert('familyUrlName', '[a-zA-Z1-9\-_\/]+')->assert('subfamilyUrlName', '[a-zA-Z1-9\-_\/]+');
 
 $app->get('product-FPC{productId}', function($productId) use($app) {
 
