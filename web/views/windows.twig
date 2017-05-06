@@ -57,6 +57,7 @@
     {% endif %} 
   </div>
   <br>
+  {% if global.request.get('familyUrlname') == "pvc" or global.request.get('familyUrlname') == "chene" or global.request.get('familyUrlname') == "pin" %}
   <div class="tab-content">
     <div class="tab-pane fane in active" id="classique">
       {% if global.request.get('familyUrlname') == "pvc" %}
@@ -65,13 +66,14 @@
         {% include 'windows-classic-pin.twig' %}
       {% elseif global.request.get('familyUrlname') == "chene" %}
         {% include 'windows-classic-chene.twig' %}
-      {% elseif global.request.get('familyUrlname') == "aluminium" %}
       {% endif %} 
     </div>
     <div class="tab-pane fane in active" id="excellence">
 
     </div>
   </div>
-{% endblock %}
+  {% else %}
+  {% endif %}
 </div>
 <img src="/images/headers/fenetres-{{ global.request.get('familyUrlname') }}.jpg">
+{% endblock %}
