@@ -67,7 +67,23 @@
       {% endif %} 
     </div>
     <div class="tab-pane fane in active" id="excellence">
-
+      {% if global.request.get('familyUrlname') == "pvc" %}
+        <div class="famille">
+          <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pretium varius sollicitudin. Donec ut arcu quis quam posuere sodales. Mauris sed egestas quam. Pellentesque eleifend rutrum accumsan. Nunc dapibus tristique vehicula. Aliquam in pulvinar lorem. Quisque quis mauris molestie, luctus ligula sit amet, tempus nulla. Nulla luctus, ipsum sit amet tincidunt semper, justo est ultricies ex, hendrerit elementum leo lectus a diam.</p>
+          <p class="text-justify">Ouvrant et dormant 60 mm à 3chambres d’isolationthermique • Doublevitrage 24 mm Énergie STAR traité�aible émissivitéavecgaz argonet intercalaire haute isolation thermique (Ug = 1,1) • Isolationacoustique :AC1(RA ;tr = 28dB) • Doublejoint d’isolationthermiqueet acoustique • Disponiblesous 10jours maximum</p>
+        </div>
+        {% include 'windows-excellence-pvc.twig' %}
+      {% elseif global.request.get('familyUrlname') == "pin" %}
+        <div class="famille">
+          <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pretium varius sollicitudin. Donec ut arcu quis quam posuere sodales. Mauris sed egestas quam. Pellentesque eleifend rutrum accumsan. Nunc dapibus tristique vehicula. Aliquam in pulvinar lorem. Quisque quis mauris molestie, luctus ligula sit amet, tempus nulla. Nulla luctus, ipsum sit amet tincidunt semper, justo est ultricies ex, hendrerit elementum leo lectus a diam.</p>
+        </div>
+        {% include 'windows-excellence-pin.twig' %}
+      {% elseif global.request.get('familyUrlname') == "chene" %}
+        <div class="famille">
+          <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pretium varius sollicitudin. Donec ut arcu quis quam posuere sodales. Mauris sed egestas quam. Pellentesque eleifend rutrum accumsan. Nunc dapibus tristique vehicula. Aliquam in pulvinar lorem. Quisque quis mauris molestie, luctus ligula sit amet, tempus nulla. Nulla luctus, ipsum sit amet tincidunt semper, justo est ultricies ex, hendrerit elementum leo lectus a diam.</p>
+        </div>
+        {% include 'windows-excellence-chene.twig' %}
+      {% endif %} 
     </div>
   </div>
   {% else %}
