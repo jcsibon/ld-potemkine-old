@@ -23,7 +23,7 @@ $app->get('/', function() use($app) {
 });
 
 
-$app->get('/catalog', function($universeUrlName) use($app) {
+$app->get('/catalog', function() use($app) {
 
   // Génération des Sous-familles
   $subfamilies = array();
