@@ -116,18 +116,11 @@
         line-height: 1.3em;
         position: relative;
     }
-    /*
-    .container-fluid {
-        position: absolute;
-        left: 50%;
-        margin-left: -640px;
-    }
-    */
 
-    .container-fluid {
-        padding-right: 30px;
-        padding-left: 30px;
+    .container {
+        width:1280px;
     }
+
     .famille p {
         font-weight: 400;
         font-size: 14px;
