@@ -6,7 +6,7 @@
 		<div class="container">
 			<div class="headerUnivers">
 				<img src="/images/headers/{{ global.request.get('universeUrlName') }}.jpg" />
-				<p>{{ global.request.get('universeUrlName') }}</p>
+				<p>{{ catalog.get(global.request.get('universeUrlName')).get('universeTitle') }}</p>
 				<span>
 					Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam. Accusantium doloremque laudantium, totam rem aperiam</span>
 					<img src="" />

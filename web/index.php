@@ -82,7 +82,7 @@ $app->get('/{universeUrlName}-CCU0000/', function($universeUrlName) use($app) {
   // header('Content-type: application/json');
   // die(json_encode( $catalog ));
 
-  $app["twig"]->addGlobal("data", $data);
+  $app["twig"]->addGlobal("catalog", $catalog);
   $app["twig"]->addGlobal("subfamilies", $subfamilies);
   return $app['twig']->render('universe.twig');
 });
