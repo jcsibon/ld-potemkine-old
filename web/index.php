@@ -36,7 +36,7 @@ foreach ($file as $i=>$row) {
     $universes[] = array_combine($keys, $row);
 }
 
-
+  header('Content-type: application/json');
 
 foreach($universes as $universe)
   die(json_encode( $universe, true ));
