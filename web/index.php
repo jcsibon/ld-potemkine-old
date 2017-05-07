@@ -39,7 +39,9 @@ foreach ($file as $i=>$row) {
 
 
 foreach($universes as $universe)
-  $app['catalog'][$universe['universeUrlname']]=$universe;
+  die(json_encode( $universe, true ));
+
+  $app['catalog'][$universeUrlname]]=$universe;
 
   header('Content-type: application/json');
   die(json_encode( $app['catalog'], true ));
