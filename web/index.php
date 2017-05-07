@@ -36,11 +36,13 @@ foreach ($file as $i=>$row) {
     $universes[] = array_combine($keys, $row);
 }
 
-  header('Content-type: application/json');
-  die(json_encode( $universes, true ));
+
 
 foreach($universes as $universe)
   $app['catalog'][$universe['universeUrlname']]=$universe;
+
+  header('Content-type: application/json');
+  die(json_encode( $app['catalog'], true ));
 
 foreach($subuniverses as $subuniverse)
   $app['catalog'][$subuniverse['universeUrlname']]['subuniverses'][$subuniverse['subuniverseUrlname']]=$subuniverse;
