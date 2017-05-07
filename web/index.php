@@ -5,8 +5,6 @@ require('../vendor/autoload.php');
 $app = new Silex\Application();
 $app['debug'] = true;
 
-
-
 $app->register(new Silex\Provider\MonologServiceProvider(), array(
   'monolog.logfile' => 'php://stderr',
 ));
@@ -33,7 +31,8 @@ $app->get('/catalog', function() use($app) {
     $catalog[$universe['universeUrlname']]=$universe;
 
   header('Content-type: application/json');
-  die(json_encode($catalog));
+  die(json_encode($catalog, true));
+  return true;
 });
 
 $app->run();
