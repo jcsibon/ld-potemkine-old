@@ -83,4 +83,35 @@ $app->get('/catalog', function() use($app) {
   return true;
 });
 
+$app->get('/{universeUrlName}-CCU0000/', function($universeUrlName) use($app) {
+  return $app['twig']->render('universe.twig');
+})->assert('universeUrlName', '[a-z\-]+');
+
+$app->get('/{universeUrlName}-CCU0000/{familyUrlName}-CCN0000/', function($universeUrlName, $familyUrlName) use($app) {
+  return $app['twig']->render('family.twig');
+})->assert('universeUrlName', '[a-z\-]+')->assert('familyUrlName', '[a-z\-]+');
+
+$app->get('/{universeUrlName}-CCU0000/{familyUrlName}-CCN0000/{subfamilyUrlName}-CCN0000', function($universeUrlName, $familyUrlName, $subfamilyUrlName) use($app) {
+  return $app['twig']->render('family.twig');
+})->assert('universeUrlName', '[a-z\-]+')->assert('familyUrlName', '[a-z\-]+')->assert('subfamilyUrlName', '[a-z\-]+');
+
+$app->get('product-FPC{productId}', function($productId) use($app) {
+  return $app['twig']->render('product.twig');
+});
+
+$app->get('article-{articleId}', function($articleId) use($app) {
+  return $app['twig']->render('article.twig');
+});
+
+$app->get('/fenetres-CCU0000/fenetres-{familyUrlname}-CCN0000/', function($familyUrlname) use($app) {
+
+  return $app['twig']->render('windows.twig');
+})->assert('familyUrlname', '/pvc|pin|chene/');
+
+$app->get('/configurateur', function() use($app) {
+  return $app['twig']->render('configurateur.twig');
+});
+
+
+
 $app->run();
