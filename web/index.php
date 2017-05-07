@@ -30,7 +30,7 @@ $app->get('/', function() use($app) {
 
 $app->get('/catalog', function() use($app) {
   header('Content-type: application/json');
-  die($app['catalog']);
+  die(json_encode($app['catalog']));
 });
 
 $app->run();
