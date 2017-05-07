@@ -41,7 +41,7 @@ foreach($universes as $universe)
   $app['catalog'][$universe['universeUrlname']]=$universe;
 
 foreach($subuniverses as $subuniverse)
-  $app['catalog'][$subuniverse['universeUrlname']][$subuniverse['subuniverseUrlname']]=$subuniverse;
+  $app['catalog'][$subuniverse['universeUrlname']]['subuniverses'][$subuniverse['subuniverseUrlname']]=$subuniverse;
 
 
 // Register the monolog logging service
