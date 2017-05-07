@@ -163,10 +163,10 @@ $app->get('article-{articleId}', function($articleId) use($app) {
   return $app['twig']->render('article.twig');
 });
 
-$app->get('/fenetres-CCU0000/{familyUrlname}-CCN0000/', function($familyUrlname) use($app) {
+$app->get('/fenetres-CCU0000/fenetres-{familyUrlname}-CCN0000/', function($familyUrlname) use($app) {
 
   return $app['twig']->render('windows.twig');
-})->assert('familyUrlname', '/fenetres-pvc|fenetres-pin|fenetres-chene/');
+})->assert('familyUrlname', '/pvc|pin|chene/');
 
 $app->get('/configurateur', function() use($app) {
   return $app['twig']->render('configurateur.twig');
