@@ -24,11 +24,39 @@ $app->get('/catalog', function() use($app) {
   $file = array_map("str_getcsv", file("https://docs.google.com/spreadsheets/d/1s10qJviUHayRFRHxSbMGNDKaIg7-gyYAjz6kOPhPm6g/pub?gid=1971894571&single=true&output=csv",FILE_SKIP_EMPTY_LINES));
   $keys = array_shift($file);
   foreach ($file as $i=>$row) {
-      $universes[] = array_combine($keys, $row);
+      foreach(array_combine($keys, $row) as $row) {
+        $catalog[$row['universeUrlname']]=$row;
+      }
   }
 
-  foreach($universes as $universe)
-    $catalog[$universe['universeUrlname']]=$universe;
+  $subuniverses = array();
+  $file = array_map("str_getcsv", file("https://docs.google.com/spreadsheets/d/1s10qJviUHayRFRHxSbMGNDKaIg7-gyYAjz6kOPhPm6g/pub?gid=1183165030&single=true&output=csv",FILE_SKIP_EMPTY_LINES));
+  $keys = array_shift($file);
+  foreach ($file as $i=>$row) {
+      foreach(array_combine($keys, $row) as $row) {
+        $catalog[$row['universeUrlname']]['subuniverses'][$row['subuniverseUrlname']]=$row;
+      }
+  }
+
+
+  /*
+  $subfamilies = array();
+  $file = array_map("str_getcsv", file("https://docs.google.com/spreadsheets/d/1s10qJviUHayRFRHxSbMGNDKaIg7-gyYAjz6kOPhPm6g/pub?gid=1976579302&single=true&output=csv",FILE_SKIP_EMPTY_LINES));
+  $keys = array_shift($file);
+  foreach ($file as $i=>$row) {
+      $subfamilies[] = array_combine($keys, $row);
+  }
+
+  $families = array();
+  $file = array_map("str_getcsv", file("https://docs.google.com/spreadsheets/d/1s10qJviUHayRFRHxSbMGNDKaIg7-gyYAjz6kOPhPm6g/pub?gid=1183165030&single=true&output=csv",FILE_SKIP_EMPTY_LINES));
+  $keys = array_shift($file);
+  foreach ($file as $i=>$row) {
+      $families[] = array_combine($keys, $row);
+  }
+  */
+
+
+
 
   header('Content-type: application/json');
   die(json_encode($catalog, true));
