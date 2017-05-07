@@ -13,7 +13,7 @@ foreach ($file as $i=>$row) {
 }
 
 foreach($universes as $universe)
-  $app['catalog']=$universe;
+  $app['catalog'][$universes['universeUrlname']]=$universe;
 
 $app->register(new Silex\Provider\MonologServiceProvider(), array(
   'monolog.logfile' => 'php://stderr',
