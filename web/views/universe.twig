@@ -1,7 +1,6 @@
-{% extends "layout.html" %}
+	{% extends "layout.html" %}
 
 {% block content %}
-
 	<section id="univers">
 		<div class="container">
 			<div class="headerUnivers">
@@ -12,17 +11,50 @@
 					<img src="" />
 			</div>
 			<div class="ancre">
-			  <div class="ancres" onclick="javascript:animationScroll('#famille0')">Fenêtres<img src="/images/fleche.png"></div>
-			  <div class="ancres" onclick="javascript:animationScroll('#famille1')">Porte-fenêtres<img src="/images/fleche.png"></div>
-			  <div class="ancres" onclick="javascript:animationScroll('#famille2')">Chassis<img src="/images/fleche.png"></div>
-			  <div class="ancres" onclick="javascript:animationScroll('#famille3')">Abbattants<img src="/images/fleche.png"></div>
+				{% for subuniverse in catalog[global.request.get('universeUrlname')]['subuniverses'] %}
+				  <div class="ancres" onclick="javascript:animationScroll('#{{ subuniverse['subuniverseUrlname'] }}')">{{ subuniverse['subuniverseTitle'] }}<img src="/images/fleche.png"></div>
+				{% endfor %}
 			</div>
 			<img src="/images/contents/{{ global.request.get('universeUrlName') }}.jpg" />
+			{% for subuniverse in catalog[global.request.get('universeUrlname')]['subuniverses'] %}
+				<div class="famille"  id="{{ subuniverse['subuniverseUrlname'] }}">
+					<div class="familleLeft">
+						<h2 class="h2">{{ subuniverse['subuniverseTitle'] }}</h2>
+						<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.</p>
+						<div class="pinterest">
+							<div class="pinterestImage1">
+							</div>
+							<div class="pinterestImage2">
+							</div>
+							<div class="pinterestImage3">
+							</div>
+							<div class="pinterestTitre">
+								<p><br/><img src="pin.png" /></p>
+								<p>{{ subuniverse['subuniverseTitle'] }}</p>
+								<span class="pinterestVoir">Voir</span>
+							</div>
+						</div>
+					</div>
+					<div class="familleRight">
+						{% if subuniverse['subuniverseUrlname'] == 'fenetres-portes-fenetres-battantes' %}
 
 
-
-
-
+						{% else %}
+						<ul>
+							{% for family in subuniverse['families'] %}
+								<li>
+									<a href="/{{ universeUrlname }}-CCU0000/{{ subuniverseUrlname }}-CCN0000/{{ familyUrlname }}-CCN0000">{{ familyTitle }}</a>
+								</li>
+							{% endfor %}
+						</ul>
+						{% endif %}
+					</div>
+				</div>
+			{% endfor %}
+			<img src="/images/footerFenetres.jpg" />
+		</div>
+	</section>
+{% endblock %}
 
 <!--
 $('header .ancre').append('<div class="ancres" onclick="javascript:animationScroll(\'#famille' + i + '\')">
@@ -33,71 +65,4 @@ $('section#univers').append('<div class="famille ' + familleCss + '" id="famille
 <div class="familleLeft">
 <h2 class="h2">
 ' + familles[i] + '</h2>
-<p>
-Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.</p>
-<div class="pinterest">
-<div class="pinterestImage1">
-</div>
-<div class="pinterestImage2">
-</div>
-<div class="pinterestImage3">
-</div>
-<div class="pinterestTitre">
-<p>
-<br/>
-<img src="pin.png" />
-</p>
-<p>
-' + familles[i] + '</p>
-<span class="pinterestVoir">
-Voir</span>
-</div>
-</div>
-</div>
-<div class="familleRight">
-</div>
-</div>
-');
 -->
-
-{% for i in 0..3 %}
-
-	<div class="famille"  id="famille' + i + '"> <!-- ' + familleCss + '-->
-		<div class="familleLeft">
-			<h2 class="h2">familles[i]</h2>
-			<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.</p>
-			<div class="pinterest">
-				<div class="pinterestImage1">
-				</div>
-				<div class="pinterestImage2">
-				</div>
-				<div class="pinterestImage3">
-				</div>
-				<div class="pinterestTitre">
-					<p>
-						<br/>
-						<img src="pin.png" />
-					</p>
-					<p>
-						' + familles[i] + '</p>
-						<span class="pinterestVoir">
-							Voir</span>
-						</div>
-					</div>
-				</div>
-				<div class="familleRight">
-					<ul>
-					{% for row in catalog %}
-						<li>
-							{{ row }}</li>
-
-						{% endfor %}
-					</ul>
-				</div>
-			</div>
-		{% endfor %}
-		<img src="/images/footerFenetres.jpg" />
-	</div>
-</section>
-
-{% endblock %}

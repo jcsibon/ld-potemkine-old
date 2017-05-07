@@ -11,14 +11,22 @@ $subfamilies = array();
 $file = array_map("str_getcsv", file("https://docs.google.com/spreadsheets/d/1s10qJviUHayRFRHxSbMGNDKaIg7-gyYAjz6kOPhPm6g/pub?gid=1976579302&single=true&output=csv",FILE_SKIP_EMPTY_LINES));
 $keys = array_shift($file);
 foreach ($file as $i=>$row) {
-    $subfamilies[$row[0]][] = array_combine($keys, $row);
+    $subfamilies[] = array_combine($keys, $row);
 }
 
 $families = array();
 $file = array_map("str_getcsv", file("https://docs.google.com/spreadsheets/d/1s10qJviUHayRFRHxSbMGNDKaIg7-gyYAjz6kOPhPm6g/pub?gid=1183165030&single=true&output=csv",FILE_SKIP_EMPTY_LINES));
 $keys = array_shift($file);
 foreach ($file as $i=>$row) {
-    $families[$row[0]][] = array_combine($keys, $row);
+    $families[] = array_combine($keys, $row);
+}
+
+
+$subuniverses = array();
+$file = array_map("str_getcsv", file("https://docs.google.com/spreadsheets/d/1s10qJviUHayRFRHxSbMGNDKaIg7-gyYAjz6kOPhPm6g/pub?gid=1183165030&single=true&output=csv",FILE_SKIP_EMPTY_LINES));
+$keys = array_shift($file);
+foreach ($file as $i=>$row) {
+    $subuniverses[] = array_combine($keys, $row);
 }
 
 
@@ -26,11 +34,15 @@ $universes = array();
 $file = array_map("str_getcsv", file("https://docs.google.com/spreadsheets/d/1s10qJviUHayRFRHxSbMGNDKaIg7-gyYAjz6kOPhPm6g/pub?gid=1971894571&single=true&output=csv",FILE_SKIP_EMPTY_LINES));
 $keys = array_shift($file);
 foreach ($file as $i=>$row) {
-    $universes[$row[0]] = array_combine($keys, $row);
+    $universes[] = array_combine($keys, $row);
 }
 
+foreach($universes as $universe)
+  $app['catalog'][$universe['universeUrlname']]=$universe;
 
-$app['catalog'] = $universes;
+foreach($subuniverses as $subuniverse)
+  $app['catalog'][$subuniverse['universeUrlname']][$subuniverse['subuniverseUrlname']]=$subuniverse;
+
 
 // Register the monolog logging service
 $app->register(new Silex\Provider\MonologServiceProvider(), array(
@@ -107,12 +119,21 @@ $app->get('/{universeUrlName}-CCU0000/', function($universeUrlName) use($app) {
   }
 
 
+  $subuniverses = array();
+  $file = array_map("str_getcsv", file("https://docs.google.com/spreadsheets/d/1s10qJviUHayRFRHxSbMGNDKaIg7-gyYAjz6kOPhPm6g/pub?gid=1121908549&single=true&output=csv",FILE_SKIP_EMPTY_LINES));
+  $keys = array_shift($file);
+  foreach ($file as $i=>$row) {
+      $subuniverses[] = array_combine($keys, $row);
+  }
+
   $universes = array();
   $file = array_map("str_getcsv", file("https://docs.google.com/spreadsheets/d/1s10qJviUHayRFRHxSbMGNDKaIg7-gyYAjz6kOPhPm6g/pub?gid=1971894571&single=true&output=csv",FILE_SKIP_EMPTY_LINES));
   $keys = array_shift($file);
   foreach ($file as $i=>$row) {
-      $universes[$row[0]] = array_combine($keys, $row);
+      $universes[] = array_combine($keys, $row);
   }
+
+
 
 
   $catalog = $universes;
