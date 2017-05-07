@@ -32,7 +32,8 @@ $app->get('/catalog', function() use($app) {
   $keys = array_shift($file);
   foreach ($file as $i=>$row) {
       foreach(array_combine($keys, $row) as $data) {
-        $catalog[$data['subuniverseUrlname']]=$data;
+        $catalog[]=$data;
+        //$catalog[$data['subuniverseUrlname']]=$data;
         // $catalog[$row['universeUrlname']]['subuniverses'][$row['subuniverseUrlname']]=$row;
       }
   }
