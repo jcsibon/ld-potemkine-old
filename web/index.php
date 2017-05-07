@@ -13,7 +13,7 @@ foreach ($file as $i=>$row) {
 }
 
 foreach($universes as $universe)
-  $app['catalog'][]=$universe;
+  $app['catalog'][$universe['universeUrlname']]=$universe;
 
 $app->register(new Silex\Provider\MonologServiceProvider(), array(
   'monolog.logfile' => 'php://stderr',
@@ -30,7 +30,7 @@ $app->get('/', function() use($app) {
 
 $app->get('/catalog', function() use($app) {
   header('Content-type: application/json');
-  die(json_encode($app['catalog']));
+  die("hello");
 });
 
 $app->run();
