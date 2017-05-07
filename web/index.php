@@ -23,16 +23,16 @@ $app->get('/catalog', function() use($app) {
   $file = array_map("str_getcsv", file("https://docs.google.com/spreadsheets/d/1s10qJviUHayRFRHxSbMGNDKaIg7-gyYAjz6kOPhPm6g/pub?gid=1971894571&single=true&output=csv",FILE_SKIP_EMPTY_LINES));
   $keys = array_shift($file);
   foreach ($file as $i=>$row) {
-      foreach(array_combine($keys, $row) as $row) {
-        $catalog[$row['universeUrlname']]=$row;
+      foreach(array_combine($keys, $row) as $data) {
+        $cata[$data['universeUrlname']]=$data;
       }
   }
 
   $file = array_map("str_getcsv", file("https://docs.google.com/spreadsheets/d/1s10qJviUHayRFRHxSbMGNDKaIg7-gyYAjz6kOPhPm6g/pub?gid=1183165030&single=true&output=csv",FILE_SKIP_EMPTY_LINES));
   $keys = array_shift($file);
   foreach ($file as $i=>$row) {
-      foreach(array_combine($keys, $row) as $row) {
-        $catalog[$row['subuniverseUrlname']]=$row;
+      foreach(array_combine($keys, $row) as $data) {
+        $catalog[$data['subuniverseUrlname']]=$data;
         // $catalog[$row['universeUrlname']]['subuniverses'][$row['subuniverseUrlname']]=$row;
       }
   }
