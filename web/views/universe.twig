@@ -11,9 +11,11 @@
 					<img src="" />
 			</div>
 			<div class="ancre">
+				{#
 				{% for subuniverse in catalog[global.request.get('universeUrlname')]['subuniverses'] %}
 				  <div class="ancres" onclick="javascript:animationScroll('#{{ subuniverse['subuniverseUrlname'] }}')">{{ subuniverse['subuniverseTitle'] }}<img src="/images/fleche.png"></div>
 				{% endfor %}
+				#}
 			</div>
 			<img src="/images/contents/{{ global.request.get('universeUrlName') }}.jpg" />
 			{% for subuniverse in catalog[global.request.get('universeUrlname')]['subuniverses'] %}
