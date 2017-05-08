@@ -37,8 +37,12 @@
 					</div>
 					<div class="familleRight">
 						{% if subuniverse['subuniverseUrlname'] == 'fenetres-portes-fenetres-battantes' %}
-
-
+								{% for gamme in ['pin','pvc','chene','aluminium'] %}
+								<fieldset class="ssfamilleBloc" onclick="location.href='liste.html?famille=Portes d'entrée&amp;univers=Portes'">
+								  <legend>Pin</legend>
+								  <div class="ssfamille" style="background:url(1)"></div>
+								</fieldset>
+								{% endfor %}
 						{% else %}
 							{% for family in subuniverse['families'] %}
 								<fieldset class="ssfamilleBloc" onclick="location.href='liste.html?famille=Portes d'entrée&amp;univers=Portes'">
