@@ -48,7 +48,7 @@ $app->get('/', function() use($app) {
   return $app['twig']->render('index.twig');
 });
 
-$app->get('/catalog', function() use($app) {
+$app->get('/catalog', function() use($app, $catalog) {
 
 /*
   $file = array_map("str_getcsv", file("https://docs.google.com/spreadsheets/d/1s10qJviUHayRFRHxSbMGNDKaIg7-gyYAjz6kOPhPm6g/pub?gid=1971894571&single=true&output=csv",FILE_SKIP_EMPTY_LINES));
@@ -80,7 +80,7 @@ $app->get('/catalog', function() use($app) {
   }
 */
   header('Content-type: application/json');
-  die(json_encode($app['twig']));
+  die(json_encode($catalog));
   return true;
 });
 
