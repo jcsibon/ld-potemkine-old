@@ -80,7 +80,7 @@ $app->get('/catalog', function() use($app) {
   }
 */
   header('Content-type: application/json');
-  die(json_encode($catalog, true));
+  die(json_encode($app['twig'], true));
   return true;
 });
 
