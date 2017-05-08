@@ -11,11 +11,9 @@
 					<img src="" />
 			</div>
 			<div class="ancre">
-
 				{% for subuniverse in catalog[global.request.get('universeUrlname')]['subuniverses'] %}
 				  <div class="ancres" onclick="javascript:animationScroll('#{{ subuniverse['subuniverseUrlname'] }}')">{{ subuniverse['subuniverseTitle'] }}<img src="/images/fleche.png"></div>
 				{% endfor %}
-
 			</div>
 			<img src="/images/contents/{{ global.request.get('universeUrlname') }}.jpg" />
 			{% for subuniverse in catalog[global.request.get('universeUrlname')]['subuniverses'] %}
@@ -42,9 +40,12 @@
 
 
 						{% else %}
-						<ul>
-
-						</ul>
+							{% for family in subuniverse['families'] %}
+								<fieldset class="ssfamilleBloc" onclick="location.href='liste.html?famille=Portes d'entrée&amp;univers=Portes'">
+								  <legend>{{ family.familyName }}</legend>
+								  <div class="ssfamille" style="background:url(1)"></div>
+								</fieldset>
+							{% endfor %}
 						{% endif %}
 					</div>
 				</div>
