@@ -1,13 +1,13 @@
 <div class="container breadcrumb">
-    <nav> <a href="javascript:history.back()"><strong>&lt; Retour </strong></a><span>|</span> <a href="https://www.lapeyre.fr">Accueil</a> 
+    <nav> <a href="/javascript:history.back()"><strong>&lt; Retour </strong></a><span>|</span> <a href="/https://www.lapeyre.fr">Accueil</a> 
 	{% if global.request.get('universeUrlname') is defined %}
-		<span>></span> <a href="{{ global.request.get('universeUrlname') }}-CCU0000/">{{ catalog[global.request.get('universeUrlname')]['universeTitle'] }}</a>&nbsp;
+		<span>></span> <a href="/{{ global.request.get('universeUrlname') }}-CCU0000/">{{ catalog[global.request.get('universeUrlname')]['universeTitle'] }}</a>&nbsp;
 		{% if global.request.get('subuniverseUrlname') is defined %}
-			<span>></span> <a href="{{ global.request.get('universeUrlname') }}-CCU0000"></a>&nbsp;
+			<span>></span> <a href="/{{ global.request.get('universeUrlname') }}-CCU0000"></a>&nbsp;
 			{% if global.request.get('familyUrlname') is defined %}
-				<span>></span> <a href="{{ global.request.get('universeUrlname') }}-CCU0000/{{ global.request.get('subuniverseUrlname') }}-CCN0000/{{ global.request.get('familyUrlname') }}-CCN0000"></a>&nbsp;
+				<span>></span> <a href="/{{ global.request.get('universeUrlname') }}-CCU0000/{{ global.request.get('subuniverseUrlname') }}-CCN0000/{{ global.request.get('familyUrlname') }}-CCN0000"></a>&nbsp;
 				{% if global.request.get('subfamilyUrlname') is defined %}
-					<span>></span> <a href="{{ global.request.get('universeUrlname') }}-CCU0000/{{ global.request.get('subuniverseUrlname') }}-CCN0000/{{ global.request.get('familyUrlname') }}-CCN0000/{{ global.request.get('subfamilyUrlname') }}-CCN0000"></a>&nbsp;
+					<span>></span> <a href="/{{ global.request.get('universeUrlname') }}-CCU0000/{{ global.request.get('subuniverseUrlname') }}-CCN0000/{{ global.request.get('familyUrlname') }}-CCN0000/{{ global.request.get('subfamilyUrlname') }}-CCN0000"></a>&nbsp;
 				{% endif %}
 			{% endif %}
 		{% endif %}
