@@ -10,5 +10,13 @@
   {% block content %}{% endblock %}
 
  {% include 'footer.html' %}
+
+<script>
+function animationScroll(destination) {
+    $('html, body').animate({
+        scrollTop: $( destination ).offset().top
+    }, 500);
+} 
+</script>
 </body>
 </html>
