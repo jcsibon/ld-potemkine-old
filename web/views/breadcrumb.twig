@@ -1,5 +1,16 @@
 <div class="container breadcrumb">
-
-    <nav> <a href="javascript:history.back()"><strong>&lt; Retour </strong></a><span>|</span> <a href="https://www.lapeyre.fr">Accueil</a> <span>></span> <a href="" id="breadcrumbUnivers"></a><span>></span> <strong></strong></nav>
-
+    <nav> <a href="javascript:history.back()"><strong>&lt; Retour </strong></a><span>|</span> <a href="https://www.lapeyre.fr">Accueil</a> 
+	{% if global.request.get('universeUrlname') is defined %}
+		<span>></span> <a href="{{ global.request.get('universeUrlname') }}-CCU0000/">{{ catalog[global.request.get('universeUrlname')]['universeTitle'] }}</a>&nbsp;
+		{% if global.request.get('subuniverseUrlname') is defined %}
+			<span>></span> <a href="{{ global.request.get('universeUrlname') }}-CCU0000"></a>&nbsp;
+			{% if global.request.get('familyUrlname') is defined %}
+				<span>></span> <a href="{{ global.request.get('universeUrlname') }}-CCU0000/xxx-CCN0000/xxx-CCN0000"></a>&nbsp;
+				{% if global.request.get('familyUrlname') is defined %}
+					<span>></span> <a href="{{ global.request.get('universeUrlname') }}-CCU0000/xxx-CCN0000/xxx-CCN0000/xxx-CCN0000"></a>&nbsp;
+				{% endif %}
+			{% endif %}
+		{% endif %}
+	{% endif %}
+	</nav>
 </div>
