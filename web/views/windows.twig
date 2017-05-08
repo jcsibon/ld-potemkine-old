@@ -6,11 +6,11 @@
 
 <div class="container">
   <div class="headerUnivers">
-    <img src="/images/headers/fenetres-{{ global.request.get('familyUrlname') }}.jpg">
+    <img src="/images/headers/fenetres-{{ global.request.get('type') }}.jpg">
     <p>Fenêtres PVC</p><span>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam. Accusantium doloremque laudantium, totam rem aperiam</span>
   </div>
 <img class="img-responsive" src="/images/cartouche.png" />
-  {% if global.request.get('familyUrlname') == "pvc" or global.request.get('familyUrlname') == "chene" or global.request.get('familyUrlname') == "pin" %}
+  {% if global.request.get('type') == "pvc" or global.request.get('type') == "chene" or global.request.get('type') == "pin" %}
 <div style="background-color:#EFEFEF">
  <ul class="nav nav-tabs row">
     <li class="col-md-offset-1 col-md-5 active">
@@ -45,21 +45,21 @@
 </div>
   {% endif %} 
 
-  {% if global.request.get('familyUrlname') == "pvc" or global.request.get('familyUrlname') == "chene" or global.request.get('familyUrlname') == "pin" %}
+  {% if global.request.get('type') == "pvc" or global.request.get('type') == "chene" or global.request.get('type') == "pin" %}
   <div class="tab-content">
     <div class="tab-pane fade in active" id="classique">
-      {% if global.request.get('familyUrlname') == "pvc" %}
+      {% if global.request.get('type') == "pvc" %}
         <div class="famille">
           <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pretium varius sollicitudin. Donec ut arcu quis quam posuere sodales. Mauris sed egestas quam. Pellentesque eleifend rutrum accumsan. Nunc dapibus tristique vehicula. Aliquam in pulvinar lorem. Quisque quis mauris molestie, luctus ligula sit amet, tempus nulla. Nulla luctus, ipsum sit amet tincidunt semper, justo est ultricies ex, hendrerit elementum leo lectus a diam.</p>
           <p class="text-justify">Ouvrant et dormant 60 mm à 3chambres d’isolationthermique • Doublevitrage 24 mm Énergie STAR traité�aible émissivitéavecgaz argonet intercalaire haute isolation thermique (Ug = 1,1) • Isolationacoustique :AC1(RA ;tr = 28dB) • Doublejoint d’isolationthermiqueet acoustique • Disponiblesous 10jours maximum</p>
         </div>
         {% include 'windows-classic-pvc.twig' %}
-      {% elseif global.request.get('familyUrlname') == "pin" %}
+      {% elseif global.request.get('type') == "pin" %}
         <div class="famille">
           <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pretium varius sollicitudin. Donec ut arcu quis quam posuere sodales. Mauris sed egestas quam. Pellentesque eleifend rutrum accumsan. Nunc dapibus tristique vehicula. Aliquam in pulvinar lorem. Quisque quis mauris molestie, luctus ligula sit amet, tempus nulla. Nulla luctus, ipsum sit amet tincidunt semper, justo est ultricies ex, hendrerit elementum leo lectus a diam.</p>
         </div>
         {% include 'windows-classic-pin.twig' %}
-      {% elseif global.request.get('familyUrlname') == "chene" %}
+      {% elseif global.request.get('type') == "chene" %}
         <div class="famille">
           <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pretium varius sollicitudin. Donec ut arcu quis quam posuere sodales. Mauris sed egestas quam. Pellentesque eleifend rutrum accumsan. Nunc dapibus tristique vehicula. Aliquam in pulvinar lorem. Quisque quis mauris molestie, luctus ligula sit amet, tempus nulla. Nulla luctus, ipsum sit amet tincidunt semper, justo est ultricies ex, hendrerit elementum leo lectus a diam.</p>
         </div>
@@ -72,17 +72,17 @@
           <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pretium varius sollicitudin. Donec ut arcu quis quam posuere sodales. Mauris sed egestas quam. Pellentesque eleifend rutrum accumsan. Nunc dapibus tristique vehicula. Aliquam in pulvinar lorem. Quisque quis mauris molestie, luctus ligula sit amet, tempus nulla. Nulla luctus, ipsum sit amet tincidunt semper, justo est ultricies ex, hendrerit elementum leo lectus a diam.</p>
           <p class="text-justify">Ouvrant et dormant 60 mm à 3chambres d’isolationthermique • Doublevitrage 24 mm Énergie STAR traité�aible émissivitéavecgaz argonet intercalaire haute isolation thermique (Ug = 1,1) • Isolationacoustique :AC1(RA ;tr = 28dB) • Doublejoint d’isolationthermiqueet acoustique • Disponiblesous 10jours maximum</p>
         </div>
-      {% if global.request.get('familyUrlname') == "pvc" %}
+      {% if global.request.get('type') == "pvc" %}
         {% include 'windows-excellence-pvc.twig' %}
         <div class="famille">
           <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pretium varius sollicitudin. Donec ut arcu quis quam posuere sodales. Mauris sed egestas quam. Pellentesque eleifend rutrum accumsan. Nunc dapibus tristique vehicula. Aliquam in pulvinar lorem. Quisque quis mauris molestie, luctus ligula sit amet, tempus nulla. Nulla luctus, ipsum sit amet tincidunt semper, justo est ultricies ex, hendrerit elementum leo lectus a diam.</p>
         </div>
-      {% elseif global.request.get('familyUrlname') == "pin" %}
+      {% elseif global.request.get('type') == "pin" %}
         {% include 'windows-excellence-pin.twig' %}
         <div class="famille">
           <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pretium varius sollicitudin. Donec ut arcu quis quam posuere sodales. Mauris sed egestas quam. Pellentesque eleifend rutrum accumsan. Nunc dapibus tristique vehicula. Aliquam in pulvinar lorem. Quisque quis mauris molestie, luctus ligula sit amet, tempus nulla. Nulla luctus, ipsum sit amet tincidunt semper, justo est ultricies ex, hendrerit elementum leo lectus a diam.</p>
         </div>
-      {% elseif global.request.get('familyUrlname') == "chene" %}
+      {% elseif global.request.get('type') == "chene" %}
         {% include 'windows-excellence-chene.twig' %}
         <div class="famille">
           <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pretium varius sollicitudin. Donec ut arcu quis quam posuere sodales. Mauris sed egestas quam. Pellentesque eleifend rutrum accumsan. Nunc dapibus tristique vehicula. Aliquam in pulvinar lorem. Quisque quis mauris molestie, luctus ligula sit amet, tempus nulla. Nulla luctus, ipsum sit amet tincidunt semper, justo est ultricies ex, hendrerit elementum leo lectus a diam.</p>
@@ -92,6 +92,6 @@
   </div>
   {% else %}
   {% endif %}
-<img src="/images/headers/fenetres-{{ global.request.get('familyUrlname') }}.jpg">
+<img src="/images/headers/fenetres-{{ global.request.get('type') }}.jpg">
 </div>
 {% endblock %}
