@@ -58,9 +58,9 @@ $app->get('/{universeUrlname}-CCU0000/', function($universeUrlname) use($app) {
   return $app['twig']->render('universe.twig');
 })->assert('universeUrlname', '[a-z\-]+');
 
-$app->get('/fenetres-CCU0000/fenetres-porte-fenetres-battantes-CCN0000/fenetres-portes-fenetres-pvc-CCN0000/', function() use($app) {
+$app->get('/fenetres-CCU0000/fenetres-porte-fenetres-battantes-CCN0000/fenetres-portes-fenetres-{type}-CCN0000/', function($type) use($app) {
   return $app['twig']->render('windows.twig');
-});
+})->assert('type', '[a-z\-]+');
 
 $app->get('/{universeUrlname}-CCU0000/{subuniverseUrlname}-CCN0000/{familyUrlname}-CCN0000/', function($universeUrlname, $subuniverseUrlname, $familyUrlname) use($app) {
   return $app['twig']->render('family.twig');
