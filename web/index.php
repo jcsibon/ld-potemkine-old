@@ -58,11 +58,11 @@ $app->get('/{universeUrlname}-CCU0000/', function($universeUrlname) use($app) {
   return $app['twig']->render('universe.twig');
 })->assert('universeUrlname', '[a-z\-]+');
 
-$app->get('/{universeUrlname}-CCU0000/{subuniverseUrlname}-CCU0000/{familyUrlname}-CCN0000/', function($universeUrlname, $subuniverseUrlname, $familyUrlname) use($app) {
+$app->get('/{universeUrlname}-CCU0000/{subuniverseUrlname}-CCN0000/{familyUrlname}-CCN0000/', function($universeUrlname, $subuniverseUrlname, $familyUrlname) use($app) {
   return $app['twig']->render('family.twig');
 })->assert('universeUrlname', '[a-z\-]+')->assert('subuniverseUrlname', '[a-z\-]+')->assert('familyUrlname', '[a-z\-]+');
 
-$app->get('/{universeUrlname}-CCU0000/{subuniverseUrlname}-CCU0000/{familyUrlname}-CCN0000/{subfamilyUrlname}-CCN0000', function($universeUrlname, $subuniverseUrlname, $familyUrlname, $subfamilyUrlname) use($app) {
+$app->get('/{universeUrlname}-CCU0000/{subuniverseUrlname}-CCN0000/{familyUrlname}-CCN0000/{subfamilyUrlname}-CCN0000', function($universeUrlname, $subuniverseUrlname, $familyUrlname, $subfamilyUrlname) use($app) {
   return $app['twig']->render('family.twig');
 })->assert('universeUrlname', '[a-z\-]+')->assert('subuniverseUrlname', '[a-z\-]+')->assert('familyUrlname', '[a-z\-]+')->assert('subfamilyUrlname', '[a-z\-]+');
 
