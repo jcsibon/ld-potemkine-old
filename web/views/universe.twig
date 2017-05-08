@@ -47,7 +47,7 @@
 							{% for family in subuniverse['families'] %}
 								<fieldset class="ssfamilleBloc" onclick="location.href='/{{ global.request.get('universeUrlname') }}-CCU0000/{{ subuniverse['subuniverseUrlname'] }}-CCN0000/{{ family['familyUrlname'] }}-CCN0000/'">
 								  <legend>{{ family.familyName }}</legend>
-								  <div class="ssfamille" style="background:url(1)"></div>
+								  <div class="ssfamille" style="background:url({{ family['familyImage'] }})"></div>
 								</fieldset>
 							{% endfor %}
 						{% endif %}
