@@ -60,11 +60,11 @@ $app->get('/{universeUrlname}-CCU0000/', function($universeUrlname) use($app) {
 
 $app->get('/{universeUrlname}-CCU0000/{subuniverseUrlname}-CCU0000/{familyUrlname}-CCN0000/', function($universeUrlname, $familyUrlname) use($app) {
   return $app['twig']->render('family.twig');
-})->assert('universeUrlname', '[a-z\-]+')->assert('familyUrlname', '[a-z\-]+');
+})->assert('universeUrlname', '[a-z\-]+')->assert('subuniverseUrlname', '[a-z\-]+')->assert('familyUrlname', '[a-z\-]+');
 
 $app->get('/{universeUrlname}-CCU0000/{subuniverseUrlname}-CCU0000/{familyUrlname}-CCN0000/{subfamilyUrlname}-CCN0000', function($universeUrlname, $familyUrlname, $subfamilyUrlname) use($app) {
   return $app['twig']->render('family.twig');
-})->assert('universeUrlname', '[a-z\-]+')->assert('familyUrlname', '[a-z\-]+')->assert('subfamilyUrlname', '[a-z\-]+');
+})->assert('universeUrlname', '[a-z\-]+')->assert('subuniverseUrlname', '[a-z\-]+')->assert('familyUrlname', '[a-z\-]+')->assert('subfamilyUrlname', '[a-z\-]+');
 
 $app->get('product-FPC{productId}', function($productId) use($app) {
   return $app['twig']->render('product.twig');
