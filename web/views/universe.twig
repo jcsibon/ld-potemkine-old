@@ -24,7 +24,7 @@
 						<div class="pinterest">
 							{% for family in subuniverse['families'] %}
 								{% if loop.indexed < 4 %}
-									<div class="pinterestImage{{ loop.indexed }}">
+									<div class="pinterestImage{{ loop.index }}">
 										<img src="{{ family['familyImage'] }}">
 									</div>
 								{% endif %}
