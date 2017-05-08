@@ -42,16 +42,16 @@
 								<fieldset class="ssfamilleBloc" onclick="location.href='/'">
 								  <legend>Pin</legend>
 								  <div class="ssfamille" style="background:url(1)"></div>
-								  {{ catalog[global.request.get('universeUrlname')]['subuniverses'][global.request.get('subuniverseUrlname')]['families']['fenetres-portes-fenetres-battantes-' ~ gamme]['familyName'] }}
+								  {{ catalog[global.request.get('universeUrlname')]['subuniverses']['fenetres-portes-fenetres-battantes']['families']['fenetres-portes-fenetres-battantes-' ~ gamme]['familyName'] }}
 								</fieldset>
 								{% endfor %}
 						{% endif %}
-						{% if subuniverse['subuniverseUrlname'] == 'fenetres-portes-fenetres-coulissantes' %}
+						{% if subuniverse['subuniverseUrlname'] == 'fenetres-baies-fenetres-coulissantes' %}
 								{% for gamme in ['pin','pvc','chene','aluminium'] %}
 								<fieldset class="ssfamilleBloc" onclick="location.href='/'">
 								  <legend>Pin</legend>
 								  <div class="ssfamille" style="background:url(1)"></div>
-								  {{ catalog[global.request.get('universeUrlname')]['subuniverses'][global.request.get('subuniverseUrlname')]['families']['fenetres-portes-fenetres-coulissantes-' ~ gamme]['familyName'] }}
+								  {{ catalog[global.request.get('universeUrlname')]['subuniverses']['fenetres-baies-fenetres-coulissantes']['families']['fenetres-portes-fenetres-coulissantes-' ~ gamme]['familyName'] }}
 								</fieldset>
 								{% endfor %}
 						{% endif %}
