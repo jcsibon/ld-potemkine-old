@@ -39,12 +39,23 @@
 					<div class="familleRight">
 						{% if subuniverse['subuniverseUrlname'] == 'fenetres-portes-fenetres-battantes' %}
 								{% for gamme in ['pin','pvc','chene','aluminium'] %}
-								<fieldset class="ssfamilleBloc" onclick="location.href='liste.html?famille=Portes d'entrée&amp;univers=Portes'">
+								<fieldset class="ssfamilleBloc" onclick="location.href='/'">
 								  <legend>Pin</legend>
 								  <div class="ssfamille" style="background:url(1)"></div>
+								  {{ catalog[global.request.get('universeUrlname')]['subuniverses'][global.request.get('subuniverseUrlname')]['families']['fenetres-portes-fenetres-battantes-' ~ gamme]['familyName'] }}
 								</fieldset>
 								{% endfor %}
 						{% endif %}
+						{% if subuniverse['subuniverseUrlname'] == 'fenetres-portes-fenetres-coulissantes' %}
+								{% for gamme in ['pin','pvc','chene','aluminium'] %}
+								<fieldset class="ssfamilleBloc" onclick="location.href='/'">
+								  <legend>Pin</legend>
+								  <div class="ssfamille" style="background:url(1)"></div>
+								  {{ catalog[global.request.get('universeUrlname')]['subuniverses'][global.request.get('subuniverseUrlname')]['families']['fenetres-portes-fenetres-coulissantes-' ~ gamme]['familyName'] }}
+								</fieldset>
+								{% endfor %}
+						{% endif %}
+
 						{% for family in subuniverse['families'] %}
 							{% if family['showUniverse'] == 2 %}
 								<fieldset class="ssfamilleBloc" onclick="location.href='/{{ global.request.get('universeUrlname') }}-CCU0000/{{ subuniverse['subuniverseUrlname'] }}-CCN0000/{{ family['familyUrlname'] }}-CCN0000/'">
