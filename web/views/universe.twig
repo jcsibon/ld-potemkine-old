@@ -44,14 +44,24 @@
 								  <div class="ssfamille" style="background:url(1)"></div>
 								</fieldset>
 								{% endfor %}
-						{% else %}
-							{% for family in subuniverse['families'] %}
+						{% endif %}
+						{% for family in subuniverse['families'] %}
+							{% if family['showUniverse'] == 2 %}
 								<fieldset class="ssfamilleBloc" onclick="location.href='/{{ global.request.get('universeUrlname') }}-CCU0000/{{ subuniverse['subuniverseUrlname'] }}-CCN0000/{{ family['familyUrlname'] }}-CCN0000/'">
 								  <legend>{{ family.familyName }}</legend>
 								  <div class="ssfamille" style="background:url({{ family['familyImage'] }})"></div>
 								</fieldset>
+							{% endif %}
+						{% endfor %}
+						<p>
+							Et aussi : 
+							{% for family in subuniverse['families'] %}
+								{% if family['showUniverse'] == 1 %}
+									<a href="/{{ global.request.get('universeUrlname') }}-CCU0000/{{ subuniverse['subuniverseUrlname'] }}-CCN0000/{{ family['familyUrlname'] }}-CCN0000/'">{{ family.familyName }}</a>
+								{% endif %}
 							{% endfor %}
-						{% endif %}
+						</p>
+
 					</div>
 				</div>
 			{% endfor %}
