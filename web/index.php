@@ -74,9 +74,9 @@ $app->get('article-{articleId}', function($articleId) use($app) {
   return $app['twig']->render('article.twig');
 });
 
-$app->get('/fenetres-CCU0000/fenetres-porte-fenetres-battantes-CCN0000/fenetres-{familyUrlname}-CCN0000/', function($familyUrlname) use($app) {
+$app->get('/fenetres-CCU0000/fenetres-porte-fenetres-battantes-CCN0000/fenetres-portes-fenetres-pvc-CCN0000/', function($familyUrlname) use($app) {
   return $app['twig']->render('windows.twig');
-})->assert('familyUrlname', '/pvc|pin|chene/');
+});//->assert('familyUrlname', '/fenetres-portes-fenetres-pvc|pin|chene/');
 
 $app->get('/configurateur', function() use($app) {
   return $app['twig']->render('configurateur.twig');
