@@ -17,7 +17,8 @@
 				{% endfor %}
 				#}
 			</div>
-			<img src="/images/contents/{{ global.request.get('universeUrlName') }}.jpg" />
+			<img src="/images/contents/{{ global.request.get('universeUrlname') }}.jpg" />
+			{#
 			{% for subuniverse in catalog[global.request.get('universeUrlname')]['subuniverses'] %}
 				<div class="famille"  id="{{ subuniverse['subuniverseUrlname'] }}">
 					<div class="familleLeft">
@@ -49,6 +50,7 @@
 					</div>
 				</div>
 			{% endfor %}
+			#}
 			<img src="/images/footerFenetres.jpg" />
 		</div>
 	</section>
