@@ -58,11 +58,11 @@ $app->get('/{universeUrlname}-CCU0000/', function($universeUrlname) use($app) {
   return $app['twig']->render('universe.twig');
 })->assert('universeUrlname', '[a-z\-]+');
 
-$app->get('/{universeUrlname}-CCU0000/{familyUrlname}-CCN0000/', function($universeUrlname, $familyUrlname) use($app) {
+$app->get('/{universeUrlname}-CCU0000/{subuniverseUrlname}-CCU0000/{familyUrlname}-CCN0000/', function($universeUrlname, $familyUrlname) use($app) {
   return $app['twig']->render('family.twig');
 })->assert('universeUrlname', '[a-z\-]+')->assert('familyUrlname', '[a-z\-]+');
 
-$app->get('/{universeUrlname}-CCU0000/{familyUrlname}-CCN0000/{subfamilyUrlname}-CCN0000', function($universeUrlname, $familyUrlname, $subfamilyUrlname) use($app) {
+$app->get('/{universeUrlname}-CCU0000/{subuniverseUrlname}-CCU0000/{familyUrlname}-CCN0000/{subfamilyUrlname}-CCN0000', function($universeUrlname, $familyUrlname, $subfamilyUrlname) use($app) {
   return $app['twig']->render('family.twig');
 })->assert('universeUrlname', '[a-z\-]+')->assert('familyUrlname', '[a-z\-]+')->assert('subfamilyUrlname', '[a-z\-]+');
 
@@ -74,7 +74,7 @@ $app->get('article-{articleId}', function($articleId) use($app) {
   return $app['twig']->render('article.twig');
 });
 
-$app->get('/fenetres-CCU0000/fenetres-{familyUrlname}-CCN0000/', function($familyUrlname) use($app) {
+$app->get('/fenetres-CCU0000/fenetres-porte-fenetres-battantes-CCN0000/fenetres-{familyUrlname}-CCN0000/', function($familyUrlname) use($app) {
   return $app['twig']->render('windows.twig');
 })->assert('familyUrlname', '/pvc|pin|chene/');
 
