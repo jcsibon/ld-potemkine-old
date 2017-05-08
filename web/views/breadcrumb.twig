@@ -5,9 +5,9 @@
 		{% if global.request.get('subuniverseUrlname') is defined %}
 			<span>></span> <a href="{{ global.request.get('universeUrlname') }}-CCU0000"></a>&nbsp;
 			{% if global.request.get('familyUrlname') is defined %}
-				<span>></span> <a href="{{ global.request.get('universeUrlname') }}-CCU0000/xxx-CCN0000/xxx-CCN0000"></a>&nbsp;
-				{% if global.request.get('familyUrlname') is defined %}
-					<span>></span> <a href="{{ global.request.get('universeUrlname') }}-CCU0000/xxx-CCN0000/xxx-CCN0000/xxx-CCN0000"></a>&nbsp;
+				<span>></span> <a href="{{ global.request.get('universeUrlname') }}-CCU0000/{{ global.request.get('subuniverseUrlname') }}-CCN0000/{{ global.request.get('familyUrlname') }}-CCN0000"></a>&nbsp;
+				{% if global.request.get('subfamilyUrlname') is defined %}
+					<span>></span> <a href="{{ global.request.get('universeUrlname') }}-CCU0000/{{ global.request.get('subuniverseUrlname') }}-CCN0000/{{ global.request.get('familyUrlname') }}-CCN0000/{{ global.request.get('subfamilyUrlname') }}-CCN0000"></a>&nbsp;
 				{% endif %}
 			{% endif %}
 		{% endif %}
