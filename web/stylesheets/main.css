@@ -118,7 +118,8 @@
     }
 
     .container {
-        width:1310px;
+        width:1280px;
+        margin:auto;
     }
 
     .famille p {
