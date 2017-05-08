@@ -22,7 +22,6 @@
 						<h2 class="h2">{{ subuniverse['subuniverseTitle'] }}</h2>
 						<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.</p>
 						<div class="pinterest">
-
 							{% for family in subuniverse['families'] %}
 								{% if loop.index < 4 %}
 									<div class="pinterestImage{{ loop.index }}">
@@ -38,6 +37,7 @@
 						</div>
 					</div>
 					<div class="familleRight">
+						{{ subuniverse['subuniverseUrlname'] }}
 						{% if subuniverse['subuniverseUrlname'] == 'fenetres-portes-fenetres-battantes' %}
 								{% for gamme in ['pin','pvc','chene','aluminium'] %}
 								<fieldset class="ssfamilleBloc" onclick="location.href='liste.html?famille=Portes d'entrée&amp;univers=Portes'">
