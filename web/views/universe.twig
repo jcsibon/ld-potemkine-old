@@ -4,21 +4,20 @@
 	<section id="univers">
 		<div class="container">
 			<div class="headerUnivers">
-				<img src="/images/headers/{{ global.request.get('universeUrlName') }}.jpg" />
-				<p>{{ catalog[global.request.get('universeUrlName')]['universeTitle'] }}</p>
+				<img src="/images/headers/{{ global.request.get('universeUrlname') }}.jpg" />
+				<p>{{ catalog[global.request.get('universeUrlname')]['universeTitle'] }}</p>
 				<span>
 					Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam. Accusantium doloremque laudantium, totam rem aperiam</span>
 					<img src="" />
 			</div>
 			<div class="ancre">
-				{#
+
 				{% for subuniverse in catalog[global.request.get('universeUrlname')]['subuniverses'] %}
 				  <div class="ancres" onclick="javascript:animationScroll('#{{ subuniverse['subuniverseUrlname'] }}')">{{ subuniverse['subuniverseTitle'] }}<img src="/images/fleche.png"></div>
 				{% endfor %}
-				#}
+
 			</div>
 			<img src="/images/contents/{{ global.request.get('universeUrlname') }}.jpg" />
-			{#
 			{% for subuniverse in catalog[global.request.get('universeUrlname')]['subuniverses'] %}
 				<div class="famille"  id="{{ subuniverse['subuniverseUrlname'] }}">
 					<div class="familleLeft">
@@ -50,7 +49,6 @@
 					</div>
 				</div>
 			{% endfor %}
-			#}
 			<img src="/images/footerFenetres.jpg" />
 		</div>
 	</section>
