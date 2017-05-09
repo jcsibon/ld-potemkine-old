@@ -7,7 +7,7 @@
 <div class="container">
   <div class="headerUnivers">
     <img src="/images/headers/{{ global.request.get('familyUrlname') }}.jpg">
-    <p>Fenêtres PVC</p><span>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam. Accusantium doloremque laudantium, totam rem aperiam</span>
+    <p>{{ catalog[global.request.get('universeUrlname')]['subuniverses'][global.request.get('subuniverseUrlname')]['families'][global.request.get('familyUrlname')]['familyTitle'] }}</p><span>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam. Accusantium doloremque laudantium, totam rem aperiam</span>
   </div>
 <img class="img-responsive" src="/images/cartouche.png" />
   {% if global.request.get('familyUrlname') == "fenetres-portes-fenetres-baies-coulissantes-pvc" or global.request.get('familyUrlname') == "fenetres-portes-fenetres-baies-coulissantes-chene" or global.request.get('familyUrlname') == "fenetres-portes-fenetres-baies-coulissantes-pin" %}
