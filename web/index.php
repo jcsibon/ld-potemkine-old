@@ -68,7 +68,7 @@ $app->get('/{universeUrlname}-CCU0000/{subuniverseUrlname}-CCN0000/{familyUrlnam
 
 
 $app->get('/{universeUrlname}-CCU0000/{subuniverseUrlname}-CCN0000/{familyUrlname}-CCN0000/{subfamilyUrlname}-CCN0000', function($universeUrlname, $subuniverseUrlname, $familyUrlname, $subfamilyUrlname) use($app) {
-  if ($universeUrlname == 'fenetres' && $subuniverseUrlname == 'fenetres-porte-fenetres-battantes')
+  if ($universeUrlname == 'fenetres' && $subuniverseUrlname == 'fenetres-portes-fenetres-battantes')
     return $app['twig']->render('windows.twig');
   else
     return $app['twig']->render('family.twig');
