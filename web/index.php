@@ -83,8 +83,8 @@ $app->get('article-{articleId}', function($articleId) use($app) {
 });
 
 
-$app->get('/configurateur', function() use($app) {
+$app->get('/configurateur/step-{step}', function($step) use($app) {
   return $app['twig']->render('configurateur.twig');
-});
+})->assert('universeUrlname', '[0-9]+');
 
 $app->run();
