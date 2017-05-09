@@ -63,14 +63,14 @@ $app->get('/fenetres-CCU0000/fenetres-porte-fenetres-battantes-CCN0000/fenetres-
 })->assert('type', '[a-z\-]+');
 */
 $app->get('/{universeUrlname}-CCU0000/{subuniverseUrlname}-CCN0000/{familyUrlname}-CCN0000/', function($universeUrlname, $subuniverseUrlname, $familyUrlname) use($app) {
-  return $app['twig']->render('family.twig');
+  if ($universeUrlname == 'fenetres' && $subuniverseUrlname == 'fenetres-portes-fenetres-battantes')
+    return $app['twig']->render('windows.twig');
+  else
+    return $app['twig']->render('family.twig');
 })->assert('universeUrlname', '[a-z\-]+')->assert('subuniverseUrlname', '[a-z\-]+')->assert('familyUrlname', '[a-z\-]+');
 
 
 $app->get('/{universeUrlname}-CCU0000/{subuniverseUrlname}-CCN0000/{familyUrlname}-CCN0000/{subfamilyUrlname}-CCN0000', function($universeUrlname, $subuniverseUrlname, $familyUrlname, $subfamilyUrlname) use($app) {
-  if ($universeUrlname == 'fenetres' && $subuniverseUrlname == 'fenetres-portes-fenetres-battantes')
-    return $app['twig']->render('windows.twig');
-  else
     return $app['twig']->render('family.twig');
 })->assert('universeUrlname', '[a-z\-]+')->assert('subuniverseUrlname', '[a-z\-]+')->assert('familyUrlname', '[a-z\-]+')->assert('subfamilyUrlname', '[a-z\-]+');
 
