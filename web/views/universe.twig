@@ -72,7 +72,7 @@
 							{% endif %}
 						{% endfor %}
 						<p>
-							Et aussi : 
+							<u>Et aussi : </u>
 							{% for family in subuniverse['families'] %}
 								{% if family['showUniverse'] == 1 %}
 									<a href="/{{ global.request.get('universeUrlname') }}-CCU0000/{{ subuniverse['subuniverseUrlname'] }}-CCN0000/{{ family['familyUrlname'] }}-CCN0000/'">{{ family.familyName }}</a>
