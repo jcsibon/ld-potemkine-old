@@ -6,11 +6,11 @@
 
 <div class="container">
   <div class="headerUnivers">
-    <img src="/images/headers/fenetres-{{ global.request.get('type') }}.jpg">
+    <img src="/images/headers/{{ global.request.get('familyUrlname') }}.jpg">
     <p>Fenêtres PVC</p><span>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam. Accusantium doloremque laudantium, totam rem aperiam</span>
   </div>
 <img class="img-responsive" src="/images/cartouche.png" />
-  {% if global.request.get('type') == "fenetres-portes-fenetres-battantes-pvc" or global.request.get('type') == "fenetres-portes-fenetres-battantes-chene" or global.request.get('type') == "fenetres-portes-fenetres-battantes-pin" %}
+  {% if global.request.get('familyUrlname') == "fenetres-portes-fenetres-battantes-pvc" or global.request.get('familyUrlname') == "fenetres-portes-fenetres-battantes-chene" or global.request.get('familyUrlname') == "fenetres-portes-fenetres-battantes-pin" %}
 <div style="background-color:#EFEFEF">
  <ul class="nav nav-tabs row">
     <li class="col-md-offset-1 col-md-5 active">
