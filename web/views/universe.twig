@@ -38,14 +38,20 @@
 					</div>
 					<div class="familleRight">
 						{% if subuniverse['subuniverseUrlname'] == 'fenetres-portes-fenetres-battantes' %}
+								<p class="h2 text-center">Découvrez en quelques questions le produit le plus adapté à votre projet </p>
 								<img class="img-responsive" src="/images/configurateur.png" style="margin:20px">
-								{% for gamme in ['pin','pvc','chene','aluminium'] %}
-								<fieldset class="ssfamilleBloc" onclick="location.href='/'">
-								  <legend>Pin</legend>
-								  <div class="ssfamille" style="background:url(1)"></div>
-								  {{ catalog[global.request.get('universeUrlname')]['subuniverses']['fenetres-portes-fenetres-battantes']['families']['fenetres-portes-fenetres-battantes-' ~ gamme]['familyName'] }}
-								</fieldset>
-								{% endfor %}
+								<p class="h2 text-center">Explorez directement nos gammes</p>
+								<div class="row">
+									<div class="col-md-3">
+										{% for gamme in ['pin','pvc','chene','aluminium'] %}
+									    	<a href="https://lapeyre.herokuapp.com/fenetres-CCU0000/fenetres-porte-fenetres-battantes-CCN0000/fenetres-portes-fenetres-{{ gamme }}-CCN0000/">
+												<br>
+												<img class="img-inline" src="/images/windows/{{ gamme }}.png">
+												<h2 class="h2 text-center">{{ gamme }}</h2>
+								  			</a>
+										{% endfor %}
+									</div>
+								</div>
 						{% endif %}
 						{% if subuniverse['subuniverseUrlname'] == 'fenetres-baies-fenetres-coulissantes' %}
 								{% for gamme in ['pin','pvc','chene','aluminium'] %}
