@@ -37,7 +37,7 @@
 						</div>
 					</div>
 					<div class="familleRight">
-						{% if subuniverse['subuniverseUrlname'] == 'fenetres-portes-fenetres-battantes' %}
+						{% if subuniverse['subuniverseUrlname'] == 'fenetres-portes-fenetres-baies-coulissantes' %}
 								<h2 class="h2 text-center">Découvrez en quelques questions le produit le plus adapté à votre projet </h2>
 								<img class="img-responsive" src="/images/configurateur.png" style="margin:20px">
 								<br>
@@ -45,7 +45,7 @@
 								<div class="row">
 									{% for gamme in ['pvc','pin','chene','aluminium'] %}
 										<div class="col-md-3 text-center">
-									    	<a href="https://lapeyre.herokuapp.com/fenetres-CCU0000/fenetres-portes-fenetres-battantes-CCN0000/fenetres-portes-fenetres-battantes-{{ gamme }}-CCN0000/">
+									    	<a href="https://lapeyre.herokuapp.com/fenetres-CCU0000/fenetres-portes-fenetres-baies-coulissantes-CCN0000/fenetres-portes-fenetres-baies-coulissantes-{{ gamme }}-CCN0000/">
 												<br>
 												<img class="img-inline" src="/images/windows/{{ gamme }}.png">
 												<h2 class="h2 text-center">{{ gamme }}</h2>
@@ -54,16 +54,6 @@
 									{% endfor %}
 								</div>
 						{% endif %}
-						{% if subuniverse['subuniverseUrlname'] == 'fenetres-baies-fenetres-coulissantes' %}
-								{% for gamme in ['pin','pvc','chene','aluminium'] %}
-								<fieldset class="ssfamilleBloc" onclick="location.href='/'">
-								  <legend>Pin</legend>
-								  <div class="ssfamille" style="background:url(1)"></div>
-								  {{ catalog[global.request.get('universeUrlname')]['subuniverses']['fenetres-baies-fenetres-coulissantes']['families']['fenetres-portes-fenetres-coulissantes-' ~ gamme]['familyName'] }}
-								</fieldset>
-								{% endfor %}
-						{% endif %}
-
 						{% for family in subuniverse['families'] %}
 							{% if family['showUniverse'] == 2 %}
 								<fieldset class="ssfamilleBloc" onclick="location.href='/{{ global.request.get('universeUrlname') }}-CCU0000/{{ subuniverse['subuniverseUrlname'] }}-CCN0000/{{ family['familyUrlname'] }}-CCN0000/'">

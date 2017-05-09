@@ -63,7 +63,7 @@ $app->get('/fenetres-CCU0000/fenetres-porte-fenetres-battantes-CCN0000/fenetres-
 })->assert('type', '[a-z\-]+');
 */
 $app->get('/{universeUrlname}-CCU0000/{subuniverseUrlname}-CCN0000/{familyUrlname}-CCN0000/', function($universeUrlname, $subuniverseUrlname, $familyUrlname) use($app) {
-  if ($universeUrlname == 'fenetres' && $subuniverseUrlname == 'fenetres-portes-fenetres-battantes')
+  if ($universeUrlname == 'fenetres' && $subuniverseUrlname == 'fenetres-portes-fenetres-baies-coulissantes')
     return $app['twig']->render('windows.twig');
   else
     return $app['twig']->render('family.twig');
