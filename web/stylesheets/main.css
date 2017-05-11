@@ -222,7 +222,7 @@
         width: 270px;
         padding: 20px;
         margin-top: 40px;
-        height: 200px;
+        height: 235px;
         position: relative;
     }
     
@@ -230,7 +230,7 @@
         background: #efefef;
         display: inline-block;
         padding: 12px 17px;
-        width: 40px;
+        width: 70px;
         text-align: center;
         font-size: 13px;
         vertical-align: middle;
@@ -263,7 +263,7 @@
     }
     
     .pinterestImage1 {
-        width: 158px;
+        width: 156px;
         height: 142px;
         float: left;
         background-size: cover !important;
