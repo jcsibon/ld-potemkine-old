@@ -21,7 +21,7 @@
 					<div class="familleLeft">
 						<h2 class="h2">{{ subuniverse['subuniverseTitle'] }}</h2>
 						<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.</p>
-						{% if subuniverse['families'].length>4 %}
+						{% if subuniverse['families']|length > 3 %}
 							<div class="pinterest">
 								{% for family in subuniverse['families'] %}
 									{% if loop.index < 4 %}
