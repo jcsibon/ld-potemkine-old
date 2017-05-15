@@ -66,15 +66,17 @@
 								</fieldset>
 							{% endif %}
 						{% endfor %}
-						<p>
-							<u>Et aussi : </u>
-							{% for family in subuniverse['families'] %}
-								{% if family['showUniverse'] == 1 %}
-									<a href="/{{ global.request.get('universeUrlname') }}-CCU0000/{{ subuniverse['subuniverseUrlname'] }}-CCN0000/{{ family['familyUrlname'] }}-CCN0000/'">{{ family.familyName }}</a>
-								{% endif %}
-							{% endfor %}
-						</p>
-
+						{% set otherFamiliesDetails = null %}
+						{% set otherFamilies = '<p><u>Et aussi :</u>' %}
+						{% for family in subuniverse['families'] %}
+						   {% if family['showUniverse'] == 1 %}
+						      {% set otherFamiliesDetails = otherFamiliesDetails ~ '<a href="/{{ global.request.get('universeUrlname') }}-CCU0000/{{ subuniverse['subuniverseUrlname'] }}-CCN0000/{{ family['familyUrlname'] }}-CCN0000/'">{{ family.familyName }}</a>' %}
+						   {% endif %}
+						{% endfor %}
+						{% set otherFamilies = otherFamiliesDetails ~ '</p>' %}
+						{% if otherFamiliesDetails %}
+						        {{otherFamilies | raw}}
+						{% endif %}			
 					</div>
 				</div>
 			{% endfor %}
