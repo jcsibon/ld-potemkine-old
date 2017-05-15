@@ -21,20 +21,22 @@
 					<div class="familleLeft">
 						<h2 class="h2">{{ subuniverse['subuniverseTitle'] }}</h2>
 						<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.</p>
-						<div class="pinterest">
-							{% for family in subuniverse['families'] %}
-								{% if loop.index < 4 %}
-									<div class="pinterestImage{{ loop.index }}">
-										<img class="img-responsive" src="{{ family['familyImage'] }}">
-									</div>
-								{% endif %}
-							{% endfor %}
-							<div class="pinterestTitre">
-								<p><br/><img src="/images/pin.png" /></p>
-								<p>{{ subuniverse['subuniverseTitle'] }}</p>
-								<span class="pinterestVoir">Voir</span>
+						{% if subuniverse['families'].length>4 %}
+							<div class="pinterest">
+								{% for family in subuniverse['families'] %}
+									{% if loop.index < 4 %}
+										<div class="pinterestImage{{ loop.index }}">
+											<img class="img-responsive" src="{{ family['familyImage'] }}">
+										</div>
+									{% endif %}
+								{% endfor %}
+								<div class="pinterestTitre">
+									<p><br/><img src="/images/pin.png" /></p>
+									<p>{{ subuniverse['subuniverseTitle'] }}</p>
+									<span class="pinterestVoir">Voir</span>
+								</div>
 							</div>
-						</div>
+						{% endif %}
 					</div>
 					<div class="familleRight">
 						{% if subuniverse['subuniverseUrlname'] == 'fenetres-portes-fenetres-baies-coulissantes' %}
@@ -59,7 +61,7 @@
 						{% for family in subuniverse['families'] %}
 							{% if family['showUniverse'] == 2 %}
 								<fieldset class="ssfamilleBloc" onclick="location.href='/{{ global.request.get('universeUrlname') }}-CCU0000/{{ subuniverse['subuniverseUrlname'] }}-CCN0000/{{ family['familyUrlname'] }}-CCN0000/'">
-								  <legend>{{ family.familyName }}</legend>
+								  <legend align="center">{{ family.familyName }}</legend>
 								  <div class="ssfamille" style="background:url({{ family['familyImage'] }})"></div>
 								</fieldset>
 							{% endif %}
