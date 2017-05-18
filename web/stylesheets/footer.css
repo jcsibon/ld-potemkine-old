@@ -1,0 +1,362 @@
+/**
+ *				TABLE OF CONTENTS
+ *
+ * GLOBAL.......................... Global style
+ * SUBSCRIPTION.................... Subscription story
+ * CMS_CONTENT..................... CMS Content story
+ * RESPONSIVE...................... Responsive style
+ */ 
+
+
+/*-------------------------------------------------------------*\
+    $GLOBAL
+    Global style
+\*-------------------------------------------------------------*/
+
+footer {
+	background-color: #3e3c3d;
+	color: #fff;
+	font-size: 14px;
+}
+footer hr {
+	border: 1px solid #4c494a;
+}
+
+footer ul {
+	list-style: none;
+	padding: 0;
+}
+footer ul li {
+	display: inline-block;
+}
+
+
+/*-------------------------------------------------------------*\
+    $SUBSCRIPTION
+    Subscription story
+\*-------------------------------------------------------------*/
+
+/* Subscription */
+
+.subscription {
+	padding-top: 30px;
+}
+.subscription {
+	background-color: #dc1228;
+	padding-bottom: 20px;
+}
+
+.subscription-title {
+	text-transform: uppercase;
+	padding-bottom: 10px;
+}
+.subscription-form {
+	margin-top: 20px;	
+}
+
+input[type="text"].subscription-input {
+	border-radius: 2px 0 0 2px;
+	padding: 5px 10px;
+	border: none;
+}
+
+.subscription-button {
+	background: #fe8100;
+    border: none;
+    padding: 0 20px;
+    height: 28px;
+    margin-left: -10px;
+    border-radius: 0 2px 2px 0;
+    font-weight: bold;
+}
+
+input[type="text"].subscription-input, .subscription-button {
+	box-sizing: border-box;
+	height:35px;
+}
+
+.subscription label.error {
+	color: #fff;
+}
+
+.subscription hr {
+	border: 1px solid #e23d4e;
+}
+
+/* Social networks */
+
+.shareSocialNetwork ul li {
+	padding: 0 !important;
+}
+
+.shareSocialNetwork>ul>li>a {
+	margin: 0px auto;
+	display: inline-block;
+	width: 100%;
+}
+
+.shareSocialNetwork>ul>li>a {
+	margin: 0px auto;
+	display: inline-block;
+	width: 100%;
+	padding: 15px 0;
+}
+
+.shareSocialNetwork>ul>li>a div {
+	background: url("../../images/shareIcons.png") no-repeat;
+	height: 22px;
+	margin: 0px auto;
+}
+
+.shareSocialNetworkBlack>ul>li>a div {
+	background: url("../../images/shareIconsBlack.png") no-repeat;
+	height: 30px;
+	width: 30px;
+	margin: 0px auto;
+}
+
+.shareSocialNetwork>ul>li.facebookShare a div {
+	background-position: -8px -5px;
+}
+
+.shareSocialNetworkBlack>ul>li.facebookShare a div {
+	background-position: 4px 1px;
+}
+
+.shareSocialNetwork>ul>li.pinterestShare a div {
+	background-position: -8px -485px;
+}
+
+.shareSocialNetworkBlack>ul>li.pinterestShare a div {
+	background-position: -2px -140px;
+}
+
+.shareSocialNetwork>ul>li.youtubeShare a div {
+	background-position: -8px -390px;
+}
+
+.shareSocialNetworkBlack>ul>li.youtubeShare a div {
+	background-position: -8px -390px;
+}
+
+.shareSocialNetwork>ul>li.twitterShare a div {
+	background-position: -8px -293px;
+}
+
+.shareSocialNetworkBlack>ul>li.twitterShare a div {
+	background-position: 0px -107px;
+}
+
+.shareSocialNetwork>ul>li.instagramShare a div {
+	background-position: -8px -102px;
+}
+
+.shareSocialNetworkBlack>ul>li.instagramShare a div {
+	background-position: 0px -102px;
+}
+
+.shareSocialNetworkBlack>ul>li.emailShare a div {
+	background-position: 0px -170px;
+}
+
+.shareSocialNetworkBlack>ul>li.instagramShare a div {
+	background-position: 0px -73px;
+}
+
+.ficheSocialNetworks ul{
+	list-style: none;
+	display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+	display: -ms-flexbox; /* TWEENER - IE 10 */
+	display: -webkit-flex; /* NEW - Chrome */
+	display: flex; /* NEW, Spec - Opera 12.1, Firefox 20+ */
+	display: -webkit-flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0;
+    margin: 30px 0px 20px 0px;
+}
+
+/*-------------------------------------------------------------*\
+    $CMS_CONTENT
+    CMS Content story
+\*-------------------------------------------------------------*/
+
+.footer-bottom {
+	padding: 20px 0;
+	margin-bottom: 0;
+}
+
+.footer-mid {
+	padding: 40px 0;
+}
+
+.footer-mid li {
+	padding: 5px 0;
+	width: 100%;
+}
+
+.footer-mid a:hover, .footer-bottom a:hover {
+	text-decoration: underline;
+}
+
+.footer-section:last-of-type {
+	color: #909090;
+}
+
+.footer-header {
+	font-weight: bold;
+	text-transform: uppercase;
+	margin-bottom: 8px;
+}
+
+.footer-bottom-links {
+	text-align: right;
+}
+
+#footerCMSContent {
+	background-color: #3e3c3d;
+    color: #fff;
+    font-size: 14px;
+}
+
+/*-------------------------------------------------------------*\
+    $RESPONSIVE
+    Responsive style
+\*-------------------------------------------------------------*/
+
+/* Desktop */
+@media screen and (min-width: 1200px) {
+	.push-loyalty-info {
+		left: 100px !important;
+	}
+	.footer-bottom li {
+		padding: 0 20px;
+	}
+}
+
+/* Mobile */
+@media screen and (max-width: 767px) {
+	input[type="text"].subscription-input {
+		border-radius: 2px 2px 0 0;
+	}
+	
+	.subscription-button {
+		border-radius: 0 0 2px 2px;
+	}
+	
+	.subscription-title {
+		font-size: 20px;
+	}
+	
+	.shareSocialNetwork>ul>li>a div {
+		width: 30px;
+	}
+}
+
+/* Tablet */
+@media screen and (max-width: 1199px) {
+	#footerRow2 > div {
+		padding-left: 0;
+	}
+	
+	.footer-mid {
+    	padding: 0 !important;
+    	margin-left: 15px !important;
+    	margin-right: 15px !important;
+	}
+	
+	#footerCMSContent .footer-section:first-child {
+		border-top: 1px #6e6b6b solid;
+		margin-top: 20px;
+	}
+	
+	.footer-section {
+		border-bottom: 1px #6e6b6b solid;
+	}
+	
+	.footer-header {
+	    text-align: left;
+	    padding: 20px 0;
+	    margin: 0px;
+	    font-size: 13px;
+	    font-family: 'Roboto Condensed', sans-serif;
+	    font-weight: bold;
+	    display: block;
+	    color: white;
+	}
+	
+	.footer-header .plusMinusWhitePicto {
+		float: right;
+	} 
+	
+	.footer-list-cms {
+	    list-style: none;
+	    display: none;
+	    padding: 0 0 30px 10px;
+	    color: white;
+	}
+	
+	.footer-bottom-links ul {
+		list-style: none;
+		display: flex;
+	    padding: 0;
+	    justify-content: space-between;
+	    flex-wrap: wrap;
+	}
+	
+	.footer-mid > div {
+		padding: 0 !important;
+	}
+	
+	.footer-bottom-links {
+		padding: 0 !important;
+	}
+
+	.footer-bottom-links ul li {
+		display: inline-block;
+	}
+	
+	.footer-bottom-links ul li {
+		padding: 0 !important;
+		margin-top: 10px;
+	}
+	
+	.footer-bottom {
+		display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+		display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+		display: -ms-flexbox; /* TWEENER - IE 10 */
+		display: -webkit-flex; /* NEW - Chrome */
+		display: flex; /* NEW, Spec - Opera 12.1, Firefox 20+ */
+		display: -webkit-flex;
+		flex-direction: column;
+		margin-left: 15px !important;
+    	margin-right: 15px !important;
+	}
+	#footerCopyright {
+	    order: 2;
+	    text-align: center;
+	    border-top: solid 1px #595757;
+	    margin-top: 35px;
+	    padding-top: 30px;
+	    color: #b6b5b5;
+	}
+	#footerCMSContent {
+    	width: 100%;
+	}
+	.footer-bottom li {
+		padding: 5px 5px;
+	}
+	footer ul {
+        text-align-last: justify;
+    	text-align: justify;
+	}
+	#copyright{
+    	text-align: center;
+    	color: #c8c8c8;
+    	margin-top: 10px;
+	}
+	#footerCMSLinks .footer-bottom-links{
+		margin-bottom: 20px;
+	}
+}
