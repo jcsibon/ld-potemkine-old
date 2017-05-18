@@ -60,7 +60,7 @@
 									{% endfor %}
 								</div>
 						{% endif %}
-                        {% if if subuniverse['families'] is defined %}
+                        {% if subuniverse['families'] is defined %}
                             {% for family in subuniverse['families'] %}
                                 {% if family['showUniverse'] == 2 %}
                                     <fieldset class="ssfamilleBloc" onclick="location.href='/{{ global.request.get('universeUrlname') }}-CCU0000/{{ subuniverse['subuniverseUrlname'] }}-CCN0000/{{ family['familyUrlname'] }}-CCN0000/'">
