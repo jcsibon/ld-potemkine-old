@@ -117,10 +117,10 @@
         position: relative;
     }
 
-    .container {
-        width:1310px;
+ /*   .universeContainer {
+        max-width:1310px;
         margin:auto;
-    }
+    }*/
 
     .famille p {
         font-weight: 400;
@@ -170,7 +170,7 @@
         padding: 0 10px;
     }
     
-    header img, footer img {
+    header img {
         display: block;
     }
     
