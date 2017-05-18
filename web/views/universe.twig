@@ -3,20 +3,22 @@
 <div id="content" role="main">
    <div class="container universeContainer" id="container_">
       <div class="row">
-		<div class="col s12 headerUnivers" style="background-image:url('/images/headers/{{ global.request.get('universeUrlname') }}.jpg')">
+		<div class="col s12 universeHeader" style="background-image:url('/images/headers/{{ global.request.get('universeUrlname') }}.jpg')">
          <p>{{ catalog[global.request.get('universeUrlname')]['universeTitle'] }}</p>
          <span>
          Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam. Accusantium doloremque laudantium, totam rem aperiam</span>
         </div>
-        <div class="anchor">
+        <div class="universeAnchor">
              {% for subuniverse in catalog[global.request.get('universeUrlname')]['subuniverses'] %}
-             <div class="anchors" onclick="javascript:animationScroll('#{{ subuniverse['subuniverseUrlname'] }}');">{{ subuniverse['subuniverseTitle'] }}<img src="/images/fleche.png"></div>
+             <div class="universeAnchors" onclick="javascript:animationScroll('#{{ subuniverse['subuniverseUrlname'] }}');">{{ subuniverse['subuniverseTitle'] }}<img src="/images/fleche.png"></div>
              {% endfor %}
         </div>
       </div>
-      <div class="col s12 headerUnivers">   
+    <div class="row">
+      <div class="col s12">   
         <img src="/images/contents/{{ global.request.get('universeUrlname') }}.jpg" />
-      </div>        
+      </div>   
+    </div>    
       {% for subuniverse in catalog[global.request.get('universeUrlname')]['subuniverses'] %}
       <div class="famille"  id="{{ subuniverse['subuniverseUrlname'] }}">
          <div class="familleLeft">
