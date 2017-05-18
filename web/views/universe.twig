@@ -1,104 +1,104 @@
-	{% extends "layout.html" %}
-
+{% extends "layout.html" %}
 {% block content %}
-	<section id="univers">
-		<div class="universeContainer">
-			<div class="headerUnivers">
-				<img src="/images/headers/{{ global.request.get('universeUrlname') }}.jpg" />
-				<p>{{ catalog[global.request.get('universeUrlname')]['universeTitle'] }}</p>
-				<span>
-					Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam. Accusantium doloremque laudantium, totam rem aperiam</span>
-					<img src="" />
-			</div>
-			<div class="ancre">
-				{% for subuniverse in catalog[global.request.get('universeUrlname')]['subuniverses'] %}
-				  <div class="ancres" onclick="javascript:animationScroll('#{{ subuniverse['subuniverseUrlname'] }}');">{{ subuniverse['subuniverseTitle'] }}<img src="/images/fleche.png"></div>
-				{% endfor %}
-			</div>
-			<img src="/images/contents/{{ global.request.get('universeUrlname') }}.jpg" />
-			{% for subuniverse in catalog[global.request.get('universeUrlname')]['subuniverses'] %}
-				<div class="famille"  id="{{ subuniverse['subuniverseUrlname'] }}">
-					<div class="familleLeft">
-						<h2 class="h2">{{ subuniverse['subuniverseTitle'] }}</h2>
-						<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.</p>
-						{% if subuniverse['families'] is defined %}
-                            {% if subuniverse['families']|length > 3 %}
-                                <div class="pinterest">
-                                    {% for family in subuniverse['families'] %}
-                                        {% if loop.index < 4 %}
-                                            <div class="pinterestImage{{ loop.index }}">
-                                                <img class="img-responsive" src="{{ family['familyImage'] }}">
-                                            </div>
-                                        {% endif %}
-                                    {% endfor %}
-                                    <div class="pinterestTitre">
-                                        <p><br/><img src="/images/pin.png" /></p>
-                                        <p>{{ subuniverse['subuniverseTitle'] }}</p>
-                                        <span class="pinterestVoir">Voir</span>
-                                    </div>
-                                </div>
-                            {% endif %}
-						{% endif %}
-					</div>
-					<div class="familleRight">
-						{% if subuniverse['subuniverseUrlname'] == 'fenetres-portes-fenetres-baies-coulissantes' %}
-								<h2 class="h2 text-center">Découvrez en quelques questions le produit le plus adapté à votre projet </h2>
-								<a href="/configurateur">
-									<img class="img-responsive" src="/images/configurateur.png" style="margin:20px">
-								</a>
-								<br>
-								<h2 class="h2 text-center">Explorez directement nos gammes</h2>
-								<div class="row">
-									{% for gamme in ['pvc','pin','chene','aluminium'] %}
-										<div class="col-md-3 text-center">
-									    	<a href="https://lapeyre.herokuapp.com/fenetres-CCU0000/fenetres-portes-fenetres-baies-coulissantes-CCN0000/fenetres-portes-fenetres-baies-coulissantes-{{ gamme }}-CCN0000/">
-												<br>
-												<img class="img-inline" src="/images/windows/{{ gamme }}.png">
-												<h2 class="h2 text-center">{{ gamme }}</h2>
-								  			</a>
-										</div>
-									{% endfor %}
-								</div>
-						{% endif %}
-                        {% if subuniverse['families'] is defined %}
-                            {% for family in subuniverse['families'] %}
-                                {% if family['showUniverse'] == 2 %}
-                                    <fieldset class="ssfamilleBloc" onclick="location.href='/{{ global.request.get('universeUrlname') }}-CCU0000/{{ subuniverse['subuniverseUrlname'] }}-CCN0000/{{ family['familyUrlname'] }}-CCN0000/'">
-                                      <legend align="center">{{ family.familyName }}</legend>
-                                      <div class="ssfamille" style="background:url({{ family['familyImage'] }})"></div>
-                                    </fieldset>
-                                {% endif %}
-                            {% endfor %}
-                        {% endif %}
-                        {% set otherFamiliesDetails = null %}
-                        {% set otherFamilies = '<p><u>Et aussi</u> :' %}
-                        {% if subuniverse['families'] is defined %}
-                            {% for family in subuniverse['families'] %}
-                                {% if family['showUniverse'] == 1 %}
-                                    {% set otherFamiliesDetails = otherFamiliesDetails ~ '&nbsp;<a href="/' ~ global.request.get('universeUrlname') ~ '-CCU0000/' ~ subuniverse['subuniverseUrlname'] ~ '-CCN0000/' ~ family['familyUrlname'] ~ '-CCN0000/">' ~ family.familyName ~ '</a>,' %}
-                                {% endif %}
-                            {% endfor %} 
-                        {% endif %}
-                        {% set otherFamilies = otherFamilies ~ otherFamiliesDetails | trim(',') ~ '</p>' %}  
-                        
-                        {% if otherFamiliesDetails %}
-                            {{ otherFamilies | raw }}	
-                        {% endif %}	
-					</div>
-				</div>
-			{% endfor %}
-			<img src="/images/footerFenetres.jpg" />
-		</div>
-	</section>
-	<!--
-$('header .ancre').append('<div class="ancres" onclick="javascript:animationScroll(\'#famille' + i + '\')">
-' + familles[i] + '<img src="fleche.png"/>
+<div id="content" role="main">
+   <div class="container universeContainer" id="container_">
+      <div class="headerUnivers">
+         <img src="/images/headers/{{ global.request.get('universeUrlname') }}.jpg" />
+         <p>{{ catalog[global.request.get('universeUrlname')]['universeTitle'] }}</p>
+         <span>
+         Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam. Accusantium doloremque laudantium, totam rem aperiam</span>
+         <img src="" />
+      </div>
+      <div class="ancre">
+         {% for subuniverse in catalog[global.request.get('universeUrlname')]['subuniverses'] %}
+         <div class="ancres" onclick="javascript:animationScroll('#{{ subuniverse['subuniverseUrlname'] }}');">{{ subuniverse['subuniverseTitle'] }}<img src="/images/fleche.png"></div>
+         {% endfor %}
+      </div>
+      <img src="/images/contents/{{ global.request.get('universeUrlname') }}.jpg" />
+      {% for subuniverse in catalog[global.request.get('universeUrlname')]['subuniverses'] %}
+      <div class="famille"  id="{{ subuniverse['subuniverseUrlname'] }}">
+         <div class="familleLeft">
+            <h2 class="h2">{{ subuniverse['subuniverseTitle'] }}</h2>
+            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.</p>
+            {% if subuniverse['families'] is defined %}
+            {% if subuniverse['families']|length > 3 %}
+            <div class="pinterest">
+               {% for family in subuniverse['families'] %}
+               {% if loop.index < 4 %}
+               <div class="pinterestImage{{ loop.index }}">
+                  <img class="img-responsive" src="{{ family['familyImage'] }}">
+               </div>
+               {% endif %}
+               {% endfor %}
+               <div class="pinterestTitre">
+                  <p><br/><img src="/images/pin.png" /></p>
+                  <p>{{ subuniverse['subuniverseTitle'] }}</p>
+                  <span class="pinterestVoir">Voir</span>
+               </div>
+            </div>
+            {% endif %}
+            {% endif %}
+         </div>
+         <div class="familleRight">
+            {% if subuniverse['subuniverseUrlname'] == 'fenetres-portes-fenetres-baies-coulissantes' %}
+            <h2 class="h2 text-center">Découvrez en quelques questions le produit le plus adapté à votre projet </h2>
+            <a href="/configurateur">
+            <img class="img-responsive" src="/images/configurateur.png" style="margin:20px">
+            </a>
+            <br>
+            <h2 class="h2 text-center">Explorez directement nos gammes</h2>
+            <div class="row">
+               {% for gamme in ['pvc','pin','chene','aluminium'] %}
+               <div class="col-md-3 text-center">
+                  <a href="https://lapeyre.herokuapp.com/fenetres-CCU0000/fenetres-portes-fenetres-baies-coulissantes-CCN0000/fenetres-portes-fenetres-baies-coulissantes-{{ gamme }}-CCN0000/">
+                     <br>
+                     <img class="img-inline" src="/images/windows/{{ gamme }}.png">
+                     <h2 class="h2 text-center">{{ gamme }}</h2>
+                  </a>
+               </div>
+               {% endfor %}
+            </div>
+            {% endif %}
+            {% if subuniverse['families'] is defined %}
+            {% for family in subuniverse['families'] %}
+            {% if family['showUniverse'] == 2 %}
+            <fieldset class="ssfamilleBloc" onclick="location.href='/{{ global.request.get('universeUrlname') }}-CCU0000/{{ subuniverse['subuniverseUrlname'] }}-CCN0000/{{ family['familyUrlname'] }}-CCN0000/'">
+               <legend align="center">{{ family.familyName }}</legend>
+               <div class="ssfamille" style="background:url({{ family['familyImage'] }})"></div>
+            </fieldset>
+            {% endif %}
+            {% endfor %}
+            {% endif %}
+            {% set otherFamiliesDetails = null %}
+            {% set otherFamilies = '
+            <p><u>Et aussi</u> :' %}
+               {% if subuniverse['families'] is defined %}
+               {% for family in subuniverse['families'] %}
+               {% if family['showUniverse'] == 1 %}
+               {% set otherFamiliesDetails = otherFamiliesDetails ~ '&nbsp;<a href="/' ~ global.request.get('universeUrlname') ~ '-CCU0000/' ~ subuniverse['subuniverseUrlname'] ~ '-CCN0000/' ~ family['familyUrlname'] ~ '-CCN0000/">' ~ family.familyName ~ '</a>,' %}
+               {% endif %}
+               {% endfor %} 
+               {% endif %}
+               {% set otherFamilies = otherFamilies ~ otherFamiliesDetails | trim(',') ~ '
+            </p>
+            ' %}  
+            {% if otherFamiliesDetails %}
+            {{ otherFamilies | raw }}	
+            {% endif %}	
+         </div>
+      </div>
+      {% endfor %}
+      <img src="/images/footerFenetres.jpg" />
+   </div>
 </div>
-');
-$('section#univers').append('<div class="famille ' + familleCss + '" id="famille' + i + '">
-<div class="familleLeft">
-<h2 class="h2">
-' + familles[i] + '</h2>
--->
-
+<!--
+   $('header .ancre').append('<div class="ancres" onclick="javascript:animationScroll(\'#famille' + i + '\')">
+   ' + familles[i] + '<img src="fleche.png"/>
+   </div>
+   ');
+   $('section#univers').append('<div class="famille ' + familleCss + '" id="famille' + i + '">
+   <div class="familleLeft">
+   <h2 class="h2">
+   ' + familles[i] + '</h2>
+   -->
 {% endblock %}
