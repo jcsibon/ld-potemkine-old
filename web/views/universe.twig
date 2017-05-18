@@ -18,11 +18,10 @@
       <div class="col s12">   
         <img src="/images/contents/{{ global.request.get('universeUrlname') }}.jpg" />
       </div>   
-    </div>  
-    <div class="row" id="{{ subuniverse['subuniverseUrlname'] }}">
+    </div>    
       {% for subuniverse in catalog[global.request.get('universeUrlname')]['subuniverses'] %}
-
-         <div class="col3">
+      <div class="famille"  id="{{ subuniverse['subuniverseUrlname'] }}">
+         <div class="familleLeft">
             <h2 class="h2">{{ subuniverse['subuniverseTitle'] }}</h2>
             <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.</p>
             {% if subuniverse['families'] is defined %}
@@ -44,8 +43,7 @@
             {% endif %}
             {% endif %}
          </div>
-
-         <div class="col9">
+         <div class="familleRight">
             {% if subuniverse['subuniverseUrlname'] == 'fenetres-portes-fenetres-baies-coulissantes' %}
             <h2 class="h2 text-center">Découvrez en quelques questions le produit le plus adapté à votre projet </h2>
             <a href="/configurateur">
@@ -92,14 +90,19 @@
             {{ otherFamilies | raw }}	
             {% endif %}	
          </div>
-    </div>
+      </div>
       {% endfor %}
-    <div class="row">
-      <div class="col s12">   
-        <img src="/images/footerFenetres.jpg" />
-      </div>   
-    </div> 
+      <img src="/images/footerFenetres.jpg" />
    </div>
 </div>
-
+<!--
+   $('header .ancre').append('<div class="ancres" onclick="javascript:animationScroll(\'#famille' + i + '\')">
+   ' + familles[i] + '<img src="fleche.png"/>
+   </div>
+   ');
+   $('section#univers').append('<div class="famille ' + familleCss + '" id="famille' + i + '">
+   <div class="familleLeft">
+   <h2 class="h2">
+   ' + familles[i] + '</h2>
+   -->
 {% endblock %}
