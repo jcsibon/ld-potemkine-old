@@ -6,6 +6,8 @@
 .headerUnivers {
     background-repeat: no-repeat;
     background-position: top center;
+    height: 320px;
+    position: relative;
 }
 
 .headerUnivers p {
@@ -31,4 +33,42 @@
     font-size: 14px;
     text-align: center;
     text-shadow: 0px 0px 12px #000;
+}
+
+.anchor {
+    position: absolute;
+    top: 441px;
+    width: 1280px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.anchors {
+    display: inline-block;
+    background: #FE8005;
+    color: #fff;
+    padding: 20px 18px 18px 18px;
+    margin: 0 1px 1px 0;
+    font-size: 14px;
+}
+
+.anchors:hover {
+    background: #e66100;
+    cursor: pointer;
+} 
+
+.anchors:last-of-type {
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+
+.anchors:first-of-type {
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+}
+
+.anchors img {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0 0 0 10px;
 }
