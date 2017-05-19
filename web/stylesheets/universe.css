@@ -165,7 +165,7 @@
     clear: both;
 }
 
-.pinterestTitle div {
+.universeContainer .pinterestTitle div {
     align-items: center;
     display: flex;
     height: 50px;
