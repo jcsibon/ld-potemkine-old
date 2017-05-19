@@ -20,7 +20,7 @@
       </div>   
     </div>    
       {% for subuniverse in catalog[global.request.get('universeUrlname')]['subuniverses'] %}
-      <div class="row"  id="{{ subuniverse['subuniverseUrlname'] }}">
+      <div class="row subUniverse"  id="{{ subuniverse['subuniverseUrlname'] }}">
          <div class="col s3">
             <h2 class="h2">{{ subuniverse['subuniverseTitle'] }}</h2>
             <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.</p>
