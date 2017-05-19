@@ -7,14 +7,14 @@
     margin-bottom: 0;
 }
 
-.universeHeader {
+.universeContainer .universeHeader {
     background-repeat: no-repeat;
     background-position: top center;
     height: 320px;
     position: relative;
 }
 
-.universeHeader p {
+.universeContainer .universeHeader p {
     position: absolute;
     top: 100px;
     color: #fff;
@@ -26,7 +26,7 @@
     text-shadow: 0px 0px 12px #000;
 }
 
-.universeHeader span {
+.universeContainer .universeHeader span {
     position: absolute;
     top: 150px;
     color: #fff;
@@ -39,7 +39,7 @@
     text-shadow: 0px 0px 12px #000;
 }
 
-.universeAnchor {
+.universeContainer .universeAnchor {
     position: absolute;
     top: 450px;
     width: 100%;
@@ -49,7 +49,7 @@
     z-index: 1;
 }
 
-.universeAnchors {
+.universeContainer .universeAnchors {
     display: inline-block;
     background: #FE8005;
     color: #fff;
@@ -58,33 +58,33 @@
     font-size: 14px;
 }
 
-.universeAnchors:hover {
+.universeContainer .universeAnchors:hover {
     background: #e66100;
     cursor: pointer;
 } 
 
-.universeAnchors:last-of-type {
+.universeContainer .universeAnchors:last-of-type {
     border-top-right-radius: 2px;
     border-bottom-right-radius: 2px;
 }
 
-.universeAnchors:first-of-type {
+.universeContainer .universeAnchors:first-of-type {
     border-top-left-radius: 2px;
     border-bottom-left-radius: 2px;
 }
 
-.universeAnchors img {
+.universeContainer .universeAnchors img {
     display: inline-block;
     vertical-align: middle;
     padding: 0 0 0 10px;
 }
 
-.subFamilyContainer:hover {
+.universeContainer .subFamilyContainer:hover {
     text-decoration: underline;
     cursor: pointer;
 }
 
-.subFamilyContainer {
+.universeContainer .subFamilyContainer {
     border: 10px solid #f1f1f1;
     width: 230px;
     display: inline-block;
@@ -92,7 +92,7 @@
     position: relative;
 }
 
-.subFamilyContainer legend {
+.universeContainer .subFamilyContainer legend {
     text-align: center;
     width: 80%;
     padding: 0 10px;
@@ -100,7 +100,7 @@
     font-weight: 700;
 }
 
-.subFamilyImage {
+.universeContainer .subFamilyImage {
     font-weight: 100;
     padding: 20px;
     text-align: center;
@@ -126,11 +126,62 @@
     line-height: 1.6em;
 }
 
-.pinterest {
+.universeContainer .pinterest {
     box-shadow: 3px 4px 15px #eaeaea;
     border: 1px solid #eee;
     padding: 20px;
     margin-top: 40px;
     height: 200px;
     position: relative;
+}
+
+.universeContainer .pinterestImage1 {
+    width: 158px;
+    height: 142px;
+    float: left;
+    background-size: cover !important;
+    background-repeat: no-repeat;
+}
+
+.universeContainer .pinterestImage2, .universeContainer .pinterestImage3 {
+    width: 70px;
+    height: 70px;
+    float: right;
+    margin: 0 0 2px 2px;
+    background-repeat: no-repeat;
+}
+
+.universeContainer .pinterestImage3 {
+    margin: 0 0 0 2px;
+}
+
+.universeContainer .pinterestTitle {
+    position: absolute;
+    top: 183px;
+    left: 0;
+    font-size: 15px;
+    width: 270px;
+}
+
+.universeContainer .pinterestTitle p:nth-of-type(1) {
+    display: inline-flex;
+    padding: 0 0 0 20px;
+}
+
+.universeContainer .pinterestTitle p:nth-of-type(2) {
+    display: inline-flex;
+    vertical-align: middle;
+    width: 110px;
+    line-height: 1.2em;
+    padding: 10px 10px 10px 0px !important;
+}
+
+.universeContainer .pinterestButton {
+    background: #efefef;
+    display: inline-block;
+    padding: 12px 17px;
+    width: 40px;
+    text-align: center;
+    font-size: 13px;
+    vertical-align: middle;
 }
