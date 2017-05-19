@@ -86,7 +86,8 @@
 
 .universeContainer .subFamilyContainer {
     border: 10px solid #f1f1f1;
-    width: 230px;
+    max-width: 230px;
+    width: 100%;
     display: inline-block;
     margin: 19px;
     position: relative;
