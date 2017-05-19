@@ -78,3 +78,32 @@
     vertical-align: middle;
     padding: 0 0 0 10px;
 }
+
+.subFamilyContainer:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.subFamilyContainer {
+    border: 10px solid #f1f1f1;
+    width: 230px;
+    display: inline-block;
+    margin: 19px;
+    position: relative;
+}
+
+.subFamilyContainer legend {
+    text-align: center;
+    width: 80%;
+    padding: 0 10px;
+}
+
+.subFamilyImage {
+    font-weight: 100;
+    padding: 20px;
+    text-align: center;
+    margin: 20px;
+    height: 150px;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+}
