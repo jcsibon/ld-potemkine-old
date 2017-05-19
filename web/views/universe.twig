@@ -26,7 +26,7 @@
             <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.</p>
             {% if subuniverse['families'] is defined %}
             {% if subuniverse['families']|length > 3 %}
-            <div class="pinterest">
+            <div class="col s12 pinterest">
                {% for family in subuniverse['families'] %}
                {% if loop.index < 4 %}
                <div class="pinterestImage{{ loop.index }}">
@@ -45,7 +45,7 @@
          </div>
          <div class="col s9">
             {% if subuniverse['subuniverseUrlname'] == 'fenetres-portes-fenetres-baies-coulissantes' %}
-            <h2 class="h2 text-center">Découvrez en quelques questions le produit le plus adapté à votre projet </h2>
+            <h2 class="text-center">Découvrez en quelques questions le produit le plus adapté à votre projet </h2>
             <a href="/configurateur">
             <img class="img-responsive" src="/images/configurateur.png" style="margin:20px">
             </a>
@@ -69,7 +69,7 @@
             <div class="col s4">
                 <fieldset class="subFamilyContainer" onclick="location.href='/{{ global.request.get('universeUrlname') }}-CCU0000/{{ subuniverse['subuniverseUrlname'] }}-CCN0000/{{ family['familyUrlname'] }}-CCN0000/'">
                    <legend align="center">{{ family.familyName }}</legend>
-                   <div class="subFamilyImage" style="background:url({{ family['familyImage'] }})"></div>
+                   <div class="subFamilyImage" style="background:url('{{ family['familyImage'] }}')"></div>
                 </fieldset>
             </div>    
             {% endif %}

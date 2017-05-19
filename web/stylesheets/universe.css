@@ -96,6 +96,8 @@
     text-align: center;
     width: 80%;
     padding: 0 10px;
+    color: #000;
+    font-weight: 700;
 }
 
 .subFamilyImage {
@@ -106,4 +108,29 @@
     height: 150px;
     background-repeat: no-repeat !important;
     background-position: center center !important;
+}
+
+.universeContainer h2 {
+    color: #646665;
+    font-size: 24px;
+    font-weight: bold;
+    padding-bottom: 20px;
+    line-height: 1.3em;
+    position: relative;
+}
+
+.universeContainer p {
+    font-weight: 400;
+    font-size: 14px;
+    padding: 10px 0;
+    line-height: 1.6em;
+}
+
+.pinterest {
+    box-shadow: 3px 4px 15px #eaeaea;
+    border: 1px solid #eee;
+    padding: 20px;
+    margin-top: 40px;
+    height: 200px;
+    position: relative;
 }
