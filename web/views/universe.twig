@@ -29,8 +29,7 @@
             <div class="col s12 pinterest">
                {% for family in subuniverse['families'] %}
                {% if loop.index < 4 %}
-               <div class="pinterestImage{{ loop.index }}">
-                  <img class="img-responsive" src="{{ family['familyImage'] }}">
+               <div class="pinterestImage{{ loop.index }}" style="background-image:url('{{ family['familyImage'] }}')">
                </div>
                {% endif %}
                {% endfor %}
