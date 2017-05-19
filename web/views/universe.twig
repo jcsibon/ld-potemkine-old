@@ -29,14 +29,19 @@
             <div class="col s12 pinterest">
                {% for family in subuniverse['families'] %}
                {% if loop.index < 4 %}
-               <div class="pinterestImage{{ loop.index }}" style="background-image:url('{{ family['familyImage'] }}')">
-               </div>
+               <div class="pinterestImage{{ loop.index }}" style="background-image:url('{{ family['familyImage'] }}')"></div>
                {% endif %}
                {% endfor %}
                <div class="pinterestTitle">
-                  <p><img src="/images/pin.png" /></p>
-                  <p>{{ subuniverse['subuniverseTitle'] }}</p>
-                  <span class="pinterestButton">Voir</span>
+                   <div class="col s3">
+                       <img src="/images/pin.png" />
+                   </div>
+                   <div class="col s6">
+                       {{ subuniverse['subuniverseTitle'] }}
+                   </div>
+                   <div class="col s3">
+                       <span class="pinterestButton">Voir</span>
+                   </div>                  
                </div>
             </div>
             {% endif %}

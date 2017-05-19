@@ -124,6 +124,7 @@
     font-size: 14px;
     padding: 10px 0;
     line-height: 1.6em;
+    color: #000;
 }
 
 .universeContainer .pinterest {
@@ -133,6 +134,7 @@
     margin-top: 40px;
     height: 200px;
     position: relative;
+    max-width: 272px;
 }
 
 .universeContainer .pinterestImage1 {
@@ -155,38 +157,11 @@
     margin: 0 0 0 2px;
 }
 
-.universeContainer .pinterestTitle {
-    position: absolute;
-    top: 183px;
-    left: 0;
-    font-size: 15px;
-    width: 270px;
-}
-
-.universeContainer .pinterestTitle p:nth-of-type(1) {
-    display: inline-flex;
-    padding: 0 0 0 20px;
-}
-
-.universeContainer .pinterestTitle p:nth-of-type(2) {
-    display: inline-flex;
-    vertical-align: middle;
-    width: 110px;
-    line-height: 1.2em;
-    padding: 10px 10px 10px 0px !important;
-}
-
-.universeContainer .pinterestButton {
-    background: #efefef;
-    display: inline-block;
-    padding: 12px 17px;
-    width: 40px;
-    text-align: center;
-    font-size: 13px;
-    vertical-align: middle;
-}
-
 .universeContainer .subUniverse {
     padding: 60px 40px;
     background: url(../images/degrade.jpg) top center repeat-x #f6f7f7;
+}
+
+.universeContainer .subUniverse>div>p {
+    clear: both;
 }
