@@ -21,12 +21,12 @@
     </div>    
       {% for subuniverse in catalog[global.request.get('universeUrlname')]['subuniverses'] %}
       <div class="row subUniverse"  id="{{ subuniverse['subuniverseUrlname'] }}">
-         <div class="col s3">
+         <div class="col l3 m12">
             <h2 class="h2">{{ subuniverse['subuniverseTitle'] }}</h2>
             <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.</p>
             {% if subuniverse['families'] is defined %}
             {% if subuniverse['families']|length > 3 %}
-            <div class="col s12 pinterest">
+            <div class="col s12 hide-on-med-and-down pinterest">
                {% for family in subuniverse['families'] %}
                {% if loop.index < 4 %}
                <div class="pinterestImage{{ loop.index }}" style="background-image:url('{{ family['familyImage'] }}')"></div>
@@ -47,7 +47,7 @@
             {% endif %}
             {% endif %}
          </div>
-         <div class="col s9">
+         <div class="col l9 m12">
             {% if subuniverse['subuniverseUrlname'] == 'fenetres-portes-fenetres-baies-coulissantes' %}
             <h2 class="text-center">Découvrez en quelques questions le produit le plus adapté à votre projet </h2>
             <a href="/configurateur">
