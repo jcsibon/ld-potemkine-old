@@ -1,6 +1,7 @@
 .universeContainer {
     width: 100%;
     max-width: 1280px;
+    position: relative;
 }
 
 .universeContainer .row {
@@ -41,7 +42,7 @@
 
 .universeContainer .universeAnchor {
     position: absolute;
-    top: 450px;
+    top: 290px;
     width: 100%;
     max-width: 1280px;
     text-align: center;
@@ -146,7 +147,7 @@
 }
 
 .universeContainer .pinterestImage1 {
-    width: 158px;
+    width: 66%;
     height: 142px;
     float: left;
     background-size: cover !important;
@@ -154,10 +155,11 @@
 }
 
 .universeContainer .pinterestImage2, .universeContainer .pinterestImage3 {
-    width: 70px;
+    width: 34%;
     height: 70px;
     float: right;
     margin: 0 0 2px 2px;
+    background-size: cover !important;
     background-repeat: no-repeat;
 }
 
