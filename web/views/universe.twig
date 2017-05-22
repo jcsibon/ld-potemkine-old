@@ -72,7 +72,7 @@
             {% if family['showUniverse'] == 2 %}
             <div class="col l4 m6 s12">
                 <fieldset class="subFamilyContainer" onclick="location.href='/{{ global.request.get('universeUrlname') }}-CCU0000/{{ subuniverse['subuniverseUrlname'] }}-CCN0000/{{ family['familyUrlname'] }}-CCN0000/'">
-                   <legend align="center">{{ family.familyName }}</legend>
+                   <legend align="center"><div>{{ family.familyName }}</div></legend>
                    <div class="subFamilyImage" style="background:url('{{ family['familyImage'] }}')"></div>
                 </fieldset>
             </div>    
