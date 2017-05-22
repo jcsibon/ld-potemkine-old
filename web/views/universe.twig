@@ -71,10 +71,10 @@
             {% for family in subuniverse['families'] %}
             {% if family['showUniverse'] == 2 %}
             <div class="col l4 m6 s12">
-                <div class="subFamilyContainer" onclick="location.href='/{{ global.request.get('universeUrlname') }}-CCU0000/{{ subuniverse['subuniverseUrlname'] }}-CCN0000/{{ family['familyUrlname'] }}-CCN0000/'">
-                   <div class="subFamilyTitle">{{ family.familyName }}</div>
+                <fieldset class="subFamilyContainer" onclick="location.href='/{{ global.request.get('universeUrlname') }}-CCU0000/{{ subuniverse['subuniverseUrlname'] }}-CCN0000/{{ family['familyUrlname'] }}-CCN0000/'">
+                   <legend align="center">{{ family.familyName }}</legend>
                    <div class="subFamilyImage" style="background:url('{{ family['familyImage'] }}')"></div>
-                </div>
+                </fieldset>
             </div>    
             {% endif %}
             {% endfor %}

@@ -93,7 +93,7 @@
     position: relative;
 }
 
-.universeContainer .subFamilyTitle {
+.universeContainer .subFamilyContainer legend {
     text-align: center;
     width: 80%;
     padding: 0 10px;
