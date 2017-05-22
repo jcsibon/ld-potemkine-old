@@ -21,7 +21,7 @@
     </div>    
       {% for subuniverse in catalog[global.request.get('universeUrlname')]['subuniverses'] %}
       <div class="row subUniverse"  id="{{ subuniverse['subuniverseUrlname'] }}">
-         <div class="col l3 m12">
+         <div class="col l3 s12">
             <h2 class="h2">{{ subuniverse['subuniverseTitle'] }}</h2>
             <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.</p>
             {% if subuniverse['families'] is defined %}
@@ -47,7 +47,7 @@
             {% endif %}
             {% endif %}
          </div>
-         <div class="col l9 m12">
+         <div class="col l9 s12">
             {% if subuniverse['subuniverseUrlname'] == 'fenetres-portes-fenetres-baies-coulissantes' %}
             <h2 class="text-center">Découvrez en quelques questions le produit le plus adapté à votre projet </h2>
             <a href="/configurateur">
