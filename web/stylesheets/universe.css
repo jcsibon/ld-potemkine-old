@@ -89,7 +89,7 @@
     max-width: 230px;
     width: 100%;
     display: inline-block;
-    margin: 19px;
+    margin: 0 19px 19px 19px;
     position: relative;
 }
 
