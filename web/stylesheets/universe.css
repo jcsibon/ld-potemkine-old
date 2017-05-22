@@ -106,7 +106,7 @@
     line-height: 1.2em;
     height: 50px;
     align-items: center;
-    display: inline-flex;
+    display: grid;
 }
 
 .universeContainer .subFamilyImage {
