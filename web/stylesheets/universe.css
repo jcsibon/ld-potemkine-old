@@ -214,6 +214,9 @@
 }
 
 @media screen and (max-width: 768px) {
+  .universeContainer .subUniverseFamilies {
+     display: none; 
+  }
   .universeContainer .subUniverse .col.s6 {
      width: 100%;
   }
@@ -223,5 +226,9 @@
   .universeContainer .subFamilyContainer {
      max-width: 230px;
      margin: 0 auto 19px auto;
+  }
+  .universeContainer .universeHeader span {
+     width: 80%;
+     margin: 0 10%;
   }
 }
