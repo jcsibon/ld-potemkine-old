@@ -18,7 +18,18 @@ function animationScroll(destination) {
     }, 500);
 } 
 
-
+$('.subUniverseMobTitle').click(function() {
+  $('.subUniverseMobTitle').removeClass('subUniverseMobActive');
+  $('.subUniverseMobTitle').addClass('subUniverseMobDisable');
+  if ($(this).parent().next('.subUniverseFamilies').is(':visible')!=0) {
+    $(this).parent().next('.subUniverseFamilies').slideUp();
+  } else {
+    $('.subUniverseFamilies').hide();
+    $(this).removeClass('subUniverseMobDisable');
+    $(this).addClass('subUniverseMobActive');
+    $(this).parent().next('.subUniverseFamilies').slideDown();
+  }
+})
 </script>
 </body>
 </html>

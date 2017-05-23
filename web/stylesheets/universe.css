@@ -213,6 +213,8 @@
     font-size: 40px;
     position: absolute;
     right: 10px;
+    width: 20px;
+    text-align: center;
 }
 
 .universeContainer .subUniverseMobDisable::after {
@@ -221,6 +223,8 @@
     font-size: 40px;
     position: absolute;
     right: 10px;
+    width: 20px;
+    text-align: center;
 }
 
 .divider {
