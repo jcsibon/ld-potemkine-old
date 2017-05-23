@@ -98,14 +98,14 @@
     width: 80%;
     font-weight: 700;
     padding: 0 10px;
-    height: 53px;
+    height: 63px;
 }
 
 .universeContainer .subFamilyContainer legend div {
     color: #000;
     text-align: center;
     line-height: 1.2em;
-    height: 50px;
+    height: 60px;
     align-items: center;
     display: grid;
 }
