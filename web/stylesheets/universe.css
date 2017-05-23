@@ -203,4 +203,8 @@
   .universeContainer .subUniverse {
      padding: 60px 10px;
   }
+  .universeContainer .subFamilyContainer {
+     max-width: 230px;
+     margin: 0 auto 19px auto;
+  }
 }
