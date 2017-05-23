@@ -207,6 +207,14 @@
     padding-bottom: 0;
 }
 
+.universeContainer .subUniverseMobTitle::after {
+    content: "+";
+    font-weight: 100;
+    font-size: 40px;
+    position: absolute;
+    right: 10px;
+}
+
 .divider {
     height: 1px;
     overflow: hidden;
@@ -215,7 +223,7 @@
 
 @media screen and (min-width: 768px) {
   .universeContainer .subUniverseFamilies {
-     display: block; 
+     display: block !important; 
   }
 }
 
