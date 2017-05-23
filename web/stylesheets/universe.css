@@ -200,6 +200,11 @@
     clear: both;
 }
 
+.universeContainer .subUniverseMobTitle {
+    border-bottom: 1px solid #ccc;
+    cursor: pointer;
+}
+
 @media screen and (max-width: 600px) {
   .universeContainer .subUniverse .col.s6 {
      width: 100%;
