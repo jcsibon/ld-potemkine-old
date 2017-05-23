@@ -139,13 +139,13 @@
     padding: 10px 0;
     line-height: 1.6em;
     color: #000;
+    margin-bottom: 40px;
 }
 
 .universeContainer .pinterest {
     box-shadow: 3px 4px 15px #eaeaea;
     border: 1px solid #eee;
     padding: 20px;
-    margin-top: 40px;
     position: relative;
     max-width: 272px;
 }
