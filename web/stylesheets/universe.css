@@ -244,9 +244,6 @@
   .universeContainer .subUniverseFamilies {
      display: none; 
   }
-  .universeContainer .subUniverse .col.s6 {
-     width: 100%;
-  }
   .universeContainer .subUniverse {
      padding: 0 10px;
   }
@@ -257,5 +254,11 @@
   .universeContainer .universeHeader span {
      width: 80%;
      margin: 0 10%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .universeContainer .subUniverse .col.s6 {
+     width: 100%;
   }
 }
