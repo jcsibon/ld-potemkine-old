@@ -203,8 +203,8 @@
 .universeContainer .subUniverseMobTitle {
     cursor: pointer;
     font-size: 20px;
-    line-height: 80px;
-    padding-bottom: 0;
+    line-height: 1.1em;
+    padding: 30px 35px 30px 0;
 }
 
 .universeContainer .subUniverseMobActive::after {
