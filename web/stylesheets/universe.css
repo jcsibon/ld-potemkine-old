@@ -207,7 +207,15 @@
     padding-bottom: 0;
 }
 
-.universeContainer .subUniverseMobTitle::after {
+.universeContainer .subUniverseMobActive::after {
+    content: "-";
+    font-weight: 100;
+    font-size: 40px;
+    position: absolute;
+    right: 10px;
+}
+
+.universeContainer .subUniverseMobDisable::after {
     content: "+";
     font-weight: 100;
     font-size: 40px;
