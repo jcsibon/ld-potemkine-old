@@ -213,6 +213,12 @@
     background-color: #e0e0e0;
 }
 
+@media screen and (min-width: 768px) {
+  .universeContainer .subUniverseFamilies {
+     display: block; 
+  }
+}
+
 @media screen and (max-width: 768px) {
   .universeContainer .subUniverseFamilies {
      display: none; 
