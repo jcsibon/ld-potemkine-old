@@ -195,3 +195,12 @@
     padding-top: 10px;
     clear: both;
 }
+
+@media screen and (max-width: 600px) {
+  .universeContainer .subUniverse .col.s6 {
+     width: 100%;
+  }
+  .universeContainer .subUniverse {
+     padding: 60px 10px;
+  }
+}
