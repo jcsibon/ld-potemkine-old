@@ -136,7 +136,7 @@
 .universeContainer .subFamilyImage:hover div:before, .universeContainer .subFamilyImage:focus div:before {
     display: block;
 }
-inspector-stylesheet:1
+
 .universeContainer .subFamilyImage div:before {
     content: "";
     display: none;
