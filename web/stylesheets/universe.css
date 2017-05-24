@@ -125,12 +125,12 @@
     background-position: center center !important;
     width: 100%;
     height: 100%;
-    transition: all .2s;
+    transition: all .5s;
 }
 
 .universeContainer .subFamilyImage div:hover {
     transform: scale(1.2);
-    transition: all .5s;
+    transition: all 1s;
 }
 
 .universeContainer .subFamilyImage:hover div:before, .universeContainer .subFamilyImage:focus div:before {
