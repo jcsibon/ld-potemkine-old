@@ -115,15 +115,16 @@
 }
 
 .universeContainer .subFamilyImage {
-    font-weight: 100;
     padding: 20px;
-    text-align: center;
     margin: 0 20px 20px 20px;
     height: 150px;
+}
+
+.universeContainer .subFamilyImage div {
     background-repeat: no-repeat !important;
     background-position: center center !important;
 }
-
+    
 .universeContainer h2 {
     color: #646665;
     font-size: 24px;
