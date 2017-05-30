@@ -261,6 +261,10 @@
     background-color: #e0e0e0;
 }
 
+.capitalize {
+    text-transform: capitalize;
+}
+
 @media screen and (min-width: 768px) {
   .universeContainer .subUniverseFamilies {
      display: block !important; 
