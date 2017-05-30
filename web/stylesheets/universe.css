@@ -120,6 +120,10 @@
     overflow: hidden;
 }
 
+.universeContainer .subFamilyImageTiny {
+    height: 130px;
+}
+
 .universeContainer .subFamilyImage div {
     background-repeat: no-repeat !important;
     background-position: center center !important;

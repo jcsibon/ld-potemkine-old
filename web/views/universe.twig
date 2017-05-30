@@ -64,24 +64,14 @@
             <div class="row">
                {% for gamme in ['pvc','pin','chene','aluminium'] %}
                 
-                <div class="col m4 s6">
+                <div class="col m3 s6">
                     <fieldset class="subFamilyContainer" onclick="location.href='/fenetres-CCU0000/fenetres-portes-fenetres-baies-coulissantes-CCN0000/fenetres-portes-fenetres-baies-coulissantes-{{ gamme }}-CCN0000/'">
                        <legend align="center"><div>{{ gamme }}</div></legend>
-                       <div class="subFamilyImage">
+                       <div class="subFamilyImage subFamilyImageTiny">
                            <div style="background:url('/images/windows/{{ gamme }}.png')"></div>
                        </div>
                     </fieldset>
                 </div> 
-                
-                <!--
-               <div class="col-md-3 text-center">
-                  <a href="https://lapeyre.herokuapp.com/fenetres-CCU0000/fenetres-portes-fenetres-baies-coulissantes-CCN0000/fenetres-portes-fenetres-baies-coulissantes-{{ gamme }}-CCN0000/">
-                     <br>
-                     <img class="img-inline" src="/images/windows/{{ gamme }}.png">
-                     <h2 class="h2 text-center">{{ gamme }}</h2>
-                  </a>
-               </div>
--->
                {% endfor %}
             </div>
             {% endif %}
