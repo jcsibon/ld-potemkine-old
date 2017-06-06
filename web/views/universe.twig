@@ -55,11 +55,6 @@
          </div>
          <div class="col l9 s12 subUniverseFamilies">
             {% if subuniverse['subuniverseUrlname'] == 'fenetres-portes-fenetres-baies-coulissantes' %}
-            <h2 class="text-center">Découvrez en quelques questions le produit le plus adapté à votre projet </h2>
-            <a href="/configurateur">
-            <img class="responsive-img" src="/images/windows/MEA_sur_mesure.png" style="margin-bottom:40px">
-            </a>
-            <br>
             <h2 class="h2 text-center">Explorez directement nos gammes</h2>
             <div class="row">
                {% for gamme in ['pvc','pin','chene','aluminium'] %}
@@ -74,6 +69,10 @@
                 </div> 
                {% endfor %}
             </div>
+            <h2 class="text-center" style="padding-top:20px">Découvrez en quelques questions le produit le plus adapté à votre projet </h2>
+            <a href="/configurateur">
+            <img class="responsive-img" src="/images/windows/MEA_sur_mesure.png" style="margin-bottom:10px">
+            </a>
             {% endif %}
             {% if subuniverse['families'] is defined %}
             {% for family in subuniverse['families'] %}
