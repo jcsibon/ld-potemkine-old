@@ -200,8 +200,8 @@
 }
 
 .universeContainer .subUniverse {
-    padding: 60px 40px;
-    background: url(../images/degrade.jpg) top center repeat-x #f6f7f7;
+    padding: 30px 40px 60px 40px;
+    background: url(https://www.lapeyre.fr/img/contrib/freehtml/pages/v8/univers/images/degrade.jpg) top center repeat-x #f6f7f7;
 }
 
 .universeContainer .subUniverse>div>p {
