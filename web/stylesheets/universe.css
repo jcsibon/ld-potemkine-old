@@ -294,3 +294,45 @@
      width: 100%;
   }
 }
+
+/* Widget Pinterest DÃŠbut */
+
+#widgetPinterest {
+   padding: 0;
+   text-align: center;
+}
+
+#widgetPinterest > span[class*="_board"] {
+    padding: 5px;
+}
+
+#widgetPinterest span {
+   overflow-x: hidden;
+   overflow-y: hidden;
+}
+
+#widgetPinterest > span {
+    box-shadow: 0 0 10px #e2e2e2;
+    border-radius: 2px;
+}
+
+#widgetPinterest span[class*="_img"] {
+    box-shadow: none;
+}
+
+#widgetPinterest span[class*="_bd"] {
+    height: inherit !important;
+    padding-bottom: 6px;
+}
+
+#widgetPinterest span[class*="_img"]:nth-child(n+3), #widgetPinterest span[class*="_ft"], #widgetPinterest span[class*="_pinner"]{
+    display:none;
+}
+
+#widgetPinterest span span span[class*="_board"] {
+    height: 24px;
+    color: #666;
+    width: 70%;
+}
+
+/* Widget Pinterest Fin */
