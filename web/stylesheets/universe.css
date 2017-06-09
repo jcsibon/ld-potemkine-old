@@ -326,6 +326,39 @@
     border-radius: 2px;
 }
 
+.subUniverseWindow {
+    background: #fff !important;
+    position: relative !important;
+}
+
+
+.subUniverseWindowOther {
+    clear: both;
+    background: #F1F2F3 !important;
+    position: relative;
+    padding-top: 50px;
+}
+
+.subUniverseWindowOther p {
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    color: #646665;
+}
+
+.subUniverseWindowOther::Before {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -35px;
+    width: 0;
+    height: 0;
+    border-left: 35px solid transparent;
+    border-right: 35px solid transparent;
+    border-top: 32px solid #fff;
+}
+
 @media screen and (min-width: 768px) {
   .universeContainer .subUniverseFamilies {
      display: block !important; 
