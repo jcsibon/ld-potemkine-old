@@ -35,13 +35,29 @@
 		      </div>
 		   </div>
 		   <div class="col s6">
-		      <div class="col s12">
+		      <div class="col s12 subUniverseFamilies">
 		         <p>Trouver par matière</p>
+			    {% if subuniverse['subuniverseUrlname'] == 'fenetres-portes-fenetres-baies-coulissantes' %}
+				    <div class="row">
+				       {% for gamme in ['pvc','pin','chene','aluminium'] %}
+
+					<div class="col m3 s6">
+					    <fieldset class="subFamilyContainer" onclick="location.href='/fenetres-CCU0000/fenetres-portes-fenetres-baies-coulissantes-CCN0000/fenetres-portes-fenetres-baies-coulissantes-{{ gamme }}-CCN0000/'">
+					       <legend align="center" class="capitalize"><div>{{ gamme }}</div></legend>
+					       <div class="subFamilyImage subFamilyImageTiny">
+						   <div style="background-image:url('/images/windows/{{ gamme }}.png')"></div>
+					       </div>
+					    </fieldset>
+					</div> 
+				       {% endfor %}
+				    </div>
+			    {% endif %}
 		      </div>
 		   </div>
 		</div>
 		<div class="row subUniverse subUniverseWindowOther">
 			<p>Et n'oubliez pas :</p>
+			xxxxxxxxxxxxxx
 		</div>
 	      {% endif %}
 	      <div class="row subUniverse"  id="{{ subuniverse['subuniverseUrlname'] }}">
