@@ -25,45 +25,36 @@ array_shift($file);
 foreach ($file as $i=>$row) {
     foreach($keys as $j=>$key)
       $newrow[$key] = $row[$j];
-  
-  
 
   switch (substr($newrow['ParentID'],0,3)) {
       case "CCR":
-          $precatalog["Univers"][$newrow['ID']]=$newrow;
+          $CCU[$newrow['ID']]=$newrow;
       break;
       case "CCU":
-          $precatalog["Sous-univers"][$newrow['ID']]=$newrow;
+          $SCU[$newrow['ID']]=$newrow;
       break;
       case "SCU":
-          $precatalog["Familles"][$newrow['ID']]=$newrow;
+          $CCN[$newrow['ID']]=$newrow;
       break;
       case "CCN":
-          $precatalog["Sous-familles"][$newrow['ID']]=$newrow;
+          $SCN[$newrow['ID']]=$newrow;
       break;    
   }
 }
 
-foreach ($precatalog["Sous-familles"] as $row)
-  $precatalog["Familles"][$row['ParentID']]["Content"][]=$row;
+foreach ($SCN as $row)
+  $CCN[$row['ParentID']]["Content"][]=$row;
 
-foreach ($precatalog["Familles"] as $row)
-  $precatalog["Sous-univers"][$row['ParentID']]["Content"][]=$row;
+foreach ($CCN as $row)
+  $SCU[$row['ParentID']]["Content"][]=$row;
 
-foreach ($precatalog["Sous-univers"] as $row)
-  $precatalog["Univers"][$row['ParentID']]["Content"][]=$row;
+foreach ($SCU as $row)
+  $CCU[$row['ParentID']]["Content"][]=$row;
 
-$catalog=$precatalog["Univers"];
+$catalog=$CCU;
 
-?>
-<pre>
-    <?php
-        print_r($catalog);
-    ?>
-</pre>
-<?
-die();
 
+/*
 $file = array_map("str_getcsv", file("https://docs.google.com/spreadsheets/d/1s10qJviUHayRFRHxSbMGNDKaIg7-gyYAjz6kOPhPm6g/pub?gid=1971894571&single=true&output=csv",FILE_SKIP_EMPTY_LINES));
 $keys = array_shift($file);
 foreach ($file as $i=>$row) {
@@ -84,14 +75,8 @@ foreach ($file as $i=>$row) {
     $row = array_combine($keys, $row);
     $catalog[$row['universeUrlname']]['subuniverses'][$row['subuniverseUrlname']]['families'][$row['familyUrlname']]=$row;
 }
-/*
-$file = array_map("str_getcsv", file("https://docs.google.com/spreadsheets/d/1s10qJviUHayRFRHxSbMGNDKaIg7-gyYAjz6kOPhPm6g/pub?gid=1976579302&single=true&output=csv",FILE_SKIP_EMPTY_LINES));
-$keys = array_shift($file);
-foreach ($file as $i=>$row) {
-    $row = array_combine($keys, $row);
-    $catalog[$row['universeUrlname']]['subuniverses'][$row['subuniverseUrlname']]['families'][$row['familyUrlname']]['criterias'][$row['criteriaName']]=$row;
-}
 */
+
 $app['twig']->addGlobal('catalog', $catalog);
 
 $app->get('/', function() use($app) {
@@ -105,21 +90,21 @@ $app->get('/catalog', function() use($app, $catalog) {
   return true;
 });
 
-$app->get('/{universeUrlname}-CCU0000/', function($universeUrlname) use($app) {
+$app->get('/{universeUrlname}-{universeUrlcode}/', function($universeUrlcode) use($app) {
   return $app['twig']->render('universe.twig');
-})->assert('universeUrlname', '[a-z\-]+');
+})->assert('universeUrlcode', 'CCU[0-9\-]+');
 
-$app->get('/{universeUrlname}-CCU0000/{subuniverseUrlname}-CCN0000/{familyUrlname}-CCN0000/', function($universeUrlname, $subuniverseUrlname, $familyUrlname) use($app) {
+$app->get('/{universeUrlname}-{universeUrlcode}/{subuniverseUrlname}-{subuniverseUrlcode}/{familyUrlname}-{familyUrlcode}/', function($universeUrlname, $subuniverseUrlname, $familyUrlname) use($app) {
   if ($universeUrlname == 'fenetres' && $subuniverseUrlname == 'fenetres-portes-fenetres-baies-coulissantes')
     return $app['twig']->render('windows.twig');
   else
     return $app['twig']->render('family.twig');
-})->assert('universeUrlname', '[a-z\-]+')->assert('subuniverseUrlname', '[a-z\-]+')->assert('familyUrlname', '[a-z\-]+');
+})->assert('universeUrlname', '[a-z\-]+')->assert('universeUrlcode', 'CCU[0-9\-]+')->assert('subuniverseUrlname', '[a-z\-]+')->assert('subuniverseUrlcode', 'SCU[0-9\-]+')->assert('familyUrlname', '[a-z\-]+')->assert('familyUrlcode', 'CCN[0-9\-]+');
 
 
-$app->get('/{universeUrlname}-CCU0000/{subuniverseUrlname}-CCN0000/{familyUrlname}-CCN0000/{subfamilyUrlname}-CCN0000', function($universeUrlname, $subuniverseUrlname, $familyUrlname, $subfamilyUrlname) use($app) {
+$app->get('/{universeUrlname}-{universeUrlcode}/{subuniverseUrlname}-{subuniverseUrlcode}/{familyUrlname}-{familyUrlcode}/{subfamilyUrlname}-{subfamilyUrlncode}', function($universeUrlname, $subuniverseUrlname, $familyUrlname, $subfamilyUrlname) use($app) {
     return $app['twig']->render('family.twig');
-})->assert('universeUrlname', '[a-z\-]+')->assert('subuniverseUrlname', '[a-z\-]+')->assert('familyUrlname', '[a-z\-]+')->assert('subfamilyUrlname', '[a-z\-]+');
+})->assert('universeUrlname', '[a-z\-]+')->assert('universeUrlcode', 'CCU[0-9\-]+')->assert('subuniverseUrlname', '[a-z\-]+')->assert('subuniverseUrlcode', 'SCU[0-9\-]+')->assert('familyUrlname', '[a-z\-]+')->assert('familyUrlcode', 'CCN[0-9\-]+')->assert('subfamilyUrlname', '[a-z\-]+')->assert('subfamilyUrlcode', 'CCN[0-9\-]+');
 
 $app->get('product-FPC{productId}', function($productId) use($app) {
   return $app['twig']->render('product.twig');
