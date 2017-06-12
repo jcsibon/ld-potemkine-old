@@ -1,29 +1,29 @@
 {% extends "layout.html" %}
 {% block content %}
-	{#
+
 
 <div id="content" role="main">
    <div class="container universeContainer" id="container_">
       <div class="row">
-		<div class="col s12 universeHeader" style="background-image:url('/images/headers/{{ global.request.get('universeUrlname') }}.jpg')">
-         <p>{{ catalog[global.request.get('universeUrlname')]['universeTitle'] }}</p>
+		<div class="col s12 universeHeader" style="background-image:url('/images/headers/{{ global.request.get('universeUrlcode') }}.jpg')">
+         <p>{{ catalog[global.request.get('universeUrlcode')]['Name'] }}</p>
          <span>
          Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam. Accusantium doloremque laudantium, totam rem aperiam</span>
         </div>
         <div class="universeAnchor">
-             {% for subuniverse in catalog[global.request.get('universeUrlname')]['subuniverses'] %}
-             <div class="universeAnchors  hide-on-med-and-down" onclick="javascript:animationScroll('#{{ subuniverse['subuniverseUrlname'] }}');">{{ subuniverse['subuniverseTitle'] }}<img src="/images/fleche.png"></div>
+             {% for subuniverse in catalog[global.request.get('universeUrlcode')]['Content'] %}
+             <div class="universeAnchors  hide-on-med-and-down" onclick="javascript:animationScroll('#{{ subuniverse['subuniverseUrlcode'] }}');">{{ subuniverse['Name'] }}<img src="/images/fleche.png"></div>
              {% endfor %}
              <div class="universeAnchors universeMainAnchor hide-on-large-only hide-on-small-only" onclick="javascript:animationScroll('.subUniverse');">Voir les produits<img src="/images/fleche.png"></div>
         </div>
       </div>
     <div class="row">
       <div class="col s12 hide-on-med-and-down">   
-        <img src="/images/contents/{{ global.request.get('universeUrlname') }}.jpg" />
+        <img src="/images/contents/{{ global.request.get('universeUrlcode') }}.jpg" />
       </div>   
     </div>    
-      {% for subuniverse in catalog[global.request.get('universeUrlname')]['subuniverses'] %}
-	      {% if subuniverse['subuniverseUrlname'] == 'fenetres-portes-fenetres-baies-coulissantes' %}
+      {% for subuniverse in catalog[global.request.get('universeUrlcode')]['Content'] %}
+	      {% if subuniverse['subuniverseUrlcode'] == 'fenetres-portes-fenetres-baies-coulissantes' %}
 		<div class="row subUniverse subUniverseWindow">
 		   <div class="col s12">
 		      <p><strong>Votre fenêtre</strong> à partir de 99€</p>
@@ -39,7 +39,7 @@
 		   <div class="col s6">
 		      <div class="col s12 subUniverseFamilies">
 		         <p>Trouver par matière</p>
-			    {% if subuniverse['subuniverseUrlname'] == 'fenetres-portes-fenetres-baies-coulissantes' %}
+			    {% if subuniverse['subuniverseUrlcode'] == 'fenetres-portes-fenetres-baies-coulissantes' %}
 				    <div class="row">
 				       {% for gamme in ['pvc','pin','chene','aluminium'] %}
 
@@ -61,11 +61,11 @@
 			<p>Et n'oubliez pas :</p>
 		</div>
 	      {% endif %}
-	      <div class="row subUniverse"  id="{{ subuniverse['subuniverseUrlname'] }}">
+	      <div class="row subUniverse"  id="{{ subuniverse['subuniverseUrlcode'] }}">
 		 <div class="col l3 s12">
 		    <div class="col l12 m8 s12">
-			<h2 class="h2 hide-on-small-only">{{ subuniverse['subuniverseTitle'] }}</h2>
-			<h2 class="h2 subUniverseMobTitle subUniverseMobDisable hide-on-med-and-up">{{ subuniverse['subuniverseTitle'] }}</h2>
+			<h2 class="h2 hide-on-small-only">{{ subuniverse['Name'] }}</h2>
+			<h2 class="h2 subUniverseMobTitle subUniverseMobDisable hide-on-med-and-up">{{ subuniverse['Name'] }}</h2>
 			<p class="hide-on-small-only">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.</p>
 		    </div>
 		    <div class="col l12 m4 hide-on-small-only"> 
@@ -79,7 +79,7 @@
 		    </div>
 		 </div>
 		 <div class="col l9 s12 subUniverseFamilies">
-		    {% if subuniverse['subuniverseUrlname'] == 'fenetres-portes-fenetres-baies-coulissantes' %}
+		    {% if subuniverse['subuniverseUrlcode'] == 'fenetres-portes-fenetres-baies-coulissantes' %}
 		    <h2 class="h2 text-center">Explorez directement nos gammes</h2>
 		    <div class="row">
 		       {% for gamme in ['pvc','pin','chene','aluminium'] %}
@@ -103,7 +103,7 @@
 		    {% for family in subuniverse['families'] %}
 		    {% if family['showUniverse'] == 2 %}
 		    <div class="col m4 s6">
-			<fieldset class="subFamilyContainer" onclick="location.href='/{{ global.request.get('universeUrlname') }}-CCU0000/{{ subuniverse['subuniverseUrlname'] }}-CCN0000/{{ family['familyUrlname'] }}-CCN0000/'">
+			<fieldset class="subFamilyContainer" onclick="location.href='/{{ global.request.get('universeUrlcode') }}-CCU0000/{{ subuniverse['subuniverseUrlcode'] }}-CCN0000/{{ family['familyUrlname'] }}-CCN0000/'">
 			   <legend align="center"><div>{{ family.familyName }}</div></legend>
 			   <div class="subFamilyImage">
 			       <div style="background-image:url('{{ family['familyImage'] }}')"></div>
@@ -119,7 +119,7 @@
 		       {% if subuniverse['families'] is defined %}
 		       {% for family in subuniverse['families'] %}
 		       {% if family['showUniverse'] == 1 %}
-		       {% set otherFamiliesDetails = otherFamiliesDetails ~ '&nbsp;<a href="/' ~ global.request.get('universeUrlname') ~ '-CCU0000/' ~ subuniverse['subuniverseUrlname'] ~ '-CCN0000/' ~ family['familyUrlname'] ~ '-CCN0000/">' ~ family.familyName ~ '</a>,' %}
+		       {% set otherFamiliesDetails = otherFamiliesDetails ~ '&nbsp;<a href="/' ~ global.request.get('universeUrlcode') ~ '-CCU0000/' ~ subuniverse['subuniverseUrlcode'] ~ '-CCN0000/' ~ family['familyUrlname'] ~ '-CCN0000/">' ~ family.familyName ~ '</a>,' %}
 		       {% endif %}
 		       {% endfor %} 
 		       {% endif %}
@@ -140,5 +140,5 @@
     </div>
    </div>
 </div>
-#}
+
 {% endblock %}

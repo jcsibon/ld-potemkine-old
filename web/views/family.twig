@@ -10,7 +10,7 @@
 <div class="listLeft">
     <div>
         <div>
-           <h3> &lt; {{ catalog[global.request.get('universeUrlname')]['universeTitle'] }}</h3>
+           <h3> &lt; {{ catalog[global.request.get('universeUrlcode')]['universeTitle'] }}</h3>
            <ul>
            </ul>
         </div>
@@ -38,7 +38,7 @@
 </div>
 
 <div class="listRight">
-    <h1><strong>{{ catalog[global.request.get('universeUrlname')]['subuniverses'][global.request.get('subuniverseUrlname')]['families'][global.request.get('familyUrlname')]['familyTitle'] }}</strong> (345 produits)</h1>
+    <h1><strong>{{ catalog[global.request.get('universeUrlcode')]['subuniverses'][global.request.get('subuniverseUrlcode')]['families'][global.request.get('familyUrlname')]['familyTitle'] }}</strong> (345 produits)</h1>
     <div class="listMEA"></div>
     <img src="/images/family/bloc_product1.png" />
     <img src="/images/family/bloc_product2.png" />
