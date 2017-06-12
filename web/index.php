@@ -16,8 +16,8 @@ $app->register(new Silex\Provider\TwigServiceProvider(), array(
 $file = array_map("str_getcsv", file("https://docs.google.com/spreadsheets/d/1s10qJviUHayRFRHxSbMGNDKaIg7-gyYAjz6kOPhPm6g/pub?gid=922201227&single=true&output=csv",FILE_SKIP_EMPTY_LINES));
 $keys = array_shift($file);
 foreach ($file as $i=>$row) {
-    $row = array_combine($keys, $row);
-    $catalog[]=$row;
+    $newrow = array_combine($keys, $row);
+    $catalog[]=$newrow;
 }
 die(print_r($catalog));
 
