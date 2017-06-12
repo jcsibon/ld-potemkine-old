@@ -43,20 +43,26 @@ foreach ($file as $i=>$row) {
       break;    
   }
 }
-print_r($precatalog);
-die();
 
 foreach ($precatalog["Sous-familles"] as $row)
   $precatalog["Familles"][$row['ParentID']]["Content"][]=$row;
 
+foreach ($precatalog["Familles"] as $row)
+  $precatalog["Sous-univers"][$row['ParentID']]["Content"][]=$row;
 
+foreach ($precatalog["Sous-univers"] as $row)
+  $precatalog["Univers"][$row['ParentID']]["Content"][]=$row;
 
+$catalog=$precatalog["Univers"];
 
-/*
-header('Content-Type: application/json');
-die(json_encode());
-*/
-
+?>
+<pre>
+    <?php
+        print_r($catalog);
+    ?>
+</pre>
+<?
+die();
 
 $file = array_map("str_getcsv", file("https://docs.google.com/spreadsheets/d/1s10qJviUHayRFRHxSbMGNDKaIg7-gyYAjz6kOPhPm6g/pub?gid=1971894571&single=true&output=csv",FILE_SKIP_EMPTY_LINES));
 $keys = array_shift($file);
