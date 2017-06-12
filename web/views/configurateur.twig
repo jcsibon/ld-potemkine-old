@@ -1,7 +1,7 @@
-{#
 {% extends "layout.html" %}
 
 {% block content %}
+{#
 	{% if global.request.get('step') == 1 %}
 	{{ global.request.get('step') }}
 
@@ -22,6 +22,8 @@
 	{{ global.request.get('step') }}
 
 	{% endif %}
-{% endblock %}
 #}
-<iframe src="https://lapeyre-configurateur.herokuapp.com/"></iframe>
+<div class="container">
+<iframe class="img-responsive" src="https://lapeyre-configurateur.herokuapp.com/"></iframe>
+</div>
+{% endblock %}

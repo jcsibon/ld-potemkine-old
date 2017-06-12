@@ -82,7 +82,7 @@ $app->get('article-{articleId}', function($articleId) use($app) {
   return $app['twig']->render('article.twig');
 });
 
-$app->get('/configurateur', function() use($app) {
+$app->get('/c/h/configurateur-fenetres', function() use($app) {
   return $app['twig']->render('configurateur.twig');
 });
 
