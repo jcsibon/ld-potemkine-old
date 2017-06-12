@@ -43,13 +43,13 @@ foreach ($file as $i=>$row) {
 }
 
 foreach ($SCN as $row)
-  $CCN[$row['ParentID']]["Content"][]=$row;
+  $CCN[$row['ParentID']]["Content"][$row['ID']]=$row;
 
 foreach ($CCN as $row)
-  $SCU[$row['ParentID']]["Content"][]=$row;
+  $SCU[$row['ParentID']]["Content"][$row['ID']]=$row;
 
 foreach ($SCU as $row)
-  $CCU[$row['ParentID']]["Content"][]=$row;
+  $CCU[$row['ParentID']]["Content"][$row['ID']]=$row;
 
 $catalog=$CCU;
 
