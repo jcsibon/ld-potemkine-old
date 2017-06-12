@@ -66,7 +66,7 @@
 			    {% for family in subuniverse['Content'] %}
 				    {# {% if family['showUniverse'] == 2 %} #}
 				    <div class="col m4 s6">
-					<fieldset class="subFamilyContainer" onclick="location.href='/{{ catalog[global.request.get('universeUrlcode')]['URL'] }}/{{ catalog[global.request.get('universeUrlcode')]['Contents'][global.request.get('subuniverseUrlcode')]['URL'] }}/{{ catalog[global.request.get('universeUrlcode')]['Contents'][global.request.get('subuniverseUrlcode')]['Contents'][global.request.get('familyUrlcode')]['URL'] }}'">
+					<fieldset class="subFamilyContainer" onclick="location.href='/{{ catalog[global.request.get('universeUrlcode')]['URL'] }}/{{ subuniverse['URL'] }}/{{ family['URL'] }}'">
 					   <legend align="center"><div>{{ family.Name }}</div></legend>
 					   <div class="subFamilyImage">
 					       <div style="background-image:url('//static.lapeyre.fr/img/catalogue/desktopList/{{ family['VisuelprincipalAssetReferenceID'] }}/{{ family['VisuelprincipalAssetReferenceID'] }}/{{ family['VisuelprincipalAssetReferenceID'] }}.jpg">')"></div>
