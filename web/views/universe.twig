@@ -67,9 +67,9 @@
 				    {# {% if family['showUniverse'] == 2 %} #}
 				    <div class="col m4 s6">
 					<fieldset class="subFamilyContainer" onclick="location.href='/{{ catalog[global.request.get('universeUrlcode')]['URL'] }}'">{# {{ global.request.get('universeUrlcode') }}-CCU0000/{{ subuniverse['ID'] }}-CCN0000/{{ family['familyUrlname'] }}-CCN0000/#}
-					   <legend align="center"><div>{{ family.familyName }}</div></legend>
+					   <legend align="center"><div>{{ family.Name }}</div></legend>
 					   <div class="subFamilyImage">
-					       <div style="background-image:url('{{ family['familyImage'] }}')"></div>
+					       <div style="background-image:url('{{ family['VisuelprincipalAssetReferenceID'] }}')"></div>
 					   </div>
 					</fieldset>
 				    </div> 
