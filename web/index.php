@@ -21,7 +21,6 @@ foreach($file[0] as $cell) {
 }
 
 array_shift($file);
-die(print_r($keys));
 
 foreach ($file as $i=>$row) {
     foreach($keys as $j=>$key)
