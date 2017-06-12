@@ -82,6 +82,11 @@ $app->get('article-{articleId}', function($articleId) use($app) {
   return $app['twig']->render('article.twig');
 });
 
+$app->get('/configurateur', function($step) use($app) {
+  return $app['twig']->render('configurateur.twig');
+});
+
+
 
 $app->get('/configurateur/step-{step}', function($step) use($app) {
   return $app['twig']->render('configurateur.twig');
