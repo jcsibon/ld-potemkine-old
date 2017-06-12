@@ -4,94 +4,14 @@
 
 {% include 'breadcrumb.twig' %}
 
-<div class="container criteriaContainer">
-  <div class="headerUnivers">
-    <img src="/images/headers/{{ global.request.get('familyUrlname') }}.jpg">
-    <p>{{ catalog[global.request.get('universeUrlname')]['subuniverses'][global.request.get('subuniverseUrlname')]['families'][global.request.get('familyUrlname')]['familyTitle'] }}</p><span>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam. Accusantium doloremque laudantium, totam rem aperiam</span>
-  </div>
-<img class="img-responsive" src="/images/cartouche.png" />
-  {% if global.request.get('familyUrlname') == "fenetres-portes-fenetres-baies-coulissantes-pvc" or global.request.get('familyUrlname') == "fenetres-portes-fenetres-baies-coulissantes-chene" or global.request.get('familyUrlname') == "fenetres-portes-fenetres-baies-coulissantes-pin" %}
-<div style="background-color:#EFEFEF">
- <ul class="nav nav-tabs row">
-    <li class="col-md-offset-1 col-md-5 active">
-      <a data-toggle="tab" href="#classique">
-        <div class="row">
-          <div class="col-md-3">
-            <img class="img-responsive" src="/images/carre.png">
-          </div>
-          <div class="col-md-9">
-      <h2 class="h2 ">Gamme Classique</h2>
-      <p>Lorem ipsum dolor sit amet</p>
-      <p>Dimension standard et sur mesure</p>
-    </div>
-  </div>
-    </a>
-    </li>
-    <li class="col-md-5">
-      <a data-toggle="tab" href="#excellence">
-        <div class="row">
-          <div class="col-md-3">
-            <img class="img-responsive" src="/images/carre.png">
-          </div>
-          <div class="col-md-9">
-      <h2 class="h2 ">Gamme Excellence</h2>
-      <p>Lorem ipsum dolor sit amet</p>
-      <p>Sur mesure uniquement</p>
-    </div>
-  </div>
-    </a>
-    </li>
-  </ul>
-</div>
-  {% endif %} 
-
-  {% if global.request.get('familyUrlname') == "fenetres-portes-fenetres-baies-coulissantes-pvc" or global.request.get('familyUrlname') == "fenetres-portes-fenetres-baies-coulissantes-chene" or global.request.get('familyUrlname') == "fenetres-portes-fenetres-baies-coulissantes-pin" %}
-  <div class="tab-content">
-    <div class="tab-pane fade in active" id="classique">
+<div class="container">
       {% if global.request.get('familyUrlname') == "fenetres-portes-fenetres-baies-coulissantes-pvc" %}
-        <div class="famille">
-          <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pretium varius sollicitudin. Donec ut arcu quis quam posuere sodales. Mauris sed egestas quam. Pellentesque eleifend rutrum accumsan. Nunc dapibus tristique vehicula. Aliquam in pulvinar lorem. Quisque quis mauris molestie, luctus ligula sit amet, tempus nulla. Nulla luctus, ipsum sit amet tincidunt semper, justo est ultricies ex, hendrerit elementum leo lectus a diam.</p>
-          <p class="text-justify">Ouvrant et dormant 60 mm à 3chambres d’isolationthermique • Doublevitrage 24 mm Énergie STAR traité�aible émissivitéavecgaz argonet intercalaire haute isolation thermique (Ug = 1,1) • Isolationacoustique :AC1(RA ;tr = 28dB) • Doublejoint d’isolationthermiqueet acoustique • Disponiblesous 10jours maximum</p>
-        </div>
         {% include 'windows-classic-pvc.twig' %}
       {% elseif global.request.get('familyUrlname') == "fenetres-portes-fenetres-baies-coulissantes-pin" %}
-        <div class="famille">
-          <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pretium varius sollicitudin. Donec ut arcu quis quam posuere sodales. Mauris sed egestas quam. Pellentesque eleifend rutrum accumsan. Nunc dapibus tristique vehicula. Aliquam in pulvinar lorem. Quisque quis mauris molestie, luctus ligula sit amet, tempus nulla. Nulla luctus, ipsum sit amet tincidunt semper, justo est ultricies ex, hendrerit elementum leo lectus a diam.</p>
-        </div>
         {% include 'windows-classic-pin.twig' %}
       {% elseif global.request.get('familyUrlname') == "fenetres-portes-fenetres-baies-coulissantes-chene" %}
-        <div class="famille">
-          <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pretium varius sollicitudin. Donec ut arcu quis quam posuere sodales. Mauris sed egestas quam. Pellentesque eleifend rutrum accumsan. Nunc dapibus tristique vehicula. Aliquam in pulvinar lorem. Quisque quis mauris molestie, luctus ligula sit amet, tempus nulla. Nulla luctus, ipsum sit amet tincidunt semper, justo est ultricies ex, hendrerit elementum leo lectus a diam.</p>
-        </div>
         {% include 'windows-classic-chene.twig' %}
       {% endif %} 
-    </div>
-    
-    <div class="tab-pane fade" id="excellence">
-        <div class="famille">
-          <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pretium varius sollicitudin. Donec ut arcu quis quam posuere sodales. Mauris sed egestas quam. Pellentesque eleifend rutrum accumsan. Nunc dapibus tristique vehicula. Aliquam in pulvinar lorem. Quisque quis mauris molestie, luctus ligula sit amet, tempus nulla. Nulla luctus, ipsum sit amet tincidunt semper, justo est ultricies ex, hendrerit elementum leo lectus a diam.</p>
-          <p class="text-justify">Ouvrant et dormant 60 mm à 3chambres d’isolationthermique • Doublevitrage 24 mm Énergie STAR traité�aible émissivitéavecgaz argonet intercalaire haute isolation thermique (Ug = 1,1) • Isolationacoustique :AC1(RA ;tr = 28dB) • Doublejoint d’isolationthermiqueet acoustique • Disponiblesous 10jours maximum</p>
-        </div>
-      {% if global.request.get('familyUrlname') == "fenetres-portes-fenetres-baies-coulissantes-pvc" %}
-        {% include 'windows-excellence-pvc.twig' %}
-        <div class="famille">
-          <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pretium varius sollicitudin. Donec ut arcu quis quam posuere sodales. Mauris sed egestas quam. Pellentesque eleifend rutrum accumsan. Nunc dapibus tristique vehicula. Aliquam in pulvinar lorem. Quisque quis mauris molestie, luctus ligula sit amet, tempus nulla. Nulla luctus, ipsum sit amet tincidunt semper, justo est ultricies ex, hendrerit elementum leo lectus a diam.</p>
-        </div>
-      {% elseif global.request.get('familyUrlname') == "fenetres-portes-fenetres-baies-coulissantes-pin" %}
-        {% include 'windows-excellence-pin.twig' %}
-        <div class="famille">
-          <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pretium varius sollicitudin. Donec ut arcu quis quam posuere sodales. Mauris sed egestas quam. Pellentesque eleifend rutrum accumsan. Nunc dapibus tristique vehicula. Aliquam in pulvinar lorem. Quisque quis mauris molestie, luctus ligula sit amet, tempus nulla. Nulla luctus, ipsum sit amet tincidunt semper, justo est ultricies ex, hendrerit elementum leo lectus a diam.</p>
-        </div>
-      {% elseif global.request.get('familyUrlname') == "fenetres-portes-fenetres-baies-coulissantes-chene" %}
-        {% include 'windows-excellence-chene.twig' %}
-        <div class="famille">
-          <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pretium varius sollicitudin. Donec ut arcu quis quam posuere sodales. Mauris sed egestas quam. Pellentesque eleifend rutrum accumsan. Nunc dapibus tristique vehicula. Aliquam in pulvinar lorem. Quisque quis mauris molestie, luctus ligula sit amet, tempus nulla. Nulla luctus, ipsum sit amet tincidunt semper, justo est ultricies ex, hendrerit elementum leo lectus a diam.</p>
-        </div>
-      {% endif %} 
-    </div>
-  </div>
-  {% else %}
-  {% endif %}
-<img src="/images/headers/global.request.get('familyUrlname').jpg">
 </div>
+
 {% endblock %}
