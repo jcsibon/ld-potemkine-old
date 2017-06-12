@@ -25,6 +25,7 @@ array_shift($file);
 foreach ($file as $i=>$row) {
     foreach($keys as $j=>$key)
       $newrow[$key] = $row[$j];
+}
 
 switch (substr($newrow['Parent ID'],0,2)) {
     case "CCR":
@@ -41,15 +42,13 @@ switch (substr($newrow['Parent ID'],0,2)) {
     break;    
 }
 
+print_r($catalog);
+die();
+
+/*
 header('Content-Type: application/json');
-die(json_encode($catalog));
-
-foreach ($rowlist as $row) {
-
-
-}
-
-die(print_r($catalog));
+die(json_encode());
+*/
 
 
 $file = array_map("str_getcsv", file("https://docs.google.com/spreadsheets/d/1s10qJviUHayRFRHxSbMGNDKaIg7-gyYAjz6kOPhPm6g/pub?gid=1971894571&single=true&output=csv",FILE_SKIP_EMPTY_LINES));
