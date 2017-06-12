@@ -25,8 +25,30 @@ array_shift($file);
 foreach ($file as $i=>$row) {
     foreach($keys as $j=>$key)
       $newrow[$key] = $row[$j];
-    $catalog[]=$newrow;
+
+switch (substr($newrow['Parent ID'],0,2)) {
+    case "CCR":
+        $catalog["Univers"][$newrow['ID']]=$newrow;
+    break;
+    case "CCU":
+        $catalog["Sous-univers"][$newrow['ID']]=$newrow;
+    break;
+    case "SCU":
+        $catalog["Familles"][$newrow['ID']]=$newrow;
+    break;
+    case "CCN":
+        $catalog["Sous-familles"][$newrow['ID']]=$newrow;
+    break;    
 }
+
+header('Content-Type: application/json');
+die(json_encode($catalog));
+
+foreach ($rowlist as $row) {
+
+
+}
+
 die(print_r($catalog));
 
 
