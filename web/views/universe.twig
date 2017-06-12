@@ -8,7 +8,7 @@
 		<div class="col s12 universeHeader" style="background-image:url('/images/headers/{{ global.request.get('universeUrlcode') }}.jpg')">
          <p>{{ catalog[global.request.get('universeUrlcode')]['Name'] }}</p>
          <span>
-         Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam. Accusantium doloremque laudantium, totam rem aperiam</span>
+         {{ catalog[global.request.get('universeUrlcode')]['Descriptifgnral'] }}</span>
         </div>
         <div class="universeAnchor">
              {% for subuniverse in catalog[global.request.get('universeUrlcode')]['Content'] %}
@@ -32,11 +32,11 @@
 		    </div>
 		    <div class="col l12 m4 hide-on-small-only"> 
 			{% if subuniverse['Content'] is defined %}
-			{% if subuniverse['Content']|length > 3 %}
-			<div id="widgetPinterest" class="col l12 m4 hide-on-small-only">
-			   <a data-pin-do="embedBoard" data-pin-lang="fr" data-pin-board-width="230" data-pin-scale-height="150" data-pin-scale-width="100" href="#"></a>
-			</div>                
-			{% endif %}
+				{% if subuniverse['Content']|length > 3 %}
+				<div id="widgetPinterest" class="col l12 m4 hide-on-small-only">
+				   <a data-pin-do="embedBoard" data-pin-lang="fr" data-pin-board-width="230" data-pin-scale-height="150" data-pin-scale-width="100" href="#"></a>
+				</div>                
+				{% endif %}
 			{% endif %}
 		    </div>
 		 </div>
