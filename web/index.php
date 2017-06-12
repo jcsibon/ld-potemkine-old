@@ -14,7 +14,15 @@ $app->register(new Silex\Provider\TwigServiceProvider(), array(
 ));
 
 $file = array_map("str_getcsv", file("https://docs.google.com/spreadsheets/d/1s10qJviUHayRFRHxSbMGNDKaIg7-gyYAjz6kOPhPm6g/pub?gid=922201227&single=true&output=csv",FILE_SKIP_EMPTY_LINES));
-$keys = array_shift($file);
+
+
+foreach($file[0] as $cell) {
+  $keys[]=preg_replace('/[^A-Za-z0-9\-]/', '', $cell);
+}
+
+array_shift($file);
+die(print_r($keys));
+
 foreach ($file as $i=>$row) {
     foreach($keys as $j=>$key)
       $newrow[$key] = $row[$j];
