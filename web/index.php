@@ -25,8 +25,8 @@ array_shift($file);
 foreach ($file as $i=>$row) {
     foreach($keys as $j=>$key)
       $newrow[$key] = $row[$j];
-  print_r($newrow);
-  echo substr($newrow['ParentID'],0,3).PHP_EOL;
+  
+  
 
   switch (substr($newrow['ParentID'],0,3)) {
       case "CCR":
