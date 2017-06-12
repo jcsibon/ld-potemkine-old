@@ -23,7 +23,7 @@
       </div>   
     </div>    
       {% for subuniverse in catalog[global.request.get('universeUrlcode')]['Content'] %}
-	      {% if subuniverse['subuniverseUrlcode'] == 'fenetres-portes-fenetres-baies-coulissantes' %}
+	      {% if subuniverse['ID'] == 'SCU687471' %}
 		<div class="row subUniverse subUniverseWindow">
 		   <div class="col s12">
 		      <p><strong>Votre fenêtre</strong> à partir de 99€</p>
@@ -39,7 +39,7 @@
 		   <div class="col s6">
 		      <div class="col s12 subUniverseFamilies">
 		         <p>Trouver par matière</p>
-			    {% if subuniverse['subuniverseUrlcode'] == 'fenetres-portes-fenetres-baies-coulissantes' %}
+			    {% if subuniverse['ID'] == 'fenetres-portes-fenetres-baies-coulissantes' %}
 				    <div class="row">
 				       {% for gamme in ['pvc','pin','chene','aluminium'] %}
 
@@ -61,7 +61,7 @@
 			<p>Et n'oubliez pas :</p>
 		</div>
 	      {% endif %}
-	      <div class="row subUniverse"  id="{{ subuniverse['subuniverseUrlcode'] }}">
+	      <div class="row subUniverse"  id="{{ subuniverse['ID'] }}">
 		 <div class="col l3 s12">
 		    <div class="col l12 m8 s12">
 			<h2 class="h2 hide-on-small-only">{{ subuniverse['Name'] }}</h2>
@@ -79,7 +79,7 @@
 		    </div>
 		 </div>
 		 <div class="col l9 s12 subUniverseFamilies">
-		    {% if subuniverse['subuniverseUrlcode'] == 'fenetres-portes-fenetres-baies-coulissantes' %}
+		    {% if subuniverse['ID'] == 'fenetres-portes-fenetres-baies-coulissantes' %}
 		    <h2 class="h2 text-center">Explorez directement nos gammes</h2>
 		    <div class="row">
 		       {% for gamme in ['pvc','pin','chene','aluminium'] %}
@@ -103,7 +103,7 @@
 		    {% for family in subuniverse['families'] %}
 		    {% if family['showUniverse'] == 2 %}
 		    <div class="col m4 s6">
-			<fieldset class="subFamilyContainer" onclick="location.href='/{{ global.request.get('universeUrlcode') }}-CCU0000/{{ subuniverse['subuniverseUrlcode'] }}-CCN0000/{{ family['familyUrlname'] }}-CCN0000/'">
+			<fieldset class="subFamilyContainer" onclick="location.href='/{{ global.request.get('universeUrlcode') }}-CCU0000/{{ subuniverse['ID'] }}-CCN0000/{{ family['familyUrlname'] }}-CCN0000/'">
 			   <legend align="center"><div>{{ family.familyName }}</div></legend>
 			   <div class="subFamilyImage">
 			       <div style="background-image:url('{{ family['familyImage'] }}')"></div>
@@ -119,7 +119,7 @@
 		       {% if subuniverse['families'] is defined %}
 		       {% for family in subuniverse['families'] %}
 		       {% if family['showUniverse'] == 1 %}
-		       {% set otherFamiliesDetails = otherFamiliesDetails ~ '&nbsp;<a href="/' ~ global.request.get('universeUrlcode') ~ '-CCU0000/' ~ subuniverse['subuniverseUrlcode'] ~ '-CCN0000/' ~ family['familyUrlname'] ~ '-CCN0000/">' ~ family.familyName ~ '</a>,' %}
+		       {% set otherFamiliesDetails = otherFamiliesDetails ~ '&nbsp;<a href="/' ~ global.request.get('universeUrlcode') ~ '-CCU0000/' ~ subuniverse['ID'] ~ '-CCN0000/' ~ family['familyUrlname'] ~ '-CCN0000/">' ~ family.familyName ~ '</a>,' %}
 		       {% endif %}
 		       {% endfor %} 
 		       {% endif %}
