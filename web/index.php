@@ -25,26 +25,32 @@ array_shift($file);
 foreach ($file as $i=>$row) {
     foreach($keys as $j=>$key)
       $newrow[$key] = $row[$j];
-
-  echo substr($newrow['Parent ID'],0,3).EOL;
+  print_r($newrow);
+  echo substr($newrow['Parent ID'],0,3).PHP_EOL;
 
   switch (substr($newrow['Parent ID'],0,3)) {
       case "CCR":
-          $catalog["Univers"][$newrow['ID']]=$newrow;
+          $precatalog["Univers"][$newrow['ID']]=$newrow;
       break;
       case "CCU":
-          $catalog["Sous-univers"][$newrow['ID']]=$newrow;
+          $precatalog["Sous-univers"][$newrow['ID']]=$newrow;
       break;
       case "SCU":
-          $catalog["Familles"][$newrow['ID']]=$newrow;
+          $precatalog["Familles"][$newrow['ID']]=$newrow;
       break;
       case "CCN":
-          $catalog["Sous-familles"][$newrow['ID']]=$newrow;
+          $precatalog["Sous-familles"][$newrow['ID']]=$newrow;
       break;    
   }
 }
-print_r($catalog);
+print_r($precatalog);
 die();
+
+foreach ($precatalog["Sous-familles"] as $row)
+  $precatalog["Familles"][$row['Parent ID']]["Content"][]=$row;
+
+
+
 
 /*
 header('Content-Type: application/json');
