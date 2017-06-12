@@ -61,39 +61,40 @@
 		    <a href="/c/h/configurateur-fenetres">
 		    <img class="responsive-img" src="/images/windows/MEA_sur_mesure.png" style="margin-bottom:10px">
 		    </a>
+		    {% else %}
+			    {% if subuniverse['Content'] is defined %}
+				    {% for family in subuniverse['Content'] %}
+					    {# {% if family['showUniverse'] == 2 %} #}
+					    <div class="col m4 s6">
+						<fieldset class="subFamilyContainer" onclick="location.href='/{{ catalog[global.request.get('universeUrlcode')]['URL'] }}/{{ subuniverse['URL'] }}/{{ family['URL'] }}'">
+						   <legend align="center"><div>{{ family.Name }}</div></legend>
+						   <div class="subFamilyImage">
+						       <div style="background-image:url('//static.lapeyre.fr/img/catalogue/desktopList/{{ family['VisuelprincipalAssetReferenceID'][6:][:3] }}/{{ family['VisuelprincipalAssetReferenceID'][6:][3:] }}/{{ family['VisuelprincipalAssetReferenceID'] }}.jpg')"></div>
+						   </div>
+						</fieldset>
+					    </div> 
+					    {# {% endif %} #}
+				    {% endfor %}
+			    {% endif %}
+			    {% set otherFamiliesDetails = null %}
+			    {% set otherFamilies = '
+			    <p><u>Et aussi</u> :' %}
+			       {% if subuniverse['Content'] is defined %}
+			       {% for family in subuniverse['Content'] %}
+			       {# {% if family['showUniverse'] == 1 %} #}
+			       {#
+			       {% set otherFamiliesDetails = otherFamiliesDetails ~ '&nbsp;<a href="/' ~ global.request.get('universeUrlcode') ~ '-CCU0000/' ~ subuniverse['ID'] ~ '-CCN0000/' ~ family['familyUrlname'] ~ '-CCN0000/">' ~ family.familyName ~ '</a>,' %}
+			       #}
+			       {# {% endif %} #}
+			       {% endfor %} 
+			       {% endif %}
+			       {% set otherFamilies = otherFamilies ~ otherFamiliesDetails | trim(',') ~ '
+			    </p>
+			    ' %}  
+			    {% if otherFamiliesDetails %}
+			    {{ otherFamilies | raw }}	
+			    {% endif %}	
 		    {% endif %}
-		    {% if subuniverse['Content'] is defined %}
-			    {% for family in subuniverse['Content'] %}
-				    {# {% if family['showUniverse'] == 2 %} #}
-				    <div class="col m4 s6">
-					<fieldset class="subFamilyContainer" onclick="location.href='/{{ catalog[global.request.get('universeUrlcode')]['URL'] }}/{{ subuniverse['URL'] }}/{{ family['URL'] }}'">
-					   <legend align="center"><div>{{ family.Name }}</div></legend>
-					   <div class="subFamilyImage">
-					       <div style="background-image:url('//static.lapeyre.fr/img/catalogue/desktopList/{{ family['VisuelprincipalAssetReferenceID'][6:][:3] }}/{{ family['VisuelprincipalAssetReferenceID'][6:][3:] }}/{{ family['VisuelprincipalAssetReferenceID'] }}.jpg')"></div>
-					   </div>
-					</fieldset>
-				    </div> 
-				    {# {% endif %} #}
-			    {% endfor %}
-		    {% endif %}
-		    {% set otherFamiliesDetails = null %}
-		    {% set otherFamilies = '
-		    <p><u>Et aussi</u> :' %}
-		       {% if subuniverse['Content'] is defined %}
-		       {% for family in subuniverse['Content'] %}
-		       {# {% if family['showUniverse'] == 1 %} #}
-		       {#
-		       {% set otherFamiliesDetails = otherFamiliesDetails ~ '&nbsp;<a href="/' ~ global.request.get('universeUrlcode') ~ '-CCU0000/' ~ subuniverse['ID'] ~ '-CCN0000/' ~ family['familyUrlname'] ~ '-CCN0000/">' ~ family.familyName ~ '</a>,' %}
-		       #}
-		       {# {% endif %} #}
-		       {% endfor %} 
-		       {% endif %}
-		       {% set otherFamilies = otherFamilies ~ otherFamiliesDetails | trim(',') ~ '
-		    </p>
-		    ' %}  
-		    {% if otherFamiliesDetails %}
-		    {{ otherFamilies | raw }}	
-		    {% endif %}	
 		 </div>
 	      </div>
 	      <div class="divider hide-on-med-and-up"></div>
