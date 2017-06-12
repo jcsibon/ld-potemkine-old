@@ -64,16 +64,16 @@
 		    {% endif %}
 		    {% if subuniverse['Content'] is defined %}
 			    {% for family in subuniverse['Content'] %}
-				    {# {% if family['showUniverse'] == 2 %}
+				    {# {% if family['showUniverse'] == 2 %} #}
 				    <div class="col m4 s6">
-					<fieldset class="subFamilyContainer" onclick="location.href='/{{ global.request.get('universeUrlcode') }}-CCU0000/{{ subuniverse['ID'] }}-CCN0000/{{ family['familyUrlname'] }}-CCN0000/'">
+					<fieldset class="subFamilyContainer" onclick="location.href='/{{ catalog[{{ global.request.get('universeUrlcode') }}]['URL'] }}'">{# {{ global.request.get('universeUrlcode') }}-CCU0000/{{ subuniverse['ID'] }}-CCN0000/{{ family['familyUrlname'] }}-CCN0000/#}
 					   <legend align="center"><div>{{ family.familyName }}</div></legend>
 					   <div class="subFamilyImage">
 					       <div style="background-image:url('{{ family['familyImage'] }}')"></div>
 					   </div>
 					</fieldset>
 				    </div> 
-				    {% endif %} #}
+				    {# {% endif %} #}
 			    {% endfor %}
 		    {% endif %}
 		    {% set otherFamiliesDetails = null %}
