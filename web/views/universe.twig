@@ -42,8 +42,8 @@
 		 </div>
 		 <div class="col l9 s12 subUniverseFamilies">
 		       {% if subuniverse['ID'] == 'SCU687471' %}
-
 				<img src="/images/windows.png" class="responsive-img"/>
+{#
 
 		    <h2 class="h2 text-center">Explorez directement nos gammes</h2>
 		    <div class="row">
@@ -63,6 +63,7 @@
 		    <a href="/c/h/configurateur-fenetres">
 		    <img class="responsive-img" src="/images/windows/MEA_sur_mesure.png" style="margin-bottom:10px">
 		    </a>
+#}
 		    {% else %}
 			    {% if subuniverse['Content'] is defined %}
 				    {% for family in subuniverse['Content'] %}
