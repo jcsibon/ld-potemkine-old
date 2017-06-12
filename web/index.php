@@ -13,6 +13,15 @@ $app->register(new Silex\Provider\TwigServiceProvider(), array(
     'twig.path' => __DIR__.'/views',
 ));
 
+$file = array_map("str_getcsv", file("https://docs.google.com/spreadsheets/d/1s10qJviUHayRFRHxSbMGNDKaIg7-gyYAjz6kOPhPm6g/pub?gid=922201227&single=true&output=csv",FILE_SKIP_EMPTY_LINES));
+$keys = array_shift($file);
+foreach ($file as $i=>$row) {
+    $row = array_combine($keys, $row);
+    $catalog[]=$row;
+}
+die(print_r($catalog));
+
+
 $file = array_map("str_getcsv", file("https://docs.google.com/spreadsheets/d/1s10qJviUHayRFRHxSbMGNDKaIg7-gyYAjz6kOPhPm6g/pub?gid=1971894571&single=true&output=csv",FILE_SKIP_EMPTY_LINES));
 $keys = array_shift($file);
 foreach ($file as $i=>$row) {
@@ -57,11 +66,7 @@ $app->get('/catalog', function() use($app, $catalog) {
 $app->get('/{universeUrlname}-CCU0000/', function($universeUrlname) use($app) {
   return $app['twig']->render('universe.twig');
 })->assert('universeUrlname', '[a-z\-]+');
-/*
-$app->get('/fenetres-CCU0000/fenetres-porte-fenetres-battantes-CCN0000/fenetres-portes-fenetres-{type}-CCN0000/', function($type) use($app) {
-  return $app['twig']->render('windows.twig');
-})->assert('type', '[a-z\-]+');
-*/
+
 $app->get('/{universeUrlname}-CCU0000/{subuniverseUrlname}-CCN0000/{familyUrlname}-CCN0000/', function($universeUrlname, $subuniverseUrlname, $familyUrlname) use($app) {
   if ($universeUrlname == 'fenetres' && $subuniverseUrlname == 'fenetres-portes-fenetres-baies-coulissantes')
     return $app['twig']->render('windows.twig');
