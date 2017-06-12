@@ -62,27 +62,27 @@
 		    </a>
 		    {% endif %}
 		    {% if subuniverse['Content'] is defined %}
-		    {% for family in subuniverse['Content'] %}
-		    {% if family['showUniverse'] == 2 %}
-		    <div class="col m4 s6">
-			<fieldset class="subFamilyContainer" onclick="location.href='/{{ global.request.get('universeUrlcode') }}-CCU0000/{{ subuniverse['ID'] }}-CCN0000/{{ family['familyUrlname'] }}-CCN0000/'">
-			   <legend align="center"><div>{{ family.familyName }}</div></legend>
-			   <div class="subFamilyImage">
-			       <div style="background-image:url('{{ family['familyImage'] }}')"></div>
-			   </div>
-			</fieldset>
-		    </div> 
-		    {% endif %}
-		    {% endfor %}
+			    {% for family in subuniverse['Content'] %}
+				    {# {% if family['showUniverse'] == 2 %}
+				    <div class="col m4 s6">
+					<fieldset class="subFamilyContainer" onclick="location.href='/{{ global.request.get('universeUrlcode') }}-CCU0000/{{ subuniverse['ID'] }}-CCN0000/{{ family['familyUrlname'] }}-CCN0000/'">
+					   <legend align="center"><div>{{ family.familyName }}</div></legend>
+					   <div class="subFamilyImage">
+					       <div style="background-image:url('{{ family['familyImage'] }}')"></div>
+					   </div>
+					</fieldset>
+				    </div> 
+				    {% endif %} #}
+			    {% endfor %}
 		    {% endif %}
 		    {% set otherFamiliesDetails = null %}
 		    {% set otherFamilies = '
 		    <p><u>Et aussi</u> :' %}
 		       {% if subuniverse['families'] is defined %}
 		       {% for family in subuniverse['families'] %}
-		       {% if family['showUniverse'] == 1 %}
+		       {# {% if family['showUniverse'] == 1 %} #}
 		       {% set otherFamiliesDetails = otherFamiliesDetails ~ '&nbsp;<a href="/' ~ global.request.get('universeUrlcode') ~ '-CCU0000/' ~ subuniverse['ID'] ~ '-CCN0000/' ~ family['familyUrlname'] ~ '-CCN0000/">' ~ family.familyName ~ '</a>,' %}
-		       {% endif %}
+		       {# {% endif %} #}
 		       {% endfor %} 
 		       {% endif %}
 		       {% set otherFamilies = otherFamilies ~ otherFamiliesDetails | trim(',') ~ '
