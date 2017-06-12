@@ -21,91 +21,115 @@
       </div>   
     </div>    
       {% for subuniverse in catalog[global.request.get('universeUrlname')]['subuniverses'] %}
-      <div class="row subUniverse"  id="{{ subuniverse['subuniverseUrlname'] }}">
-         <div class="col l3 s12">
-            <div class="col l12 m7 s12">
-                <h2 class="h2 hide-on-small-only">{{ subuniverse['subuniverseTitle'] }}</h2>
-                <h2 class="h2 subUniverseMobTitle subUniverseMobDisable hide-on-med-and-up">{{ subuniverse['subuniverseTitle'] }}</h2>
-                <p class="hide-on-small-only">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.</p>
-            </div>
-            <div class="col l12 m5 hide-on-small-only"> 
-                {% if subuniverse['families'] is defined %}
-                {% if subuniverse['families']|length > 3 %}
-                <div class="col s12 pinterest">
-                   {% for family in subuniverse['families'] %}
-                   {% if loop.index < 4 %}
-                   <div class="pinterestImage{{ loop.index }}" style="background-image:url('{{ family['familyImage'] }}')"></div>
-                   {% endif %}
-                   {% endfor %}
-                   <div class="pinterestTitle">
-                       <div class="col s3">
-                           <img src="/images/pin.png" />
-                       </div>
-                       <div class="col s6">
-                           {{ subuniverse['subuniverseTitle'] }}
-                       </div>
-                       <div class="col s3">
-                           <span>Voir</span>
-                       </div>                  
-                   </div>
-                </div>
-                {% endif %}
-                {% endif %}
-            </div>
-         </div>
-         <div class="col l9 s12 subUniverseFamilies">
-            {% if subuniverse['subuniverseUrlname'] == 'fenetres-portes-fenetres-baies-coulissantes' %}
-            <h2 class="text-center">Découvrez en quelques questions le produit le plus adapté à votre projet </h2>
-            <a href="/configurateur">
-            <img class="responsive-img" src="/images/configurateur.png" style="margin:20px">
-            </a>
-            <br>
-            <h2 class="h2 text-center">Explorez directement nos gammes</h2>
-            <div class="row">
-               {% for gamme in ['pvc','pin','chene','aluminium'] %}
-               <div class="col-md-3 text-center">
-                  <a href="https://lapeyre.herokuapp.com/fenetres-CCU0000/fenetres-portes-fenetres-baies-coulissantes-CCN0000/fenetres-portes-fenetres-baies-coulissantes-{{ gamme }}-CCN0000/">
-                     <br>
-                     <img class="img-inline" src="/images/windows/{{ gamme }}.png">
-                     <h2 class="h2 text-center">{{ gamme }}</h2>
-                  </a>
-               </div>
-               {% endfor %}
-            </div>
-            {% endif %}
-            {% if subuniverse['families'] is defined %}
-            {% for family in subuniverse['families'] %}
-            {% if family['showUniverse'] == 2 %}
-            <div class="col m4 s6">
-                <fieldset class="subFamilyContainer" onclick="location.href='/{{ global.request.get('universeUrlname') }}-CCU0000/{{ subuniverse['subuniverseUrlname'] }}-CCN0000/{{ family['familyUrlname'] }}-CCN0000/'">
-                   <legend align="center"><div>{{ family.familyName }}</div></legend>
-                   <div class="subFamilyImage">
-                       <div style="background:url('{{ family['familyImage'] }}')"></div>
-                   </div>
-                </fieldset>
-            </div> 
-            {% endif %}
-            {% endfor %}
-            {% endif %}
-            {% set otherFamiliesDetails = null %}
-            {% set otherFamilies = '
-            <p><u>Et aussi</u> :' %}
-               {% if subuniverse['families'] is defined %}
-               {% for family in subuniverse['families'] %}
-               {% if family['showUniverse'] == 1 %}
-               {% set otherFamiliesDetails = otherFamiliesDetails ~ '&nbsp;<a href="/' ~ global.request.get('universeUrlname') ~ '-CCU0000/' ~ subuniverse['subuniverseUrlname'] ~ '-CCN0000/' ~ family['familyUrlname'] ~ '-CCN0000/">' ~ family.familyName ~ '</a>,' %}
-               {% endif %}
-               {% endfor %} 
-               {% endif %}
-               {% set otherFamilies = otherFamilies ~ otherFamiliesDetails | trim(',') ~ '
-            </p>
-            ' %}  
-            {% if otherFamiliesDetails %}
-            {{ otherFamilies | raw }}	
-            {% endif %}	
-         </div>
-      </div>
-      <div class="divider hide-on-med-and-up"></div>
+	      {% if subuniverse['subuniverseUrlname'] == 'fenetres-portes-fenetres-baies-coulissantes' %}
+		<div class="row subUniverse subUniverseWindow">
+		   <div class="col s12">
+		      <p><strong>Votre fenêtre</strong> à partir de 99€</p>
+		      <p>Faites entrer la lumière et améliorez votre confort au quotidien. Lapeyre vous acompagne pour choisir les menuiseries les plus adaptées à vos besoins.</p>
+		   </div>
+		   <div class="col s6">
+		      <div class="col s12">
+		         <p>Trouver votre fenêtre idéale</p>
+		         <p>En quelques clics, Lapeyre vous accompagne pour trouver la solution parfaite selon vos souhaits.</p>
+			 <p><a href="">C'est parti !</a></p>
+		      </div>
+		   </div>
+		   <div class="col s6">
+		      <div class="col s12 subUniverseFamilies">
+		         <p>Trouver par matière</p>
+			    {% if subuniverse['subuniverseUrlname'] == 'fenetres-portes-fenetres-baies-coulissantes' %}
+				    <div class="row">
+				       {% for gamme in ['pvc','pin','chene','aluminium'] %}
+
+					<div class="col m3 s6">
+					    <fieldset class="subFamilyContainer" onclick="location.href='/fenetres-CCU0000/fenetres-portes-fenetres-baies-coulissantes-CCN0000/fenetres-portes-fenetres-baies-coulissantes-{{ gamme }}-CCN0000/'">
+					       <legend align="center" class="capitalize"><div>{{ gamme }}</div></legend>
+					       <div class="subFamilyImage subFamilyImageTiny">
+						   <div style="background-image:url('/images/windows/{{ gamme }}.png')"></div>
+					       </div>
+					    </fieldset>
+					</div> 
+				       {% endfor %}
+				    </div>
+			    {% endif %}
+		      </div>
+		   </div>
+		</div>
+		<div class="row subUniverse subUniverseWindowOther">
+			<p>Et n'oubliez pas :</p>
+		</div>
+	      {% endif %}
+	      <div class="row subUniverse"  id="{{ subuniverse['subuniverseUrlname'] }}">
+		 <div class="col l3 s12">
+		    <div class="col l12 m8 s12">
+			<h2 class="h2 hide-on-small-only">{{ subuniverse['subuniverseTitle'] }}</h2>
+			<h2 class="h2 subUniverseMobTitle subUniverseMobDisable hide-on-med-and-up">{{ subuniverse['subuniverseTitle'] }}</h2>
+			<p class="hide-on-small-only">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.</p>
+		    </div>
+		    <div class="col l12 m4 hide-on-small-only"> 
+			{% if subuniverse['families'] is defined %}
+			{% if subuniverse['families']|length > 3 %}
+			<div id="widgetPinterest" class="col l12 m4 hide-on-small-only">
+			   <a data-pin-do="embedBoard" data-pin-lang="fr" data-pin-board-width="230" data-pin-scale-height="150" data-pin-scale-width="100" href="{{ subuniverse['pinterest'] }}"></a>
+			</div>                
+			{% endif %}
+			{% endif %}
+		    </div>
+		 </div>
+		 <div class="col l9 s12 subUniverseFamilies">
+		    {% if subuniverse['subuniverseUrlname'] == 'fenetres-portes-fenetres-baies-coulissantes' %}
+		    <h2 class="h2 text-center">Explorez directement nos gammes</h2>
+		    <div class="row">
+		       {% for gamme in ['pvc','pin','chene','aluminium'] %}
+
+			<div class="col m3 s6">
+			    <fieldset class="subFamilyContainer" onclick="location.href='/fenetres-CCU0000/fenetres-portes-fenetres-baies-coulissantes-CCN0000/fenetres-portes-fenetres-baies-coulissantes-{{ gamme }}-CCN0000/'">
+			       <legend align="center" class="capitalize"><div>{{ gamme }}</div></legend>
+			       <div class="subFamilyImage subFamilyImageTiny">
+				   <div style="background-image:url('/images/windows/{{ gamme }}.png')"></div>
+			       </div>
+			    </fieldset>
+			</div> 
+		       {% endfor %}
+		    </div>
+		    <h2 class="text-center" style="padding-top:20px">Découvrez en quelques questions le produit le plus adapté à votre projet </h2>
+		    <a href="/configurateur">
+		    <img class="responsive-img" src="/images/windows/MEA_sur_mesure.png" style="margin-bottom:10px">
+		    </a>
+		    {% endif %}
+		    {% if subuniverse['families'] is defined %}
+		    {% for family in subuniverse['families'] %}
+		    {% if family['showUniverse'] == 2 %}
+		    <div class="col m4 s6">
+			<fieldset class="subFamilyContainer" onclick="location.href='/{{ global.request.get('universeUrlname') }}-CCU0000/{{ subuniverse['subuniverseUrlname'] }}-CCN0000/{{ family['familyUrlname'] }}-CCN0000/'">
+			   <legend align="center"><div>{{ family.familyName }}</div></legend>
+			   <div class="subFamilyImage">
+			       <div style="background-image:url('{{ family['familyImage'] }}')"></div>
+			   </div>
+			</fieldset>
+		    </div> 
+		    {% endif %}
+		    {% endfor %}
+		    {% endif %}
+		    {% set otherFamiliesDetails = null %}
+		    {% set otherFamilies = '
+		    <p><u>Et aussi</u> :' %}
+		       {% if subuniverse['families'] is defined %}
+		       {% for family in subuniverse['families'] %}
+		       {% if family['showUniverse'] == 1 %}
+		       {% set otherFamiliesDetails = otherFamiliesDetails ~ '&nbsp;<a href="/' ~ global.request.get('universeUrlname') ~ '-CCU0000/' ~ subuniverse['subuniverseUrlname'] ~ '-CCN0000/' ~ family['familyUrlname'] ~ '-CCN0000/">' ~ family.familyName ~ '</a>,' %}
+		       {% endif %}
+		       {% endfor %} 
+		       {% endif %}
+		       {% set otherFamilies = otherFamilies ~ otherFamiliesDetails | trim(',') ~ '
+		    </p>
+		    ' %}  
+		    {% if otherFamiliesDetails %}
+		    {{ otherFamilies | raw }}	
+		    {% endif %}	
+		 </div>
+	      </div>
+	      <div class="divider hide-on-med-and-up"></div>
       {% endfor %}
     <div class="row">
       <div class="col s12 hide-on-med-and-down">
