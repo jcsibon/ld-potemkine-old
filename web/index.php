@@ -26,9 +26,9 @@ foreach ($file as $i=>$row) {
     foreach($keys as $j=>$key)
       $newrow[$key] = $row[$j];
   print_r($newrow);
-  echo substr($newrow['Parent ID'],0,3).PHP_EOL;
+  echo substr($newrow['ParentID'],0,3).PHP_EOL;
 
-  switch (substr($newrow['Parent ID'],0,3)) {
+  switch (substr($newrow['ParentID'],0,3)) {
       case "CCR":
           $precatalog["Univers"][$newrow['ID']]=$newrow;
       break;
@@ -47,7 +47,7 @@ print_r($precatalog);
 die();
 
 foreach ($precatalog["Sous-familles"] as $row)
-  $precatalog["Familles"][$row['Parent ID']]["Content"][]=$row;
+  $precatalog["Familles"][$row['ParentID']]["Content"][]=$row;
 
 
 
