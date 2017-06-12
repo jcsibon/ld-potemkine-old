@@ -1,4 +1,4 @@
-.listLeft {
+#leftColumnCategory {
     float: left;
     width: 240px;
     padding: 20px 0;
@@ -9,29 +9,29 @@
     color: #212121;
 }
 
-.listLeft>div:nth-of-type(1) {
+#leftColumnCategory>div:nth-of-type(1) {
     border: #f2f3f5 solid 2px;
 }
 
-.listLeft>div>div:nth-of-type(1) {
+#leftColumnCategory>div>div:nth-of-type(1) {
     padding: 20px 20px 0 20px;
 }
 
-.listLeft h3 {
+#leftColumnCategory h3 {
     font-size:16px;
     font-weight: 700;
 }
 
-.listLeft h3 a {
+#leftColumnCategory h3 a {
     text-decoration: none;
     color: #212121;
 }
 
-.listLeft ul {
+#leftColumnCategory ul {
     padding: 20px 0 15px;
 }
 
-.listLeft ul li {
+#leftColumnCategory ul li {
     line-height: 2em;
     padding-left: 10px;
 }
@@ -51,35 +51,35 @@
     width: 95%;   
 }
 
-.listLeft .listFilters ul {
+#leftColumnCategory .listFilters ul {
     
 }
 
-.listLeft .listFilters ul li {
+#leftColumnCategory .listFilters ul li {
     
 }
 
-.listLeft .listFilters ul li:nth-of-type(1) {
+#leftColumnCategory .listFilters ul li:nth-of-type(1) {
     font-weight: 700;
 }
 
-.listLeft .listFilters ul li input {
+#leftColumnCategory .listFilters ul li input {
     margin-right: 10px;
     vertical-align: top;
     margin-top: 3px;
 }
 
-.listLeft .listFilters ul li span {
+#leftColumnCategory .listFilters ul li span {
     display: inline-block;
     width: 165px;
     line-height: 1.3em;
 }
 
-.listLeft>div>div>ul li strong {
+#leftColumnCategory>div>div>ul li strong {
     font-weight: 700;
 }
 
-.listLeft ul li a {
+#leftColumnCategory ul li a {
     color: #212121;
     text-decoration: none;
 }
