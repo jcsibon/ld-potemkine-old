@@ -12,7 +12,7 @@
         </div>
         <div class="universeAnchor">
              {% for subuniverse in catalog[global.request.get('universeUrlcode')]['Content'] %}
-             <div class="universeAnchors  hide-on-med-and-down" onclick="javascript:animationScroll('#{{ subuniverse['subuniverseUrlcode'] }}');">{{ subuniverse['Name'] }}<img src="/images/fleche.png"></div>
+             <div class="universeAnchors  hide-on-med-and-down" onclick="javascript:animationScroll('#{{ subuniverse['ID'] }}');">{{ subuniverse['Name'] }}<img src="/images/fleche.png"></div>
              {% endfor %}
              <div class="universeAnchors universeMainAnchor hide-on-large-only hide-on-small-only" onclick="javascript:animationScroll('.subUniverse');">Voir les produits<img src="/images/fleche.png"></div>
         </div>
