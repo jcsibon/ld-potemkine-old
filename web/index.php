@@ -27,7 +27,7 @@ foreach ($file as $i=>$row) {
       $newrow[$key] = $row[$j];
 }
 
-switch (substr($newrow['Parent ID'],0,2)) {
+switch (substr($newrow['Parent ID'],0,3)) {
     case "CCR":
         $catalog["Univers"][$newrow['ID']]=$newrow;
     break;
