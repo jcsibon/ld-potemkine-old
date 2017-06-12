@@ -90,6 +90,10 @@ $app->get('/catalog', function() use($app, $catalog) {
   return true;
 });
 
+$app->get('/c/h/configurateur-fenetres', function() use($app) {
+  return $app['twig']->render('configurateur.twig');
+});
+
 $app->get('/{universeUrlname}-{universeUrlcode}/', function($universeUrlcode) use($app) {
   return $app['twig']->render('universe.twig');
 })->assert('universeUrlcode', 'CCU[0-9\-]+');
@@ -113,13 +117,5 @@ $app->get('product-FPC{productId}', function($productId) use($app) {
 $app->get('article-{articleId}', function($articleId) use($app) {
   return $app['twig']->render('article.twig');
 });
-
-$app->get('/c/h/configurateur-fenetres', function() use($app) {
-  return $app['twig']->render('configurateur.twig');
-});
-
-$app->get('/configurateur/step-{step}', function($step) use($app) {
-  return $app['twig']->render('configurateur.twig');
-})->assert('universeUrlname', '[0-9]+');
 
 $app->run();
