@@ -106,9 +106,9 @@ $app->get('/{universeUrlname}-{universeUrlcode}/{subuniverseUrlname}-{subunivers
     return $app['twig']->render('family.twig');
 })->assert('universeUrlname', '[a-z\-]+')->assert('universeUrlcode', 'CCU[0-9\-]+')->assert('subuniverseUrlname', '[a-z\-]+')->assert('subuniverseUrlcode', 'SCU[0-9\-]+')->assert('familyUrlname', '[a-z\-]+')->assert('familyUrlcode', 'CCN[0-9\-]+')->assert('subfamilyUrlname', '[a-z\-]+')->assert('subfamilyUrlcode', 'CCN[0-9\-]+');
 
-$app->get('product-FPC{productId}', function($productId) use($app) {
+$app->get('{productUrlname}-{productUrlcode}', function($productUrlcode) use($app) {
   return $app['twig']->render('product.twig');
-});
+})->assert('productUrlcode', 'FPC[0-9\-]+');
 
 $app->get('article-{articleId}', function($articleId) use($app) {
   return $app['twig']->render('article.twig');
