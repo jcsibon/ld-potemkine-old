@@ -912,7 +912,30 @@
     </div>
     </div>
   </div>
-  <script src="https://www.lapeyre.fr/img/contrib/freehtml/pages/v8/familles/js/script.js"></script> 
+  <script>
+$('head').append('<link rel="stylesheet" type="text/css" href="https://www.lapeyre.fr/img/contrib/freehtml/pages/v8/familles/css/family.css">');
+   
+$( ".criteria table tr:not(:first-child) td" )
+  .on( "mouseenter", function() {
+   if ($(this).text().trim().length=='0') {
+     $(this).addClass('td_sm');
+   }
+  })
+  .on( "mouseleave", function() {
+    $('.criteria table td').removeClass('td_sm');
+  });
+
+$( ".criteria ul li" )
+  .on( "mouseenter", function() {
+     $(this).addClass('criteria_li_hover');
+     $(this).find('div').addClass('criteria_li_div_hover');
+  })
+  .on( "mouseleave", function() {
+    $(".criteria ul li").removeClass('criteria_li_hover');
+    $(".criteria ul li div").removeClass('criteria_li_div_hover');
+  });
+
+  </script> 
 </div>
 
 {% endblock %}
