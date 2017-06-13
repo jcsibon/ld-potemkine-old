@@ -57,7 +57,7 @@
 
 			<div class="col m3 s6">
 			    <fieldset class="subFamilyContainer" onclick="location.href='/fenetres-CCU0000/fenetres-portes-fenetres-baies-coulissantes-CCN0000/fenetres-portes-fenetres-baies-coulissantes-{{ gamme }}-CCN0000/'">
-			       <legend align="center" class="capitalize"><div>{{ gamme }}</div></legend>
+			       <legend align="center" class="capitalize"><div><a href="/fenetres-CCU0000/fenetres-portes-fenetres-baies-coulissantes-CCN0000/fenetres-portes-fenetres-baies-coulissantes-{{ gamme }}-CCN0000/">{{ gamme }}</a></div></legend>
 			       <div class="subFamilyImage subFamilyImageTiny">
 				   <div style="background-image:url('/images/windows/{{ gamme }}.png')"></div>
 			       </div>
@@ -76,7 +76,7 @@
 					    {# {% if family['showUniverse'] == 2 %} #}
 					    <div class="col m4 s6">
 						<fieldset class="subFamilyContainer" onclick="location.href='/{{ catalog[global.request.get('universeUrlcode')]['URL'] }}/{{ subuniverse['URL'] }}/{{ family['URL'] }}'">
-						   <legend align="center"><div>{{ family.Name }}</div></legend>
+						   <legend align="center"><div><a href="/{{ catalog[global.request.get('universeUrlcode')]['URL'] }}/{{ subuniverse['URL'] }}/{{ family['URL'] }}">{{ family.Name }}</a></div></legend>
 						   <div class="subFamilyImage">
 						       <div style="background-image:url('//static.lapeyre.fr/img/catalogue/desktopList/{{ family['VisuelprincipalAssetReferenceID'][family['VisuelprincipalAssetReferenceID']|length - 6:3] }}/{{ family['VisuelprincipalAssetReferenceID'][family['VisuelprincipalAssetReferenceID']|length - 3:] }}/{{ family['VisuelprincipalAssetReferenceID'] }}.jpg')"></div>
 						   </div>
