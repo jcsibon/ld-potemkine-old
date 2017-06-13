@@ -389,6 +389,11 @@
     display: inline-block;
 }
 
+#SCU687471 > div:nth-of-type(2) > div:nth-of-type(2) div.col {
+    text-align: center;
+    padding: 20px 0 0;
+}
+
 @media screen and (min-width: 768px) {
   .universeContainer .subUniverseFamilies {
      display: block !important; 
