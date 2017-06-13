@@ -937,7 +937,7 @@ $( ".criteria ul li" )
 
 $( "[data-target]" )
   .on( "click", function(this) {
-    window.scrollTo(0, $("#" + this.data(target)).offset().top);
+    window.scrollTo(0, $(this.data(target)).offset().top);
   });
 
 
