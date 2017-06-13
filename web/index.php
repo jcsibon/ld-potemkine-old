@@ -108,7 +108,7 @@ $app->get('/{universeUrlname}-{universeUrlcode}/{subuniverseUrlname}-{subunivers
 
 $app->get('{productUrlname}-{productUrlcode}', function($productUrlcode) use($app) {
   return $app['twig']->render('product.twig');
-})->assert('productUrlcode', 'FPC[0-9\-]+');
+})->assert('productUrlname', '[a-z\-]+')->assert('productUrlcode', 'FPC[0-9\-]+');
 
 $app->get('article-{articleId}', function($articleId) use($app) {
   return $app['twig']->render('article.twig');
