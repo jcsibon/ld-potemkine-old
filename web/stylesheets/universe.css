@@ -368,7 +368,7 @@
 }
 
 #SCU687471 > div:nth-of-type(2) > div:nth-of-type(1) {
-    background: url(/images/windows/blocFenetre.jpg) no-repeat;
+    background: url(/images/windows/blocFenetre.jpg) top center no-repeat;
     padding: 40px 20px;
     text-align: center;
 }
