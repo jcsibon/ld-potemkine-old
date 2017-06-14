@@ -394,6 +394,14 @@
     padding: 20px 0 0;
 }
 
+#SCU687471 .subFamilyContainer:hover {
+    text-decoration: none;
+}
+
+#SCU687471 .subFamilyContainer div:hover {
+    text-decoration: underline;
+}
+
 @media screen and (min-width: 768px) {
   .universeContainer .subUniverseFamilies {
      display: block !important; 
