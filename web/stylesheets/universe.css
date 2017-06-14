@@ -403,6 +403,14 @@
     text-decoration: underline;
 }
 
+#SCU687471 .subFamilyContainer p {
+    margin-bottom: 0;
+}
+
+#SCU687471 .subFamilyContainer {
+    padding-bottom: 40px;
+}
+
 @media screen and (min-width: 768px) {
   .universeContainer .subUniverseFamilies {
      display: block !important; 
