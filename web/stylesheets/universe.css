@@ -410,6 +410,7 @@
 
 #SCU687471 .subFamilyContainer {
     padding-bottom: 40px;
+    max-width: inherit;
 }
 
 @media screen and (min-width: 768px) {
