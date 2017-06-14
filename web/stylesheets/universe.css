@@ -396,6 +396,7 @@
 
 #SCU687471 .subFamilyContainer:hover {
     text-decoration: none;
+    cursor: inherit;
 }
 
 #SCU687471 .subFamilyContainer div:hover {
