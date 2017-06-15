@@ -59,7 +59,9 @@
 			<div class="col s12">
 				<fieldset class="subFamilyContainer">
 				   <legend align="center"><div>Les accessoires pour votre fenêtre</div></legend>
-				   <div class="col s3"><a href=""><img src="" /></a><p><a href=""></a></p></div>
+				   {% if subuniverse['ID'] == 'CCN0050' or subuniverse['ID'] == 'CCN688125' or subuniverse['ID'] == 'CCN688126' or subuniverse['ID'] == 'CCN0044' or subuniverse['ID'] == 'CCN0045' or subuniverse['ID'] == 'CCN0046' %}
+				      <div class="col s3"><a href=""><img src="" /></a><p><a href=""></a></p></div>
+				   {% endif %}
 				</fieldset>
 			</div>
 
