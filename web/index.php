@@ -85,8 +85,8 @@ $app->get('/', function() use($app) {
 });
 
 $app->get('/catalog', function() use($app, $catalog) {
-  header('Content-type: application/json');
-  die(json_encode($catalog));
+  var_dump($catalog);
+  die();
   return true;
 });
 
