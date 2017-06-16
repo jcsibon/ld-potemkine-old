@@ -85,7 +85,7 @@ $app->get('/', function() use($app) {
 });
 
 $app->get('/catalog', function() use($app, $catalog) {
-  var_dump($catalog);
+  echo '<pre>' . var_export($data, true) . '</pre>';
   die();
   return true;
 });
