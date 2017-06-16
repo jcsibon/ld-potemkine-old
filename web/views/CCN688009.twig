@@ -1,4 +1,4 @@
-{% for subfamily in catalog[global.request.get('universeUrlcode')]['Contents'][global.request.get('subuniverseUrlcode')]['Contents'][global.request.get('familyUrlcode')]['Contents'] %}
+{% for subfamily in catalog[global.request.get('universeUrlcode')]['Content'][global.request.get('subuniverseUrlcode')]['Content'][global.request.get('familyUrlcode')]['Content'] %}
     <div class="col m4 s6">
 		<fieldset class="subFamilyContainer" onclick="location.href='/{{ catalog[global.request.get('universeUrlcode')]['URL'] }}/{{ subuniverse['URL'] }}/{{ family['URL'] }}/{{ subfamily['URL'] }}'">
 		   <legend align="center"><div><a href="/{{ catalog[global.request.get('universeUrlcode')]['URL'] }}/{{ subuniverse['URL'] }}/{{ family['URL'] }}/{{ subfamily['URL'] }}">{{ subfamily.Name }}</a></div></legend>
