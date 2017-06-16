@@ -367,30 +367,30 @@
     padding-top: 50px;
 }
 
-#SCU687471 > div:nth-of-type(2) > div:nth-of-type(1) {
+#SCU687471 > div:nth-of-type(2) > div:nth-of-type(2) {
     background: url(/images/windows/blocFenetre.jpg) top center no-repeat;
     padding: 40px 20px;
     text-align: center;
     max-width: 460px;
 }
 
-#SCU687471 > div:nth-of-type(2) > div:nth-of-type(1) h3 {
+#SCU687471 > div:nth-of-type(2) > div:nth-of-type(2) h3 {
     font-size: 20px;
     color: #fff;
 }
 
-#SCU687471 > div:nth-of-type(2) > div:nth-of-type(1) p {
+#SCU687471 > div:nth-of-type(2) > div:nth-of-type(2) p {
     color: #fff;
     margin-bottom: 20px;
 }
 
-#SCU687471 > div:nth-of-type(2) > div:nth-of-type(1) a {
+#SCU687471 > div:nth-of-type(2) > div:nth-of-type(2) a {
     width: 100%;
     max-width: 200px;
     display: inline-block;
 }
 
-#SCU687471 > div:nth-of-type(2) > div:nth-of-type(2) div.col {
+#SCU687471 > div:nth-of-type(2) > div:nth-of-type(1) div.col {
     text-align: center;
     padding: 20px 0 0;
 }
