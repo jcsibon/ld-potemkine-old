@@ -95,7 +95,7 @@ $app->get('/{universeUrlname}-{universeUrlcode}/', function($universeUrlcode) us
 })->assert('universeUrlcode', 'CCU[0-9\-]+');
 
 $app->get('/{universeUrlname}-{universeUrlcode}/{subuniverseUrlname}-{subuniverseUrlcode}/{familyUrlname}-{familyUrlcode}/', function($universeUrlcode, $subuniverseUrlcode, $familyUrlcode) use($app) {
-  if (in_array($familyUrlcode, ['CCN0010','CCN0025','CCN0086','CCN688463','CCN688464','CCN688465','CCN688466']))
+  if (in_array($familyUrlcode, ['CCN0010','CCN0025','CCN688009','CCN688463','CCN688464','CCN688465','CCN688466']))
     return $app['twig']->render($familyUrlcode.'.twig');
   else
     return $app['twig']->render('family.twig');
