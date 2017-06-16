@@ -1,3 +1,7 @@
+{% extends "layout.html" %} 
+
+{% block content %}
+
 <h1>{{ catalog[global.request.get('universeUrlcode')]['Content'][global.request.get('subuniverseUrlcode')]['Content'][global.request.get('familyUrlcode')]['Name'] }}</h1>
 
 <div class="row">
@@ -12,3 +16,5 @@
 	    </div> 
 	{% endfor %}
 </div>
+
+{% endblock %}
