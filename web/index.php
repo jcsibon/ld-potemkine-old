@@ -24,7 +24,7 @@ array_shift($file);
 
 foreach ($file as $i=>$row) {
     foreach($keys as $j=>$key)
-      $newrow[$key] = $row[$j];
+      $newrow[$key] = str_replace("_", "-", $row[$j]);
 
   switch (substr($newrow['ParentID'],0,3)) {
       case "CCR":
