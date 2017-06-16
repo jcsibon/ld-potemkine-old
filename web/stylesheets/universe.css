@@ -413,6 +413,10 @@
     max-width: inherit;
 }
 
+#SCU687471>div>div:nth-of-type(3) .subFamilyContainer img {
+    width: 100%;
+}
+
 @media screen and (min-width: 768px) {
   .universeContainer .subUniverseFamilies {
      display: block !important; 
