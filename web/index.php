@@ -102,7 +102,7 @@ $app->get('/{universeUrlname}-{universeUrlcode}/{subuniverseUrlname}-{subunivers
 })->assert('universeUrlname', '[a-z\-]+')->assert('universeUrlcode', 'CCU[0-9\-]+')->assert('subuniverseUrlname', '[a-z\-]+')->assert('subuniverseUrlcode', 'SCU[0-9\-]+')->assert('familyUrlname', '[a-z\-]+')->assert('familyUrlcode', 'CCN[0-9\-]+');
 
 
-$app->get('/{universeUrlname}-{universeUrlcode}/{subuniverseUrlname}-{subuniverseUrlcode}/{familyUrlname}-{familyUrlcode}/{subfamilyUrlname}-{subfamilyUrlncode}', function($universeUrlcode, $subuniverseUrlcode, $familyUrlcode, $subfamilyUrlcode) use($app) {
+$app->get('/{universeUrlname}-{universeUrlcode}/{subuniverseUrlname}-{subuniverseUrlcode}/{familyUrlname}-{familyUrlcode}/{subfamilyUrlname}-{subfamilyUrlcode}', function($universeUrlcode, $subuniverseUrlcode, $familyUrlcode, $subfamilyUrlcode) use($app) {
     return $app['twig']->render('family.twig');
 })->assert('universeUrlname', '[a-z\-]+')->assert('universeUrlcode', 'CCU[0-9\-]+')->assert('subuniverseUrlname', '[a-z\-]+')->assert('subuniverseUrlcode', 'SCU[0-9\-]+')->assert('familyUrlname', '[a-z\-]+')->assert('familyUrlcode', 'CCN[0-9\-]+')->assert('subfamilyUrlname', '[a-z\-]+')->assert('subfamilyUrlcode', 'CCN[0-9\-]+');
 
