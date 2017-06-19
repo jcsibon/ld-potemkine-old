@@ -61,7 +61,7 @@
 			</div>-->
 			<div class="col s12">
 				<fieldset class="subFamilyContainer">
-				   <legend align="center"><div>Les accessoires pour votre fenêtre</div></legend>
+				   <legend align="center"><div>Et aussi :</div></legend>
 					{% for family in subuniverse['Content'] %}
 					   {% if family['ID'] == 'CCN0050' or family['ID'] == 'CCN688125' or family['ID'] == 'CCN688126' or family['ID'] == 'CCN0044' or family['ID'] == 'CCN0045' or family['ID'] == 'CCN0046' %}
 					      <div class="col m2 s4"><a href="/{{ catalog[global.request.get('universeUrlcode')]['URL'] }}/{{ subuniverse['URL'] }}/{{ family['URL'] }}"><img src="//static.lapeyre.fr/img/catalogue/desktopList/{{ family['VisuelprincipalAssetReferenceID'][family['VisuelprincipalAssetReferenceID']|length - 6:3]|lower|replace({' ': '_'}) }}/{{ family['VisuelprincipalAssetReferenceID'][family['VisuelprincipalAssetReferenceID']|length - 3:]|lower|replace({' ': '_'}) }}/{{ family['VisuelprincipalAssetReferenceID'] }}.jpg" /></a><p><a href="/{{ catalog[global.request.get('universeUrlcode')]['URL'] }}/{{ subuniverse['URL'] }}/{{ family['URL'] }}">{{ family.Name }}</a></p></div>
