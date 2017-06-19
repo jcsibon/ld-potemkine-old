@@ -1,3 +1,7 @@
+.categoryName {
+    max-width: inherit !important;
+}
+
 .universeContainer {
     width: 100%;
     max-width: 1280px;
