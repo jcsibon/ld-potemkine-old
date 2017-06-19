@@ -368,7 +368,7 @@
 }
 
 #SCU687471 > div:nth-of-type(2) > div:nth-of-type(2) {
-    background: url(/images/windows/blocFenetre.jpg) top center no-repeat;
+    background: url(https://www.lapeyre.fr/img/contrib/freehtml/pages/v8/univers/images/windows/configurateur.jpg) top center no-repeat;
     padding: 40px 20px;
     text-align: center;
     max-width: 460px;
@@ -417,6 +417,62 @@
     width: 100%;
 }
 
+#subUnivers > div {
+    width: 100vw;
+    left: calc(-50vw + 50%);
+    position: relative;
+}
+
+.blocEdito {
+   border: 10px #fff solid;
+   padding-top: 20px;
+}
+
+.blocEdito div div:nth-of-type(1) {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.blocListeArticles div div:nth-of-type(1) {
+    height: 45px;
+}
+
+/* Widget Edito Debut */
+
+.blocEdito legend {
+    padding: 0 20px;
+    font-size: 26px;
+    font-weight: 700;
+    margin-left: 10px;
+}
+
+.blocEdito div div:nth-of-type(2) {
+    color: #737373;
+    font-size: 13px;
+}
+
+.blocEdito p {
+    text-align: right;
+    text-decoration: underline;
+    font-weight: 700;
+    color: #444;
+    font-size: 13px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+}
+
+.blocEdito a:hover {
+    text-decoration: underline;
+}
+
+.blocEdito>div {
+    padding-bottom: 10px !important;
+}
+
+/* Widget Edito Fin */
+
+
 @media screen and (min-width: 768px) {
   .universeContainer .subUniverseFamilies {
      display: block !important; 
@@ -446,7 +502,7 @@
   }
 }
 
-/* Widget Pinterest DÃŠbut */
+/* Widget Pinterest Debut */
 
 #widgetPinterest {
    padding: 0;
