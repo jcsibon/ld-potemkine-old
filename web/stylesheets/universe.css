@@ -410,6 +410,14 @@
     cursor: inherit;
 }
 
+#SCU687471 div:nth-of-type(3) .subFamilyContainer {
+    padding-bottom: 10px;
+}
+
+#SCU687471 .subFamilyContainer p {
+    line-height: 1.3em;
+}
+
 #SCU687471 .subFamilyContainer div:hover {
     text-decoration: underline;
 }
