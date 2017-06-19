@@ -456,6 +456,10 @@
     height: 45px;
 }
 
+.blocListeArticles {
+    max-width: 400px;
+}
+
 /* Widget Edito Debut */
 
 .blocEdito legend {
