@@ -368,10 +368,12 @@
 }
 
 #SCU687471 > div:nth-of-type(2) > div:nth-of-type(2) {
-    background: url(https://www.lapeyre.fr/img/contrib/freehtml/pages/v8/univers/images/windows/configurateur.jpg) top center no-repeat;
-    padding: 40px 20px;
+    background: url(https://www.lapeyre.fr/img/contrib/freehtml/pages/v8/univers/images/windows/configurateur.jpg) top left no-repeat;
+    padding: 0px 20px;
     text-align: center;
     max-width: 460px;
+    min-height: 270px;
+    position: relative;
 }
 
 #SCU687471 > div:nth-of-type(2) > div:nth-of-type(2) h3 {
@@ -387,7 +389,10 @@
 #SCU687471 > div:nth-of-type(2) > div:nth-of-type(2) a {
     width: 100%;
     max-width: 200px;
-    display: inline-block;
+    bottom: 10px;
+    position: absolute;
+    margin-left: -110px;
+    left: 50%;
 }
 
 #SCU687471 > div:nth-of-type(2) > div:nth-of-type(1) div.col {
