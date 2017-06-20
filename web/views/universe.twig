@@ -107,7 +107,7 @@
 				    {% endfor %}
 			    {% endif %}
 			    {% set otherFamiliesDetails = null %}
-			    {% set otherFamilies = '<div class="col s12"><fieldset class="subFamilyContainer subFamilyContainerOther"><legend align="center"><div>Et aussi :</div></legend>' %}
+			    {% set otherFamilies = '<fieldset class="subFamilyContainer subFamilyContainerOther"><legend align="center"><div>Et aussi :</div></legend>' %}
 			       {% if subuniverse['Content'] is defined %}
 				  {% for family in subuniverse['Content'] %}
 					{% if family['Affichageunivers'] == "Petit" %} 
@@ -115,7 +115,7 @@
 					{% endif %} 
 				  {% endfor %} 
 			       {% endif %}
-			       {% set otherFamilies = otherFamilies ~ otherFamiliesDetails | trim(',') ~ '</fieldset></div>' %}  
+			       {% set otherFamilies = otherFamilies ~ otherFamiliesDetails | trim(',') ~ '</fieldset>' %}  
 			    {% if otherFamiliesDetails %}
 			    {{ otherFamilies | raw }}	
 			    {% endif %}	
