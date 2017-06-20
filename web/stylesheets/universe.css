@@ -92,13 +92,16 @@
     text-decoration: underline;
     cursor: pointer;
 }
+.universeContainer .subFamilyContainerOther:hover {
+    cursor: inherit !important;
+}
 
 .universeContainer .subFamilyContainer {
     border: 10px solid #f1f1f1;
     margin: 0 0 19px 0;
 }
 
-.universeContainer .subFamilyContainerOther {
+.universeContainer .subFamilyContainer{
     display: inline-block; 
     min-width: 250px;
     text-align: center;
@@ -110,6 +113,7 @@
 
 .universeContainer .subFamilyContainerOther>div:hover {
     text-decoration: underline;
+    cursor: pointer;
 }
 
 .universeContainer .subFamilyContainer legend {
