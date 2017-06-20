@@ -611,10 +611,4 @@
     color: #666;
     width: 70%;
 }
-
-@media screen and (max-width: 1200px) {
-	#widgetPinterest span[class*="_img"]:nth-child(n+2) {
-	    display:none;
-	}
-}
 /* Widget Pinterest Fin */
