@@ -112,7 +112,7 @@
 			       {% if subuniverse['Content'] is defined %}
 			       {% for family in subuniverse['Content'] %}
 			       {% if family['Affichageunivers'] == "Petit" %} 
-			       {% set otherFamiliesDetails = otherFamiliesDetails ~ '&nbsp;<a href="/' ~ global.request.get('universeUrlcode') ~ '-CCU0000/' ~ subuniverse['ID'] ~ '-CCN0000/' ~ family['URL'] ~ '-CCN0000/">' ~ family.Name ~ '</a>,' %}
+			       {% set otherFamiliesDetails = otherFamiliesDetails ~ '&nbsp;<a href="/' ~ global.request.get('universeUrlcode')['URL'] ~ '/' ~ subuniverse['URL'] ~ '/' ~ family['URL'] ~ '">' ~ family.Name ~ '</a>,' %}
 			       {% endif %} 
 			       {% endfor %} 
 			       {% endif %}
