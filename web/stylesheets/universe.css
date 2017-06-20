@@ -597,6 +597,10 @@
     box-shadow: none;
 }
 
+#widgetPinterest>span:nth-of-type(1) {
+    min-width: 210px;
+}
+
 #widgetPinterest span[class*="_bd"] {
     height: inherit !important;
     padding-bottom: 6px;
@@ -611,4 +615,11 @@
     color: #666;
     width: 70%;
 }
+
+@media screen and (max-width: 1200px) {
+	#widgetPinterest span[class*="_img"]:nth-child(n+2) {
+	    display:none;
+	}
+}
+
 /* Widget Pinterest Fin */
