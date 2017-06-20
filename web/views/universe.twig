@@ -110,11 +110,11 @@
 			    {% set otherFamilies = '
 			    <p><u>Et aussi</u> :' %}
 			       {% if subuniverse['Content'] is defined %}
-			       {% for family in subuniverse['Content'] %}
-			       {% if family['Affichageunivers'] == "Petit" %} 
-			       {% set otherFamiliesDetails = otherFamiliesDetails ~ '&nbsp;<a href="/' ~ catalog[global.request.get('universeUrlcode')]['URL'] ~ '/' ~ subuniverse['URL'] ~ '/' ~ family['URL'] ~ '">' ~ family.Name ~ '</a>,' %}
-			       {% endif %} 
-			       {% endfor %} 
+				  {% for family in subuniverse['Content'] %}
+					{% if family['Affichageunivers'] == "Petit" %} 
+					      {% set otherFamiliesDetails = otherFamiliesDetails ~ '&nbsp;<a href="/' ~ catalog[global.request.get('universeUrlcode')]['URL'] ~ '/' ~ subuniverse['URL'] ~ '/' ~ family['URL'] ~ '">' ~ family.Name ~ '</a>,' %}
+					{% endif %} 
+				  {% endfor %} 
 			       {% endif %}
 			       {% set otherFamilies = otherFamilies ~ otherFamiliesDetails | trim(',') ~ '
 			    </p>
