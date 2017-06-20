@@ -107,8 +107,7 @@
 				    {% endfor %}
 			    {% endif %}
 			    {% set otherFamiliesDetails = null %}
-			    {% set otherFamilies = '
-			    <p><u>Et aussi</u> :' %}
+			    {% set otherFamilies = '<div><fieldset>' %}
 			       {% if subuniverse['Content'] is defined %}
 				  {% for family in subuniverse['Content'] %}
 					{% if family['Affichageunivers'] == "Petit" %} 
@@ -116,9 +115,7 @@
 					{% endif %} 
 				  {% endfor %} 
 			       {% endif %}
-			       {% set otherFamilies = otherFamilies ~ otherFamiliesDetails | trim(',') ~ '
-			    </p>
-			    ' %}  
+			       {% set otherFamilies = otherFamilies ~ otherFamiliesDetails | trim(',') ~ '</fieldset></div>' %}  
 			    {% if otherFamiliesDetails %}
 			    {{ otherFamilies | raw }}	
 			    {% endif %}	
