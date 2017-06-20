@@ -590,6 +590,7 @@
 #widgetPinterest span span:nth-of-type(2) span[class*="_img"] {
     padding-bottom: 100% !important;
     background-position: center center;
+    background-size: inherit;
 }
 
 #widgetPinterest span[class*="_img"] {
