@@ -155,6 +155,22 @@
     left: 0;
     background-color: rgba(0,0,0,0.2);
 }
+
+.universeContainer .subFamilyContainerOther div {
+    display: inline-grid;
+    margin: 5px 8px;
+    font-size: 13px;
+    text-align: center;
+    width: 120px;
+    line-height: 1.2em;
+}
+
+.universeContainer .subFamilyContainerOther div div {
+    width: 100%;
+    height: 120px;
+    background-position: center center !important;
+    background-size: contain !important;
+}
     
 .universeContainer h2 {
     color: #646665;
