@@ -97,7 +97,7 @@
 }
 
 .universeContainer .subFamilyContainerOther {
-    margin: 0 11px !important;
+    margin: 0 11px;
 }
 
 .universeContainer .subFamilyContainer {
@@ -560,7 +560,7 @@
      margin: 0 10%;
   }
   .universeContainer .subFamilyContainerOther {
-	max-width: inherit;
+	display: inherit;
   }
 }
 
