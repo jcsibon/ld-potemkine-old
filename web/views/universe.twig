@@ -70,6 +70,20 @@
 				</fieldset>
 			</div>
 
+			    {% set otherFamiliesDetails = null %}
+			    {% set otherFamilies = '<div class="col s12"><fieldset class="subFamilyContainerOther subFamilyContainer"><legend align="center"><div>Et aussi :</div></legend>' %}
+			       {% if subuniverse['Content'] is defined %}
+				  {% for family in subuniverse['Content'] %}
+					{% if family['Affichageunivers'] == "Petit" %} 
+					      {% set otherFamiliesDetails = otherFamiliesDetails ~ '<div onclick="location.href=\'/' ~ catalog[global.request.get('universeUrlcode')]['URL'] ~ '/' ~ subuniverse['URL'] ~ '/' ~ family['URL'] ~ '\'"><div style="background-image: url(\'//static.lapeyre.fr/img/catalogue/desktopList/' ~ family['VisuelprincipalAssetReferenceID'][family['VisuelprincipalAssetReferenceID']|length - 6:3]|lower|replace({' ': '_'}) ~ '/' ~ family['VisuelprincipalAssetReferenceID'][family['VisuelprincipalAssetReferenceID']|length - 3:]|lower|replace({' ': '_'}) ~ '/' ~ family['VisuelprincipalAssetReferenceID'] ~ '.jpg\')"></div><a href="/' ~ catalog[global.request.get('universeUrlcode')]['URL'] ~ '/' ~ subuniverse['URL'] ~ '/' ~ family['URL'] ~ '">' ~ family.Name ~ '</a></div>' %}
+					{% endif %} 
+				  {% endfor %} 
+			       {% endif %}
+			       {% set otherFamilies = otherFamilies ~ otherFamiliesDetails | trim(',') ~ '</fieldset></div>' %}  
+			    {% if otherFamiliesDetails %}
+			    {{ otherFamilies | raw }}	
+			    {% endif %}	
+
 {#
 
 		    <h2 class="h2 text-center">Explorez directement nos gammes</h2>
