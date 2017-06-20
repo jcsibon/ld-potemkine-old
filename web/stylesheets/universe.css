@@ -98,8 +98,16 @@
     margin: 0 0 19px 0;
 }
 
-.subFamilyContainerOther {
+.universeContainer .subFamilyContainerOther {
     display: inline-block; 
+}
+
+.universeContainer .subFamilyContainerOther:hover {
+    text-decoration: none !important;
+}
+
+.universeContainer .subFamilyContainerOther div:hover {
+    text-decoration: underline;
 }
 
 .universeContainer .subFamilyContainer legend {
