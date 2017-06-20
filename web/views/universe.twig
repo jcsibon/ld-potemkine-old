@@ -95,15 +95,18 @@
 			    {% if subuniverse['Content'] is defined %}
 				    {% for family in subuniverse['Content'] %}
 					    {% if family['Affichageunivers'] != "Petit" %} 
-					    {% set familySize = 'm4 s6' %}
+					    {% set familySize = 'm4 s6' %} 
+					    {% set familyImageSize = 'desktopList' %}
 					    {% if family['Affichageunivers'] == "Grand" %}
 					       {% set familySize = 'm8 s12' %}
+					       {% set familyImageSize = 'zoom1' %}
 					    {% endif %}
+					    
 					    <div class="col {{familySize}}">
 						<fieldset class="subFamilyContainer" onclick="location.href='/{{ catalog[global.request.get('universeUrlcode')]['URL'] }}/{{ subuniverse['URL'] }}/{{ family['URL'] }}'">
 						   <legend align="center"><div><a href="/{{ catalog[global.request.get('universeUrlcode')]['URL'] }}/{{ subuniverse['URL'] }}/{{ family['URL'] }}">{{ family.Name }}</a></div></legend>
 						   <div class="subFamilyImage">
-						       <div style="background-image:url('//static.lapeyre.fr/img/catalogue/desktopList/{{ family['VisuelprincipalAssetReferenceID'][family['VisuelprincipalAssetReferenceID']|length - 6:3]|lower|replace({' ': '_'}) }}/{{ family['VisuelprincipalAssetReferenceID'][family['VisuelprincipalAssetReferenceID']|length - 3:]|lower|replace({' ': '_'}) }}/{{ family['VisuelprincipalAssetReferenceID'] }}.jpg')"></div>
+						       <div style="background-image:url('//static.lapeyre.fr/img/catalogue/{{ familyImageSize }}/{{ family['VisuelprincipalAssetReferenceID'][family['VisuelprincipalAssetReferenceID']|length - 6:3]|lower|replace({' ': '_'}) }}/{{ family['VisuelprincipalAssetReferenceID'][family['VisuelprincipalAssetReferenceID']|length - 3:]|lower|replace({' ': '_'}) }}/{{ family['VisuelprincipalAssetReferenceID'] }}.jpg')"></div>
 						   </div>
 						</fieldset>
 					    </div> 
