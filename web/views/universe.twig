@@ -95,7 +95,11 @@
 			    {% if subuniverse['Content'] is defined %}
 				    {% for family in subuniverse['Content'] %}
 					    {% if family['Affichageunivers'] != "Petit" %} 
-					    <div class="col m4 s6">
+					    {% set familySize = 'm4 s6' %}
+					    {% if family['Affichageunivers'] == "Grand" %}
+					       {% set familySize = 'm8 s12' %}
+					    {% endif %}
+					    <div class="col {{familySize}}">
 						<fieldset class="subFamilyContainer" onclick="location.href='/{{ catalog[global.request.get('universeUrlcode')]['URL'] }}/{{ subuniverse['URL'] }}/{{ family['URL'] }}'">
 						   <legend align="center"><div><a href="/{{ catalog[global.request.get('universeUrlcode')]['URL'] }}/{{ subuniverse['URL'] }}/{{ family['URL'] }}">{{ family.Name }}</a></div></legend>
 						   <div class="subFamilyImage">
