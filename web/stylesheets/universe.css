@@ -106,7 +106,7 @@
     text-decoration: none !important;
 }
 
-.universeContainer .subFamilyContainerOther div:hover {
+.universeContainer .subFamilyContainerOther>div:hover {
     text-decoration: underline;
 }
 
@@ -164,7 +164,7 @@
     background-color: rgba(0,0,0,0.2);
 }
 
-.universeContainer .subFamilyContainerOther div {
+.universeContainer .subFamilyContainerOther>div {
     display: inline-grid;
     margin: 5px 8px;
     font-size: 13px;
@@ -173,11 +173,15 @@
     line-height: 1.2em;
 }
 
-.universeContainer .subFamilyContainerOther div div {
+.universeContainer .subFamilyContainerOther>div>div {
     width: 100%;
     height: 120px;
     background-position: center center !important;
     background-size: contain !important;
+}
+
+.universeContainer .subFamilyContainerOther>div>a {
+    padding-top: 5px;
 }
     
 .universeContainer h2 {
