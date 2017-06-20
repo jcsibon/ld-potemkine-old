@@ -117,10 +117,6 @@
     cursor: pointer;
 }
 
-.universeContainer .subFamilyContainerOther {
-    margin: 0 11px;
-}
-
 .universeContainer .subFamilyContainer legend {
     width: 80%;
     font-weight: 700;
