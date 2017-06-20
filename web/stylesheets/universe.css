@@ -164,6 +164,11 @@
     background-color: rgba(0,0,0,0.2);
 }
 
+.universeContainer .subFamilyContainerOther legend {
+    width: 50%;
+    max-width: 200px;
+}
+
 .universeContainer .subFamilyContainerOther>div {
     display: inline-grid;
     margin: 5px 8px;
