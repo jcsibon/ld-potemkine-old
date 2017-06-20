@@ -94,7 +94,7 @@
 		    {% else %}
 			    {% if subuniverse['Content'] is defined %}
 				    {% for family in subuniverse['Content'] %}
-					    {# {% if family['showUniverse'] == 2 %} #}
+					    {% if family['Affichageunivers'] != "Petit" %} 
 					    <div class="col m4 s6">
 						<fieldset class="subFamilyContainer" onclick="location.href='/{{ catalog[global.request.get('universeUrlcode')]['URL'] }}/{{ subuniverse['URL'] }}/{{ family['URL'] }}'">
 						   <legend align="center"><div><a href="/{{ catalog[global.request.get('universeUrlcode')]['URL'] }}/{{ subuniverse['URL'] }}/{{ family['URL'] }}">{{ family.Name }}</a></div></legend>
@@ -103,7 +103,7 @@
 						   </div>
 						</fieldset>
 					    </div> 
-					    {# {% endif %} #}
+					    {% endif %} 
 				    {% endfor %}
 			    {% endif %}
 			    {% set otherFamiliesDetails = null %}
