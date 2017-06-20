@@ -104,7 +104,8 @@
 .universeContainer .subFamilyContainer{
     display: inline-block; 
     min-width: 250px;
-    text-align: center;
+    text-align: center; 
+    min-height: 263px;
 }
 
 .universeContainer .subFamilyContainerOther:hover {
