@@ -95,11 +95,11 @@
 
 .universeContainer .subFamilyContainer {
     border: 10px solid #f1f1f1;
-    /* max-width: 230px; */
-    /* width: 100%; */
-    /* display: inline-block; */
     margin: 0 0 19px 0;
-    /* position: relative; */
+}
+
+.subFamilyContainerOther {
+    display: inline-block; 
 }
 
 .universeContainer .subFamilyContainer legend {
