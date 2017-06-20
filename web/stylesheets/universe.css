@@ -548,6 +548,9 @@
      width: 80%;
      margin: 0 10%;
   }
+  .universeContainer .subFamilyContainerOther {
+	max-width: inherit;
+  }
 }
 
 @media screen and (max-width: 550px) {
