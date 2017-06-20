@@ -97,7 +97,7 @@
 }
 
 .universeContainer .subFamilyContainerOther {
-    margin: 0 11px;
+    margin: 0 11px !important;
 }
 
 .universeContainer .subFamilyContainer {
