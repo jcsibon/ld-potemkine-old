@@ -96,6 +96,11 @@
     cursor: inherit !important;
 }
 
+.subFamilyContainerOther legend {
+    text-align: left;
+    margin-left: 20px;
+}
+
 .universeContainer .subFamilyContainer {
     border: 10px solid #f1f1f1;
     margin: 0 0 19px 0;
