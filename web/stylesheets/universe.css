@@ -180,7 +180,7 @@
 
 .universeContainer .subFamilyContainerOther>div {
     display: inline-table;
-    margin: 5px 8px;
+    /*margin: 5px 8px;*/
     font-size: 13px;
     text-align: center;
     width: 80px;
