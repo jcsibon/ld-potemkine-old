@@ -190,7 +190,8 @@
     height: 45px;
     background-position: center center !important;
     background-size: cover;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; 
+    text-align: left;
 }
    
 .universeContainer h2 {
