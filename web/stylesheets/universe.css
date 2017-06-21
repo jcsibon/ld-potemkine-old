@@ -112,7 +112,7 @@
 }
 
 .universeContainer .subFamilyContainerOther:hover {
-    text-decoration: none !important;
+   /* text-decoration: none !important;*/
 }
 
 .universeContainer .subFamilyContainerOther>div:hover {
