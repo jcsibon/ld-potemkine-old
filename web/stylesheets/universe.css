@@ -177,7 +177,6 @@
 }
 
 .universeContainer .subFamilyContainerOther > div {
-    display: inline-table;
     font-size: 13px;
     margin-bottom: 10px;
     width: 80px;
@@ -189,7 +188,6 @@
     background-position: center center !important;
     background-size: cover;
     background-repeat: no-repeat; 
-    text-align: left;
 }
    
 .universeContainer h2 {
