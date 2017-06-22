@@ -408,7 +408,7 @@
     margin-bottom: 0;
     padding-top: 50px;
 }
-
+/*
 #SCU687471 > div:nth-of-type(2) > div:nth-of-type(2) {
     background: url(https://www.lapeyre.fr/img/contrib/freehtml/pages/v8/univers/images/windows/configurateur.jpg) top left no-repeat;
     padding: 0px 20px;
@@ -466,7 +466,7 @@
 #SCU687471>div>div:nth-of-type(3) .subFamilyContainer img {
     width: 100%;
 }
-
+*/
 #subUnivers > div {
     width: 100vw;
     left: calc(-50vw + 50%);
