@@ -17,6 +17,7 @@
     background-position: top center;
     height: 320px;
     position: relative;
+    margin-bottom: 20px;
 }
 
 .familyContainer .familyHeader p {
