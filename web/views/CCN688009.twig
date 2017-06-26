@@ -8,8 +8,8 @@
 <div class="col s12">
    <div class="col s12 familyHeader" style="background-image:url('/images/headers/CCU0002.jpg')">
          <p>{{ catalog[global.request.get('universeUrlcode')]['Content'][global.request.get('subuniverseUrlcode')]['Content'][global.request.get('familyUrlcode')]['Name'] }}</p>
-         <span>
-         Meuble-vasque, carrelage, espace douche, baignoire ou encore robinetterie : nous vous proposons des matériaux de qualité, des marques reconnues et un conseil hors pair, du projet d’agencement à l’installation de votre salle de bains.</span>
+         <span>{{ catalog[global.request.get('universeUrlcode')]['Descriptifgnral'] }}
+         {# Meuble-vasque, carrelage, espace douche, baignoire ou encore robinetterie : nous vous proposons des matériaux de qualité, des marques reconnues et un conseil hors pair, du projet d’agencement à l’installation de votre salle de bains. #}</span>
    </div>
 </div>
 <div class="col l12">
