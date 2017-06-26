@@ -4,7 +4,7 @@
 
 <h1>{{ catalog[global.request.get('universeUrlcode')]['Content'][global.request.get('subuniverseUrlcode')]['Content'][global.request.get('familyUrlcode')]['Name'] }}</h1>
 
-<div class="row universeContainer">
+<div class="row familyContainer">
 	{% for subfamily in catalog[global.request.get('universeUrlcode')]['Content'][global.request.get('subuniverseUrlcode')]['Content'][global.request.get('familyUrlcode')]['Content'] %}
 	    <div class="col l3 m4 s6">
 			<fieldset class="subFamilyContainer" onclick="location.href='/{{ catalog[global.request.get('universeUrlcode')]['URL'] }}/{{ catalog[global.request.get('universeUrlcode')]['Content'][global.request.get('subuniverseUrlcode')]['URL'] }}/{{ catalog[global.request.get('universeUrlcode')]['Content'][global.request.get('subuniverseUrlcode')]['Content'][global.request.get('familyUrlcode')]['URL'] }}/{{ subfamily['URL'] }}'">
