@@ -168,8 +168,18 @@
 }
 
 @media screen and (max-width: 768px) {
-  .familyContainer .subFamilyContainer {
-     margin: 0 auto 19px auto;
-  }
+    .familyContainer .subFamilyContainer {
+        margin: 0 auto 19px auto;
+    }
 }
 
+@media screen and (max-width: 550px) {
+    .familyContainer .familyHeader p {
+       font-size: 22px;
+    }
+
+    .familyContainer .familyHeader span {
+        width: 90%;
+        margin: 0 5%;
+    }
+}
