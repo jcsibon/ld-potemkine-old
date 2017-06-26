@@ -2,97 +2,21 @@
     max-width: inherit !important;
 }
 
-.universeContainer {
+.familyContainer {
     width: 100%;
     max-width: 1280px;
     position: relative;
 }
 
-.universeContainer .row {
+.familyContainer .row {
     margin-bottom: 0;
 }
 
-.universeContainer .universeHeader {
-    background-repeat: no-repeat;
-    background-position: top center;
-    height: 320px;
-    position: relative;
-}
-
-.universeContainer .universeHeader p {
-    position: absolute;
-    top: 80px;
-    color: #fff;
-    width: 100%;
-    text-align: center;
-    font-weight: 700;
-    font-size: 32px;
-    letter-spacing: 1px;
-    text-shadow: 0px 0px 12px #000;
-}
-
-.universeContainer .universeHeader span {
-    position: absolute;
-    top: 150px;
-    color: #fff;
-    width: 60%;
-    font-weight: 400;
-    margin: 0 20%;
-    line-height: 1.6em;
-    font-size: 16px;
-    text-align: center;
-    text-shadow: 0px 0px 12px #000;
-}
-
-.universeContainer .universeAnchor {
-    position: absolute;
-    top: 290px;
-    width: 100%;
-    max-width: 1280px;
-    text-align: center;
-    cursor: pointer;
-    z-index: 1;
-}
-
-.universeContainer .universeAnchors {
-    display: inline-block;
-    background: #FE8005;
-    color: #fff;
-    padding: 20px 18px 18px 18px;
-    font-size: 14px;
-}
-
-.universeContainer .universeAnchors:hover {
-    background: #e66100;
-    cursor: pointer;
-} 
-
-.universeContainer .universeMainAnchor {
-    width: 250px;
-    border-radius: 4px;
-}
-
-.universeContainer .universeAnchors:nth-last-of-type(2) {
-    border-top-right-radius: 4px;
-    border-bottom-right-radius: 4px;
-}
-
-.universeContainer .universeAnchors:first-of-type {
-    border-top-left-radius: 4px;
-    border-bottom-left-radius: 4px;
-}
-
-.universeContainer .universeAnchors img {
-    display: inline-block;
-    vertical-align: middle;
-    padding: 0 0 0 10px;
-}
-
-.universeContainer .subFamilyContainer:hover {
+.familyContainer .subFamilyContainer:hover {
     text-decoration: underline;
     cursor: pointer;
 }
-.universeContainer .subFamilyContainerOther:hover {
+.familyContainer .subFamilyContainerOther:hover {
     cursor: inherit !important;
     text-decoration: none !important;
 }
@@ -102,22 +26,22 @@
     margin-left: 20px;
 }
 
-.universeContainer .subFamilyContainer {
+.familyContainer .subFamilyContainer {
     border: 10px solid #f1f1f1;
     margin: 0 0 19px 0;
 }
 
-.universeContainer .subFamilyContainerOther {
+.familyContainer .subFamilyContainerOther {
    /* display: inline-block; */
     min-width: 250px;
 }
 
-.universeContainer .subFamilyContainerOther>div:hover {
+.familyContainer .subFamilyContainerOther>div:hover {
     text-decoration: underline;
     cursor: pointer;
 }
 
-.universeContainer .subFamilyContainer legend {
+.familyContainer .subFamilyContainer legend {
     width: 80%;
     font-weight: 700;
     padding: 0 10px;
@@ -125,7 +49,7 @@
     max-width: 300px;
 }
 
-.universeContainer .subFamilyContainer legend div {
+.familyContainer .subFamilyContainer legend div {
     color: #000;
     text-align: center;
     line-height: 1.2em;
@@ -135,17 +59,17 @@
     justify-content: center;
 }
 
-.universeContainer .subFamilyImage {
+.familyContainer .subFamilyImage {
     margin: 0 20px 20px 20px;
     height: 190px;
     overflow: hidden;
 }
 
-.universeContainer .subFamilyImageTiny {
+.familyContainer .subFamilyImageTiny {
     height: 130px;
 }
 
-.universeContainer .subFamilyImage div {
+.familyContainer .subFamilyImage div {
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -155,15 +79,15 @@
     transition: all .5s;
 }
 
-.universeContainer .subFamilyImage div:hover {
+.familyContainer .subFamilyImage div:hover {
     transform: scale(1.1);
     transition: all 1.5s;
 }
 
-.universeContainer .subFamilyImage:hover div:before, .universeContainer .subFamilyImage:focus div:before {
+.familyContainer .subFamilyImage:hover div:before, .familyContainer .subFamilyImage:focus div:before {
     display: block;}
 
-.universeContainer .subFamilyImage div:before {
+.familyContainer .subFamilyImage div:before {
     content: "";
     display: none;
     width: 100%;
@@ -173,19 +97,19 @@
     background-color: rgba(0,0,0,0.2);
 }
 
-.universeContainer .subFamilyContainerOther legend {
+.familyContainer .subFamilyContainerOther legend {
     width: 50%;
     max-width: 200px;
 }
 
-.universeContainer .subFamilyContainerOther > div {
+.familyContainer .subFamilyContainerOther > div {
     font-size: 13px;
     margin-bottom: 10px;
     width: 80px;
     line-height: 1.2em;
 }
 
-.universeContainer .subFamilyContainerOther > div > div:nth-of-type(1) {
+.familyContainer .subFamilyContainerOther > div > div:nth-of-type(1) {
     height: 45px;
     background-position: center center !important;
     background-size: cover;
@@ -193,7 +117,7 @@
     max-width: 100px;
 }
    
-.universeContainer h2 {
+.familyContainer h2 {
     color: #646665;
     font-size: 24px;
     font-weight: bold;
@@ -202,7 +126,7 @@
     position: relative;
 }
 
-.universeContainer p {
+.familyContainer p {
     font-weight: 400;
     font-size: 14px;
     padding: 10px 0;
@@ -211,349 +135,9 @@
     margin-bottom: 40px;
 }
 
-.universeContainer .pinterest {
-    box-shadow: 3px 4px 15px #eaeaea;
-    border: 1px solid #eee;
-    padding: 20px;
-    position: relative;
-    max-width: 272px;
-    margin-bottom: 20px;
-}
-
-.universeContainer .pinterestImage1 {
-    width: 66%;
-    height: 142px;
-    float: left;
-    background-size: cover !important;
-    background-repeat: no-repeat;
-}
-
-.universeContainer .pinterestImage2, .universeContainer .pinterestImage3 {
-    width: 32%;
-    height: 70px;
-    float: right;
-    margin: 0 0 2px 2px;
-    background-size: cover !important;
-    background-repeat: no-repeat;
-}
-
-.universeContainer .pinterestImage3 {
-    margin: 0 0 0 2px;
-}
-
-.universeContainer .subUniverse {
-    padding: 30px 40px 60px 40px;
-    background: url(https://www.lapeyre.fr/img/contrib/freehtml/pages/v8/univers/images/degrade.jpg) top center repeat-x #f6f7f7;
-}
-
-.universeContainer .subUniverse>div>p {
-    clear: both;
-}
-
-.universeContainer .pinterestTitle div {
-    align-items: center;
-    display: flex;
-    height: 50px;
-}
-
-.universeContainer .pinterestTitle span {
-    background: #efefef;
-    padding: 12px 17px;
-    font-size: 13px;
-    cursor: pointer;
-    display: none;
-}
-
-.universeContainer .pinterestTitle {
-    font-size: 14px;
-    line-height: 1.1em;
-    padding-top: 10px;
-    clear: both;
-}
-
-.universeContainer .subUniverseMobTitle {
-    cursor: pointer;
-    font-size: 20px;
-    line-height: 1.1em;
-    padding: 30px 35px 30px 0;
-}
-
-.universeContainer .subUniverseMobActive::after {
-    content: "-";
-    font-weight: 100;
-    font-size: 40px;
-    position: absolute;
-    right: 10px;
-    width: 20px;
-    text-align: center;
-}
-
-.universeContainer .subUniverseMobDisable::after {
-    content: "+";
-    font-weight: 100;
-    font-size: 40px;
-    position: absolute;
-    right: 10px;
-    width: 20px;
-    text-align: center;
-}
-
-.divider {
-    height: 1px;
-    overflow: hidden;
-    background-color: #e0e0e0;
-}
-
-.capitalize {
-    text-transform: capitalize;
-}
-
-.subUniverseWindow {
-    background: #fff;
-}
-
-.subUniverseWindow > div > p:nth-of-type(1) {
-    text-align: center;
-    color: #646665;
-    font-size: 30px;
-    font-weight: 100;
-    padding-bottom: 0;
-    margin-bottom: 0;
-}
-
-.subUniverseWindow > div > p:nth-of-type(2) {
-    color: #000;
-    text-align: center;
-    max-width: 600px;
-    width: 100%;
-    margin: 0 auto;
-    padding-bottom: 50px;
-}
-
-.subUniverseWindow > div:nth-of-type(2) div {
-    background: url(https://www.lapeyre.fr/img/contrib/freehtml/pages/v8/univers/images/windows/search_window.png) #009af4 center 50px no-repeat;
-    padding: 130px 0 40px 0;  
-}
-
-.subUniverseWindow > div:nth-of-type(2) div p:nth-of-type(1) {
-    text-align: center;
-    color: #fff;
-    font-size: 26px;
-    font-weight: 700;
-    margin-bottom: 0px;
-}
-
-.subUniverseWindow > div:nth-of-type(2) div p:nth-of-type(2) {
-    text-align: center;
-    color: #fff;
-    font-size: 16px;
-    font-weight: 100;
-    width: 100%;
-    margin: 0 auto;
-    max-width: 400px;
-}
-
-.subUniverseWindow > div:nth-of-type(2) div p:nth-of-type(3) {
-    text-align: center;
-    padding-top: 40px;
-    margin-bottom: 10px
-}
-
-.subUniverseWindow > div:nth-of-type(2) div a {
-    color: #000;
-    font-size: 18px;
-    background: #efefef;
-    font-weight: 700;
-    padding: 12px 45px;
-    border-radius: 2px;
-}
-
-.subUniverseWindow {
-    background: #fff !important;
-    position: relative !important;
-}
-
-
-.subUniverseWindowOther {
-    clear: both;
-    background: #F1F2F3 !important;
-    position: relative;
-    padding-top: 50px;
-}
-
-.subUniverseWindowOther p {
-    font-size: 30px;
-    font-weight: 700;
-    text-align: center;
-    color: #646665;
-}
-
-.subUniverseWindowOther::Before {
-    content: " ";
-    position: absolute;
-    top: 0;
-    left: 50%;
-    margin-left: -35px;
-    width: 0;
-    height: 0;
-    border-left: 35px solid transparent;
-    border-right: 35px solid transparent;
-    border-top: 32px solid #fff;
-}
-
-.subUniverseWindow .subUniverseFamilies p {
-    text-align: center;
-    font-weight: 700;
-    font-size: 24px;
-    margin-bottom: 0;
-    padding-top: 50px;
-}
-/*
-#SCU687471 > div:nth-of-type(2) > div:nth-of-type(2) {
-    background: url(https://www.lapeyre.fr/img/contrib/freehtml/pages/v8/univers/images/windows/configurateur.jpg) top left no-repeat;
-    padding: 0px 20px;
-    text-align: center;
-    min-height: 270px;
-    position: relative;
-}
-
-#SCU687471 > div:nth-of-type(2) > div:nth-of-type(2) h3 {
-    font-size: 20px;
-    color: #fff;
-}
-
-#SCU687471 > div:nth-of-type(2) > div:nth-of-type(2) p {
-    color: #fff;
-    margin-bottom: 20px;
-}
-
-#SCU687471 > div:nth-of-type(2) > div:nth-of-type(2) a {
-    width: 100%;
-    max-width: 200px;
-    bottom: 10px;
-    position: absolute;
-    margin-left: -110px;
-    left: 50%;
-}
-
-#SCU687471 > div:nth-of-type(2) > div:nth-of-type(1) div.col {
-    text-align: center;
-    padding: 20px 0 0;
-}
-
-#SCU687471 .subFamilyContainer:hover {
-    text-decoration: none;
-    cursor: inherit;
-}
-
-#SCU687471 div:nth-of-type(3) .subFamilyContainer {
-    padding-bottom: 10px;
-}
-
-#SCU687471 .subFamilyContainer p {
-    line-height: 1.3em;
-}
-
-#SCU687471 .subFamilyContainer p {
-    margin-bottom: 0;
-}
-
-#SCU687471 .subFamilyContainer {
-    padding-bottom: 40px;
-    max-width: inherit;
-}
-
-#SCU687471>div>div:nth-of-type(3) .subFamilyContainer img {
-    width: 100%;
-}
-*/
-#subUnivers > div {
-    width: 100vw;
-    left: calc(-50vw + 50%);
-    position: relative;
-}
-
-.blocEdito {
-   border: 10px #fff solid;
-   padding-top: 20px;
-}
-
-.blocEdito div div:nth-of-type(1) {
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-}
-
-.blocListeArticles div div:nth-of-type(1) {
-    height: 45px;
-}
-
-.blocListeArticles {
-    max-width: 400px;
-}
-
-/* Widget Edito Debut */
-
-.blocEdito legend {
-    padding: 0 20px;
-    font-size: 26px;
-    font-weight: 700;
-    margin-left: 10px;
-}
-
-.blocEdito div div:nth-of-type(2) {
-    color: #737373;
-    font-size: 13px;
-}
-
-.blocEdito p {
-    text-align: right;
-    text-decoration: underline;
-    font-weight: 700;
-    color: #444;
-    font-size: 13px;
-    padding-right: 20px;
-    padding-bottom: 20px;
-}
-
-.blocEdito a:hover {
-    text-decoration: underline;
-}
-
-.blocEdito>div {
-    padding-bottom: 10px !important;
-}
-
-/* Widget Edito Fin */
-
-
-@media screen and (min-width: 768px) {
-  .universeContainer .subUniverseFamilies {
-     display: block !important; 
-  }
-}
-
 @media screen and (max-width: 768px) {
-  .universeContainer .subUniverseFamilies {
-     display: none; 
-  }
-  .universeContainer .subUniverse {
-     padding: 0 10px;
-  }
-  .universeContainer .subFamilyContainer {
+  .familyContainer .subFamilyContainer {
      margin: 0 auto 19px auto;
   }
-  .universeContainer .universeHeader span {
-     width: 80%;
-     margin: 0 10%;
-  }
-  .universeContainer .subFamilyContainerOther {
-	display: inherit;
-  }
 }
 
-@media screen and (max-width: 550px) {
-  .universeContainer .subUniverse .col.s6 {
-     width: 100%;
-  }
-}
