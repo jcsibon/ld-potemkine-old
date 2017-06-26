@@ -181,5 +181,6 @@
     .familyContainer .familyHeader span {
         width: 90%;
         margin: 0 5%;
+        line-height: 1.4em;
     }
 }
