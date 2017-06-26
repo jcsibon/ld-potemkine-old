@@ -1,18 +1,17 @@
 {% extends "layout.html" %} 
 
 {% block content %}
+      
+{#<h1>{{ catalog[global.request.get('universeUrlcode')]['Content'][global.request.get('subuniverseUrlcode')]['Content'][global.request.get('familyUrlcode')]['Name'] }}</h1>#}
 
-<div class="row universeContainer">
-   <div class="col s12 universeHeader" style="background-image:url('/images/headers/CCU0002.jpg')">
+<div class="row familyContainer">
+<div class="row">
+   <div class="col s12 familyHeader" style="background-image:url('/images/headers/CCU0002.jpg')">
          <p>Meubles de salle de bains</p>
          <span>
          Meuble-vasque, carrelage, espace douche, baignoire ou encore robinetterie : nous vous proposons des matériaux de qualité, des marques reconnues et un conseil hors pair, du projet d’agencement à l’installation de votre salle de bains.</span>
    </div>
 </div>
-      
-{#<h1>{{ catalog[global.request.get('universeUrlcode')]['Content'][global.request.get('subuniverseUrlcode')]['Content'][global.request.get('familyUrlcode')]['Name'] }}</h1>#}
-
-<div class="row familyContainer">
 <div class="col l12">
 	{% for subfamily in catalog[global.request.get('universeUrlcode')]['Content'][global.request.get('subuniverseUrlcode')]['Content'][global.request.get('familyUrlcode')]['Content'] %}
 	    <div class="col l3 m4 s6">
