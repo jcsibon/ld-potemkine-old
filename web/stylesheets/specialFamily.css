@@ -168,6 +168,12 @@
     margin-bottom: 40px;
 }
 
+@media screen and (max-width: 550px) {
+    .familyContainer .subFamilyContainer .col.s6 {
+        width: 100%;
+    }
+}
+
 @media screen and (max-width: 768px) {
     .familyContainer .subFamilyContainer {
         margin: 0 auto 19px auto;
