@@ -95,8 +95,10 @@ $app->get('/{universeUrlname}-{universeUrlcode}/', function($universeUrlcode) us
 })->assert('universeUrlcode', 'CCU[0-9\-]+');
 
 $app->get('/{universeUrlname}-{universeUrlcode}/{subuniverseUrlname}-{subuniverseUrlcode}/{familyUrlname}-{familyUrlcode}/', function($universeUrlcode, $subuniverseUrlcode, $familyUrlcode) use($app) {
-  if (in_array($familyUrlcode, ['CCN1010','CCN0025','CCN688009','CCN688463','CCN688464','CCN688465','CCN688466']))
+  if (in_array($familyUrlcode, ['CCN1010','CCN0025','CCN688463','CCN688464','CCN688465','CCN688466']))
     return $app['twig']->render($familyUrlcode.'.twig');
+  elseif (in_array($familyUrlcode, ['CCN688009', 'CCN0010']))
+    return $app['twig']->render('CCN688009.twig');    
   else
     return $app['twig']->render('family.twig');
 })->assert('universeUrlname', '[a-z\-]+')->assert('universeUrlcode', 'CCU[0-9\-]+')->assert('subuniverseUrlname', '[a-z\-]+')->assert('subuniverseUrlcode', 'SCU[0-9\-]+')->assert('familyUrlname', '[a-z\-]+')->assert('familyUrlcode', 'CCN[0-9\-]+');
