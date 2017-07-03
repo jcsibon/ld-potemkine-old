@@ -102,7 +102,7 @@ $app->get('/{universeUrlname}-{universeUrlcode}/{subuniverseUrlname}-{subunivers
   {
 
 
-    $file = array_map("str_getcsv", file("https://docs.google.com/spreadsheets/d/1s10qJviUHayRFRHxSbMGNDKaIg7-gyYAjz6kOPhPm6g/pub?gid=1525879562&single=true&output=csv",,FILE_SKIP_EMPTY_LINES));
+    $file = array_map("str_getcsv", file("https://docs.google.com/spreadsheets/d/1s10qJviUHayRFRHxSbMGNDKaIg7-gyYAjz6kOPhPm6g/pub?gid=1525879562&single=true&output=csv",FILE_SKIP_EMPTY_LINES));
     header('Content-Type: application/json');
     die(json_encode($file));
 
