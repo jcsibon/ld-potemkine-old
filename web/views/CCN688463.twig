@@ -32,38 +32,6 @@
         </div>
         <div class="col s12 m9 l9">
  
-<table>
-  <thead>
-  <tr>
-  <th class="text-center">Largeur</th>
-  {% for largeur in [40,60,80,90,100,120,140,180] %}
-  <th>{{ largeur }}</th>
-  {% endfor %}
-  </tr>
-  <tr>
-  </tr>
-  </thead>
-  <tbody>
-  {% for longueur,sets in windows['Pvc']['Abattant']['Basculant'] %}
-  <tr>
-  <td>
-  {{ longueur }}
-  </td>
-  {% for largeur in [40,60,80,90,100,120,140,180] %}
-  <td>
-  {% if windows['Pvc']['Abattant']['Basculant'][longueur][largeur] is defined %}
-  <a target="_blank" href="/SearchDisplay?searchTerm={{ windows['Pvc']['Abattant']['Basculant'][longueur][largeur][0]['idArticle'] }}">
-  {{ windows['Pvc']['Abattant']['Basculant'][longueur][largeur][0]['prix']|round }}
-  </a>
-  {% else %}
-  -
-  {% endif %}
-  </td>
-  {% endfor %}
-  </tr>
-  {% endfor %}
-  </tbody>
-</table>
 
           </table><div class="col s12 customTool">
               <div class="col s6 m3">Vous ne trouvez pas vos dimensions ?</div>
