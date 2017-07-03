@@ -13,6 +13,9 @@ $app->register(new Silex\Provider\TwigServiceProvider(), array(
     'twig.path' => __DIR__.'/views',
 ));
 
+
+$file = array_map("str_getcsv", file("https://docs.google.com/spreadsheets/d/1s10qJviUHayRFRHxSbMGNDKaIg7-gyYAjz6kOPhPm6g/pub?gid=922201227&single=true&output=csv",FILE_SKIP_EMPTY_LINES));
+
 $file = array_map("str_getcsv", file("https://docs.google.com/spreadsheets/d/1s10qJviUHayRFRHxSbMGNDKaIg7-gyYAjz6kOPhPm6g/pub?gid=922201227&single=true&output=csv",FILE_SKIP_EMPTY_LINES));
 
 
@@ -96,7 +99,16 @@ $app->get('/{universeUrlname}-{universeUrlcode}/', function($universeUrlcode) us
 
 $app->get('/{universeUrlname}-{universeUrlcode}/{subuniverseUrlname}-{subuniverseUrlcode}/{familyUrlname}-{familyUrlcode}/', function($universeUrlcode, $subuniverseUrlcode, $familyUrlcode) use($app) {
   if (in_array($familyUrlcode, ['CCN1010','CCN0025','CCN688463','CCN688464','CCN688465','CCN688466']))
+  {
+
+    $file = array_map("str_getcsv", file("https://docs.google.com/spreadsheets/d/1s10qJviUHayRFRHxSbMGNDKaIg7-gyYAjz6kOPhPm6g/pub?gid=1525879562&single=true&output=csv",,FILE_SKIP_EMPTY_LINES));
+
+header('Content-Type: application/json');
+die(json_encode($file));
+
+
     return $app['twig']->render($familyUrlcode.'.twig');
+  }
   elseif (in_array($familyUrlcode, ['CCN688009', 'CCN0010']))
     return $app['twig']->render('CCN688009.twig');    
   else
