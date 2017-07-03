@@ -66,7 +66,7 @@
         <td>
           {% if windows['Pvc']['Abattant']['Basculant'][longueur][largeur] is defined %}
            <a target="_blank" href="/SearchDisplay?searchTerm={{ windows['Pvc']['Abattant']['Basculant'][longueur][largeur][0]['idArticle'] }}">
-              {{ windows['Pvc']['Abattant']['Basculant'][longueur][largeur][0]['prix'] }}
+              {{ windows['Pvc']['Abattant']['Basculant'][longueur][largeur][0]['prix']|round }}
            </a>
            {% else %}
               -
