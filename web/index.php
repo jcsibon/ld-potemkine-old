@@ -108,7 +108,7 @@ $app->get('/{universeUrlname}-{universeUrlcode}/{subuniverseUrlname}-{subunivers
     array_shift($file);
 
     foreach ($file as $row)
-      $data[] = $row;
+      $data[] = array("idArticle" => $row[0], "nom" => $row[1], "materiau" => $row[2], "type" => $row[3], "ouverture" => $row[4], "longueur" => $row[5], "largeur" => $row[6], "prix" => $row[7], "idProduit" => $row[8]);
 
     die(json_encode($data));
 
