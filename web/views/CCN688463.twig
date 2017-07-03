@@ -5,9 +5,7 @@
 
  
 
- <a target="_blank" href="/SearchDisplay?searchTerm={{ windows['Pvc']['Abattant']['Basculant']['45']['60'][0]['idArticle'] }}">
-    {{ windows['Pvc']['Abattant']['Basculant']['45']['60'][0]['prix'] }} €
- </a>
+
 
 {#
 {% for longueur in windows['Pvc']['Abattant']['Basculant'] %}
@@ -45,6 +43,28 @@
            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
         </div>
         <div class="col s12 m9 l9">
+ 
+<table>
+<thead>
+    <tr>
+      <th class="text-center">Largeur</th>
+      {% for keys,largeur in windows['Pvc']['Abattant']['Basculant'] %}
+        <th>{{ key }}</th>
+      {% endfor %}
+    </tr>
+</thead>
+ <table>
+ <tr>
+      {% for keys,largeur in windows['Pvc']['Abattant']['Basculant'] %}
+        <td>
+           <a target="_blank" href="/SearchDisplay?searchTerm={{ windows['Pvc']['Abattant']['Basculant']['45']['60'][0]['idArticle'] }}">
+              {{ windows['Pvc']['Abattant']['Basculant']['45']['60'][0]['prix'] }}
+           </a>
+        </td>
+      {% endfor %}
+      </tr>
+      </table>
+        {#
   <table>
             <thead>
               <tr>
@@ -517,6 +537,7 @@
                 </td>
               </tr>
             </tbody>
+          #}
           </table><div class="col s12 customTool">
               <div class="col s6 m3">Vous ne trouvez pas vos dimensions ?</div>
               <div class="col s6 m3">Vous voulez avoir plus chaud ?</div>
