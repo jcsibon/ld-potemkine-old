@@ -48,20 +48,25 @@
 <thead>
     <tr>
       <th class="text-center">Largeur</th>
-      {% for key in [80,90,100,120,140,180] %}
-        <th>{{ key }}</th>
+      {% for largeur in [80,90,100,120,140,180] %}
+        <th>{{ largeur }}</th>
       {% endfor %}
+    </tr>
+    <tr>
     </tr>
 </thead>
 <tbody>
-  {% for largeur,sets in windows['Pvc']['Abattant']['Basculant'] %}
+  {% for longueur,sets in windows['Pvc']['Abattant']['Basculant'] %}
 
  <tr>
-           {% for key in [80,90,100,120,140,180] %}
+         <td>
+
+        </td>
+           {% for largeur in [80,90,100,120,140,180] %}
         <td>
-          {% if windows['Pvc']['Abattant']['Basculant'][largeur][key] is defined %}
-           <a target="_blank" href="/SearchDisplay?searchTerm={{ windows['Pvc']['Abattant']['Basculant'][largeur][key][0]['idArticle'] }}">
-              {{ windows['Pvc']['Abattant']['Basculant'][largeur][key][0]['prix'] }}
+          {% if windows['Pvc']['Abattant']['Basculant'][longueur][largeur] is defined %}
+           <a target="_blank" href="/SearchDisplay?searchTerm={{ windows['Pvc']['Abattant']['Basculant'][longueur][largeur][0]['idArticle'] }}">
+              {{ windows['Pvc']['Abattant']['Basculant'][longueur][largeur][0]['prix'] }}
            </a>
            {% else %}
               -
