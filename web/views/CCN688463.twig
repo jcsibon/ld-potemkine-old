@@ -3,12 +3,13 @@
 {% block content %}
 
 
-{% for longueur in windows['pvc']['fenetre'] %}
+{% for longueur in windows['Pvc']['Abattant']['Basculant'] %}
 
   {{ dump(longueur) }}
 
 {% endfor %}
 
+{# Pvc, Aluminium, Chêne, Pin #}
 
 <div id="contentWrapper">
   <div class="row criteria">
