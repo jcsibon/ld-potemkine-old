@@ -3,7 +3,12 @@
 {% block content %}
 
 
-{{ windows }}
+{% for longueur in windows['pvc']['fenetre'] %}
+
+  {{ dump(longueur) }}
+
+{% endfor %}
+
 
 <div id="contentWrapper">
   <div class="row criteria">
