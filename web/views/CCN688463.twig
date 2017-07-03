@@ -3,13 +3,15 @@
 {% block content %}
 
 
- {{ windows['Pvc']['Abattant']['Basculant']['45']['60'] }}
+ {{ dump(windows['Pvc']['Abattant']['Basculant']['45']['60']) }}
 
+{#
 {% for longueur in windows['Pvc']['Abattant']['Basculant'] %}
 
   {{ dump(longueur) }}
 
 {% endfor %}
+#}
 
 {# Pvc, Aluminium, Chêne, Pin #}
 
