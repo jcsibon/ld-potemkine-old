@@ -3,7 +3,11 @@
 {% block content %}
 
 
- {{ dump(windows['Pvc']['Abattant']['Basculant']['45']['60']) }}
+ 
+
+ <a target="_blank" href="/SearchDisplay?searchTerm={{ windows['Pvc']['Abattant']['Basculant']['45']['60'][0]['idArticle'] }}">
+    {{ windows['Pvc']['Abattant']['Basculant']['45']['60'][0][prix] }} €
+ </a>
 
 {#
 {% for longueur in windows['Pvc']['Abattant']['Basculant'] %}
