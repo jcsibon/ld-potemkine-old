@@ -103,14 +103,11 @@ $app->get('/{universeUrlname}-{universeUrlcode}/{subuniverseUrlname}-{subunivers
 
 
     $file = array_map("str_getcsv", file("https://docs.google.com/spreadsheets/d/1s10qJviUHayRFRHxSbMGNDKaIg7-gyYAjz6kOPhPm6g/pub?gid=1525879562&single=true&output=csv",FILE_SKIP_EMPTY_LINES));
-    header('Content-Type: application/json');
 
     array_shift($file);
-
     foreach ($file as $row)
       $data[$row[2]][$row[3]][$row[4]][$row[5]][] = array("idArticle" => $row[0], "nom" => $row[1], "materiau" => $row[2], "type" => $row[3], "ouverture" => $row[4], "longueur" => $row[5], "largeur" => $row[6], "prix" => $row[7], "idProduit" => $row[8]);
 
-    die(json_encode($data));
 
 
     return $app['twig']->render($familyUrlcode.'.twig');
