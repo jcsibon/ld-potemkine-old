@@ -104,7 +104,17 @@ $app->get('/{universeUrlname}-{universeUrlcode}/{subuniverseUrlname}-{subunivers
 
     $file = array_map("str_getcsv", file("https://docs.google.com/spreadsheets/d/1s10qJviUHayRFRHxSbMGNDKaIg7-gyYAjz6kOPhPm6g/pub?gid=1525879562&single=true&output=csv",FILE_SKIP_EMPTY_LINES));
     header('Content-Type: application/json');
-    die(json_encode($file));
+
+    foreach($file[0] as $cell) {
+      $keys[]=preg_replace('/[^A-Za-z0-9\-]/', '', $cell);
+    }
+
+    array_shift($file);
+
+    foreach ($file as $i=>$row)
+      $data[] = str_replace("_", "-", $row[$j]);
+
+    die(json_encode($data));
 
 
     return $app['twig']->render($familyUrlcode.'.twig');
