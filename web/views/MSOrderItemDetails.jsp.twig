@@ -54,18 +54,18 @@
 			</th>
 			<td class=" shippingaddress_nest" width="200" id="WC_MSOrderItemDetails_td_1_1" headers="MultipleShipments_tableCell_shipAddress MultipleShipping_rowHeader_product1">
 				<div class="shipping_address_nester" id="WC_MSOrderItemDetails_div_3_1"> 
-{{ include ShippingAddressSelect.jsp.twig %}
+{% include ShippingAddressSelect.jsp.twig %}
 
 				</div>
 			</td>
 			<td class=" shippingmethod_nest" id="WC_MSOrderItemDetails_td_2_1" headers="MultipleShipments_tableCell_shipMethod MultipleShipping_rowHeader_product1">
 				<div class="shipping_method_nested" id="WC_MSOrderItemDetails_div_4_1">
-{{ include ShippingMethodDetails.jsp.twig %}
+{% include ShippingMethodDetails.jsp.twig %}
 
 				</div>
 			</td>  
 			<td id="WC_MSOrderItemDetails_td_3_1" class=" avail" headers="MultipleShipments_tableCell_availability MultipleShipping_rowHeader_product1">
-{{ include CatalogEntryAvailabilityDisplay.jspf.twig %}
+{% include CatalogEntryAvailabilityDisplay.jspf.twig %}
 
 			</td>
 			<td class=" QTY" id="WC_MSOrderItemDetails_td_4_1" class="QTY" headers="MultipleShipments_tableCell_quantity MultipleShipping_rowHeader_product1">
@@ -91,7 +91,7 @@
  -->
  </table>
 <div class="free_gifts_block">
-{{ include PromotionPickYourFreeGift.jsp.twig %}
+{% include PromotionPickYourFreeGift.jsp.twig %}
 
 </div>	
 </span>

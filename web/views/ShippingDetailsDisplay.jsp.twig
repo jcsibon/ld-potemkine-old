@@ -14,7 +14,7 @@
 	<div class="left_corner" id="WC_ShipmentDisplay_div_6"></div>
 	<div class="left" id="WC_ShipmentDisplay_div_7"><span aria-level="1" class="main_header_text" role="heading">[PROPERTIES;BCT_SHIPPING_INFO;Shipping Information]</span></div>
 	<div class="right_corner" id="WC_ShipmentDisplay_div_8"></div>
-{{ include CheckoutTopESpotDisplay.jspf.twig %}
+{% include CheckoutTopESpotDisplay.jspf.twig %}
 
 </div>
 		 <div class="checkout_subheader" id="WC_MultipleShipmentDisplay_div_9">
@@ -29,7 +29,7 @@
 				</a>
 			</div>
 			<div id="WC_ShipmentDisplay_div_14a" class="header_element_align">
-{{ include ContentRecommendation.jsp.twig %}
+{% include ContentRecommendation.jsp.twig %}
 			</div>			
 			<div class="right_corner" id="WC_MultipleShipmentDisplay_div_15"></div>
 		 </div>
@@ -46,7 +46,7 @@
 				</div>
 				<span id="multipleShipmentOrderDetails_ACCE_Label" class="spanacce">[PROPERTIES;ACCE_Region_Order_Item_List;Order Item List]</span>
 				<div id="WC_MultipleShipmentDisplay_div_18" class="shipping_billing_img_padding" dojoType="wc.widget.RefreshArea" widgetId="multipleShipmentOrderDetails" controllerId="multipleShipmentDetailsController" ariaMessage="[PROPERTIES;ACCE_Status_Order_Item_List_Updated;Order Item List Updated]" ariaLiveId="ariaMessage" role="region" aria-labelledby="multipleShipmentOrderDetails_ACCE_Label">
-{{ include MSOrderItemDetails.jsp.twig %}
+{% include MSOrderItemDetails.jsp.twig %}
 
 				</div> 
 				<script type="text/javascript">
@@ -56,7 +56,7 @@
 				</script>
 		<span id="singleShipmentOrderTotalsDetail_ACCE_Label" class="spanacce">[PROPERTIES;ACCE_Region_Order_Total;Order Total]</span>
 		<div dojoType="wc.widget.RefreshArea" widgetId="singleShipmentOrderTotalsDetail"  controllerId="currentOrderTotalsAreaController" id="WC_ShipmentDisplay_div_18" ariaMessage="[PROPERTIES;ACCE_Status_Order_Total_Updated;Order Total Updated]" ariaLiveId="ariaMessage" role="region" aria-labelledby="singleShipmentOrderTotalsDetail_ACCE_Label">
-{{ include SingleShipmentOrderTotalsSummary.jsp.twig %}
+{% include SingleShipmentOrderTotalsSummary.jsp.twig %}
 
 		</div>
 		<script type="text/javascript">
