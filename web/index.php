@@ -130,6 +130,11 @@ $app->get('article-{articleId}', function($articleId) use($app) {
   return $app['twig']->render('article.twig');
 });
 
+$app->get('tunnel', function() use($app) {
+  return $app['twig']->render('jsps/_proto.twig');
+});
+
+
 $app->get('/c/h/configurateur-fenetres', function() use($app) {
   return $app['twig']->render('configurateur.twig');
 });

@@ -1,0 +1,703 @@
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+	
+	
+	
+		
+		
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+		
+	
+
+
+
+
+	
+	
+		
+	
+	
+
+
+
+
+
+
+	
+	
+	
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+	
+	
+		
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+ 
+
+
+
+
+
+
+	
+
+
+	
+	
+
+
+	
+
+	
+	
+
+
+
+	
+		
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	
+
+
+	
+
+	
+	
+
+
+
+	
+		
+	
+
+
+
+	
+		
+	
+
+
+
+
+
+
+
+	
+		
+		
+		
+			
+
+
+<div id="widget_language_and_currency" style="display:none;">
+	<div id="widget_language_and_currency_popup" dojoType="wc.widget.WCDialog" closeOnTimeOut="false" title="Language and Currency Dialog">
+		<div class="widget_language_and_currency_popup widget_site_popup">										
+			<!-- Top Border Styling -->
+			<div class="top">
+				<div class="left_border"></div>
+				<div class="middle"></div>
+				<div class="right_border"></div>
+			</div>
+			<div class="clear_float"></div>
+			<!-- Main Content Area -->
+			<div class="middle">
+				<div class="content_left_border">
+					<div class="content_right_border">
+						<div class="content">
+							<div class="header">
+								<span>Please select a language and currency</span>
+								<a id="close" class="close_acce tlignore" title="CLOSE" href="javascript:dijit.byId('widget_language_and_currency_popup').hide();"><img role="button" onmouseover="this.src='../../StoreAssets/B2CAssets/images/colors/color1/close_hover.png'" onmouseout="this.src='../../StoreAssets/B2CAssets/images/colors/color1/close_normal.png'" src="../../StoreAssets/B2CAssets/images/colors/color1/close_normal.png" class="closeImg" alt="CLOSE"/></a>
+								<div class="clear_float"></div>
+							</div>
+							<div class="selectors">
+								<div class="selector">
+									<span class="option_name">Language:&nbsp;</span>
+									<label for="languageSelection" class="nodisplay">Language:</label>
+									<select id="languageSelection" class='ios' name="langId" onchange="javascript:document.getElementById('languageSelectionHidden').value=this.value">
+										
+											
+												
+													
+												
+											
+												
+											
+												
+											
+												
+											
+												
+											
+												
+											
+												
+											
+											
+												
+													
+												
+											
+											
+												
+													<option value='-1' selected="selected">United States English</option>
+												
+												
+											
+										
+									</select>
+									<div class="clear_float"></div>
+								</div>
+								<div class="selector">
+									<span class="option_name">Currency:&nbsp;</span>
+									<label for="currencySelection" class="nodisplay">Currency:</label>
+									<select id="currencySelection" class='ios' name="currency" onchange="javascript:document.getElementById('currencySelectionHidden').value=this.value">
+										
+											
+												
+													
+												
+											
+											
+												
+													<option value='USD' selected="selected">US Dollar</option>
+												
+												
+											
+										
+											
+												
+													
+												
+											
+											
+												
+												
+													<option value='BRL'>Brazilian Real</option>
+												
+											
+										
+											
+												
+													
+												
+											
+											
+												
+												
+													<option value='CAD'>Canadian Dollar</option>
+												
+											
+										
+											
+												
+													
+												
+											
+											
+												
+												
+													<option value='CNY'>Chinese Yuan</option>
+												
+											
+										
+											
+												
+													
+												
+											
+											
+												
+												
+													<option value='EUR'>Euro</option>
+												
+											
+										
+											
+												
+													
+												
+											
+											
+												
+												
+													<option value='GBP'>British Pound</option>
+												
+											
+										
+											
+												
+													
+												
+											
+											
+												
+												
+													<option value='JPY'>Japanese Yen</option>
+												
+											
+										
+											
+												
+													
+												
+											
+											
+												
+												
+													<option value='KRW'>South Korean Won</option>
+												
+											
+										
+											
+												
+													
+												
+											
+											
+												
+												
+													<option value='PLN'>Polish Zloty</option>
+												
+											
+										
+											
+												
+													
+												
+											
+											
+												
+												
+													<option value='RON'>Romanian Leu</option>
+												
+											
+										
+											
+												
+													
+												
+											
+											
+												
+												
+													<option value='RUB'>Russian Ruble</option>
+												
+											
+										
+											
+												
+													
+												
+											
+											
+												
+												
+													<option value='TWD'>Taiwan Dollar</option>
+												
+											
+										
+									</select>
+									<div class="clear_float"></div>
+								</div>
+								<form id="SetLanguageCurrencyPreferenceForm"action="/webapp/wcs/stores/servlet/SetCurrencyPreference" method="post">
+									<input type="hidden" name="storeId" value="10152"/>
+									<input type="hidden" name="catalogId" value="10001"/>
+									<input type="hidden" id="languageSelectionHidden" name="langId" value="-1"/>
+									<input type="hidden" id="currencySelectionHidden" name="currency" value="USD"/>									
+									
+									
+										
+										
+											<input type="hidden" name="URL" value="/webapp/wcs/stores/servlet/AjaxStoreLocatorDisplayView?currency*=" id="WC_SidebarDisplay_FormInput_URL_2"/>
+										
+									
+									
+										
+											
+										
+									
+										
+											
+										
+									
+										
+											
+										
+									
+									
+								</form>
+							</div>
+							<div class="footer">
+								<div class="button_container ">
+									<a id="LangCurrencyApplyBtn" class="button_primary tlignore" tabindex="0" href="javascript:dijit.byId('widget_language_and_currency_popup').hide();document.getElementById('SetLanguageCurrencyPreferenceForm').submit();">
+										<div class="left_border"></div>
+										<div id="LangCurrencyApplyBtnText" class="button_text">Apply</div>
+										<div class="right_border"></div>
+									</a>
+									<div class="clear_float"></div>
+								</div>
+								
+							</div>
+							<div class="clear_float"></div>
+						<!-- End content Section -->
+						</div>
+					<!-- End content_right_border -->
+					</div>
+				<!-- End content_left_border -->
+				</div>
+			</div>
+			<div class="clear_float"></div>
+			<!-- Bottom Border Styling -->
+			<div class="bottom">
+				<div class="left_border"></div>
+				<div class="middle"></div>
+				<div class="right_border"></div>
+			</div>
+			<div class="clear_float"></div>
+		</div>
+	</div>
+</div>
+
+
+<a id="LanguageCurrencyChangeLink" class="tlignore" href="javaScript: shoppingActionsJS.showWCDialogPopup('widget_language_and_currency_popup');">[PROPERTIES;LC_LANGUAGE_CURRENCY;Language / <br/> Currency]</a>
+
+		
+	
+
+
+
+ 

@@ -1,0 +1,7 @@
+ 
+
+<form name="purchaseOrderNumberInfo"  id="purchaseOrderNumberInfo">
+				<input type="hidden" name="purchase_order_number" id="purchase_order_number" value=""/>
+				<input type="hidden" name="purchaseOrderNumberRequired" id="purchaseOrderNumberRequired" value="false"/>
+</form>
+<!-- END POSnippet.jspf -->

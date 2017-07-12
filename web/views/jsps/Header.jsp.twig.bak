@@ -1,0 +1,3065 @@
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+	
+	
+	
+		
+		
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+		
+	
+
+
+
+
+	
+	
+		
+	
+	
+
+
+
+
+
+
+	
+	
+	
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+	
+	
+		
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+ 
+
+
+
+
+
+
+	<div id="shoppingListItemAddedPopup" dojoType="dijit.Dialog" style="display:none;" title="This item has been successfully added to your list.">
+		<div class="widget_site_popup">
+													
+			<!-- Top Border Styling -->
+			<div class="top">
+				<div class="left_border"></div>
+				<div class="middle"></div>
+				<div class="right_border"></div>
+			</div>
+			<div class="clear_float"></div>
+			<!-- Main Content Area -->
+			<div class="middle">
+				<div class="content_left_border">
+					<div class="content_right_border">
+						<div class="content">
+							<div class="header">
+								<span>This item has been successfully added to your list.</span>
+								<a role="button" id="shoppingListItemAddedClose" href="javascript:ShoppingListDialogJS.close();" onclick="javascript: document.getElementById('addToShoppingList').focus();" class="close tlignore" title="Close" aria-label="Close" ></a>
+								<div class="clear_float"></div>
+							</div>
+							
+								<div class="product">
+									<div class="product_image">
+										<img id="shoppingListItemAddedImg" alt=""/>
+									</div>
+									<div id="shoppingListItemAddedName" class="product_name"></div>
+									<div class="clear_float"></div>
+								</div>
+							
+							<div class="footer">
+								<div class="button_container ">
+									<a id="shoppingListItemAddedContinue" href="javascript:ShoppingListDialogJS.close();" onclick="javascript: document.getElementById('addToShoppingList').focus();" class="button_primary tlignore" title="Continue Shopping">
+										<div class="left_border"></div>
+										<div class="button_text">Continue Shopping</div>
+										<div class="right_border"></div>
+									</a>
+									<div class="clear_float"></div>
+								</div>
+								
+							</div>
+							<div class="clear_float"></div>
+						<!-- End content Section -->
+						</div>
+					<!-- End content_right_border -->
+					</div>
+				<!-- End content_left_border -->
+				</div>
+			</div>
+			<div class="clear_float"></div>
+			<!-- Bottom Border Styling -->
+			<div class="bottom">
+				<div class="left_border"></div>
+				<div class="middle"></div>
+				<div class="right_border"></div>
+			</div>
+			<div class="clear_float"></div>
+		</div>
+	</div>
+
+	
+
+
+
+	
+
+	
+		
+
+
+
+	
+	
+	
+
+
+
+
+	
+	
+	
+
+
+
+  
+  
+  
+  
+
+
+
+
+	
+		
+		
+		
+		  
+		  
+		  
+		  
+		
+		
+		
+			
+			
+			
+			
+		
+		
+		
+	
+	
+
+
+
+   
+
+		
+
+   
+	  		
+   
+
+
+
+
+
+
+
+	
+
+
+
+	
+	
+
+
+
+	
+	
+	
+	
+
+			
+	
+	
+
+
+
+
+
+
+	
+		
+				
+		
+		
+		
+		
+		
+	
+	
+	
+		
+			
+			
+			
+			
+			
+			
+			
+			
+		
+		
+		
+	
+		
+			
+			
+			
+			
+			
+			
+			
+			
+		
+		
+		
+	
+		
+			
+			
+			
+			
+			
+			
+			
+			
+		
+		
+		
+	
+		
+			
+			
+			
+			
+			
+			
+			
+			
+		
+		
+		
+	
+
+	
+		
+				
+		
+		
+		
+		
+		
+	
+	
+	
+		
+			
+			
+			
+			
+			
+			
+			
+			
+		
+		
+		
+	
+		
+			
+			
+			
+			
+			
+			
+			
+			
+		
+		
+		
+	
+		
+			
+			
+			
+			
+			
+			
+			
+			
+		
+		
+		
+	
+		
+			
+			
+			
+			
+			
+			
+			
+			
+		
+		
+		
+	
+		
+			
+			
+			
+			
+			
+			
+			
+			
+		
+		
+		
+	
+
+	
+		
+				
+		
+		
+		
+		
+		
+	
+	
+	
+		
+			
+			
+			
+			
+			
+			
+			
+			
+		
+		
+		
+	
+		
+			
+			
+			
+			
+			
+			
+			
+			
+		
+		
+		
+	
+		
+			
+			
+			
+			
+			
+			
+			
+			
+		
+		
+		
+	
+		
+			
+			
+			
+			
+			
+			
+			
+			
+		
+		
+		
+	
+
+	
+		
+				
+		
+		
+		
+		
+		
+	
+	
+	
+		
+			
+			
+			
+			
+			
+			
+			
+			
+		
+		
+		
+	
+		
+			
+			
+			
+			
+			
+			
+			
+			
+		
+		
+		
+	
+
+	
+		
+				
+		
+		
+		
+		
+		
+	
+	
+	
+		
+			
+			
+			
+			
+			
+			
+			
+			
+		
+		
+		
+	
+		
+			
+			
+			
+			
+			
+			
+			
+			
+		
+		
+		
+	
+		
+			
+			
+			
+			
+			
+			
+			
+			
+		
+		
+		
+	
+		
+			
+			
+			
+			
+			
+			
+			
+			
+		
+		
+		
+	
+		
+			
+			
+			
+			
+			
+			
+			
+			
+		
+		
+		
+	
+		
+			
+			
+			
+			
+			
+			
+			
+			
+		
+		
+		
+	
+
+	
+		
+				
+		
+		
+		
+		
+		
+	
+	
+	
+		
+			
+			
+			
+			
+			
+			
+			
+			
+		
+		
+		
+	
+		
+			
+			
+			
+			
+			
+			
+			
+			
+		
+		
+		
+	
+
+
+	
+
+	
+
+	
+		
+
+
+
+
+
+
+<script>var isGuest = true;</script>
+
+<script src="../../StoreAssets/B2CAssets/javascript/Widgets/header.js"></script>
+
+<div id="header" role="banner">
+	<div id="headerRow1">
+		<div id="logo">
+			
+			
+				
+				
+				
+				
+				
+			<!-- BEGIN ContentRecommendation.jsp --><!-- JSPs References: HomePage.jsp, BundleDisplay.jsp , CategoryNavigationDisplay.jsp, CompareProductsDisplay.jsp
+					  DynamicKitDisplay.jsp, PackageDisplay.jsp, ProductDisplay.jsp, 
+					  SearchResultDisplay.jsp, SubCategoryPage.jsp, TopCategoryPage.jsp
+					   , Footer.jsp , OrderCancelNotify.jsp , OrderCreateNotify.jsp
+					  OrderShipmentNotify.jsp, AccountActivationNotify.jsp, PasswordChangeNotify.jsp,
+					  PasswordResetNotify.jsp, WishlistCreateNotify.jsp,  LandingPage.jsp, 	
+					  ShippingDetailDisplay.jsp, ShopCartDisplay.jsp, StaticContent, 
+					  Static JSPs, Footer_UI.jsp, Header_UI.jsp, ProductDescription_UI.jsp  
+					  UserTime--><!-- BEGIN ContentRecommendation_UI.jspf -->
+					  <div id="contentRecommendationWidget_HeaderStoreLogo_Content" class="contentRecommendationWidget" role="region" aria-labelledby="title_HeaderStoreLogo_Content">
+					  <!-- BEGIN Content_UI.jspf -->
+
+<div class="left_espot centered" >
+	
+	
+					<a id="contentLink_1_HeaderStoreLogo_Content" href="WelcometoAuroraESite.html" title="AuroraStorefrontAssetStore">
+						<img id="contentImage_1_HeaderStoreLogo_Content" src="../../StoreAssets/B2CAssets/images/logo.png" alt="AuroraStorefrontAssetStore"/>
+					</a>
+				
+	
+</div>
+
+<!-- END Content_UI.jspf -->
+</div>
+<!-- END ContentRecommendation_UI.jspf --><!-- END ContentRecommendation.jsp -->
+			
+		</div>
+		<ul id="quickLinksBar"><li class="separator-false">
+			<a id="quickLinksButton" href="#" role="button" aria-haspopup="true" data-toggle="quickLinksMenu" aria-label="[PROPERTIES;HEADER_QUICK_LINKS;Quick Links]">[PROPERTIES;HEADER_QUICK_LINKS;Quick Links]</a>
+			<div id="quickLinksMenu" class="basicMenu" role="menu" data-parent="header" aria-label="Quick Links" style="br {display: none;}" >
+				<h3>Quick Links</h3><a href="#" class="closeButton" role="button" data-toggle="quickLinksMenu"><span role="presentation"></span></a>
+				<ul><li>
+				<a id="myAccountQuickLink" href="MyAccount.html">[PROPERTIES;HEADER_MY_ACCOUNT;My Account]</a>
+				</li><li>
+					<a id="signInOutQuickLink" href="SignIn.html">[PROPERTIES;HEADER_SIGN_OUT;Sign Out]</a>
+				</li><li>
+					
+
+<!-- BEGIN LanguageCurrency.jsp -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+	
+	
+	
+		
+		
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+		
+	
+
+
+
+
+	
+	
+		
+	
+	
+
+
+
+
+
+
+	
+	
+	
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+	
+	
+		
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+ 
+
+
+
+
+
+
+	
+
+
+	
+	
+
+
+	
+
+	
+	
+
+
+
+	
+		
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	
+
+
+	
+
+	
+	
+
+
+
+	
+		
+	
+
+
+
+	
+		
+	
+
+
+
+
+
+
+
+	
+		
+		
+		
+			
+
+
+<div id="widget_language_and_currency" style="display:none;">
+	<div id="widget_language_and_currency_popup" dojoType="wc.widget.WCDialog" closeOnTimeOut="false" title="Language and Currency Dialog">
+		<div class="widget_language_and_currency_popup widget_site_popup">										
+			<!-- Top Border Styling -->
+			<div class="top">
+				<div class="left_border"></div>
+				<div class="middle"></div>
+				<div class="right_border"></div>
+			</div>
+			<div class="clear_float"></div>
+			<!-- Main Content Area -->
+			<div class="middle">
+				<div class="content_left_border">
+					<div class="content_right_border">
+						<div class="content">
+							<div class="header">
+								<span>Please select a language and currency</span>
+								<a id="close" class="close_acce tlignore" title="CLOSE" href="javascript:dijit.byId('widget_language_and_currency_popup').hide();"><img role="button" onmouseover="this.src='../../StoreAssets/B2CAssets/images/colors/color1/close_hover.png'" onmouseout="this.src='../../StoreAssets/B2CAssets/images/colors/color1/close_normal.png'" src="../../StoreAssets/B2CAssets/images/colors/color1/close_normal.png" class="closeImg" alt="CLOSE"/></a>
+								<div class="clear_float"></div>
+							</div>
+							<div class="selectors">
+								<div class="selector">
+									<span class="option_name">Language:&nbsp;</span>
+									<label for="languageSelection" class="nodisplay">Language:</label>
+									<select id="languageSelection" class='ios' name="langId" onchange="javascript:document.getElementById('languageSelectionHidden').value=this.value">
+										
+											
+												
+													
+												
+											
+												
+											
+												
+											
+												
+											
+												
+											
+												
+											
+												
+											
+											
+												
+													
+												
+											
+											
+												
+													<option value='-1' selected="selected">United States English</option>
+												
+												
+											
+										
+									</select>
+									<div class="clear_float"></div>
+								</div>
+								<div class="selector">
+									<span class="option_name">Currency:&nbsp;</span>
+									<label for="currencySelection" class="nodisplay">Currency:</label>
+									<select id="currencySelection" class='ios' name="currency" onchange="javascript:document.getElementById('currencySelectionHidden').value=this.value">
+										
+											
+												
+													
+												
+											
+											
+												
+													<option value='USD' selected="selected">US Dollar</option>
+												
+												
+											
+										
+											
+												
+													
+												
+											
+											
+												
+												
+													<option value='BRL'>Brazilian Real</option>
+												
+											
+										
+											
+												
+													
+												
+											
+											
+												
+												
+													<option value='CAD'>Canadian Dollar</option>
+												
+											
+										
+											
+												
+													
+												
+											
+											
+												
+												
+													<option value='CNY'>Chinese Yuan</option>
+												
+											
+										
+											
+												
+													
+												
+											
+											
+												
+												
+													<option value='EUR'>Euro</option>
+												
+											
+										
+											
+												
+													
+												
+											
+											
+												
+												
+													<option value='GBP'>British Pound</option>
+												
+											
+										
+											
+												
+													
+												
+											
+											
+												
+												
+													<option value='JPY'>Japanese Yen</option>
+												
+											
+										
+											
+												
+													
+												
+											
+											
+												
+												
+													<option value='KRW'>South Korean Won</option>
+												
+											
+										
+											
+												
+													
+												
+											
+											
+												
+												
+													<option value='PLN'>Polish Zloty</option>
+												
+											
+										
+											
+												
+													
+												
+											
+											
+												
+												
+													<option value='RON'>Romanian Leu</option>
+												
+											
+										
+											
+												
+													
+												
+											
+											
+												
+												
+													<option value='RUB'>Russian Ruble</option>
+												
+											
+										
+											
+												
+													
+												
+											
+											
+												
+												
+													<option value='TWD'>Taiwan Dollar</option>
+												
+											
+										
+									</select>
+									<div class="clear_float"></div>
+								</div>
+								<form id="SetLanguageCurrencyPreferenceForm"action="/webapp/wcs/stores/servlet/SetCurrencyPreference" method="post">
+									<input type="hidden" name="storeId" value="10152"/>
+									<input type="hidden" name="catalogId" value="10001"/>
+									<input type="hidden" id="languageSelectionHidden" name="langId" value="-1"/>
+									<input type="hidden" id="currencySelectionHidden" name="currency" value="USD"/>									
+									
+									
+										
+										
+											<input type="hidden" name="URL" value="/webapp/wcs/stores/servlet/AjaxStoreLocatorDisplayView?currency*=" id="WC_SidebarDisplay_FormInput_URL_2"/>
+										
+									
+									
+										
+											
+										
+									
+										
+											
+										
+									
+										
+											
+										
+									
+									
+								</form>
+							</div>
+							<div class="footer">
+								<div class="button_container ">
+									<a id="LangCurrencyApplyBtn" class="button_primary tlignore" tabindex="0" href="javascript:dijit.byId('widget_language_and_currency_popup').hide();document.getElementById('SetLanguageCurrencyPreferenceForm').submit();">
+										<div class="left_border"></div>
+										<div id="LangCurrencyApplyBtnText" class="button_text">Apply</div>
+										<div class="right_border"></div>
+									</a>
+									<div class="clear_float"></div>
+								</div>
+								
+							</div>
+							<div class="clear_float"></div>
+						<!-- End content Section -->
+						</div>
+					<!-- End content_right_border -->
+					</div>
+				<!-- End content_left_border -->
+				</div>
+			</div>
+			<div class="clear_float"></div>
+			<!-- Bottom Border Styling -->
+			<div class="bottom">
+				<div class="left_border"></div>
+				<div class="middle"></div>
+				<div class="right_border"></div>
+			</div>
+			<div class="clear_float"></div>
+		</div>
+	</div>
+</div>
+
+
+<a id="LanguageCurrencyChangeLink" class="tlignore" href="javaScript: shoppingActionsJS.showWCDialogPopup('widget_language_and_currency_popup');">[PROPERTIES;LC_LANGUAGE_CURRENCY;Language / <br/> Currency]</a>
+
+		
+	
+
+
+
+<!-- END LanguageCurrency.jsp -->
+				</li><li>
+					<a id="storeLocatorQuickLink" href="StoreLocator.html">[PROPERTIES;HEADER_STORE_LOCATOR;Store <br/>Locator]</a>
+				</li><li>
+					<a id="wishListQuickLink" href="Wishlist.html">[PROPERTIES;HEADER_SHOPPING_LIST;Wish <br/>List]</a>
+				</li><li>
+				<!-- BEGIN FacebookConnect.jsp -->
+
+<!-- BEGIN FacebookConnect_UI.jsp -->
+
+
+<span id="SocialIntegrationArea">
+	<span id="header-fb-login-button-span">
+		<a href="#" tabindex="0" class="h_tnav_but" id="headerFBlogin">
+		    Connect to Facebook
+			<img class="img_align" id="WC_FacebookConnectDisconnectDisplayImg_1" src="../../StoreAssets/B2CAssets/images/socialIntegration/facebook.png" alt="" /></a>
+	</span> 
+	
+	<span id="header-fb-logout-button-span" class="nodisplay" > 
+		<span id="header_menu_facebook_loaded" style="display:none;">
+			<span id="menu_DropDown_Facebook" class="headerMenu_DropDown_Facebook" 
+				onMouseOver="" 
+				onMouseLeave="" 
+				dojoType="" 
+				aria-label="Use shift plus enter key then press the down arrow key to disconnect from Facebook." 
+				role="button" >
+			    <span id="WC_CachedHeaderDisplayFacebook_div" class="dropdown"
+			    	onItemHover="" 
+					onMouseLeave="" 
+			    	maxItemsPerColumn="6" forceDisplayShowAll="false" 
+			    	showAllText="Show All Facebook options" 
+					aria-label="Show All Facebook options" 
+					role="menu">
+			        <span id="WC_CachedHeaderDisplayFacebook_div_2"  aria-labelledby="headerFBlogout" role="menuitem">
+			            <span>
+			                <a href="" tabindex="0" 
+								class="h_tnav_but" id="headerFBlogout">
+								Disconnect from Facebook
+							</a>
+			            </span>
+			        </span>
+			    </span>
+			</span>
+		</span>		
+	</span>
+	
+</span>	
+
+<!-- END FacebookConnect_UI.jsp -->
+
+
+<!-- END FacebookConnect.jsp -->
+				</li><li>
+					<a id="contactQuickLink" href="tel:1-800-555-1234">1-800-555-1234</a>
+				</li></ul>
+			</div>
+		</li><li class="separator-false">
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+	
+	
+	
+		
+		
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+		
+	
+
+
+
+
+	
+	
+		
+	
+	
+
+
+
+
+
+
+	
+	
+	
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+	
+	
+		
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+ 
+
+
+
+
+<span id="MiniShoppingCart_Label" class="spanacce">Shopping Cart</span>
+<div dojoType="wc.widget.RefreshArea" id="MiniShoppingCart" widgetId="MiniShoppingCart" 
+	controllerId="MiniShoppingCartController" 
+	ariaMessage="Shopping Cart Display Updated" ariaLiveId="ariaMessage" 
+	role="region" aria-labelledby="MiniShoppingCart_Label">
+	
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+	
+	
+	
+		
+		
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+		
+	
+
+
+
+
+	
+	
+		
+	
+	
+
+
+
+
+
+
+	
+	
+	
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+	
+	
+		
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+	
+
+
+
+	
+
+
+
+	
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+ 
+
+
+
+
+	
+ 
+					 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+		
+		
+			
+
+
+
+
+
+
+<a aria-label="Shopping Cart" onkeypress="javascript:toggleMiniShopCartDropDownEvent(event,'widget_minishopcart','quick_cart_container','orderItemsList');" onclick="javascript:toggleMiniShopCartDropDown('widget_minishopcart','quick_cart_container','orderItemsList');" role="button" href="#" id="widget_minishopcart" class="">
+	<div id="minishopcart_total">1</div>
+</a>
+
+<div id="placeHolder"></div>
+
+
+<div id = "MiniShopCartProductAdded">
+	<div id = "MiniShopCartProductAddedWrapper" style="display:none;" aria-labelledby="cartDropdownMessage">
+		<div id="widget_minishopcart_popup_1">
+			<div id="cartDropdown">																			
+						<h3 id="cartDropdownMessage">This item has been successfully added:</h3>																																				
+						<a id="MiniShopCartCloseButton_2" href="javascript:dijit.byId('MiniShopCartProductAdded').hide();" class="closeButton">Close</a>					            					            
+						<div class="content">	
+							<div class="products added">
+								
+							</div>							
+						</div>
+						
+						<div class="footer">
+							<a id="GotoCartButton2" href="ShoppingCart_empty.html" class="basicButton">
+								<span>Go to Cart</span>
+							</a>
+						</div>
+					
+				
+			</div>			
+		</div>
+	</div>
+</div>
+
+<input type="hidden" id="currentOrderQuantity" value="1"/>
+<input type="hidden" id="currentOrderAmount" value="0.00"/>
+<input type="hidden" id="currentOrderCurrency" value="USD"/>
+<input type="hidden" id="currentOrderLanguage" value="-1"/>
+<input type="hidden" id="currentOrderId" value=""/>
+											
+
+
+		
+	
+
+
+
+
+
+	
+</div>
+
+<div id ="MiniShopCartContents" dojoType="wc.widget.RefreshArea" widgetId="MiniShopCartContents" controllerId="MiniShopCartContentsController">
+</div>
+
+<script type="text/javascript">
+  dojo.addOnLoad(function() {
+		setMiniShopCartControllerURL('shopcart.html');
+		wc.render.getRefreshControllerById("MiniShopCartContentsController").url = 'ShopCartDropdown.htm';
+			
+	});
+</script>
+
+
+		</li></ul>
+	
+	
+	
+	
+</div>
+
+	<div id="headerRow2">
+		<a id="departmentsButton" href="#" class="basicButton" role="button" aria-haspopup="true" data-toggle="departmentsMenu" aria-label="Departments"><span>Departments</span></a><div dojoType="wc.widget.RefreshArea" widgetId="drop_down_" controllerId="departmentSubMenu_Controller">
+		<ul aria-label="Departments" data-parent="header" role="menu" id="departmentsMenu" class=""><li class="">
+			<a data-toggle="departmentMenu_10001" aria-haspopup="true" role="menuitem" class="departmentButton" href="#" id="departmentButton_10001"><span>Apparel</span></a>
+			<div aria-label="Apparel" data-id="10001" data-parent="departmentsMenu" role="menu" class="departmentMenu" id="departmentMenu_10001">
+				<div class="header">
+					<a class="link" href="ApparelAuroraESite.html" id="departmentLink_10001">Apparel</a>
+					<a data-toggle="departmentMenu_10001" role="button" class="toggle" href="#" id="departmentToggle_10001"><span role="presentation"></span></a>
+				</div>
+				
+					<ul class="categoryList"><li>
+						
+						<a href="WomenAuroraESite.html" id="categoryLink_10001_10002">Men</a>
+						
+							<ul class="subcategoryList"><li>
+								
+								<a href="DressesAuroraESite.html" id="subcategoryLink_10001_10002_10014">Jackets</a>
+							</li><li>
+								
+								<a href="DressesAuroraESite.html" id="subcategoryLink_10001_10002_10016">Suits</a>
+							</li><li>
+								
+								<a href="DressesAuroraESite.html" id="subcategoryLink_10001_10002_10019">Shoes</a>
+							</li><li>
+								
+								<a href="DressesAuroraESite.html" id="subcategoryLink_10001_10002_10018">Accessories</a>
+							</li><li>
+								
+								<a href="DressesAuroraESite.html" id="subcategoryLink_10001_10002_10017">Pants</a>
+							</li><li>
+								
+								<a href="DressesAuroraESite.html" id="subcategoryLink_10001_10002_10015">Shirts</a>
+							</li></ul>
+						
+					</li><li>
+						
+						<a href="WomenAuroraESite.html" id="categoryLink_10001_10003">Women</a>
+						
+							<ul class="subcategoryList"><li>
+								
+								<a href="DressesAuroraESite.html" id="subcategoryLink_10001_10003_10010">Pants</a>
+							</li><li>
+								
+								<a href="DressesAuroraESite.html" id="subcategoryLink_10001_10003_10012">Handbags</a>
+							</li><li>
+								
+								<a href="DressesAuroraESite.html" id="subcategoryLink_10001_10003_10007">Blouses</a>
+							</li><li>
+								
+								<a href="DressesAuroraESite.html" id="subcategoryLink_10001_10003_10008">Sweaters</a>
+							</li><li>
+								
+								<a href="DressesAuroraESite.html" id="subcategoryLink_10001_10003_10006">Dresses</a>
+							</li><li>
+								
+								<a href="DressesAuroraESite.html" id="subcategoryLink_10001_10003_10011">Shoes</a>
+							</li><li>
+								
+								<a href="DressesAuroraESite.html" id="subcategoryLink_10001_10003_10009">Skirts</a>
+							</li><li>
+								
+								<a href="DressesAuroraESite.html" id="subcategoryLink_10001_10003_10013">Accessories</a>
+							</li></ul>
+						
+					</li><li>
+						
+						<a href="WomenAuroraESite.html" id="categoryLink_10001_10004">Boys</a>
+						
+							<ul class="subcategoryList"><li>
+								
+								<a href="DressesAuroraESite.html" id="subcategoryLink_10001_10004_10025">Tops</a>
+							</li><li>
+								
+								<a href="DressesAuroraESite.html" id="subcategoryLink_10001_10004_10024">Pants</a>
+							</li><li>
+								
+								<a href="DressesAuroraESite.html" id="subcategoryLink_10001_10004_10026">Shoes</a>
+							</li></ul>
+						
+					</li><li>
+						
+						<a href="WomenAuroraESite.html" id="categoryLink_10001_10005">Girls</a>
+						
+							<ul class="subcategoryList"><li>
+								
+								<a href="DressesAuroraESite.html" id="subcategoryLink_10001_10005_10021">Pants</a>
+							</li><li>
+								
+								<a href="DressesAuroraESite.html" id="subcategoryLink_10001_10005_10020">Shoes</a>
+							</li><li>
+								
+								<a href="DressesAuroraESite.html" id="subcategoryLink_10001_10005_10023">Tops</a>
+							</li><li>
+								
+								<a href="DressesAuroraESite.html" id="subcategoryLink_10001_10005_10022">Skirts</a>
+							</li></ul>
+						
+					</li></ul>
+		
+			</div>
+		</li><li class="">
+			<a data-toggle="departmentMenu_10027" aria-haspopup="true" role="menuitem" class="departmentButton" href="#" id="departmentButton_10027"><span>Electronics</span></a>
+			<div aria-label="Electronics" data-id="10027" data-parent="departmentsMenu" role="menu" class="departmentMenu" id="departmentMenu_10027">
+				<div class="header">
+					<a class="link" href="ApparelAuroraESite.html" id="departmentLink_10027">Electronics</a>
+					<a data-toggle="departmentMenu_10027" role="button" class="toggle" href="#" id="departmentToggle_10027"><span role="presentation"></span></a>
+				</div>
+				
+					<ul class="categoryList"><li>
+						
+						<a href="WomenAuroraESite.html" id="categoryLink_10027_10028">Accessories</a>
+						
+					</li><li>
+						
+						<a href="DressesAuroraESite.html" id="categoryLink_10027_10032">Components</a>
+						
+					</li><li>
+						
+						<a href="DressesAuroraESite.html" id="categoryLink_10027_10031">Desktops</a>
+						
+					</li><li>
+						
+						<a href="DressesAuroraESite.html" id="categoryLink_10027_10030">Laptops</a>
+						
+					</li><li>
+						
+						<a href="DressesAuroraESite.html" id="categoryLink_10027_10029">Tablets</a>
+						
+					</li></ul>
+		
+			</div>
+		</li><li class="">
+			<a data-toggle="departmentMenu_10033" aria-haspopup="true" role="menuitem" class="departmentButton" href="#" id="departmentButton_10033"><span>Grocery</span></a>
+			<div aria-label="Grocery" data-id="10033" data-parent="departmentsMenu" role="menu" class="departmentMenu" id="departmentMenu_10033">
+				<div class="header">
+					<a class="link" href="ApparelAuroraESite.html" id="departmentLink_10033">Grocery</a>
+					<a data-toggle="departmentMenu_10033" role="button" class="toggle" href="#" id="departmentToggle_10033"><span role="presentation"></span></a>
+				</div>
+				
+					<ul class="categoryList"><li>
+						
+						<a href="DressesAuroraESite.html" id="categoryLink_10033_10035">Fruit</a>
+						
+					</li><li>
+						
+						<a href="DressesAuroraESite.html" id="categoryLink_10033_10034">Dairy</a>
+						
+					</li><li>
+						
+						<a href="DressesAuroraESite.html" id="categoryLink_10033_10037">Vegetables</a>
+						
+					</li><li>
+						
+						<a href="DressesAuroraESite.html" id="categoryLink_10033_10036">Meat</a>
+						
+					</li></ul>
+		
+			</div>
+		</li><li class="">
+			<a data-toggle="departmentMenu_10038" aria-haspopup="true" role="menuitem" class="departmentButton" href="#" id="departmentButton_10038"><span>Health</span></a>
+			<div aria-label="Health" data-id="10038" data-parent="departmentsMenu" role="menu" class="departmentMenu" id="departmentMenu_10038">
+				<div class="header">
+					<a class="link" href="ApparelAuroraESite.html" id="departmentLink_10038">Health</a>
+					<a data-toggle="departmentMenu_10038" role="button" class="toggle" href="#" id="departmentToggle_10038"><span role="presentation"></span></a>
+				</div>
+				
+					<ul class="categoryList"><li>
+						
+						<a href="DressesAuroraESite.html" id="categoryLink_10038_10039">Medicine</a>
+						
+					</li><li>
+						
+						<a href="DressesAuroraESite.html" id="categoryLink_10038_10040">Vitamins</a>
+						
+					</li></ul>
+		
+			</div>
+		</li><li class="">
+			<a data-toggle="departmentMenu_10041" aria-haspopup="true" role="menuitem" class="departmentButton" href="#" id="departmentButton_10041"><span>Home &amp; Furnishing</span></a>
+			<div aria-label="Home &amp; Furnishing" data-id="10041" data-parent="departmentsMenu" role="menu" class="departmentMenu" id="departmentMenu_10041">
+				<div class="header">
+					<a class="link" href="Apparel" id="departmentLink_10041">Home &amp; Furnishing</a>
+					<a data-toggle="departmentMenu_10041" role="button" class="toggle" href="#" id="departmentToggle_10041"><span role="presentation"></span></a>
+				</div>
+				
+					<ul class="categoryList"><li>
+						
+						<a href="DressesAuroraESite.html" id="categoryLink_10041_10043">Furniture</a>
+						
+					</li><li>
+						
+						<a href="DressesAuroraESite.html" id="categoryLink_10041_10045">Lighting</a>
+						
+					</li><li>
+						
+						<a href="DressesAuroraESite.html" id="categoryLink_10041_10047">Appliances</a>
+						
+					</li><li>
+						
+						<a href="DressesAuroraESite.html" id="categoryLink_10041_10042">Bath Accessories</a>
+						
+					</li><li>
+						
+						<a href="DressesAuroraESite.html" id="categoryLink_10041_10046">Tableware</a>
+						
+					</li><li>
+						
+						<a href="DressesAuroraESite.html" id="categoryLink_10041_10044">Kitchenware</a>
+						
+					</li></ul>
+		
+			</div>
+		</li><li class="">
+			<a data-toggle="departmentMenu_10048" aria-haspopup="true" role="menuitem" class="departmentButton" href="#" id="departmentButton_10048"><span>Newsletters &amp; Magazines</span></a>
+			<div aria-label="Newsletters &amp; Magazines" data-id="10048" data-parent="departmentsMenu" role="menu" class="departmentMenu" id="departmentMenu_10048">
+				<div class="header">
+					<a class="link" href="ApparelAuroraESite.html" id="departmentLink_10048">Newsletters &amp; Magazines</a>
+					<a data-toggle="departmentMenu_10048" role="button" class="toggle" href="#" id="departmentToggle_10048"><span role="presentation"></span></a>
+				</div>
+				
+					<ul class="categoryList"><li>
+						
+						<a href="DressesAuroraESite.html" id="categoryLink_10048_10050">Newsletters</a>
+						
+					</li><li>
+						
+						<a href="DressesAuroraESite.html" id="categoryLink_10048_10049">Magazines</a>
+						
+					</li></ul>
+		
+			</div>
+		</li><li class="">
+			<a data-toggle="allDepartmentsMenu" aria-haspopup="true" role="menuitem" class="departmentButton" href="#" id="allDepartmentsButton"><span>[PROPERTIES;SEARCH_ALL_DEPARTMENTS;All Departments]</span></a>
+			<ul aria-label="All Departments" data-parent="departmentsMenu" role="menu" class="departmentMenu" id="allDepartmentsMenu"><li>
+				<a tabindex="-1" role="menuitem" href="ApparelAuroraESite.html" id="departmentLink_10001_alt">Apparel</a>
+			</li><li>
+				<a tabindex="-1" role="menuitem" href="ApparelAuroraESite.html" id="departmentLink_10027_alt">Electronics</a>
+			</li><li>
+				<a tabindex="-1" role="menuitem" href="ApparelAuroraESite.html" id="departmentLink_10033_alt">Grocery</a>
+			</li><li>
+				<a tabindex="-1" role="menuitem" href="ApparelAuroraESite.html" id="departmentLink_10038_alt">Health</a>
+			</li><li>
+				<a tabindex="-1" role="menuitem" href="ApparelAuroraESite.html" id="departmentLink_10041_alt">Home &amp; Furnishing</a>
+			</li><li>
+				<a tabindex="-1" role="menuitem" href="ApparelAuroraESite.html" id="departmentLink_10048_alt">Newsletters &amp; Magazines</a>
+			</li></ul>
+		</li></ul>
+<!-- BEGIN Search.jsp -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+	
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<meta name="CommerceSearch" content="storeId_10152" />
+		
+	
+	
+	
+
+
+
+
+
+
+
+
+	
+	
+	
+
+
+	
+	
+	
+	
+
+			
+	
+
+
+
+
+
+	
+
+	
+	
+	
+
+	
+
+	
+
+	
+	
+	
+
+	
+
+	
+
+	
+	
+	
+
+	
+
+	
+
+	
+	
+	
+
+	
+
+	
+
+	
+	
+	
+
+	
+
+	
+
+	
+	
+	
+
+	
+
+			
+	
+
+	
+
+	
+		
+
+<script>
+require(["dojo/domReady!"], function() {
+	SearchJS.init();
+	SearchJS.setCachedSuggestionsURL("SearchComponentCachedSuggestionsView?langId=-1&storeId=10152&catalogId=10001");
+	SearchJS.setAutoSuggestURL("SearchComponentAutoSuggestView?coreName=MC_10001_CatalogEntry_en_US&serverURL=http%3a%2f%2f");
+});
+var staticContent = [];
+var staticContentHeaders = [];
+</script>	
+
+
+<a id="searchButton" href="SearchResults.html" role="button" data-toggle="searchBar" aria-label="Search" title="Search" ></a>
+
+<div id="searchBar" data-parent="header">
+	
+	<form id="searchBox" name="CatalogSearchForm" method="get" action="SearchResults.html">
+		<input id="categoryId" name="categoryId" type="hidden"/>
+		<input name="storeId" value="10152" type="hidden"/>
+		<input name="catalogId" value="10001" type="hidden"/>
+		<input name="langId" value="-1" type="hidden"/>
+		<input name="sType" value="SimpleSearch" type="hidden"/>
+		<input name="resultCatEntryType" value="2" type="hidden"/>
+		<input name="showResultsPage" value="true" type="hidden"/>
+		<input name="searchSource" value="Q" type="hidden"/>
+		<input name="pageView" value="" type="hidden"/>
+		<input name="beginIndex" value="0" type="hidden"/>
+		<input name="pageSize" value="12" type="hidden"/>
+
+		<div id="searchTermWrapper"><input id="SimpleSearchForm_SearchTerm" name="searchTerm" placeholder="[PROPERTIES;SEARCH_CATALOG;Search]" value="[PROPERTIES;SEARCH_CATALOG;Search]" onkeypress="if(this.value.trim() == '' && (event.keyCode == 13 || event.which == 13)){this.value='Search';}" onclick="if(this.value.trim() == 'Search'){this.value='';}" onblur="if(this.value.trim() == ''){this.value='Search';}" autocomplete="off"/></div>
+		<!-- Start SearchDropdownWidget -->
+		<div id="searchDropdown">
+			<div id="autoSuggest_Result_div" style="display: none">
+				<div id="widget_search_dropdown">
+					<!-- Main Content Area -->
+					<div id="AutoSuggestDiv" role="list" aria-required="true" onmouseover="SearchJS.autoSuggestHover = true;" onmouseout="SearchJS.autoSuggestHover = false; document.getElementById('SimpleSearchForm_SearchTerm').focus();">
+						<ul><span id="autoSuggestDynamic_Result_div_ACCE_Label" class="spanacce">Suggested keywords menu</span>
+						<div dojoType="wc.widget.RefreshArea" widgetId="autoSuggestDisplay_Widget" controllerId="AutoSuggestDisplayController" id="autoSuggestDynamic_Result_div" role="list" aria-live="polite" aria-atomic="true" aria-relevant="all" aria-labelledby="autoSuggestDynamic_Result_div_ACCE_Label">
+						
+						</div></ul>
+						<ul><div id="autoSuggestStatic_1"></div></ul>
+						<ul><div id="autoSuggestStatic_2"></div></ul>
+						<ul><div id="autoSuggestStatic_3"></div></ul>
+						<ul><div id="autoSuggestHistory"></div></ul>
+						<ul><li id="autoSuggestAdvancedSearch" class="heading"> <a href="#"  id="advancedSearch"><div>Advanced Search</div></a></li></ul>
+					</div>
+					<!-- End content Section -->
+				</div>
+			</div>
+		</div>
+		<!-- End SearchDropdownWidget -->
+		<!-- Refresh area to retrieve cached suggestions -->
+		<span id="autoSuggestCachedSuggestions_div_ACCE_Label" class="spanacce">Suggested site content and search history menu</span>
+		<div dojoType="wc.widget.RefreshArea" widgetId="AutoSuggestCachedSuggestions" controllerId="AutoSuggestCachedSuggestionsController" id="autoSuggestCachedSuggestions_div" role="region" aria-live="polite" aria-atomic="true" aria-relevant="all" style="display:none;" aria-labelledby="autoSuggestCachedSuggestions_div_ACCE_Label"></div>
+		<a id="searchFilterButton" href="#" role="button" data-toggle="searchFilterMenu">[PROPERTIES;SEARCH_ALL_DEPARTMENTS;All Departments]</a>
+		<div id="searchFilterMenu" class="basicMenu" data-parent="searchBar">
+			<ul>
+				<li><a href="#" data-value="">[PROPERTIES;SEARCH_ALL_DEPARTMENTS;All Departments]</a></li>
+				
+					<li><a href="#" data-value="10001">Apparel</a></li>
+				
+					<li><a href="#" data-value="10027">Electronics</a></li>
+				
+					<li><a href="#" data-value="10033">Grocery</a></li>
+				
+					<li><a href="#" data-value="10038">Health</a></li>
+				
+					<li><a href="#" data-value="10041">Home &amp; Furnishing</a></li>
+				
+					<li><a href="#" data-value="10048">Newsletters &amp; Magazines</a></li>
+				
+			</ul>
+		</div>
+		<a href="#" class="submitButton" role="button" aria-label="Search" onClick="document.getElementById('SimpleSearchForm_SearchTerm').value = document.getElementById('SimpleSearchForm_SearchTerm').value.trim(); if(document.getElementById('SimpleSearchForm_SearchTerm').value == ''){this.value='Search';}" title="Search"></a>
+	</form>
+</div>
+
+	
+
+	
+
+	<!-- End Search Widget -->
+
+
+
+<!-- END Search.jsp -->
+
+	</div>
+</div>
+
+<script>
+dojo.addOnLoad(function() {
+	setAjaxRefresh("false"); // Default value in header.js is empty/false.
+	if(wc.render.getRefreshControllerById("departmentSubMenu_Controller")){
+		wc.render.getRefreshControllerById("departmentSubMenu_Controller").url = getAbsoluteURL()+"DepartmentDropdownViewRWD?storeId=10152&catalogId=10001&langId=-1";
+	}
+});
+</script>
+	
+
+
+
+<!-- END Header.jsp -->

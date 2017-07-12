@@ -1,0 +1,343 @@
+ 
+
+<!-- Style sheet for RWD -->
+<link rel="stylesheet" href="../../StoreAssets/B2CAssets/css/styles.css" type="text/css" />
+<!--[if IE 8]>
+<link rel="stylesheet" href="../../StoreAssets/B2CAssets/css/stylesIE8.css" type="text/css" />
+<![endif]-->
+
+
+
+
+<script type="text/javascript" charset="UTF-8" src="../../StoreAssets/dojo18/dojo/dojo.js" djConfig="parseOnLoad: true, isDebug: false,  modulePaths: {storetext: '../../../StoreAssets/B2CAssets'}, useCommentedJson: true,locale: 'en-us' "></script>
+<script type="text/javascript" charset="UTF-8" src="../../StoreAssets/dojo18/dojo/dojodesktop.js" djConfig="parseOnLoad: true, isDebug: false,  modulePaths: {storetext: '../../../StoreAssets/B2CAssets'}, useCommentedJson: true,locale: 'en-us' "></script>
+
+
+
+
+
+<meta name="CommerceSearch" content="storeId_10152" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<link rel="shortcut icon" href="../../StoreAssets/B2CAssets/images/favicon.ico" mce_href="../../StoreAssets/B2CAssets/images/favicon.ico"/>
+
+<script type="text/javascript">
+	// Convert the WCParam object which contains request properties into javascript object
+	var WCParamJS = {
+		"storeId":'10152',
+		"catalogId":'10001',
+		"langId":'-1',
+		"pageView":'',
+		"orderBy":'',
+		"orderByContent":'',
+		"searchTerm":''
+	};
+	var absoluteURL = "AuroraESite.html";
+	var imageDirectoryPath = "../../StoreAssets/B2CAssets/";
+	var styleDirectoryPath = "images/colors/color1/";
+	var supportPaymentTypePromotions = false;
+	
+	var subsFulfillmentFrequencyAttrName = "fulfillmentFrequency";
+	var subsPaymentFrequencyAttrName = "paymentFrequency";
+	var subsTimePeriodAttrName = "timePeriod";
+	
+	var storeNLS = null;
+	var storeUserType = "G";
+	var ios = true;
+	var android = false;
+	var multiSessionEnabled = false;
+	
+	// Store the amount of time of inactivity before a re-login is required, this value is retrieved from wc-server.xml, default is 30 mins
+	var inactivityTimeout = 1800000;
+	
+	// Store the amount of time the inactivity warning dialog will be displayed before it closes itself, default is 20 seconds
+	var inactivityWarningDialogDisplayTimer = 20000;
+	
+	// Store the amount of time to display a inactivity warning dialog before a re-login is required, default is 30 seconds
+	var inactivityWarningDialogBuffer = 30000;
+	
+	// Store the timing event to display the inactivity dialog
+	var inactivityTimeoutTracker = null;
+
+	// Store the timing event to close the inactivity dialog
+	var dialogTimeoutTracker = null;
+	
+	//Summary: Returns the absolute URL to use for prefixing any Ajax URL call.
+	//Description: Dojo does not handle the case where the parameters in the URL are delimeted by the "/" forward slash. Therefore, in order to
+	//             workaround the issue, all AJAX requests must be done using absolute URLs rather than relative.
+	//Returns: The absolute URL to use for prefixing any Ajax URL call.
+	function getAbsoluteURL() {
+		if (absoluteURL != "") {
+			var currentURL = document.URL;
+			var currentProtocol = "";
+		
+			if (currentURL.indexOf("://") != -1) {
+				currentProtocol = currentURL.substring(0, currentURL.indexOf("://"));
+			}
+			
+			var savedProtocol = "";
+			if (absoluteURL.indexOf("://") != -1) {
+				savedProtocol = absoluteURL.substring(0, absoluteURL.indexOf("://"));
+			}
+			
+			if (currentProtocol != savedProtocol) {
+				absoluteURL = currentProtocol + absoluteURL.substring(absoluteURL.indexOf("://"));
+			}
+		}
+		
+		return absoluteURL;
+	}
+	//Summary: Returns the path pointing to the shared image directory.
+	//Description: In order to get the image directory path in any javascript file, this function can be used.
+	//Returns: The path to reference images.
+	function getImageDirectoryPath() {
+		return imageDirectoryPath;
+	}
+	//Summary: Returns the path pointing to the directory containing color-dependant image files.
+	//Description: In order to get the directory containing color-dependant image files in any javascript file, this function can be used.
+	//Returns: The path to reference color-dependant image files.
+	function getStyleDirectoryPath() {
+		return styleDirectoryPath;
+	}
+</script>
+
+<script type="text/javascript" src="../../StoreAssets/B2CAssets/javascript/MessageHelper.js"></script>
+<script type="text/javascript" src="../../StoreAssets/B2CAssets/javascript/StoreCommonUtilities.js"></script>
+<script type="text/javascript" src="../../StoreAssets/B2CAssets/javascript/Responsive.js"></script>
+<script type="text/javascript" src="../../StoreAssets/B2CAssets/javascript/Widgets/Search.js"></script>
+<script type="text/javascript" src="../../StoreAssets/B2CAssets/javascript/Widgets/MiniShopCartDisplay/MiniShopCartDisplay.js"></script>
+<script type="text/javascript" src="../../StoreAssets/B2CAssets/javascript/Widgets/Department/Department.js"></script>
+<script type="text/javascript" src="../../StoreAssets/B2CAssets/javascript/Common/ShoppingActions.js"></script>
+
+<script type="text/javascript" src="../../StoreAssets/B2CAssets/javascript/UserArea/AddressHelper.js"></script>
+<script type="text/javascript" src="../../StoreAssets/B2CAssets/javascript/CatalogArea/CategoryDisplay.js"></script>
+<script type="text/javascript" src="../../StoreAssets/B2CAssets/javascript/CheckoutArea/CheckoutHelper.js"></script>
+<script type="text/javascript" src="../../StoreAssets/B2CAssets/javascript/ServicesDeclaration.js"></script>
+<script type="text/javascript" src="../../StoreAssets/B2CAssets/javascript/CheckoutArea/ShippingAndBillingServicesDeclaration.js"></script>
+<script type="text/javascript" src="../../StoreAssets/B2CAssets/javascript/CommonContextsDeclarations.js"></script>
+<script type="text/javascript" src="../../StoreAssets/B2CAssets/javascript/CommonControllersDeclaration.js"></script>
+<script type="text/javascript" src="../../StoreAssets/B2CAssets/javascript/ServicesEventMapping.js"></script>
+<script type="text/javascript" src="../../StoreAssets/B2CAssets/javascript/CheckoutArea/ShippingAndBillingControllersDeclaration.js"></script>
+<script type="text/javascript" src="../../StoreAssets/B2CAssets/javascript/Widgets/QuickInfo/QuickInfo.js"></script>
+<script type="text/javascript" src="../../StoreAssets/B2CAssets/javascript/Widgets/ShoppingList/ShoppingList.js"></script>
+<script type="text/javascript" src="../../StoreAssets/B2CAssets/javascript/Widgets/ShoppingList/ShoppingListServicesDeclaration.js"></script>
+
+<script>
+	dojo.require("wc.service.common");
+	dojo.require("dojo.number");
+</script>
+
+
+
+	
+	
+	
+
+
+<script type="text/javascript">
+ //Set the default NLS to use in the store.
+ if(storeNLS == null) {
+	 dojo.requireLocalization("storetext", "StoreText");
+	 storeNLS = dojo.i18n.getLocalization("storetext","StoreText");
+ }
+ initializeInactivityWarning();
+ var ie6 = false;
+ var ie7 = false;
+ if (navigator != null && navigator.userAgent != null) {
+	 ie6 = (navigator.userAgent.toLowerCase().indexOf("msie 6.0") > -1);
+	 ie7 = (navigator.userAgent.toLowerCase().indexOf("msie 7.0") > -1); 
+ }
+ if (location.href.indexOf('UnsupportedBrowserErrorView') == -1 && (ie6 || ie7)) {
+	 document.write('<meta http-equiv="Refresh" content="0;URL="/>');
+ }
+</script>
+
+
+
+<script type="text/javascript">
+	dojo.addOnLoad(function() { 
+		shoppingActionsJS.setCommonParameters('-1','10152','10001','G','$');
+		
+		var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+		var isSafari = /Safari/.test(navigator.userAgent) && /Apple Computer/.test(navigator.vendor);
+
+		if (isChrome || isSafari) {
+			var hiddenFields = dojo.query('input[type=\"hidden\"]');
+			for (var i = 0; i < hiddenFields.length; i++) {
+				hiddenFields[i].autocomplete="off"
+			}
+		}
+	});
+</script>
+
+
+
+
+
+
+
+
+
+	
+	
+		
+	
+	
+	
+	
+	
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+				
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+		
+	
+
+	
+	
+	
+		
+			
+			
+		
+		 
+			
+			
+			
+		
+	
+		
+			
+			
+		
+		 
+			
+			
+			
+				
+				
+				
+			
+				
+				
+				
+			
+				
+				
+				
+			
+				
+				
+				
+			
+		
+	
+
+
+
+
+
+
+ 

@@ -1,0 +1,211 @@
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+	
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<meta name="CommerceSearch" content="storeId_10152" />
+		
+	
+	
+	
+
+
+
+
+
+
+
+
+	
+	
+	
+
+
+	
+	
+	
+	
+
+			
+	
+
+
+
+
+
+	
+
+	
+	
+	
+
+	
+
+	
+
+	
+	
+	
+
+	
+
+	
+
+	
+	
+	
+
+	
+
+	
+
+	
+	
+	
+
+	
+
+	
+
+	
+	
+	
+
+	
+
+	
+
+	
+	
+	
+
+	
+
+			
+	
+
+	
+
+	
+		
+
+<script>
+require(["dojo/domReady!"], function() {
+	SearchJS.init();
+	SearchJS.setCachedSuggestionsURL("SearchComponentCachedSuggestionsView?langId=-1&storeId=10152&catalogId=10001");
+	SearchJS.setAutoSuggestURL("SearchComponentAutoSuggestView?coreName=MC_10001_CatalogEntry_en_US&serverURL=http%3a%2f%2f");
+});
+var staticContent = [];
+var staticContentHeaders = [];
+</script>	
+
+
+<a id="searchButton" href="SearchResults.html" role="button" data-toggle="searchBar" aria-label="Search" title="Search" ></a>
+
+<div id="searchBar" data-parent="header">
+	
+	<form id="searchBox" name="CatalogSearchForm" method="get" action="SearchResults.html">
+		<input id="categoryId" name="categoryId" type="hidden"/>
+		<input name="storeId" value="10152" type="hidden"/>
+		<input name="catalogId" value="10001" type="hidden"/>
+		<input name="langId" value="-1" type="hidden"/>
+		<input name="sType" value="SimpleSearch" type="hidden"/>
+		<input name="resultCatEntryType" value="2" type="hidden"/>
+		<input name="showResultsPage" value="true" type="hidden"/>
+		<input name="searchSource" value="Q" type="hidden"/>
+		<input name="pageView" value="" type="hidden"/>
+		<input name="beginIndex" value="0" type="hidden"/>
+		<input name="pageSize" value="12" type="hidden"/>
+
+		<div id="searchTermWrapper"><input id="SimpleSearchForm_SearchTerm" name="searchTerm" placeholder="[PROPERTIES;SEARCH_CATALOG;Search]" value="[PROPERTIES;SEARCH_CATALOG;Search]" onkeypress="if(this.value.trim() == '' && (event.keyCode == 13 || event.which == 13)){this.value='Search';}" onclick="if(this.value.trim() == 'Search'){this.value='';}" onblur="if(this.value.trim() == ''){this.value='Search';}" autocomplete="off"/></div>
+		<!-- Start SearchDropdownWidget -->
+		<div id="searchDropdown">
+			<div id="autoSuggest_Result_div" style="display: none">
+				<div id="widget_search_dropdown">
+					<!-- Main Content Area -->
+					<div id="AutoSuggestDiv" role="list" aria-required="true" onmouseover="SearchJS.autoSuggestHover = true;" onmouseout="SearchJS.autoSuggestHover = false; document.getElementById('SimpleSearchForm_SearchTerm').focus();">
+						<ul><span id="autoSuggestDynamic_Result_div_ACCE_Label" class="spanacce">Suggested keywords menu</span>
+						<div dojoType="wc.widget.RefreshArea" widgetId="autoSuggestDisplay_Widget" controllerId="AutoSuggestDisplayController" id="autoSuggestDynamic_Result_div" role="list" aria-live="polite" aria-atomic="true" aria-relevant="all" aria-labelledby="autoSuggestDynamic_Result_div_ACCE_Label">
+						
+						</div></ul>
+						<ul><div id="autoSuggestStatic_1"></div></ul>
+						<ul><div id="autoSuggestStatic_2"></div></ul>
+						<ul><div id="autoSuggestStatic_3"></div></ul>
+						<ul><div id="autoSuggestHistory"></div></ul>
+						<ul><li id="autoSuggestAdvancedSearch" class="heading"> <a href="#"  id="advancedSearch"><div>Advanced Search</div></a></li></ul>
+					</div>
+					<!-- End content Section -->
+				</div>
+			</div>
+		</div>
+		<!-- End SearchDropdownWidget -->
+		<!-- Refresh area to retrieve cached suggestions -->
+		<span id="autoSuggestCachedSuggestions_div_ACCE_Label" class="spanacce">Suggested site content and search history menu</span>
+		<div dojoType="wc.widget.RefreshArea" widgetId="AutoSuggestCachedSuggestions" controllerId="AutoSuggestCachedSuggestionsController" id="autoSuggestCachedSuggestions_div" role="region" aria-live="polite" aria-atomic="true" aria-relevant="all" style="display:none;" aria-labelledby="autoSuggestCachedSuggestions_div_ACCE_Label"></div>
+		<a id="searchFilterButton" href="#" role="button" data-toggle="searchFilterMenu">[PROPERTIES;SEARCH_ALL_DEPARTMENTS;All Departments]</a>
+		<div id="searchFilterMenu" class="basicMenu" data-parent="searchBar">
+			<ul>
+				<li><a href="#" data-value="">[PROPERTIES;SEARCH_ALL_DEPARTMENTS;All Departments]</a></li>
+				
+					<li><a href="#" data-value="10001">Apparel</a></li>
+				
+					<li><a href="#" data-value="10027">Electronics</a></li>
+				
+					<li><a href="#" data-value="10033">Grocery</a></li>
+				
+					<li><a href="#" data-value="10038">Health</a></li>
+				
+					<li><a href="#" data-value="10041">Home &amp; Furnishing</a></li>
+				
+					<li><a href="#" data-value="10048">Newsletters &amp; Magazines</a></li>
+				
+			</ul>
+		</div>
+		<a href="#" class="submitButton" role="button" aria-label="Search" onClick="document.getElementById('SimpleSearchForm_SearchTerm').value = document.getElementById('SimpleSearchForm_SearchTerm').value.trim(); if(document.getElementById('SimpleSearchForm_SearchTerm').value == ''){this.value='Search';}" title="Search"></a>
+	</form>
+</div>
+
+	
+
+	
+
+	<!-- End Search Widget -->
+
+
+
+<!-- END Search.jsp -->

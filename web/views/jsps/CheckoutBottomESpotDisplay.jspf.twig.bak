@@ -1,0 +1,19 @@
+ 
+
+<br clear="all" />
+<div id="WC_CheckoutBottomESpotDisplay_div_1" class="left">
+<!-- BEGIN ContentRecommendation.jsp -->
+<span class="highlight">
+<div class="jspcaption" style="display:none">ContentRecommendation.jsp</div>
+</span>
+<!-- END ContentRecommendation.jsp -->
+</div>
+<div id="WC_CheckoutBottomESpotDisplay_div_2" class="espot_checkout_bottom_right">
+<!-- BEGIN ContentRecommendation.jsp -->
+<span class="highlight">
+<div class="jspcaption" style="display:none">ContentRecommendation.jsp</div>
+</span>
+<!-- END ContentRecommendation.jsp -->
+</div>
+<br clear="all" />
+<!-- END CheckoutBottomESpotDisplay.jspf -->

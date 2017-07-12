@@ -1,0 +1,17 @@
+					  UserTime--> 
+					  <div id="contentRecommendationWidget_HeaderStoreLogo_Content" class="contentRecommendationWidget" role="region" aria-labelledby="title_HeaderStoreLogo_Content">
+					  <!-- BEGIN Content_UI.jspf -->
+
+<div class="left_espot centered" >
+	
+	
+					<a id="contentLink_1_HeaderStoreLogo_Content" href="WelcometoAuroraESite.html" title="AuroraStorefrontAssetStore">
+						<img id="contentImage_1_HeaderStoreLogo_Content" src="../../StoreAssets/B2CAssets/images/logo.png" alt="AuroraStorefrontAssetStore"/>
+					</a>
+				
+	
+</div>
+
+<!-- END Content_UI.jspf -->
+</div>
+<!-- END ContentRecommendation_UI.jspf --><!-- END ContentRecommendation.jsp -->

@@ -1,0 +1,24 @@
+ 
+<span class="highlight">
+<div class="jspcaption" style="display:none">PromotionPickYourFreeGift.jsp</div>
+<script type="text/javascript">
+	dojo.addOnLoad(function(){
+		CommonControllersDeclarationJS.setControllerURL('PromotionFreeGifts_Controller','');		
+	});
+</script>	
+		<div class="free_gift_container"> 
+				<p>
+				</p>
+			<div class="button_align">
+				<a  role="button" aria-labelledby="PickYourFreeGift_ACCE_Label" class="button_secondary" id="PickYourFreeGift" onclick="javascript: document.getElementById('free_gifts_popup').style.display='block';">
+					<div class="left_border"></div>
+					<div class="button_text">
+								[PROPERTIES;PROMOTION_PICK_FREE_GIFT;Select your free gift]	
+						<span id="PickYourFreeGift_ACCE_Label" class="spanacce">[PROPERTIES;Checkout_ACCE_promo_free_gifts_pick;select to view the free gift choices]</span>
+					</div>
+					<div class="right_border"></div>
+				</a>
+			</div>
+		</div>							
+</span>
+<!-- END PromotionPickYourFreeGift.jsp -->

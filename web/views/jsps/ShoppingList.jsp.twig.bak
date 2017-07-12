@@ -1,0 +1,178 @@
+ 
+<span class="highlight">
+<div class="jspcaption" style="display:none">ShoppingList.jsp</div>
+<script>
+	shoppingListJSOI90149 = new ShoppingListJS({storeId: '10152',catalogId: '10001',langId: '-1'}, {id: '10041', name: 'Hermitage Ruched Bodice Cocktail Dress', image: '../../StoreAssets/B2CAssets/images/catalog/apparel/women/womens_dresses_105x105/WD_028_a_red.jpg', type: 'ItemBean', components: {}, skus: []}, {}, "shoppingListJSOI90149");
+</script>
+<div id="shoppingListScript_OI90149" style="display:none;">
+	if(typeof(shoppingListJSOI90149) == "undefined" || shoppingListJSOI90149 == null || !shoppingListJSOI90149) {
+		shoppingListJSOI90149 = new ShoppingListJS({storeId: '10152',catalogId: '10001',langId: '-1'}, {id: '10041', name: 'Hermitage Ruched Bodice Cocktail Dress', image: '../../StoreAssets/B2CAssets/images/catalog/apparel/women/womens_dresses_105x105/WD_028_a_red.jpg', type: 'ItemBean', components: {}, skus: []}, {}, "shoppingListJSOI90149");
+	}
+</div>
+<img style="display:none;" src="../../StoreAssets/B2CAssets/images/catalog/apparel/women/womens_dresses_105x105/WD_028_a_red.jpg"/>
+<div style="position:relative;">
+	<div id="OI90149addToShoppingListBtn" class="dropdown_primary">
+		<a id="OI90149addToShoppingList" href="
+					javascript:shoppingListJSOI90149.createDefaultListAndAddItem('-1', '90149');
+			" class="button" role="button">
+			<div class="left_border"></div>
+			<div class="content">
+						[PROPERTIES;MOVE_TO_WISH_LIST;Move to Wish List]
+			</div>
+			<div class="right_border"></div>
+		</a>
+			<div class="drop">
+			<div class="white_line"></div>
+				<a id="OI90149addToShoppingListDropdown" onmouseover="javascript: shoppingListJSOI90149.mouseOnArrow = true;" onmouseout="javascript: shoppingListJSOI90149.mouseOnArrow = false;" href="javascript:shoppingListJSOI90149.showDropDown();" class="dropdown_arrow" title="[PROPERTIES;SL_MULTIPLE_SHOPPING_LIST_DD;Multiple wish list drop down. Press enter and tab to display the drop down]" role="button">
+						<img style="margin-top: 10px;" src="../../StoreAssets/B2CAssets/images/colors/color1/widget_quick_info_popup/dropdown_arrow.png" alt="[PROPERTIES;SL_MULTIPLE_SHOPPING_LIST_DD;Multiple wish list drop down. Press enter and tab to display the drop down]"/>
+					</a>
+				<div class="right_border"></div>
+			</div>
+	</div>
+			<div id="OI90149shoppingListDropDown" style="display: none" class="dropdown_list" onmousedown="javascript:shoppingListJSOI90149.hasFocus(event);"
+				onkeydown="javascript:shoppingListJSOI90149.navigateDropDown(event);"
+				onblur="javascript: document.getElementById('OI90149addToShoppingListDropdown').focus();" role="menu">
+				<ul class="wish_order_list">
+								<li role="menuitem" class="message">[PROPERTIES;SL_SELECT_LIST;Select a list to Add to:]</li>
+							<ol role="menuitem" id="OI90149listOfShoppingLists" class="created_list_wrapper" tabindex="-1" onblur="javascript: if(!shoppingListJSOI90149.exceptionFlag){shoppingListJSOI90149.dropDownInFocus = false; shoppingListJSOI90149.hideIfNoFocus();}">														
+							<li style="display:none;" id="OI90149ShoppingListDivider"></li>
+							</ol>
+							<div class="divider"></div>
+							<li role="menuitem" id="OI90149ShoppingList_0" class="created_list" role="link" onfocus="javascript:shoppingListJSOI90149.focusList(0);"
+							onmouseover="javascript: shoppingListJSOI90149.exceptionFlag = true; document.getElementById('OI90149ShoppingListLink_0').focus();"
+							onmouseout="javascript: this.className = 'created_list'; shoppingListJSOI90149.exceptionFlag = false; if(document.getElementById('OI90149shoppingListDropDown').style.display != 'none'){document.getElementById('OI90149listOfShoppingLists').focus();}"
+							onblur="javascript: this.className = 'created_list';"
+							onclick="shoppingListJSOI90149.showPopup('create');">
+									<a id="OI90149ShoppingListLink_0" href="javascript:shoppingListJSOI90149.showPopup('create');"
+										onfocus="javascript:shoppingListJSOI90149.focusListLink(0);"
+										role="menuitem">[PROPERTIES;SL_CREATE_NEW_SHOPPING_LIST;Create a new Wish List]</a>
+							</li>
+				</ul>
+			</div>
+</div>
+<!-- Hidden Fields -->
+
+<input id="OI90149storeParams" type="hidden" value="{storeId: '10152',catalogId: '10001',langId: '-1'}"/>
+<input id="OI90149catEntryParams" type="hidden" value="{id: '10041', name: 'Hermitage Ruched Bodice Cocktail Dress', image: '../../StoreAssets/B2CAssets/images/catalog/apparel/women/womens_dresses_105x105/WD_028_a_red.jpg', type: 'ItemBean', components: {}, skus: []}"/>
+<input id="OI90149shoppingListNames" type="hidden" value="{}"/>
+<div id="OI90149createShoppingListPopup" dojoType="dijit.Dialog" title="[PROPERTIES;DIALOG_TITLE_CREATE_WISHLIST;Create Wish List Dialog]" style="display:none;">
+	<div class="widget_site_popup">
+		<div class="top">
+			<div class="left_border"></div>
+			<div class="middle"></div>
+			<div class="right_border"></div>
+		</div>
+		<div class="clear_float"></div>
+		<div class="middle">
+			<div class="content_left_border">
+				<div class="content_right_border">
+					<div class="content">
+						<div class="header">
+							<span>[PROPERTIES;SL_CREATE_NEW_SHOPPING_LIST;Create a new Wish List]</span>
+							<a role="button" id="OI90149createShoppingListPopup_close" 
+									href="javascript:dijit.byId('OI90149createShoppingListPopup').hide();"
+							class="close" tabindex="4" title="[PROPERTIES;SL_CLOSE;Close]"></a>
+							<div class="clear_float"></div>
+						</div>
+						<div class="body">
+							<div id="OI90149shoppingListErrorMessageArea" style="display:none">
+								<img class="error_icon left" src="../../StoreAssets//images/colors/color1/error_icon.png" alt=""/>
+								<p id="OI90149shoppingListErrorMessageText" class="textinlinewithicon"></p>
+								<div class="clear_float"></div>
+							</div>
+							<div class="item_spacer_10px"></div>
+							<p>[PROPERTIES;SL_NAME_NEW_LIST;Type a name for your new list.]</p>
+							<form>
+								<span class="spanacce">
+									<label for="OI90149newListName">[PROPERTIES;SL_NAME_NEW_LIST;Type a name for your new list.]</label>
+								</span>
+								<input id="OI90149newListName" type="text" size="35" maxlength="64" value="" onkeypress='if(event.keyCode==13){ shoppingListJSOI90149.create(); dojo.stopEvent(event);}' tabindex="1"/>
+							</form>
+							<div class="item_spacer_10px"></div>
+						</div>
+						<div class="footer">
+							<div class="button_container">
+								<a id="OI90149createShoppingListPopup_save" href="javascript: shoppingListJSOI90149.create();" class="button_primary" tabindex="2">
+									<div class="left_border"></div>
+									<span id="OI90149CreateShoppingListPopup_div_create_save" class="button_text">[PROPERTIES;SAVE;Save]</span>
+									<div class="right_border"></div>
+								</a>
+								<a id="OI90149createShoppingListPopup_cancel" 
+										href="javascript:dijit.byId('OI90149createShoppingListPopup').hide();" 
+								class="button_secondary" tabindex="3">
+									<div class="left_border"></div>
+									<span class="button_text">[PROPERTIES;CANCEL;Cancel]</span>
+									<div class="right_border"></div>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="clear_float"></div>
+		<div class="bottom">
+			<div class="left_border"></div>
+			<div class="middle"></div>
+			<div class="right_border"></div>
+		</div>
+		<div class="clear_float"></div>
+	</div>
+</div>
+<div id="OI90149shoppingListCreateSuccessPopup" dojoType="dijit.Dialog" title="[PROPERTIES;DIALOG_TITLE_MESSAGE;Message Dialog]" style="display:none;">
+	<div class="widget_site_popup">
+		<div class="top">
+			<div class="left_border"></div>
+			<div class="middle"></div>
+			<div class="right_border"></div>
+		</div>
+		<div class="clear_float"></div>
+		<div class="middle">
+			<div class="content_left_border">
+				<div class="content_right_border">
+					<div class="content">
+						<a role="button" id="OI90149shoppingListCreateSuccessPopup_close" 
+								href="javascript:dijit.byId('OI90149shoppingListCreateSuccessPopup').hide();"
+						class="close" title="[PROPERTIES;SL_CLOSE;Close]"></a>
+						<div class="body">
+							<div class="item_spacer_10px"></div>
+							<div class="item_spacer_10px"></div>
+							<div class="item_spacer_10px"></div>
+							<div class="item_spacer_10px"></div>
+							<img class="error_icon left" src="../../StoreAssets//images/colors/color1/success_icon.png" alt=""/>
+							<p id="OI90149successMessageAreaText" class="textinlinewithicon">[PROPERTIES;LIST_CREATED;Wish list created successfully.]</p>
+							<div class="clear_float"></div>
+							<div class="item_spacer_10px"></div>
+							<div class="item_spacer_10px"></div>
+							<div class="item_spacer_10px"></div>
+							<div class="item_spacer_10px"></div>
+						</div>
+						<div class="footer">
+							<div class="button_container">
+								<a id="OI90149shoppingListCreateSuccessPopup_continue_shopping" 
+										href="javascript:dijit.byId('OI90149shoppingListCreateSuccessPopup').hide();" 
+								class="button_primary">
+									<div class="left_border"></div>
+									<div class="button_text">[PROPERTIES;CONTINUE_SHOPPING;Continue Shopping]</div>
+									<div class="right_border"></div>
+								</a>
+								<div class="clear_float"></div>
+							</div>
+							<div class="clear_float"></div>
+						</div>
+						<div class="clear_float"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="clear_float"></div>
+		<div class="bottom">
+			<div class="left_border"></div>
+			<div class="middle"></div>
+			<div class="right_border"></div>
+		</div>
+		<div class="clear_float"></div>
+	</div>
+</div>
+</span>
+<!-- END ShoppingList.jsp -->

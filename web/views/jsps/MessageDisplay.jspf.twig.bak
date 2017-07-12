@@ -1,0 +1,30 @@
+ 
+
+<span class="spanacce" style="display:none" id="MessageArea_ACCE_Title">Message Dialog</span>
+<div id="MessageArea" class="store_message" role="alert" aria-labelledby="MessageArea_ACCE_Title">
+	<div id="msgpopup_content_wrapper" class="content">
+		<a id="clickableErrorMessageImg" role="button" class="close tlignore" href="JavaScript:MessageHelper.hideMessageArea();" title="Close">
+			<div class="close_text">Close</div>
+			<div class="close_icon"></div>
+			<div class="clear_float"></div>
+		</a>
+		
+		<div class="clear_float"></div>
+		
+		<div class="message">
+			<div class="message_icon">
+				<img id="error_icon" style="display:none;" class="error_icon" src="../../StoreAssets/B2CAssets/images/colors/color1/error_icon.png" alt=""/>
+				<img id="success_icon" style="display:none;" class="error_icon" src="../../StoreAssets/B2CAssets/images/colors/color1/success_icon.png" alt=""/>
+			</div>
+			<div class="message_text" role="region" aria-required="true" aria-labelledby="MessageArea">
+				<span id="ErrorMessageText">
+					
+				</span>
+			</div>
+			<div class="clear_float"></div>
+		</div>		
+	</div>
+</div>
+<span class="spanacce" id="ariaMessage_ACCE_Label" style="display:none">Display Update Message</span>
+<span class="spanacce" role="region" aria-labelledby="ariaMessage_ACCE_Label" id="ariaMessage" aria-live="assertive" aria-atomic="true" aria-relevant="additions"></span>
+<!-- END MessageDisplay.jspf -->

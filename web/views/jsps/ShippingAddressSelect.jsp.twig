@@ -1,0 +1,67 @@
+ 
+<span class="highlight">
+<div class="jspcaption" style="display:none">ShippingAddressSelect.jsp</div>
+<!-- this context is for dealing with states for the shipping addresses in all shipments -->
+<script type="text/javascript">
+	wc.render.declareContext("shippingAddressContext",{shippingAddress: "0"},"");
+	wc.render.declareRefreshController({
+		id: "shippingAdddressDisplayAreaController",
+		renderContext: wc.render.getContextById("shippingAddressContext"),
+		url: "https:///webapp/wcs/stores/servlet/AjaxAddressDisplayView?catalogId=10001&langId=-1&storeId=10152",
+		formId: ""
+		,renderContextChangedHandler: function(message, widget) {
+			var controller = this;
+			var renderContext = this.renderContext;
+			if (controller.testForChangedRC(["shippingAddress"])) {
+				var addressId = renderContext.properties["shippingAddress"];
+				widget.refresh({"addressId": addressId});
+			}
+			cursor_clear();
+		}
+	});
+</script>
+<div class="shipping_address_MS_shipping_info_page" id="WC_ShippingAddressSelectMultiple_div_90149">
+<div id="MS_ShippingAddress_Section_90149" class="">
+	<p>
+			<label for="MS_ShipmentAddress_90149"><span class="spanacce">[PROPERTIES;SHIP_SHIPPING_ADDRESS;Shipping Address]</span></label>
+				<select class="drop_down_shipping form_input" name="MS_ShipmentAddress_90149" id="MS_ShipmentAddress_90149" onChange="JavaScript:setCurrentId('MS_ShipmentAddress_90149'); CheckoutHelperJS.updateAddressIdForThisItem(this.value,'90149');CheckoutHelperJS.displayAddressDetailsForMS(this.value,'90149','Shipping');CheckoutHelperJS.showHideEditAddressLink(this,'90149')" onkeydown="CheckoutHelperJS.tabPressed(event);">
+						<option value="15277"
+						selected="selected"
+					>
+					TestUser</option>
+				</select>
+	</p>
+		<input type="hidden" id="shippingOrganizationAddressList" value="-2000" name="shippingOrganizationAddressList"/>
+		<!-- Area where selected shipping Address details is showed in short..-->
+
+		<div id="MS_shippingAddressDisplayArea_90149">
+			<!-- This value is equal to value in struts-config-ext.xml for view Name AjaxAddressDisplayView -->
+
+{{ include AddressDisplay.jsp.twig }}
+
+			<input type="hidden" value="15277" id="addressId_90149" name="addressId_90149"/>
+		</div>
+		<!-- Show Edit button only if there are any valid address.. -->
+
+			<br/>
+			<div class="editAddressLink hover_underline" id="editAddressLink_90149" style="display:block;">
+					<a href="ShippingandBillingDisplay_1.html?source=3" onfocus="javascript:CheckoutHelperJS.setLastFocus(this.id);" id="WC_ShippingAddressSelectMultiple_link_2_90149">
+						<img src="../../StoreAssets/B2CAssets/images/edit_icon.png" alt="" /> 
+						[PROPERTIES;ADDR_EDIT_ADDRESS;Edit Address]
+					</a>
+			</div>
+	<div class="newShippingAddressButton hover_underline" id="newShippingAddressButton_90149">
+			<a href="ShippingandBillingDisplay_3.html?source=3" id="WC_ShippingAddressSelectMultiple_link_3_90149">
+				<img class="nopadding" src="../../StoreAssets/B2CAssets/images/colors/color1/table_plus_add.png" alt="" />
+				[PROPERTIES;ADDR_CREATE_ADDRESS;Create Address]
+			</a>
+	</div>
+<script type="text/javascript">
+			dojo.addOnLoad(function() { 
+				CheckoutHelperJS.showHideEditAddressLink(document.getElementById("MS_ShipmentAddress_90149"),'90149');
+			});
+</script>
+</div>
+</div>
+</span>
+ 

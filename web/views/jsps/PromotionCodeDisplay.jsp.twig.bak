@@ -1,0 +1,45 @@
+ 
+<span class="highlight">
+<div class="jspcaption" style="display:none">PromotionCodeDisplay.jsp</div>
+<script type="text/javascript">
+	dojo.addOnLoad(function() {
+		MessageHelper.setMessage("PROMOTION_CODE_EMPTY", "Please enter the promotional code");
+	});
+</script>
+<script type="text/javascript">
+	dojo.addOnLoad(initPromotionAssets); 
+	function initPromotionAssets(){
+	}
+</script>
+<form name="PromotionCodeForm" id="PromotionCodeForm" method="post" action="https:///webapp/wcs/stores/servlet/PromotionCodeManage?catalogId=10001&amp;langId=-1&amp;storeId=10152" onsubmit="javascript: return false;">
+	<input type="hidden" name="orderId" value="17087" id="WC_PromotionCodeDisplay_FormInput_orderId_In_PromotionCodeForm_1"/>
+	<input type="hidden" name="taskType" value="A" id="WC_PromotionCodeDisplay_FormInput_page_In_PromotionCodeForm_1"/>
+	<input type="hidden" name="URL" value="" id="WC_PromotionCodeDisplay_FormInput_URL_In_PromotionCodeForm_1"/>
+	<input type="hidden" name="storeId" value="10152" id="WC_PromotionCodeDisplay_FormInput_storeId_In_PromotionCodeForm_1"/>
+	<input type="hidden" name="catalogId" value="10001" id="WC_PromotionCodeDisplay_FormInput_catalogId_In_PromotionCodeForm_1"/>
+	<input type="hidden" name="langId" value="-1" id="WC_PromotionCodeDisplay_FormInput_langId_In_PromotionCodeForm_1"/>
+	<input type="hidden" name="finalView" value="AjaxOrderItemDisplayView" id="WC_PromotionCodeDisplay_FormInput_finalView_In_PromotionCodeForm_1"/>
+	<div class="promotion_code" id="WC_PromotionCodeDisplay_div_1">
+		<label for="promoCode">Promotional code:</label>
+	</div>
+	<div class="promotion_input" id="WC_PromotionCodeDisplay_div_2">
+		<input type="text" class="input" size="6" name="promoCode" id="promoCode" onkeypress="if(event.keyCode==13) JavaScript:CheckoutHelperJS.applyPromotionCode('PromotionCodeForm','OrderShippingBillingView')"/>
+	</div>
+	<div class="promotion_button" id="WC_PromotionCodeDisplay_div_3">
+		<div class="button_align" id="WC_PromotionCodeDisplay_div_4">
+				<a  role="button" class="button_primary" id="WC_PromotionCodeDisplay_links_1" aria-labelledby="WC_PromotionCodeDisplay_links_1_ACCE_Label" tabindex="0" onclick="JavaScript:setCurrentId('WC_PromotionCodeDisplay_links_1'); CheckoutHelperJS.applyPromotionCode('PromotionCodeForm','OrderShippingBillingView');return false;">
+				<div class="left_border"></div>
+					<div class="button_text">Apply<span id="WC_PromotionCodeDisplay_links_1_ACCE_Label" class="spanacce">apply promotional code</span></div>
+				<div class="right_border"></div>
+			</a>
+		</div>
+		<br clear="all"/>
+	</div>
+	<div id="appliedPromotionCodes" class="hover_underline">                                   
+		<!--  <input type="hidden" name="newPromoCode" id="newPromoCode" value=""/> -->
+
+	</div>
+	<br clear="left" />
+</form>
+</span>
+<!-- END PromotionCodeDisplay.jsp -->

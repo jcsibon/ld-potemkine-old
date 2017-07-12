@@ -1,0 +1,73 @@
+ 
+<span class="highlight">
+<div class="jspcaption" style="display:none">ShippingDetailsDisplay.jsp</div>
+<script type="text/javascript">
+	dojo.addOnLoad(function() {
+		CheckoutHelperJS.initializeShipmentPage('2');
+		CheckoutHelperJS.setAjaxCheckOut(true);
+		CheckoutHelperJS.setCommonParameters('-1','10152','10001');
+	});
+</script>
+{{ include PromotionChoiceOfFreeGiftsPopup.jspf.twig }}
+
+<div class="main_header" id="WC_ShipmentDisplay_div_5">
+	<div class="left_corner" id="WC_ShipmentDisplay_div_6"></div>
+	<div class="left" id="WC_ShipmentDisplay_div_7"><span aria-level="1" class="main_header_text" role="heading">[PROPERTIES;BCT_SHIPPING_INFO;Shipping Information]</span></div>
+	<div class="right_corner" id="WC_ShipmentDisplay_div_8"></div>
+{{ include CheckoutTopESpotDisplay.jspf.twig }}
+
+</div>
+		 <div class="checkout_subheader" id="WC_MultipleShipmentDisplay_div_9">
+			<div class="left_corner" id="WC_MultipleShipmentDisplay_div_10"></div>
+			<input type="hidden" id="commonShipModeId" name="commonShipModeId" value="10052"/>
+			<div class="left" id="WC_MultipleShipmentDisplay_div_11"><span class="content_text">[PROPERTIES;SHIP_SINGLE_SHIPMENT_MESSAGE;Click single shipment if shipping to one address]</span></div>
+			<div class="header_element_align" id="WC_MultipleShipmentDisplay_div_12">
+				<a role="button" class="button_primary" id="WC_MultipleShipmentDisplay_links_3" tabindex="0" href="ShippingandBillingDisplay.html">
+					<div class="left_border"></div>
+					<div class="button_text">[PROPERTIES;SHIP_SINGLE_SHIPMENT;Single Shipment]<span class="spanacce">[PROPERTIES;Checkout_ACCE_Single_Shipping;select to use single shipment to ship to one address]</span></div>
+					<div class="right_border"></div>
+				</a>
+			</div>
+			<div id="WC_ShipmentDisplay_div_14a" class="header_element_align">
+{{ include ContentRecommendation.jsp.twig }}
+			</div>			
+			<div class="right_corner" id="WC_MultipleShipmentDisplay_div_15"></div>
+		 </div>
+<div class="body left" id="WC_ShipmentDisplay_div_16">
+	<div id="shipping">
+				<div id="WC_MultipleShipmentDisplay_div_17">
+						<br/>
+						<span class="checkbox">
+								<input type="checkbox" title="[PROPERTIES;SHIP_SHIP_AS_COMPLETE;Ship as Complete]" class="checkbox" id="shipAsComplete" name = "shipAsComplete"
+									checked="checked"
+								 />
+							<span class="text"><label for="shipAsComplete">[PROPERTIES;SHIP_SHIP_AS_COMPLETE;Ship as Complete]</label></span>
+						</span>
+				</div>
+				<span id="multipleShipmentOrderDetails_ACCE_Label" class="spanacce">[PROPERTIES;ACCE_Region_Order_Item_List;Order Item List]</span>
+				<div id="WC_MultipleShipmentDisplay_div_18" class="shipping_billing_img_padding" dojoType="wc.widget.RefreshArea" widgetId="multipleShipmentOrderDetails" controllerId="multipleShipmentDetailsController" ariaMessage="[PROPERTIES;ACCE_Status_Order_Item_List_Updated;Order Item List Updated]" ariaLiveId="ariaMessage" role="region" aria-labelledby="multipleShipmentOrderDetails_ACCE_Label">
+{{ include MSOrderItemDetails.jsp.twig }}
+
+				</div> 
+				<script type="text/javascript">
+					dojo.addOnLoad(function() { 
+					parseWidget("WC_MultipleShipmentDisplay_div_18"); 
+					});
+				</script>
+		<span id="singleShipmentOrderTotalsDetail_ACCE_Label" class="spanacce">[PROPERTIES;ACCE_Region_Order_Total;Order Total]</span>
+		<div dojoType="wc.widget.RefreshArea" widgetId="singleShipmentOrderTotalsDetail"  controllerId="currentOrderTotalsAreaController" id="WC_ShipmentDisplay_div_18" ariaMessage="[PROPERTIES;ACCE_Status_Order_Total_Updated;Order Total Updated]" ariaLiveId="ariaMessage" role="region" aria-labelledby="singleShipmentOrderTotalsDetail_ACCE_Label">
+{{ include SingleShipmentOrderTotalsSummary.jsp.twig }}
+
+		</div>
+		<script type="text/javascript">
+			dojo.addOnLoad(function() { 
+				parseWidget("WC_ShipmentDisplay_div_18"); 
+			});
+		</script>
+	</div>
+	<br clear="all" />
+</div>
+<!-- This button is required only for Non-Ajax Checkout.. -->
+
+</span>
+ 
