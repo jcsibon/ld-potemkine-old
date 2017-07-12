@@ -26,7 +26,7 @@
 			 <th class="th_align_left_normal " id="MultipleShipping_rowHeader_product1" abbr="[PROPERTIES;Checkout_ACCE_for;for] Hermitage Ruched Bodice Cocktail Dress" width="225">
 				<div class="img" id="WC_MSOrderItemDetails_div_1_1">
 					<a href="HermitageRuchedBodiceCocktailDressAuroraESite.html" id="catalogEntry_img_90149" title="Hermitage Ruched Bodice Cocktail Dress">
-						<img alt="Hermitage Ruched Bodice Cocktail Dress" src="../../StoreAssets/B2CAssets/images/catalog/apparel/women/womens_dresses_70x70/WD_028_a_red.jpg"/>
+						<img alt="Hermitage Ruched Bodice Cocktail Dress" src="/StoreAssets/B2CAssets/images/catalog/apparel/women/womens_dresses_70x70/WD_028_a_red.jpg"/>
 					</a> 
 				</div>
 				<div class="itemspecs hover_underline" id="WC_MSOrderItemDetails_div_2_1">
@@ -51,7 +51,7 @@
 		shoppingListJSOI90149 = new ShoppingListJS({storeId: '10152',catalogId: '10001',langId: '-1'}, {id: '10041', name: 'Hermitage Ruched Bodice Cocktail Dress', image: '../../StoreAssets/B2CAssets/images/catalog/apparel/women/womens_dresses_105x105/WD_028_a_red.jpg', type: 'ItemBean', components: {}, skus: []}, {}, "shoppingListJSOI90149");
 	}
 </div>
-<img style="display:none;" src="../../StoreAssets/B2CAssets/images/catalog/apparel/women/womens_dresses_105x105/WD_028_a_red.jpg"/>
+<img style="display:none;" src="/StoreAssets/B2CAssets/images/catalog/apparel/women/womens_dresses_105x105/WD_028_a_red.jpg"/>
 <div style="position:relative;">
 	<div id="OI90149addToShoppingListBtn" class="dropdown_primary">
 		<a id="OI90149addToShoppingList" href="
@@ -66,7 +66,7 @@
 			<div class="drop">
 			<div class="white_line"></div>
 				<a id="OI90149addToShoppingListDropdown" onmouseover="javascript: shoppingListJSOI90149.mouseOnArrow = true;" onmouseout="javascript: shoppingListJSOI90149.mouseOnArrow = false;" href="javascript:shoppingListJSOI90149.showDropDown();" class="dropdown_arrow" title="[PROPERTIES;SL_MULTIPLE_SHOPPING_LIST_DD;Multiple wish list drop down. Press enter and tab to display the drop down]" role="button">
-						<img style="margin-top: 10px;" src="../../StoreAssets/B2CAssets/images/colors/color1/widget_quick_info_popup/dropdown_arrow.png" alt="[PROPERTIES;SL_MULTIPLE_SHOPPING_LIST_DD;Multiple wish list drop down. Press enter and tab to display the drop down]"/>
+						<img style="margin-top: 10px;" src="/StoreAssets/B2CAssets/images/colors/color1/widget_quick_info_popup/dropdown_arrow.png" alt="[PROPERTIES;SL_MULTIPLE_SHOPPING_LIST_DD;Multiple wish list drop down. Press enter and tab to display the drop down]"/>
 					</a>
 				<div class="right_border"></div>
 			</div>
@@ -118,7 +118,7 @@
 						</div>
 						<div class="body">
 							<div id="OI90149shoppingListErrorMessageArea" style="display:none">
-								<img class="error_icon left" src="../../StoreAssets//images/colors/color1/error_icon.png" alt=""/>
+								<img class="error_icon left" src="/StoreAssets//images/colors/color1/error_icon.png" alt=""/>
 								<p id="OI90149shoppingListErrorMessageText" class="textinlinewithicon"></p>
 								<div class="clear_float"></div>
 							</div>
@@ -181,7 +181,7 @@
 							<div class="item_spacer_10px"></div>
 							<div class="item_spacer_10px"></div>
 							<div class="item_spacer_10px"></div>
-							<img class="error_icon left" src="../../StoreAssets//images/colors/color1/success_icon.png" alt=""/>
+							<img class="error_icon left" src="/StoreAssets//images/colors/color1/success_icon.png" alt=""/>
 							<p id="OI90149successMessageAreaText" class="textinlinewithicon">[PROPERTIES;LIST_CREATED;Wish list created successfully.]</p>
 							<div class="clear_float"></div>
 							<div class="item_spacer_10px"></div>
@@ -222,7 +222,7 @@
 					</p>
 					<p>
 							<a class="remove_address_link" href="ShippingandBillingDisplay_2.html" onfocus="javascript:CheckoutHelperJS.setLastFocus(this.id);" id="WC_MSOrderItemDetails_link_2_1">
-								<img src="../../StoreAssets/B2CAssets/images/colors/color1/table_x_delete.png" alt=""/>
+								<img src="/StoreAssets/B2CAssets/images/colors/color1/table_x_delete.png" alt=""/>
 								[PROPERTIES;REMOVE;Remove]
 							</a>
 					</p>
@@ -309,13 +309,13 @@
 			<br/>
 			<div class="editAddressLink hover_underline" id="editAddressLink_90149" style="display:block;">
 					<a href="ShippingandBillingDisplay_1.html?source=3" onfocus="javascript:CheckoutHelperJS.setLastFocus(this.id);" id="WC_ShippingAddressSelectMultiple_link_2_90149">
-						<img src="../../StoreAssets/B2CAssets/images/edit_icon.png" alt="" /> 
+						<img src="/StoreAssets/B2CAssets/images/edit_icon.png" alt="" /> 
 						[PROPERTIES;ADDR_EDIT_ADDRESS;Edit Address]
 					</a>
 			</div>
 	<div class="newShippingAddressButton hover_underline" id="newShippingAddressButton_90149">
 			<a href="ShippingandBillingDisplay_3.html?source=3" id="WC_ShippingAddressSelectMultiple_link_3_90149">
-				<img class="nopadding" src="../../StoreAssets/B2CAssets/images/colors/color1/table_plus_add.png" alt="" />
+				<img class="nopadding" src="/StoreAssets/B2CAssets/images/colors/color1/table_plus_add.png" alt="" />
 				[PROPERTIES;ADDR_CREATE_ADDRESS;Create Address]
 			</a>
 	</div>

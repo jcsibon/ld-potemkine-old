@@ -1,7 +1,7 @@
  
 
-<script type="text/javascript" src="../../StoreAssets/B2CAssets/javascript/CheckoutArea/CheckoutPayments.js"></script>
-<script type="text/javascript" src="../../StoreAssets/B2CAssets/javascript/CheckoutArea/CheckoutHelper.js"></script>
+<script type="text/javascript" src="/StoreAssets/B2CAssets/javascript/CheckoutArea/CheckoutPayments.js"></script>
+<script type="text/javascript" src="/StoreAssets/B2CAssets/javascript/CheckoutArea/CheckoutHelper.js"></script>
 <script type="text/javascript">
 		analyticsJS.loadPaymentPageView(CheckoutPayments);
 	var paymentSnippetsURLMap = {};
@@ -347,7 +347,7 @@ wc.render.declareRefreshController({
 			<br/>
 			<div id="editBillingAddressLink_1" class="editAddressLink hover_underline">
 					<a href="ShippingandBillingDisplay_1.html?source=3" id="editBillingAddressLink_a_edit_1">
-					<img src="../../StoreAssets/B2CAssets/images/edit_icon.png" alt="" />
+					<img src="/StoreAssets/B2CAssets/images/edit_icon.png" alt="" />
 					Edit Address
 					</a>
 			</div>
@@ -355,7 +355,7 @@ wc.render.declareRefreshController({
 
 			<div id="createNewBillingAddress_1" class="newShippingAddressButton hover_underline">
 					<a href="ShippingandBillingDisplay_3.html?source=3" id="editBillingAddressLink_a_create_1">
-						<img src="../../StoreAssets/B2CAssets/images/colors/color1/table_plus_add.png" alt="" />
+						<img src="/StoreAssets/B2CAssets/images/colors/color1/table_plus_add.png" alt="" />
 						Create Address
 					</a>
 			</div>
@@ -553,7 +553,7 @@ wc.render.declareRefreshController({
 			<br/>
 			<div id="editBillingAddressLink_2" class="editAddressLink hover_underline">
 					<a href="ShippingandBillingDisplay_1.html?source=3" id="editBillingAddressLink_a_edit_2">
-					<img src="../../StoreAssets/B2CAssets/images/edit_icon.png" alt="" />
+					<img src="/StoreAssets/B2CAssets/images/edit_icon.png" alt="" />
 					Edit Address
 					</a>
 			</div>
@@ -561,7 +561,7 @@ wc.render.declareRefreshController({
 
 			<div id="createNewBillingAddress_2" class="newShippingAddressButton hover_underline">
 					<a href="ShippingandBillingDisplay_3.html?source=3" id="editBillingAddressLink_a_create_2">
-						<img src="../../StoreAssets/B2CAssets/images/colors/color1/table_plus_add.png" alt="" />
+						<img src="/StoreAssets/B2CAssets/images/colors/color1/table_plus_add.png" alt="" />
 						Create Address
 					</a>
 			</div>
@@ -759,7 +759,7 @@ wc.render.declareRefreshController({
 			<br/>
 			<div id="editBillingAddressLink_3" class="editAddressLink hover_underline">
 					<a href="ShippingandBillingDisplay_1.html?source=3" id="editBillingAddressLink_a_edit_3">
-					<img src="../../StoreAssets/B2CAssets/images/edit_icon.png" alt="" />
+					<img src="/StoreAssets/B2CAssets/images/edit_icon.png" alt="" />
 					Edit Address
 					</a>
 			</div>
@@ -767,7 +767,7 @@ wc.render.declareRefreshController({
 
 			<div id="createNewBillingAddress_3" class="newShippingAddressButton hover_underline">
 					<a href="ShippingandBillingDisplay_3.html?source=3" id="editBillingAddressLink_a_create_3">
-						<img src="../../StoreAssets/B2CAssets/images/colors/color1/table_plus_add.png" alt="" />
+						<img src="/StoreAssets/B2CAssets/images/colors/color1/table_plus_add.png" alt="" />
 						Create Address
 					</a>
 			</div>

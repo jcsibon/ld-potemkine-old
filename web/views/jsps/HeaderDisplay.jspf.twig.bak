@@ -2,7 +2,7 @@
 <div id="text_highlight">
 <div class="details" id="detailsSection"><div class="details_container"><div class="content"><span class="bold">Click the button below to highlight text strings on the current page that you can customize in properties files during onboarding.</span><br></div><div class="marketing_btn"><div id="showProperties" style="display:block"><a class="light_button" onclick="showProperties()"><div id="showSpots" class="button_text">Show Properties</div><div class="button_right"></div></a></div><div id="hideProperties" style="display:none"><a class="light_button" onclick="hideProperties()"><div id="showSpots" class="button_text">Hide Properties</div><div class="button_right"></div></a></div></div><div class="content"><div id="messages" style="display:none"></div></div></div></div>
 </div>
-<script type="text/javascript" src="../../StoreAssets/B2CAssets/javascript/Properties.js"></script>
+<script type="text/javascript" src="/StoreAssets/B2CAssets/javascript/Properties.js"></script>
 
 <!-- BEGIN CommonJSPFToInclude.jspf -->
 
@@ -12,12 +12,12 @@
 <div id="progress_bar_dialog" dojoType="dijit.Dialog" style="display: none;">
 	<div id="progress_bar">
 		<div id="loading_popup">
-			<div class="top_left" id="WC_StoreCommonUtilities_div_1"><img src="../../StoreAssets/B2CAssets/images/colors/color1/transparent.gif" alt="No image available"/></div>
-		        <div class="top_right" id="WC_StoreCommonUtilities_div_2"><img src="../../StoreAssets/B2CAssets/images/colors/color1/transparent.gif" alt="No image available"/></div>
+			<div class="top_left" id="WC_StoreCommonUtilities_div_1"><img src="/StoreAssets/B2CAssets/images/colors/color1/transparent.gif" alt="No image available"/></div>
+		        <div class="top_right" id="WC_StoreCommonUtilities_div_2"><img src="/StoreAssets/B2CAssets/images/colors/color1/transparent.gif" alt="No image available"/></div>
 		        <div class="header" id="WC_StoreCommonUtilities_div_3"></div>
 		        <div class="bodyarea" id="WC_StoreCommonUtilities_div_4">
 				<div class="bodycontent" id="WC_StoreCommonUtilities_div_5">
-					<img src="../../StoreAssets/B2CAssets/images/colors/color1/loading.gif" width="44" height="44" border="0" alt="Your request is being processed."/>
+					<img src="/StoreAssets/B2CAssets/images/colors/color1/loading.gif" width="44" height="44" border="0" alt="Your request is being processed."/>
 			        </div>
 			</div>
 			<div class="footer" id="WC_StoreCommonUtilities_div_6">
@@ -48,8 +48,8 @@
 		
 		<div class="message">
 			<div class="message_icon">
-				<img id="error_icon" style="display:none;" class="error_icon" src="../../StoreAssets/B2CAssets/images/colors/color1/error_icon.png" alt=""/>
-				<img id="success_icon" style="display:none;" class="error_icon" src="../../StoreAssets/B2CAssets/images/colors/color1/success_icon.png" alt=""/>
+				<img id="error_icon" style="display:none;" class="error_icon" src="/StoreAssets/B2CAssets/images/colors/color1/error_icon.png" alt=""/>
+				<img id="success_icon" style="display:none;" class="error_icon" src="/StoreAssets/B2CAssets/images/colors/color1/success_icon.png" alt=""/>
 			</div>
 			<div class="message_text" role="region" aria-required="true" aria-labelledby="MessageArea">
 				<span id="ErrorMessageText">
@@ -119,11 +119,11 @@
 			<div class="content_left_border">
 				<div class="content_right_border">
 					<div class="content">
-						<a role="button" id="inactivityWarningPopup_close" class="close_acce" title="CLOSE" href="javascript:void(0);" onclick="dijit.byId('inactivityWarningPopup').hide(); if (dialogTimeoutTracker != null) {clearTimeout(dialogTimeoutTracker);}"><img role="button" onmouseover="this.src='../../StoreAssets/B2CAssets/images/colors/color1/close_hover.png'" onmouseout="this.src='../../StoreAssets/B2CAssets/images/colors/color1/close_normal.png'" src="../../StoreAssets/B2CAssets/images/colors/color1/close_normal.png" class="closeImg" alt="CLOSE"/></a>
+						<a role="button" id="inactivityWarningPopup_close" class="close_acce" title="CLOSE" href="javascript:void(0);" onclick="dijit.byId('inactivityWarningPopup').hide(); if (dialogTimeoutTracker != null) {clearTimeout(dialogTimeoutTracker);}"><img role="button" onmouseover="this.src='../../StoreAssets/B2CAssets/images/colors/color1/close_hover.png'" onmouseout="this.src='../../StoreAssets/B2CAssets/images/colors/color1/close_normal.png'" src="/StoreAssets/B2CAssets/images/colors/color1/close_normal.png" class="closeImg" alt="CLOSE"/></a>
 						<div class="clear_float"></div>
 						<div id="inactivityWarningPopup_body" class="body">
 							<div class="message_icon left">
-								<img class="error_icon" src="../../StoreAssets/B2CAssets/images/colors/color1/warning_icon.png" alt="Warning">
+								<img class="error_icon" src="/StoreAssets/B2CAssets/images/colors/color1/warning_icon.png" alt="Warning">
 							</div>
 							
 							
@@ -1066,7 +1066,7 @@
 
 <script>var isGuest = true;</script>
 
-<script src="../../StoreAssets/B2CAssets/javascript/Widgets/header.js"></script>
+<script src="/StoreAssets/B2CAssets/javascript/Widgets/header.js"></script>
 
 <div id="header" role="banner">
 	<div id="headerRow1">
@@ -1094,7 +1094,7 @@
 	
 	
 					<a id="contentLink_1_HeaderStoreLogo_Content" href="WelcometoAuroraESite.html" title="AuroraStorefrontAssetStore">
-						<img id="contentImage_1_HeaderStoreLogo_Content" src="../../StoreAssets/B2CAssets/images/logo.png" alt="AuroraStorefrontAssetStore"/>
+						<img id="contentImage_1_HeaderStoreLogo_Content" src="/StoreAssets/B2CAssets/images/logo.png" alt="AuroraStorefrontAssetStore"/>
 					</a>
 				
 	
@@ -1558,7 +1558,7 @@
 						<div class="content">
 							<div class="header">
 								<span>Please select a language and currency</span>
-								<a id="close" class="close_acce tlignore" title="CLOSE" href="javascript:dijit.byId('widget_language_and_currency_popup').hide();"><img role="button" onmouseover="this.src='../../StoreAssets/B2CAssets/images/colors/color1/close_hover.png'" onmouseout="this.src='../../StoreAssets/B2CAssets/images/colors/color1/close_normal.png'" src="../../StoreAssets/B2CAssets/images/colors/color1/close_normal.png" class="closeImg" alt="CLOSE"/></a>
+								<a id="close" class="close_acce tlignore" title="CLOSE" href="javascript:dijit.byId('widget_language_and_currency_popup').hide();"><img role="button" onmouseover="this.src='../../StoreAssets/B2CAssets/images/colors/color1/close_hover.png'" onmouseout="this.src='../../StoreAssets/B2CAssets/images/colors/color1/close_normal.png'" src="/StoreAssets/B2CAssets/images/colors/color1/close_normal.png" class="closeImg" alt="CLOSE"/></a>
 								<div class="clear_float"></div>
 							</div>
 							<div class="selectors">
@@ -1833,7 +1833,7 @@
 	<span id="header-fb-login-button-span">
 		<a href="#" tabindex="0" class="h_tnav_but" id="headerFBlogin">
 		    Connect to Facebook
-			<img class="img_align" id="WC_FacebookConnectDisconnectDisplayImg_1" src="../../StoreAssets/B2CAssets/images/socialIntegration/facebook.png" alt="" /></a>
+			<img class="img_align" id="WC_FacebookConnectDisconnectDisplayImg_1" src="/StoreAssets/B2CAssets/images/socialIntegration/facebook.png" alt="" /></a>
 	</span> 
 	
 	<span id="header-fb-logout-button-span" class="nodisplay" > 

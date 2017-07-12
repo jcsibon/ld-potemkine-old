@@ -5,7 +5,7 @@
 	<span id="header-fb-login-button-span">
 		<a href="#" tabindex="0" class="h_tnav_but" id="headerFBlogin">
 		    Connect to Facebook
-			<img class="img_align" id="WC_FacebookConnectDisconnectDisplayImg_1" src="../../StoreAssets/B2CAssets/images/socialIntegration/facebook.png" alt="" /></a>
+			<img class="img_align" id="WC_FacebookConnectDisconnectDisplayImg_1" src="/StoreAssets/B2CAssets/images/socialIntegration/facebook.png" alt="" /></a>
 	</span> 
 	
 	<span id="header-fb-logout-button-span" class="nodisplay" > 

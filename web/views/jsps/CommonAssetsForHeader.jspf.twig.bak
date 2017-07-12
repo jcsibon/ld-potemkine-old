@@ -1,23 +1,23 @@
  
 
 <!--Main Stylesheet for browser -->
-<link rel="stylesheet" href="../../StoreAssets/B2CAssets/css/common1_1.css" type="text/css" media="screen"/>
+<link rel="stylesheet" href="/StoreAssets/B2CAssets/css/common1_1.css" type="text/css" media="screen"/>
 
 <!-- Include script files -->
 
 <!-- BEGIN CommonJSToInclude.jspf -->
 
 <!-- Style sheet for RWD -->
-<link rel="stylesheet" href="../../StoreAssets/B2CAssets/css/styles.css" type="text/css" />
+<link rel="stylesheet" href="/StoreAssets/B2CAssets/css/styles.css" type="text/css" />
 <!--[if IE 8]>
-<link rel="stylesheet" href="../../StoreAssets/B2CAssets/css/stylesIE8.css" type="text/css" />
+<link rel="stylesheet" href="/StoreAssets/B2CAssets/css/stylesIE8.css" type="text/css" />
 <![endif]-->
 
 
 
 
-<script type="text/javascript" charset="UTF-8" src="../../StoreAssets/dojo18/dojo/dojo.js" djConfig="parseOnLoad: true, isDebug: false,  modulePaths: {storetext: '../../StoreAssets/B2CAssets'}, useCommentedJson: true,locale: 'en-us' "></script>
-<script type="text/javascript" charset="UTF-8" src="../../StoreAssets/dojo18/dojo/dojodesktop.js" djConfig="parseOnLoad: true, isDebug: false,  modulePaths: {storetext: '../../StoreAssets/B2CAssets'}, useCommentedJson: true,locale: 'en-us' "></script>
+<script type="text/javascript" charset="UTF-8" src="/StoreAssets/dojo18/dojo/dojo.js" djConfig="parseOnLoad: true, isDebug: false,  modulePaths: {storetext: '../../StoreAssets/B2CAssets'}, useCommentedJson: true,locale: 'en-us' "></script>
+<script type="text/javascript" charset="UTF-8" src="/StoreAssets/dojo18/dojo/dojodesktop.js" djConfig="parseOnLoad: true, isDebug: false,  modulePaths: {storetext: '../../StoreAssets/B2CAssets'}, useCommentedJson: true,locale: 'en-us' "></script>
 
 
 
@@ -27,7 +27,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-<link rel="shortcut icon" href="../../StoreAssets/B2CAssets/images/favicon.ico" mce_href="../../StoreAssets/B2CAssets/images/favicon.ico"/>
+<link rel="shortcut icon" href="/StoreAssets/B2CAssets/images/favicon.ico" mce_href="/StoreAssets/B2CAssets/images/favicon.ico"/>
 
 <script type="text/javascript">
 	// Convert the WCParam object which contains request properties into javascript object
@@ -41,7 +41,7 @@
 		"searchTerm":''
 	};
 	var absoluteURL = "AuroraESite.html";
-	var imageDirectoryPath = "../../StoreAssets/B2CAssets/";
+	var imageDirectoryPath = /StoreAssets/B2CAssets/";
 	var styleDirectoryPath = "images/colors/color1/";
 	var supportPaymentTypePromotions = false;
 	
@@ -109,26 +109,26 @@
 	}
 </script>
 
-<script type="text/javascript" src="../../StoreAssets/B2CAssets/javascript/MessageHelper.js"></script>
-<script type="text/javascript" src="../../StoreAssets/B2CAssets/javascript/StoreCommonUtilities.js"></script>
-<script type="text/javascript" src="../../StoreAssets/B2CAssets/javascript/Responsive.js"></script>
-<script type="text/javascript" src="../../StoreAssets/B2CAssets/javascript/Widgets/Search.js"></script>
-<script type="text/javascript" src="../../StoreAssets/B2CAssets/javascript/Widgets/MiniShopCartDisplay/MiniShopCartDisplay.js"></script>
-<script type="text/javascript" src="../../StoreAssets/B2CAssets/javascript/Widgets/Department/Department.js"></script>
-<script type="text/javascript" src="../../StoreAssets/B2CAssets/javascript/Common/ShoppingActions.js"></script>
+<script type="text/javascript" src="/StoreAssets/B2CAssets/javascript/MessageHelper.js"></script>
+<script type="text/javascript" src="/StoreAssets/B2CAssets/javascript/StoreCommonUtilities.js"></script>
+<script type="text/javascript" src="/StoreAssets/B2CAssets/javascript/Responsive.js"></script>
+<script type="text/javascript" src="/StoreAssets/B2CAssets/javascript/Widgets/Search.js"></script>
+<script type="text/javascript" src="/StoreAssets/B2CAssets/javascript/Widgets/MiniShopCartDisplay/MiniShopCartDisplay.js"></script>
+<script type="text/javascript" src="/StoreAssets/B2CAssets/javascript/Widgets/Department/Department.js"></script>
+<script type="text/javascript" src="/StoreAssets/B2CAssets/javascript/Common/ShoppingActions.js"></script>
 
-<script type="text/javascript" src="../../StoreAssets/B2CAssets/javascript/UserArea/AddressHelper.js"></script>
-<script type="text/javascript" src="../../StoreAssets/B2CAssets/javascript/CatalogArea/CategoryDisplay.js"></script>
-<script type="text/javascript" src="../../StoreAssets/B2CAssets/javascript/CheckoutArea/CheckoutHelper.js"></script>
-<script type="text/javascript" src="../../StoreAssets/B2CAssets/javascript/ServicesDeclaration.js"></script>
-<script type="text/javascript" src="../../StoreAssets/B2CAssets/javascript/CheckoutArea/ShippingAndBillingServicesDeclaration.js"></script>
-<script type="text/javascript" src="../../StoreAssets/B2CAssets/javascript/CommonContextsDeclarations.js"></script>
-<script type="text/javascript" src="../../StoreAssets/B2CAssets/javascript/CommonControllersDeclaration.js"></script>
-<script type="text/javascript" src="../../StoreAssets/B2CAssets/javascript/ServicesEventMapping.js"></script>
-<script type="text/javascript" src="../../StoreAssets/B2CAssets/javascript/CheckoutArea/ShippingAndBillingControllersDeclaration.js"></script>
-<script type="text/javascript" src="../../StoreAssets/B2CAssets/javascript/Widgets/QuickInfo/QuickInfo.js"></script>
-<script type="text/javascript" src="../../StoreAssets/B2CAssets/javascript/Widgets/ShoppingList/ShoppingList.js"></script>
-<script type="text/javascript" src="../../StoreAssets/B2CAssets/javascript/Widgets/ShoppingList/ShoppingListServicesDeclaration.js"></script>
+<script type="text/javascript" src="/StoreAssets/B2CAssets/javascript/UserArea/AddressHelper.js"></script>
+<script type="text/javascript" src="/StoreAssets/B2CAssets/javascript/CatalogArea/CategoryDisplay.js"></script>
+<script type="text/javascript" src="/StoreAssets/B2CAssets/javascript/CheckoutArea/CheckoutHelper.js"></script>
+<script type="text/javascript" src="/StoreAssets/B2CAssets/javascript/ServicesDeclaration.js"></script>
+<script type="text/javascript" src="/StoreAssets/B2CAssets/javascript/CheckoutArea/ShippingAndBillingServicesDeclaration.js"></script>
+<script type="text/javascript" src="/StoreAssets/B2CAssets/javascript/CommonContextsDeclarations.js"></script>
+<script type="text/javascript" src="/StoreAssets/B2CAssets/javascript/CommonControllersDeclaration.js"></script>
+<script type="text/javascript" src="/StoreAssets/B2CAssets/javascript/ServicesEventMapping.js"></script>
+<script type="text/javascript" src="/StoreAssets/B2CAssets/javascript/CheckoutArea/ShippingAndBillingControllersDeclaration.js"></script>
+<script type="text/javascript" src="/StoreAssets/B2CAssets/javascript/Widgets/QuickInfo/QuickInfo.js"></script>
+<script type="text/javascript" src="/StoreAssets/B2CAssets/javascript/Widgets/ShoppingList/ShoppingList.js"></script>
+<script type="text/javascript" src="/StoreAssets/B2CAssets/javascript/Widgets/ShoppingList/ShoppingListServicesDeclaration.js"></script>
 
 <script>
 	dojo.require("wc.service.common");
@@ -348,20 +348,20 @@
 
 
 <!-- END CommonJSToInclude.jspf -->
-<script type="text/javascript" src="../../StoreAssets/B2CAssets/javascript/StoreCommonUtilities.js"></script>
-<script type="text/javascript" src="../../StoreAssets/B2CAssets/javascript/Widgets/Search.js"></script>
-<script type="text/javascript" src="../../StoreAssets/B2CAssets/javascript/CommonContextsDeclarations.js"></script>
-<script type="text/javascript" src="../../StoreAssets/B2CAssets/javascript/CommonControllersDeclaration.js"></script>
-<script type="text/javascript" src="../../StoreAssets/B2CAssets/javascript/Widgets/ShoppingList/ShoppingList.js"></script>
-<script type="text/javascript" src="../../StoreAssets/B2CAssets/javascript/Widgets/ShoppingList/ShoppingListServicesDeclaration.js"></script>
-<script type="text/javascript" src="../../StoreAssets/B2CAssets/javascript/Common/ShoppingActionsServicesDeclaration.js"></script>
-<script type="text/javascript" src="../../StoreAssets/B2CAssets/javascript/Common/ShoppingActions.js"></script>
-<script type="text/javascript" src="../../StoreAssets/B2CAssets/javascript/Widgets/MiniShopCartDisplay/MiniShopCartDisplay.js"></script>
-<script type="text/javascript" src="../../StoreAssets/B2CAssets/javascript/Widgets/Department/Department.js"></script>
-<script type="text/javascript" src="../../StoreAssets/B2CAssets/javascript/Widgets/QuickInfo/QuickInfo.js"></script>
-<script type="text/javascript" src="../../StoreAssets/B2CAssets/javascript/Widgets/ESpot/ContentRecommendation.js"></script>
-<script type="text/javascript" src="../../StoreAssets/B2CAssets/javascript/Widgets/ESpot/CatalogEntryRecommendation.js"></script>
-<script type="text/javascript" src="../../StoreAssets/B2CAssets/javascript/Widgets/collapsible.js"></script>
+<script type="text/javascript" src="/StoreAssets/B2CAssets/javascript/StoreCommonUtilities.js"></script>
+<script type="text/javascript" src="/StoreAssets/B2CAssets/javascript/Widgets/Search.js"></script>
+<script type="text/javascript" src="/StoreAssets/B2CAssets/javascript/CommonContextsDeclarations.js"></script>
+<script type="text/javascript" src="/StoreAssets/B2CAssets/javascript/CommonControllersDeclaration.js"></script>
+<script type="text/javascript" src="/StoreAssets/B2CAssets/javascript/Widgets/ShoppingList/ShoppingList.js"></script>
+<script type="text/javascript" src="/StoreAssets/B2CAssets/javascript/Widgets/ShoppingList/ShoppingListServicesDeclaration.js"></script>
+<script type="text/javascript" src="/StoreAssets/B2CAssets/javascript/Common/ShoppingActionsServicesDeclaration.js"></script>
+<script type="text/javascript" src="/StoreAssets/B2CAssets/javascript/Common/ShoppingActions.js"></script>
+<script type="text/javascript" src="/StoreAssets/B2CAssets/javascript/Widgets/MiniShopCartDisplay/MiniShopCartDisplay.js"></script>
+<script type="text/javascript" src="/StoreAssets/B2CAssets/javascript/Widgets/Department/Department.js"></script>
+<script type="text/javascript" src="/StoreAssets/B2CAssets/javascript/Widgets/QuickInfo/QuickInfo.js"></script>
+<script type="text/javascript" src="/StoreAssets/B2CAssets/javascript/Widgets/ESpot/ContentRecommendation.js"></script>
+<script type="text/javascript" src="/StoreAssets/B2CAssets/javascript/Widgets/ESpot/CatalogEntryRecommendation.js"></script>
+<script type="text/javascript" src="/StoreAssets/B2CAssets/javascript/Widgets/collapsible.js"></script>
 <script type="text/javascript">
 	dojo.addOnLoad(function() { 
 		shoppingActionsServicesDeclarationJS.setCommonParameters('-1','10152','10001');

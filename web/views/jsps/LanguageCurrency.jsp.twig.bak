@@ -440,7 +440,7 @@
 						<div class="content">
 							<div class="header">
 								<span>Please select a language and currency</span>
-								<a id="close" class="close_acce tlignore" title="CLOSE" href="javascript:dijit.byId('widget_language_and_currency_popup').hide();"><img role="button" onmouseover="this.src='../../StoreAssets/B2CAssets/images/colors/color1/close_hover.png'" onmouseout="this.src='../../StoreAssets/B2CAssets/images/colors/color1/close_normal.png'" src="../../StoreAssets/B2CAssets/images/colors/color1/close_normal.png" class="closeImg" alt="CLOSE"/></a>
+								<a id="close" class="close_acce tlignore" title="CLOSE" href="javascript:dijit.byId('widget_language_and_currency_popup').hide();"><img role="button" onmouseover="this.src='../../StoreAssets/B2CAssets/images/colors/color1/close_hover.png'" onmouseout="this.src='../../StoreAssets/B2CAssets/images/colors/color1/close_normal.png'" src="/StoreAssets/B2CAssets/images/colors/color1/close_normal.png" class="closeImg" alt="CLOSE"/></a>
 								<div class="clear_float"></div>
 							</div>
 							<div class="selectors">
