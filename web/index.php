@@ -135,6 +135,12 @@ $app->get('tunnel', function() use($app) {
 });
 
 
+$app->get('tunnel2', function() use($app) {
+  return $app['twig']->render('jsps/template.html');
+});
+
+
+
 $app->get('/c/h/configurateur-fenetres', function() use($app) {
   return $app['twig']->render('configurateur.twig');
 });
