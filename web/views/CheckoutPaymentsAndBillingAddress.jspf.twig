@@ -1,0 +1,539 @@
+ 
+
+<script type="text/javascript" src="/StoreAssets/B2CAssets/javascript/CheckoutArea/CheckoutPayments.js"></script>
+<script type="text/javascript" src="/StoreAssets/B2CAssets/javascript/CheckoutArea/CheckoutHelper.js"></script>
+<script type="text/javascript">
+		analyticsJS.loadPaymentPageView(CheckoutPayments);
+	var paymentSnippetsURLMap = {};
+			paymentSnippetsURLMap['COD'] = 'StandardCOD';
+			paymentSnippetsURLMap['BillMeLater'] = 'StandardBillMeLater';
+			paymentSnippetsURLMap['Master Card'] = 'StandardMasterCard';
+			paymentSnippetsURLMap['PayLater'] = 'StandardPayLater';
+			paymentSnippetsURLMap['VISA'] = 'StandardVisa';
+			paymentSnippetsURLMap['Check'] = 'StandardCheck';
+			paymentSnippetsURLMap['AMEX'] = 'StandardAmex';
+	dojo.addOnLoad(function() { 
+		CheckoutPayments.setErrorMessage("EDPPaymentMethods_CANNOT_RECONCILE_PAYMENT_AMT", "[PROPERTIES;EDPPaymentMethods_CANNOT_RECONCILE_PAYMENT_AMT;The sum of your payment amount(s) is less than the order total. Please allocate payment amount(s) for the whole order total before proceeding.]");
+		CheckoutPayments.setErrorMessage("EDPPaymentMethods_PAYMENT_AMOUNT_LARGER_THAN_ORDER_AMOUNT", "[PROPERTIES;EDPPaymentMethods_PAYMENT_AMOUNT_LARGER_THAN_ORDER_AMOUNT;The payment amount is greater than the remaining amount.]");
+		CheckoutPayments.setErrorMessage("EDPPaymentMethods_NO_ACCOUNT_NUMBER", "[PROPERTIES;EDPPaymentMethods_NO_ACCOUNT_NUMBER;The credit card account number cannot be empty.]");
+		CheckoutPayments.setErrorMessage("EDPPaymentMethods_INVALID_EXPIRY_DATE", "[PROPERTIES;EDPPaymentMethods_INVALID_EXPIRY_DATE;Invalid expiration year and month]");
+		CheckoutPayments.setErrorMessage("EDPPaymentMethods_NO_AMOUNT", "[PROPERTIES;EDPPaymentMethods_NO_AMOUNT;The amount cannot be empty.]");
+		CheckoutPayments.setErrorMessage("EDPPaymentMethods_AMOUNT_NAN", "[PROPERTIES;EDPPaymentMethods_AMOUNT_NAN;The amount entered is not a valid amount. Please format the amount correctly.]");
+		CheckoutPayments.setErrorMessage("EDPPaymentMethods_AMOUNT_LT_ZERO", "[PROPERTIES;EDPPaymentMethods_AMOUNT_LT_ZERO;The amount entered cannot be less than zero.]");
+		CheckoutPayments.setErrorMessage("EDPPaymentMethods_NO_BILLING_ADDRESS", "[PROPERTIES;EDPPaymentMethods_NO_BILLING_ADDRESS;There is no billing address selected.]");
+		CheckoutPayments.setErrorMessage("EDPPaymentMethods_BILLING_ADDRESS_INVALID", "[PROPERTIES;EDPPaymentMethods_BILLING_ADDRESS_INVALID;The billing address information is incomplete. Complete the billing address by clicking Edit, before proceeding with the checkout process.]");
+		CheckoutPayments.setErrorMessage("EDPPaymentMethods_CVV_NOT_NUMERIC", "[PROPERTIES;EDPPaymentMethods_CVV_NOT_NUMERIC;CVV2 field must be numeric.]");
+		CheckoutPayments.setErrorMessage("EDPPaymentMethods_PAYMENT_AMOUNT_PROBLEM", "[PROPERTIES;EDPPaymentMethods_PAYMENT_AMOUNT_PROBLEM;There is a problem handling your payment amount(s). Contact your site administrator.]");
+		CheckoutPayments.setErrorMessage("EDPPaymentMethods_NO_PAYMENT_SELECTED", "[PROPERTIES;EDPPaymentMethods_NO_PAYMENT_SELECTED;You must select a payment method.]");
+		CheckoutPayments.setErrorMessage("EDPPaymentMethods_NO_ROUTING_NUMBER", "[PROPERTIES;EDPPaymentMethods_NO_ROUTING_NUMBER;No check routing number entered]");
+		CheckoutPayments.setErrorMessage("EDPPaymentMethods_NO_BANK_ACCOUNT_NO", "[PROPERTIES;EDPPaymentMethods_NO_BANK_ACCOUNT_NO;No Bank account number entered]");
+		CheckoutPayments.setErrorMessage("PROMOTION_CODE_EMPTY", "[PROPERTIES;PROMOTION_CODE_EMPTY;Please enter the promotional code]");
+		CheckoutPayments.setErrorMessage("PO_NUMBER", null);
+		CheckoutPayments.setErrorMessage("ERROR_PONumberEmpty", "???ERROR_PONumberEmpty???");
+		CheckoutPayments.setErrorMessage("ERROR_PONumberTooLong", "???ERROR_PONumberTooLong???");
+		CheckoutPayments.setLocale('en-us');
+		CheckoutPayments.initializeOverallPaymentObjects();
+		CheckoutPayments.initializePaymentAreaDataDirtyFlags();
+		wc.render.declareContext("paymentContext", {payment1: "empty", payment2: "empty", payment3: "empty", currentAreaNumber: "1", billingMode1: "none", billingMode2: "none", billingMode3: "none",currentTotal:"0"},	"");
+	});
+</script>
+<!-- Declare the payment area controller associated with the paymentContext.. when the context changes
+this controller will be used and the paymentArea div will be populated with the required JSP file, based on the
+selection made...ex: if Visa brand is selected in payment1, then paymentArea1 will get populated with contents of
+Visa.jsp -->
+<!-- There will be three controllers by default.. paymentAreaController1,paymentAreaController2 and paymentAreaController3
+When paymentAreaController1 changes, the payment1 property of the context will be updated... So in that case for paymentAreaController1,
+controller.testForChangedRC(["payment1"])) will return true..and then we check for payment1 type ..if its VISA, then we load
+Visa.jsp.. similarly it works for other controllers -->
+<script type="text/javascript">
+dojo.addOnLoad(function() { 
+	wc.render.declareRefreshController({
+		id: "paymentAreaController1",
+		renderContext: wc.render.getContextById("paymentContext"),
+		url: "",
+		formId: ""
+		,modelChangedHandler: function(message, widget) {
+			var controller = this;
+			var renderContext = this.renderContext;
+		}
+		,renderContextChangedHandler: function(message, widget) {
+			var controller = this;
+			var renderContext = this.renderContext;
+				if (renderContext.properties.currentPaymentArea == 1) {
+					if ((controller.testForChangedRC(["payment1"])  || controller.testForChangedRC(["paymentTCId1"])
+						|| (controller.testForChangedRC(["piAmount"])) && supportPaymentTypePromotions )
+					) {
+						if (renderContext.properties.payment1 == "empty") {
+							viewName = "EmptySnippetView";
+						} else {
+							viewName = paymentSnippetsURLMap[renderContext.properties.payment1];
+						}
+						controller.url = viewName + '?storeId=10152&catalogId=10001&langId=-1';
+						if (supportPaymentTypePromotions) {									
+							if (CheckoutPayments.numberOfPaymentMethods != 1) {
+								widget.refresh(renderContext.properties);
+							} else if (CheckoutPayments.numberOfPaymentMethods == 1 && 1 < 2) {
+								widget.refresh(renderContext.properties);
+							}
+						} else {
+							widget.refresh(renderContext.properties);
+						}
+				  }
+				}
+		}
+		,postRefreshHandler: function(widget) {
+			/**
+				if supportPaymentTypePromotions is true, CheckoutPayments.loadPaymentSnippet should have been called to 
+				reload the entire payment refresh area. This will also refresh the amount field. Hence, we don't need to
+				call update amount field again	(which will trigger a call to CheckoutPayments.loadPaymentSnippet ).
+			**/
+			if (!supportPaymentTypePromotions) { 
+				var orderTotal = dojo.byId("OrderTotalAmount").value;
+				CheckoutPayments.updateAmountFields(orderTotal);
+			}
+			cursor_clear();
+		}
+	});
+});
+</script>
+<script type="text/javascript">
+dojo.addOnLoad(function() { 
+	wc.render.declareRefreshController({
+		id: "paymentAreaController2",
+		renderContext: wc.render.getContextById("paymentContext"),
+		url: "",
+		formId: ""
+		,modelChangedHandler: function(message, widget) {
+			var controller = this;
+			var renderContext = this.renderContext;
+		}
+		,renderContextChangedHandler: function(message, widget) {
+			var controller = this;
+			var renderContext = this.renderContext;
+				if (renderContext.properties.currentPaymentArea == 2) {
+					if ((controller.testForChangedRC(["payment2"])  || controller.testForChangedRC(["paymentTCId2"])
+						|| (controller.testForChangedRC(["piAmount"])) && supportPaymentTypePromotions )
+					) {
+						if (renderContext.properties.payment2 == "empty") {
+							viewName = "EmptySnippetView";
+						} else {
+							viewName = paymentSnippetsURLMap[renderContext.properties.payment2];
+						}
+						controller.url = viewName + '?storeId=10152&catalogId=10001&langId=-1';
+						if (supportPaymentTypePromotions) {									
+							if (CheckoutPayments.numberOfPaymentMethods != 1) {
+								widget.refresh(renderContext.properties);
+							} else if (CheckoutPayments.numberOfPaymentMethods == 1 && 2 < 2) {
+								widget.refresh(renderContext.properties);
+							}
+						} else {
+							widget.refresh(renderContext.properties);
+						}
+				  }
+				}
+		}
+		,postRefreshHandler: function(widget) {
+			/**
+				if supportPaymentTypePromotions is true, CheckoutPayments.loadPaymentSnippet should have been called to 
+				reload the entire payment refresh area. This will also refresh the amount field. Hence, we don't need to
+				call update amount field again	(which will trigger a call to CheckoutPayments.loadPaymentSnippet ).
+			**/
+			if (!supportPaymentTypePromotions) { 
+				var orderTotal = dojo.byId("OrderTotalAmount").value;
+				CheckoutPayments.updateAmountFields(orderTotal);
+			}
+			cursor_clear();
+		}
+	});
+});
+</script>
+<script type="text/javascript">
+dojo.addOnLoad(function() { 
+	wc.render.declareRefreshController({
+		id: "paymentAreaController3",
+		renderContext: wc.render.getContextById("paymentContext"),
+		url: "",
+		formId: ""
+		,modelChangedHandler: function(message, widget) {
+			var controller = this;
+			var renderContext = this.renderContext;
+		}
+		,renderContextChangedHandler: function(message, widget) {
+			var controller = this;
+			var renderContext = this.renderContext;
+				if (renderContext.properties.currentPaymentArea == 3) {
+					if ((controller.testForChangedRC(["payment3"])  || controller.testForChangedRC(["paymentTCId3"])
+						|| (controller.testForChangedRC(["piAmount"])) && supportPaymentTypePromotions )
+					) {
+						if (renderContext.properties.payment3 == "empty") {
+							viewName = "EmptySnippetView";
+						} else {
+							viewName = paymentSnippetsURLMap[renderContext.properties.payment3];
+						}
+						controller.url = viewName + '?storeId=10152&catalogId=10001&langId=-1';
+						if (supportPaymentTypePromotions) {									
+							if (CheckoutPayments.numberOfPaymentMethods != 1) {
+								widget.refresh(renderContext.properties);
+							} else if (CheckoutPayments.numberOfPaymentMethods == 1 && 3 < 2) {
+								widget.refresh(renderContext.properties);
+							}
+						} else {
+							widget.refresh(renderContext.properties);
+						}
+				  }
+				}
+		}
+		,postRefreshHandler: function(widget) {
+			/**
+				if supportPaymentTypePromotions is true, CheckoutPayments.loadPaymentSnippet should have been called to 
+				reload the entire payment refresh area. This will also refresh the amount field. Hence, we don't need to
+				call update amount field again	(which will trigger a call to CheckoutPayments.loadPaymentSnippet ).
+			**/
+			if (!supportPaymentTypePromotions) { 
+				var orderTotal = dojo.byId("OrderTotalAmount").value;
+				CheckoutPayments.updateAmountFields(orderTotal);
+			}
+			cursor_clear();
+		}
+	});
+});
+</script>
+<script type="text/javascript">
+	wc.render.declareRefreshController({
+			id: "orderTotalController",
+			renderContext: wc.render.getContextById("paymentContext"),
+			url: "", //not used. see CheckoutPayments.getTotalInJSON()
+			formId: ""
+			,modelChangedHandler: function(message, widget) {
+				var controller = this;
+				var renderContext = this.renderContext;
+				if(message.actionId in order_updated || message.actionId == 'OrderItemAddressShipMethodUpdate' || message.actionId == 'AjaxPrepareOrderForShipChargeUpdate'
+					|| message.actionId == 'OrderItemAddressShipInstructionsUpdate' || message.actionId == 'OrderItemAddressShipInstructionsUpdate1' || message.actionId == 'AjaxUpdateOrderAfterAddressUpdate'
+					|| message.actionId == 'AjaxDeleteOrderItemForShippingBillingPage' || message.actionId == 'AjaxUpdateOrderItemsAddressId'){
+					//updating the total
+					CheckoutPayments.getTotalInJSON();
+				}
+			}
+		});
+</script>
+<!-- We will submit the order in the next page..For now prepare the order and then start the checkOut process..In checkOut process
+add all the payment instructions and then redirect user to Order Summary Page.. There we will submit the order and get back
+the final confirmation -->
+<!-- BillingAddressDropDownDisplay.jspf uses this URL and rendercontext and refreshController -->
+
+<script type="text/javascript">
+wc.render.declareRefreshController({
+	id: "billingAdddressDisplayAreaController",
+	renderContext: wc.render.getContextById("billingAddressDropDownBoxContext"),
+	url: "https:///webapp/wcs/stores/servlet/AjaxAddressDisplayView?catalogId=10001&langId=-1&storeId=10152",
+	formId: ""
+	,renderContextChangedHandler: function(message, widget) {
+		var controller = this;
+		var renderContext = this.renderContext;
+		var areaNumber = renderContext.properties["areaNumber"];	
+		var objectId = widget.objectId;
+		if (controller.testForChangedRC(["billingAddress"+areaNumber]) && objectId.charAt(objectId.length-1) == areaNumber) {
+				var addressId = renderContext.properties["billingAddress"+areaNumber];
+				widget.refresh({"addressId": addressId});
+			}
+		}
+	,postRefreshHandler: function(widget) {
+		var controller = this;
+		var renderContext = this.renderContext;
+		//clears the progress bar set from billingdropdowndisplay.jsp
+		cursor_clear();
+	}
+});
+</script>
+	<div dojoType="wc.widget.RefreshArea" id="orderTotalAmountArea" widgetId="orderTotalAmountArea" controllerId="orderTotalController" ></div>
+	<script type="text/javascript">dojo.addOnLoad(function() { 
+		parseWidget("orderTotalAmountArea"); 
+	});</script>
+{% include 'POSnippet.jspf.twig' %}
+
+	<div id="paymentSection1" style="display:block" >
+		<div id="WC_CheckoutPaymentsAndBillingAddressf_div_1_1">
+			<div id="billing_1" class="billing">
+					<!-- Payment method number (payment1, payment2...) will be shown only if there are more than 1 payments..-->
+
+					<div id="paymentHeading1" class="payment_heading"> 
+						[PROPERTIES;PAYMENT_CAPS;PAYMENT]
+						<span id="numOfPaymentsIndicator1"> 1:</span>
+					</div>
+				<form name="PaymentForm1" id="PaymentForm1" method="post" action="" onsubmit="javascript: return false;">
+					<input type="hidden" value="" id="quickCheckoutProfileForPayment_1" name="quickCheckoutProfileForPayment"/>
+					<input type="hidden" value="" id="selectedAddressId_1" name="selectedAddressId_1" />
+					<input type="hidden" name="authToken" value="6564%2ciEHy%2bGBaq5UxrnUMsy1H07G3qpg%3d" id="WC_CheckoutPaymentsAndBillingAddressf_input_authToken_1"/>
+					<input type="hidden" name="piId" value="" id="WC_CheckoutPaymentsAndBillingAddressf_piId_1"/>
+					<input type="hidden" name="paymentDataEditable" value="" id="WC_CheckoutPaymentsAndBillingAddressf_paymentDataEditable_1"/>
+					<input type="hidden" name="orderId" value="17087" id="WC_CheckoutPaymentsAndBillingAddressf_orderId_1"/>
+					<div id="billingAddress1" class="billing_address_container">
+						<div dojoType="wc.widget.RefreshArea" id = "billingAddressSelectBoxArea_1" widgetId="billingAddressSelectBoxArea_1" objectId='1' controllerId="billingAddressSelectBoxAreaController" >	
+{{ include BillingAddressDropDownDisplay.jsp.twig %}
+
+						</div>
+					</div>
+					<script type="text/javascript">
+						dojo.addOnLoad(function() { 
+							var widgetText = "billingAddressSelectBoxArea_" + "1";
+							parseWidget(widgetText);
+							CheckoutPayments.setNumPaymentIndicator();
+						});
+					</script>
+					<div class="billing_method" id="WC_CheckoutPaymentsAndBillingAddressf_div_2_1">
+						<p class="title">[PROPERTIES;BILL_BILLING_METHOD_COLON;Billing Method:]</p>
+						<label for="payMethodId_1"><span class="spanacce">[PROPERTIES;ACCE_BILLING_METHOD2;Billing Method.  Press the Up or Down Arrow keys to navigate through the billing methods for Payment 1. Press Enter key to select a billing method. The payment input field will be updated to match your selection. Then press the Tab key to get to the payment input field.]</span></label>
+						<p>
+							<input type="hidden" name="storeId" value="10152" id="WC_CheckoutPaymentsAndBillingAddressf_inputs_1_1"/>
+							<input type="hidden" name="catalogId" value="10001" id="WC_CheckoutPaymentsAndBillingAddressf_inputs_2_1"/>
+							<input type="hidden" name="langId" value="-1" id="WC_CheckoutPaymentsAndBillingAddressf_inputs_3_1"/>
+							<input type="hidden" name="existingPiId" value="" id="WC_CheckoutPaymentsAndBillingAddressf_inputs_4_1"/>
+							<input type="hidden" name="curr_year" value="2012" id="WC_CheckoutPaymentsAndBillingAddressf_inputs_5_1"/>
+							<input type="hidden" name="curr_month" value="7" id="WC_CheckoutPaymentsAndBillingAddressf_inputs_6_1"/>
+							<input type="hidden" name="curr_date" value="26" id="WC_CheckoutPaymentsAndBillingAddressf_inputs_7_1"/>
+							<!-- Payment type promotion: onchange call the function CheckoutPayments.updateUnboundPaymentToOrder(); -->
+
+							<select class="drop_down_billing" name="payMethodId" id="payMethodId_1" 
+								onchange="JavaScript:this.blur(); 
+								CheckoutHelperJS.setOrderId('17087');
+								if ( (typeof(supportPaymentTypePromotions) == 'undefined') || (typeof(supportPaymentTypePromotions) != 'undefined' && !supportPaymentTypePromotions) ) { 
+									CheckoutPayments.loadPaymentSnippet(this, 1); 
+									CheckoutPayments.updatePaymentObject(1, 'payMethodId');
+								}
+									if (typeof(supportPaymentTypePromotions) != 'undefined' && supportPaymentTypePromotions) {
+										if (CheckoutPayments.numberOfPaymentMethods == 1) {
+											CheckoutPayments.updateUnboundPaymentToOrder(1);
+										} else {
+											CheckoutPayments.loadPaymentSnippet(this, 1); 
+											CheckoutPayments.updatePaymentObject(1, 'payMethodId');
+										}
+									}
+			                   ">
+								<!--  Add one default Payment select option -->
+
+								<option value="empty" selected="selected">[PROPERTIES;BILL_BILLING_SELECT_BILLING_METHOD;Select billing method]</option>
+								<!-- Loop through available payment options and populate the select box -->
+
+										<option  value="COD">Cash on delivery </option>
+										<option  value="BillMeLater">Bill me later </option>
+										<option  value="Master Card">MasterCard Credit Card </option>
+										<option  value="PayLater">Pay later </option>
+										<option  value="VISA">VISA Credit Card </option>
+										<option  value="Check">Check </option>
+										<option  value="AMEX">American Express Credit Card </option>
+							</select>
+							<input type="hidden" name="buyerOrgDN" value=""/>
+							<!-- This div is for Web2.0 Style -->
+
+								<div dojoType="wc.widget.RefreshArea" widgetId="paymentArea1" controllerId="paymentAreaController1" id="paymentArea1">
+{{ include Empty.jsp.twig %}
+
+								</div>
+								<script type="text/javascript">
+									dojo.addOnLoad(function() { 
+										var widgetText = "paymentArea" + "1";
+										parseWidget(widgetText);
+									});
+								</script>
+							<!-- This div is for Web1.0 style.. initially this div will be empty..when the form is submitted the innerHTML of the selected payment form div (defined below) will be set to this div's inner HTML .. bcs if all the divs are defined here and even if they are hidden, the fields inside this div will be submitted as part of the form submission.. we dont want to submit fields of all the payment options..so this workaround...-->
+
+						</p>
+					</div>
+					<!-- Payment Method Ends Here -->
+
+					<br clear="all" />
+				</form>
+			</div>
+		</div>
+	</div>
+	<div id="paymentSection2" style="display:none" >
+		<div id="WC_CheckoutPaymentsAndBillingAddressf_div_1_2">
+			<div id="billing_2" class="billing billing_border">
+					<!-- Payment method number (payment1, payment2...) will be shown only if there are more than 1 payments..-->
+
+					<div id="paymentHeading2" class="payment_heading"> 
+						[PROPERTIES;PAYMENT_CAPS;PAYMENT]
+						<span id="numOfPaymentsIndicator2"> 2:</span>
+					</div>
+				<form name="PaymentForm2" id="PaymentForm2" method="post" action="" onsubmit="javascript: return false;">
+					<input type="hidden" value="" id="quickCheckoutProfileForPayment_2" name="quickCheckoutProfileForPayment"/>
+					<input type="hidden" value="" id="selectedAddressId_2" name="selectedAddressId_2" />
+					<input type="hidden" name="authToken" value="6564%2ciEHy%2bGBaq5UxrnUMsy1H07G3qpg%3d" id="WC_CheckoutPaymentsAndBillingAddressf_input_authToken_2"/>
+					<input type="hidden" name="piId" value="" id="WC_CheckoutPaymentsAndBillingAddressf_piId_2"/>
+					<input type="hidden" name="paymentDataEditable" value="" id="WC_CheckoutPaymentsAndBillingAddressf_paymentDataEditable_2"/>
+					<input type="hidden" name="orderId" value="17087" id="WC_CheckoutPaymentsAndBillingAddressf_orderId_2"/>
+					<div id="billingAddress2" class="billing_address_container">
+						<div dojoType="wc.widget.RefreshArea" id = "billingAddressSelectBoxArea_2" widgetId="billingAddressSelectBoxArea_2" objectId='2' controllerId="billingAddressSelectBoxAreaController" >	
+{{ include BillingAddressDropDownDisplay.jsp.twig %}
+
+						</div>
+					</div>
+					<script type="text/javascript">
+						dojo.addOnLoad(function() { 
+							var widgetText = "billingAddressSelectBoxArea_" + "2";
+							parseWidget(widgetText);
+							CheckoutPayments.setNumPaymentIndicator();
+						});
+					</script>
+					<div class="billing_method" id="WC_CheckoutPaymentsAndBillingAddressf_div_2_2">
+						<p class="title">[PROPERTIES;BILL_BILLING_METHOD_COLON;Billing Method:]</p>
+						<label for="payMethodId_2"><span class="spanacce">[PROPERTIES;ACCE_BILLING_METHOD2;Billing Method.  Press the Up or Down Arrow keys to navigate through the billing methods for Payment 2. Press Enter key to select a billing method. The payment input field will be updated to match your selection. Then press the Tab key to get to the payment input field.]</span></label>
+						<p>
+							<input type="hidden" name="storeId" value="10152" id="WC_CheckoutPaymentsAndBillingAddressf_inputs_1_2"/>
+							<input type="hidden" name="catalogId" value="10001" id="WC_CheckoutPaymentsAndBillingAddressf_inputs_2_2"/>
+							<input type="hidden" name="langId" value="-1" id="WC_CheckoutPaymentsAndBillingAddressf_inputs_3_2"/>
+							<input type="hidden" name="existingPiId" value="" id="WC_CheckoutPaymentsAndBillingAddressf_inputs_4_2"/>
+							<input type="hidden" name="curr_year" value="2012" id="WC_CheckoutPaymentsAndBillingAddressf_inputs_5_2"/>
+							<input type="hidden" name="curr_month" value="7" id="WC_CheckoutPaymentsAndBillingAddressf_inputs_6_2"/>
+							<input type="hidden" name="curr_date" value="26" id="WC_CheckoutPaymentsAndBillingAddressf_inputs_7_2"/>
+							<!-- Payment type promotion: onchange call the function CheckoutPayments.updateUnboundPaymentToOrder(); -->
+
+							<select class="drop_down_billing" name="payMethodId" id="payMethodId_2" 
+								onchange="JavaScript:this.blur(); 
+								CheckoutHelperJS.setOrderId('17087');
+								if ( (typeof(supportPaymentTypePromotions) == 'undefined') || (typeof(supportPaymentTypePromotions) != 'undefined' && !supportPaymentTypePromotions) ) { 
+									CheckoutPayments.loadPaymentSnippet(this, 2); 
+									CheckoutPayments.updatePaymentObject(2, 'payMethodId');
+								}
+									if (typeof(supportPaymentTypePromotions) != 'undefined' && supportPaymentTypePromotions) {
+										if (CheckoutPayments.numberOfPaymentMethods == 1) {
+											CheckoutPayments.updateUnboundPaymentToOrder(2);
+										} else {
+											CheckoutPayments.loadPaymentSnippet(this, 2); 
+											CheckoutPayments.updatePaymentObject(2, 'payMethodId');
+										}
+									}
+			                   ">
+								<!--  Add one default Payment select option -->
+
+								<option value="empty" selected="selected">[PROPERTIES;BILL_BILLING_SELECT_BILLING_METHOD;Select billing method]</option>
+								<!-- Loop through available payment options and populate the select box -->
+
+										<option  value="COD">Cash on delivery </option>
+										<option  value="BillMeLater">Bill me later </option>
+										<option  value="Master Card">MasterCard Credit Card </option>
+										<option  value="PayLater">Pay later </option>
+										<option  value="VISA">VISA Credit Card </option>
+										<option  value="Check">Check </option>
+										<option  value="AMEX">American Express Credit Card </option>
+							</select>
+							<input type="hidden" name="buyerOrgDN" value=""/>
+							<!-- This div is for Web2.0 Style -->
+
+								<div dojoType="wc.widget.RefreshArea" widgetId="paymentArea2" controllerId="paymentAreaController2" id="paymentArea2">
+{{ include Empty.jsp.twig %}
+
+								</div>
+								<script type="text/javascript">
+									dojo.addOnLoad(function() { 
+										var widgetText = "paymentArea" + "2";
+										parseWidget(widgetText);
+									});
+								</script>
+							<!-- This div is for Web1.0 style.. initially this div will be empty..when the form is submitted the innerHTML of the selected payment form div (defined below) will be set to this div's inner HTML .. bcs if all the divs are defined here and even if they are hidden, the fields inside this div will be submitted as part of the form submission.. we dont want to submit fields of all the payment options..so this workaround...-->
+
+						</p>
+					</div>
+					<!-- Payment Method Ends Here -->
+
+					<br clear="all" />
+				</form>
+			</div>
+		</div>
+	</div>
+	<div id="paymentSection3" style="display:none" >
+		<div id="WC_CheckoutPaymentsAndBillingAddressf_div_1_3">
+			<div id="billing_3" class="billing billing_border">
+					<!-- Payment method number (payment1, payment2...) will be shown only if there are more than 1 payments..-->
+
+					<div id="paymentHeading3" class="payment_heading"> 
+						[PROPERTIES;PAYMENT_CAPS;PAYMENT]
+						<span id="numOfPaymentsIndicator3"> 3:</span>
+					</div>
+				<form name="PaymentForm3" id="PaymentForm3" method="post" action="" onsubmit="javascript: return false;">
+					<input type="hidden" value="" id="quickCheckoutProfileForPayment_3" name="quickCheckoutProfileForPayment"/>
+					<input type="hidden" value="" id="selectedAddressId_3" name="selectedAddressId_3" />
+					<input type="hidden" name="authToken" value="6564%2ciEHy%2bGBaq5UxrnUMsy1H07G3qpg%3d" id="WC_CheckoutPaymentsAndBillingAddressf_input_authToken_3"/>
+					<input type="hidden" name="piId" value="" id="WC_CheckoutPaymentsAndBillingAddressf_piId_3"/>
+					<input type="hidden" name="paymentDataEditable" value="" id="WC_CheckoutPaymentsAndBillingAddressf_paymentDataEditable_3"/>
+					<input type="hidden" name="orderId" value="17087" id="WC_CheckoutPaymentsAndBillingAddressf_orderId_3"/>
+					<div id="billingAddress3" class="billing_address_container">
+						<div dojoType="wc.widget.RefreshArea" id = "billingAddressSelectBoxArea_3" widgetId="billingAddressSelectBoxArea_3" objectId='3' controllerId="billingAddressSelectBoxAreaController" >	
+{{ include BillingAddressDropDownDisplay.jsp.twig %}
+
+						</div>
+					</div>
+					<script type="text/javascript">
+						dojo.addOnLoad(function() { 
+							var widgetText = "billingAddressSelectBoxArea_" + "3";
+							parseWidget(widgetText);
+							CheckoutPayments.setNumPaymentIndicator();
+						});
+					</script>
+					<div class="billing_method" id="WC_CheckoutPaymentsAndBillingAddressf_div_2_3">
+						<p class="title">[PROPERTIES;BILL_BILLING_METHOD_COLON;Billing Method:]</p>
+						<label for="payMethodId_3"><span class="spanacce">[PROPERTIES;ACCE_BILLING_METHOD2;Billing Method.  Press the Up or Down Arrow keys to navigate through the billing methods for Payment 3. Press Enter key to select a billing method. The payment input field will be updated to match your selection. Then press the Tab key to get to the payment input field.]</span></label>
+						<p>
+							<input type="hidden" name="storeId" value="10152" id="WC_CheckoutPaymentsAndBillingAddressf_inputs_1_3"/>
+							<input type="hidden" name="catalogId" value="10001" id="WC_CheckoutPaymentsAndBillingAddressf_inputs_2_3"/>
+							<input type="hidden" name="langId" value="-1" id="WC_CheckoutPaymentsAndBillingAddressf_inputs_3_3"/>
+							<input type="hidden" name="existingPiId" value="" id="WC_CheckoutPaymentsAndBillingAddressf_inputs_4_3"/>
+							<input type="hidden" name="curr_year" value="2012" id="WC_CheckoutPaymentsAndBillingAddressf_inputs_5_3"/>
+							<input type="hidden" name="curr_month" value="7" id="WC_CheckoutPaymentsAndBillingAddressf_inputs_6_3"/>
+							<input type="hidden" name="curr_date" value="26" id="WC_CheckoutPaymentsAndBillingAddressf_inputs_7_3"/>
+							<!-- Payment type promotion: onchange call the function CheckoutPayments.updateUnboundPaymentToOrder(); -->
+
+							<select class="drop_down_billing" name="payMethodId" id="payMethodId_3" 
+								onchange="JavaScript:this.blur(); 
+								CheckoutHelperJS.setOrderId('17087');
+								if ( (typeof(supportPaymentTypePromotions) == 'undefined') || (typeof(supportPaymentTypePromotions) != 'undefined' && !supportPaymentTypePromotions) ) { 
+									CheckoutPayments.loadPaymentSnippet(this, 3); 
+									CheckoutPayments.updatePaymentObject(3, 'payMethodId');
+								}
+									if (typeof(supportPaymentTypePromotions) != 'undefined' && supportPaymentTypePromotions) {
+										if (CheckoutPayments.numberOfPaymentMethods == 1) {
+											CheckoutPayments.updateUnboundPaymentToOrder(3);
+										} else {
+											CheckoutPayments.loadPaymentSnippet(this, 3); 
+											CheckoutPayments.updatePaymentObject(3, 'payMethodId');
+										}
+									}
+			                   ">
+								<!--  Add one default Payment select option -->
+
+								<option value="empty" selected="selected">[PROPERTIES;BILL_BILLING_SELECT_BILLING_METHOD;Select billing method]</option>
+								<!-- Loop through available payment options and populate the select box -->
+
+										<option  value="COD">Cash on delivery </option>
+										<option  value="BillMeLater">Bill me later </option>
+										<option  value="Master Card">MasterCard Credit Card </option>
+										<option  value="PayLater">Pay later </option>
+										<option  value="VISA">VISA Credit Card </option>
+										<option  value="Check">Check </option>
+										<option  value="AMEX">American Express Credit Card </option>
+							</select>
+							<input type="hidden" name="buyerOrgDN" value=""/>
+							<!-- This div is for Web2.0 Style -->
+
+								<div dojoType="wc.widget.RefreshArea" widgetId="paymentArea3" controllerId="paymentAreaController3" id="paymentArea3">
+{{ include Empty.jsp.twig %}
+
+								</div>
+								<script type="text/javascript">
+									dojo.addOnLoad(function() { 
+										var widgetText = "paymentArea" + "3";
+										parseWidget(widgetText);
+									});
+								</script>
+							<!-- This div is for Web1.0 style.. initially this div will be empty..when the form is submitted the innerHTML of the selected payment form div (defined below) will be set to this div's inner HTML .. bcs if all the divs are defined here and even if they are hidden, the fields inside this div will be submitted as part of the form submission.. we dont want to submit fields of all the payment options..so this workaround...-->
+
+						</p>
+					</div>
+					<!-- Payment Method Ends Here -->
+
+					<br clear="all" />
+				</form>
+			</div>
+		</div>
+	</div>
+ 

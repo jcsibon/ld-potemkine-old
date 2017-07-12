@@ -1,0 +1,225 @@
+ 
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" onkeydown='javascript:activateHighlight(event);'>
+	<head>
+		<title>
+			Shipping and Billing Display
+		</title>
+		<meta http-equiv="content-type" content="application/xhtml+xml" />
+		<meta http-equiv="cache-control" content="max-age=300" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+        
+
+{% include 'CommonAssetsForHeader.jspf.twig' %}
+	</head>
+	
+	<body>
+		<div id="wrapper" class="ucp_active"> <!-- User Control Panel is ON-->
+
+			
+
+
+
+{{ include HeaderDisplay.jspf.twig %}
+
+<!-- END Header.jsp -->
+
+		</div>
+		<div id="OrderShippingBillingErrorArea" class="nodisplay" role="alert" aria-describedby="WC_OrderShippingBillingDetails_div_3">
+			<div id="WC_OrderShippingBillingDetails_div_1">
+				<div class="body" id="WC_OrderShippingBillingDetails_div_2">
+					<div class="left" id="WC_OrderShippingBillingDetails_div_3">
+						[PROPERTIES;SHIP_PROBLEM_DESC;Click on the 'Go Back' button to return to the previous page and correct the problems before proceeding with the checkout process.]
+					</div>
+					<br clear="all" />
+					<div class="button_align" id="WC_OrderShippingBillingDetails_div_4">
+						<a role="button" class="button_primary" id="WC_OrderShippingBillingDetails_links_1" tabindex="0" href="javascript:setPageLocation('https:///webapp/wcs/stores/servlet/OrderCalculate?calculationUsageId=-1&amp;updatePrices=1&amp;catalogId=10001&amp;errorViewName=AjaxCheckoutDisplayView&amp;orderId=.&amp;langId=-1&amp;storeId=10152&amp;URL=AjaxCheckoutDisplayView')">
+							<div class="left_border"></div>
+							<div class="button_text">[PROPERTIES;SHIP_GO_BACK;Go Back]<span class="spanacce">[PROPERTIES;Checkout_ACCE_back_shopping_cart;to shopping cart page]</span></div>
+							<div class="right_border"></div>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+				<script type="text/javascript">
+					wc.render.declareRefreshController({
+						id: "editShippingAdddressAreaController",
+						renderContext: wc.render.getContextById("editShippingAddressContext"),
+						url: "https:///webapp/wcs/stores/servlet/AddressEditView?catalogId=10001&langId=-1&storeId=10152",
+						formId: ""
+						,modelChangedHandler: function(message, widget) {
+							if('2' == 2){
+								var controller = this;
+								var renderContext = this.renderContext;
+								if (message.actionId in address_updated){
+									//This means, invokeService for Address Add/Edit has been called..so update our select box area
+									wc.render.updateContext('contextForMainAndAddressDiv', {'showArea':'mainContents','hideArea':'editAddressContents'});
+									selectedAddressId = message.addressId;
+									CheckoutHelperJS.updateAddressIdOFItemsOnCreateEditAddress(selectedAddressId);
+									cursor_clear();  
+								} 
+							}
+						}
+						,renderContextChangedHandler: function(message, widget) {
+							var controller = this;
+							var renderContext = this.renderContext;
+							if (controller.testForChangedRC(["shippingAddress"])) {
+								var addressId = renderContext.properties["shippingAddress"];
+								//reset the addressID..so that when user selects create address next time it works properly..
+								renderContext.properties["shippingAddress"] = 0;
+								var addressType = renderContext.properties["addressType"];
+								widget.refresh({"addressId": addressId,"addressType":addressType});
+							}
+						}
+						,postRefreshHandler: function(widget) {
+							var controller = this;
+							var renderContext = this.renderContext;
+							cursor_clear();
+							AddressHelper.loadStatesUI('shopcartAddressForm','','stateDiv','state', true);
+						}
+					});
+				</script>
+				<div id="content_wrapper" class="content_wrapper_position" dojoType="wc.widget.RefreshArea" widgetId="content_wrapper" controllerId="controllerForMainAndAddressDiv" role="main">
+					<div class="content_wrapper">
+						<div class="content_left_shadow">
+							<div class="content_right_shadow">
+							<!-- Content Start -->
+
+							<!-- There are two parts in the content (editAddressContents and mainContents Div)..One Div contains the entire checkoutContents (shopping cart, shipping address, billing info and other things.. The second DIV contains only edit Address page .. On click of Edit Address button, the first div will be hidden and edit address page div will be displayed...
+								Instead of having both the div's in same page, we can make a call to server on click of edit button and get the edit Address page..But the problem in that case is, if user clicks on Cancel/Submit button after changing the address details, we update the server with the changes and again redirect the user to Shipping and Billing address page which results in resetting any changes made in shipping / billing details. User will loose all the changes made in shipping/billing page before clicking on edit address button..To avoid this situation we have both the DIV's defined in this page and use hide/show logic here..-->
+								<div class="main_content" style="display:block">
+									<div class="container_full_width">
+										<!-- Breadcrumb Start -->
+
+										<div id="checkout_crumb">
+											<div class="crumb" id="WC_ShipmentDisplay_div_4">
+													<a href="ShoppingCart.html" id="WC_ShipmentDisplay_links_2">
+														<span class="step_off">[PROPERTIES;BCT_SHOPPING_CART;Shopping Cart]</span>
+													</a> 
+													<span class="step_arrow"></span>
+															<span class="step_on">[PROPERTIES;BCT_SHIPPING_AND_BILLING;Shipping & Billing Method]</span>
+															<span class="step_arrow"></span>
+													<span class="step_off">[PROPERTIES;BCT_ORDER_SUMMARY;Order Summary]</span>
+											</div>
+										</div>
+						        		<!-- Breadcrumb End -->
+
+									<div id="mainContents" style="display:block">
+										<div id="box">                                          
+{{ include ShippingDetailsDisplay.jsp.twig %}
+
+												<br/>&nbsp;		
+												<div class="main_header" id="WC_ShipmentDisplay_div_22">
+													<div class="left_corner_straight" id="WC_ShipmentDisplay_div_23"></div>
+													<div class="left" id="WC_ShipmentDisplay_div_24"><span aria-level="1" class="main_header_text" role="heading">[PROPERTIES;BILL_BILLING_INFO;Billing Information]</span></div>
+													<div class="right_corner_straight" id="WC_ShipmentDisplay_div_25"></div>
+												</div>
+												<!-- Display drop down box to select number of payment options.. -->
+
+											   			<div class="checkout_subheader" id="WC_ShipmentDisplay_div_26">
+												<div class="left_corner" id="WC_ShipmentDisplay_div_27"></div>
+												<div class="left_drop_down_shipment" id="WC_ShipmentDisplay_div_28">
+													<span class="content_text"><label for="numberOfPaymentMethods">[PROPERTIES;BILL_MULTIPLE_BILLING_MESSAGE;Select the number of payment methods:]</label>
+														<select class="drop_down_billing" name="numberOfPaymentMethods" id="numberOfPaymentMethods" onchange="JavaScript:CheckoutPayments.setNumberOfPaymentMethods(3,this,'paymentSection');CheckoutPayments.reinitializePaymentObjects(this);">
+																<option value="1" selected="selected">
+																	[PROPERTIES;BILL_PAYMENT_OPTIONS;1 Payment method(s)]
+																</option>
+																<option value="2" >
+																	[PROPERTIES;BILL_PAYMENT_OPTIONS;2 Payment method(s)]
+																</option>
+																<option value="3" >
+																	[PROPERTIES;BILL_PAYMENT_OPTIONS;3 Payment method(s)]
+																</option>
+														</select>
+													</span>
+												</div> 
+												<div class="right_corner" id="WC_ShipmentDisplay_div_29"></div>
+												</div>
+												<div class="body shipping_billing_height" id="WC_ShipmentDisplay_div_30">
+{{ include CheckoutPaymentsAndBillingAddress.jspf.twig %}
+
+												</div>
+											<div class="button_footer_line" id="WC_ShipmentDisplay_div_32_1"> 
+												<a role="button" class="button_secondary" id="WC_ShipmentDisplay_links_5" tabindex="0" href="ShoppingCart.html">
+													<div class="left_border"></div>
+													<div class="button_text">[PROPERTIES;BACK;Back]<span class="spanacce">[PROPERTIES;Checkout_ACCE_back_shopping_cart;to shopping cart page]</span></div>
+													<div class="right_border"></div>
+												</a>
+												<a role="button" class="button_primary button_left_padding" id="shippingBillingPageNext" tabindex="0" href="OrderSummary.html">
+													<div class="left_border"></div>
+														<div class="button_text">[PROPERTIES;NEXT;Next]<span class="spanacce">[PROPERTIES;Checkout_ACCE_next_summary;to order summary page]</span></div>
+													<div class="right_border"></div>
+												</a>
+												<span class="button_right_side_message" id="WC_ShipmentDisplay_div_32_3">
+														[PROPERTIES;ORD_MESSAGE;Proceed to your Order Summary.]
+												</span>
+											</div>
+											<div class="espot_checkout_bottom" id="WC_ShipmentDisplay_div_38">
+{{ include CheckoutBottomESpotDisplay.jspf.twig %}
+
+											</div>
+										</div>
+									</div>
+									<!-- Edit address div -->
+
+									<div id="editAddressContents" style="display:none">
+										<!-- Start of second div in this page -->
+
+										<span class="spanacce" id="editShippingAddressArea1_ACCE_Label">[PROPERTIES;Checkout_ACCE_edit_create_address;Edit/Create Address]</span>
+										<div dojoType="wc.widget.RefreshArea" id="editShippingAddressArea1" aria-labelledby="editShippingAddressArea1_ACCE_Label" widgetId="editShippingAddressArea1" controllerId="editShippingAdddressAreaController">
+										</div>
+										<script type="text/javascript">
+											dojo.addOnLoad(function() { 
+												parseWidget("editShippingAddressArea1");
+											});
+										</script>
+									</div>
+									<!-- Main Content End -->
+									
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Main Content End -->
+                           
+				</div>
+				<script type="text/javascript">
+					dojo.addOnLoad(function() { 
+						parseWidget("content_wrapper");
+					});
+				</script>
+	</div>
+	<!-- Footer Start -->
+
+	<div class="footer_wrapper_position">
+{{ include Footer.jsp.twig %}
+
+    </div>
+
+</div>
+
+<!-- END FooterDisplay.jspf -->
+						
+			
+		</div>
+		
+		
+
+	
+
+
+
+
+
+
+
+
+<script type="text/javascript"> function displayHighlightFeatureInHTML(){var all = document.getElementsByTagName('*'); for (var i = 0; i < all.length; i++) { if (all[i].className == 'jspcaption') {all[i].style.display='block';} if (all[i].className == 'highlight') {all[i].style.border='2px dashed red';all[i].style.display='block';} } } function activateHighlight (event){ if(event.ctrlKey){ if(event.altKey){ if(event.keyCode == '72'){ displayHighlightFeatureInHTML(); } } } } </script>
+
+ </body>
+</html>
+
+ 

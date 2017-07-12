@@ -131,7 +131,7 @@ $app->get('article-{articleId}', function($articleId) use($app) {
 });
 
 $app->get('tunnel', function() use($app) {
-  return $app['twig']->render('jsps/_proto.twig');
+  return $app['twig']->render('_proto.twig');
 });
 
 

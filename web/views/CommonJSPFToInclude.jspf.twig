@@ -1,0 +1,109 @@
+ 
+
+	
+
+{% include 'ProgressBar.jspf.twig' %}
+	
+
+
+
+
+{{ include MessageDisplay.jspf.twig %}
+
+	
+
+	<div id="widget_product_comparison_popup" dojoType="dijit.Dialog" closeOnTimeOut="false" title="Product Comparison" style="display:none">
+		<div class="widget_product_comparison_popup widget_site_popup">													
+			<!-- Top Border Styling -->
+			<div class="top">
+				<div class="left_border"></div>
+				<div class="middle"></div>
+				<div class="right_border"></div>
+			</div>
+			<div class="clear_float"></div>
+			
+			<!-- Main Content Area --><div class="middle">
+		<div class="left_border">
+			<div class="right_border">
+				<div class="content">
+					<div class="heading zebra">[PROPERTIES;CPG_COMPARE_LIMIT_MSG;You can compare up to 4 products]</div>
+					
+						
+							<div class="message">[PROPERTIES;CPG_COMPARE_PRODUCT_EMPTY;Your compare zone is empty. If you would like to compare the items, add items to compare.]</div>
+						
+						
+					
+				</div>
+			</div>
+		</div>
+	</div>
+			
+			<div class="clear_float"></div>
+			
+			
+			<!-- Bottom Border Styling -->
+			<div class="bottom">
+				<div class="left_border"></div>
+				<div class="middle"></div>
+				<div class="right_border"></div>
+			</div>
+			<div class="clear_float"></div>
+		</div>
+	</div>
+
+	
+
+<div id="inactivityWarningPopup" dojoType="dijit.Dialog" title="Inactivity Warning Dialog" style="display:none;">
+	<div class="widget_site_popup">
+		<div class="top">
+			<div class="left_border"></div>
+			<div class="middle"></div>
+			<div class="right_border"></div>
+		</div>
+		<div class="clear_float"></div>
+		<div class="middle">
+			<div class="content_left_border">
+				<div class="content_right_border">
+					<div class="content">
+						<a role="button" id="inactivityWarningPopup_close" class="close_acce" title="CLOSE" href="javascript:void(0);" onclick="dijit.byId('inactivityWarningPopup').hide(); if (dialogTimeoutTracker != null) {clearTimeout(dialogTimeoutTracker);}"><img role="button" onmouseover="this.src='../../StoreAssets/B2CAssets/images/colors/color1/close_hover.png'" onmouseout="this.src='../../StoreAssets/B2CAssets/images/colors/color1/close_normal.png'" src="/StoreAssets/B2CAssets/images/colors/color1/close_normal.png" class="closeImg" alt="CLOSE"/></a>
+						<div class="clear_float"></div>
+						<div id="inactivityWarningPopup_body" class="body">
+							<div class="message_icon left">
+								<img class="error_icon" src="/StoreAssets/B2CAssets/images/colors/color1/warning_icon.png" alt="Warning">
+							</div>
+							
+							
+							
+							<div class="message_text left">
+							Your session is about to timeout due to inactivity.  Click OK to extend your time for an additional 30 minutes.
+							</div>
+							<div class="clear_float"></div>
+						</div>
+						<div class="footer">
+							<div class="button_container">
+								<a role="button" aria-labelledby="inactivityWarningPopupOK_Label" id="inactivityWarningPopupOK" href="javascript:void(0);" onclick="dijit.byId('inactivityWarningPopup').hide(); if (dialogTimeoutTracker != null) {clearTimeout(dialogTimeoutTracker);} resetServerInactivity();" class="button_primary">
+									<div class="left_border"></div>
+									<div id="inactivityWarningPopupOK_Label" class="button_text">OK</div>
+									<div class="right_border"></div>
+								</a>
+								<div class="clear_float"></div>
+							</div>
+							<div class="clear_float"></div>
+						</div>
+						<div class="clear_float"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="clear_float"></div>
+		<div class="bottom">
+			<div class="left_border"></div>
+			<div class="middle"></div>
+			<div class="right_border"></div>
+		</div>
+		<div class="clear_float"></div>
+	</div>
+</div>
+	
+	
+ 
