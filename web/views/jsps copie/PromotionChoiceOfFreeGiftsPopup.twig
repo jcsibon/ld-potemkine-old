@@ -1,0 +1,154 @@
+<!-- BEGIN PromotionChoiceOfFreeGiftsPopup.jspf -->
+
+<script type="text/javascript">
+	dojo.addOnLoad(function() { parseWidget("free_gifts_popup"); parseWidget("PromotionFreeGiftsDisplay");});	
+</script>       
+<script type="text/javascript" src="../../StoreAssets/B2CAssets/javascript/CheckoutArea/PromotionChoiceOfFreeGifts.js"></script>
+<div id="free_gifts_popup_main_div">
+	<div title="" widgetid="free_gifts_popup" style="position: absolute; opacity: 1; left: 590px; top: 187px; z-index: 951; display: none;" id="free_gifts_popup" aria-labelledby="free_gifts_popup_title" role="dialog" class="dijitDialog dijitDialogFocused dijitFocused" tabindex="-1" wairole="dialog" waistate="labelledby-free_gifts_popup_title">
+	<div title="Message Dialog" dojoattachpoint="titleBar" class="dijitDialogTitleBar">
+	<span dojoattachpoint="titleNode" class="dijitDialogTitle" id="free_gifts_popup_title"><span>Message Dialog<span title="DIALOG_TITLE_MESSAGE" class="keyIcon"><img src="../../StoreAssets/B2CAssets/images/pencil_blue.png" alt="DIALOG_TITLE_MESSAGE"></span></span></span>
+	<span style="display: none;" dojoattachpoint="closeButtonNode" class="dijitDialogCloseIcon" dojoattachevent="onclick: onCancel" title="Cancel">
+		<span dojoattachpoint="closeText" class="closeText" title="Cancel">x</span>
+	</span>
+	</div>
+		<div style="width: auto; height: auto;" dojoattachpoint="containerNode" class="dijitDialogPaneContent">
+		<!-- Refresh area -->
+
+			<span id="PromotionFreeGiftsDisplay_ACCE_Label" class="spanacce"><span>Free Gift<span title="ACCE_Region_Free_Gift" class="keyIcon"><img src="../../StoreAssets/B2CAssets/images/pencil_blue.png" alt="ACCE_Region_Free_Gift"></span></span></span>
+			<div class="dijitContentPane" role="group" title="" widgetid="PromotionFreeGiftsDisplay" dojotype="wc.widget.RefreshArea" id="PromotionFreeGiftsDisplay" controllerid="PromotionFreeGifts_Controller">
+<!-- BEGIN PromotionChoiceOfFreeGiftsPopupContent.jsp -->
+<span class="highlight">
+<div class="jspcaption" style="display:none">PromotionChoiceOfFreeGiftsPopupContent.jsp</div>
+<script type="text/javascript">
+	dojo.addOnLoad(function() {
+		MessageHelper.setMessage("PROMOTION_FREE_GIFTS_POPUP_ERROR_EXCEED_GIFT_QUANTITY", "[PROPERTIES;PROMOTION_FREE_GIFTS_POPUP_ERROR_EXCEED_GIFT_QUANTITY;You have selected more free gifts than this promotion allows  ]");
+		MessageHelper.setMessage("PROMOTION_FREE_GIFTS_POPUP_NUMBER_OF_SELECTIONS", "[PROPERTIES;PROMOTION_FREE_GIFTS_POPUP_NUMBER_OF_SELECTIONS;You have selected %0 free gifts]");
+		MessageHelper.setMessage("PROMOTION_FREE_GIFTS_POPUP_NUMBER_OF_SELECTIONS_ONE", "[PROPERTIES;PROMOTION_FREE_GIFTS_POPUP_NUMBER_OF_SELECTIONS_ONE;You have selected 1 free gift ]");                            
+	});
+</script>
+<div class="widget_site_popup" role="dialog" aria-labelledby="popupHeader">
+	<div class="top">
+		<div class="left_border"></div>
+		<div class="middle"></div>
+		<div class="right_border"></div>
+	</div>
+	<div class="clear_float"></div>
+	<div class="middle">
+		<div class="content_left_border">
+			<div class="content_right_border">
+				<div class="content">
+							<div class="header" id="popupHeader">
+								<span>
+											[PROPERTIES;PROMOTION_FREE_GIFTS_POPUP_PICK_GIFT;Select your free gift]
+								</span>
+								<a role="button" id="promotionChoice_closeLink" class="close" title="[PROPERTIES;PROMOTION_FREE_GIFTS_POPUP_CLOSE;close]" onclick="javascript: document.getElementById('free_gifts_popup').style.display='none';"></a>
+								<div class="clear_float"></div>
+							</div>
+							<div class="body">              
+								<div id="radio_choices">
+									<div id="WC_PromotionChoiceOfFreeGiftsPopupContent_div_2">
+										<input name="choose_gift_type" id="free_item" checked="checked" onclick="PromotionChoiceOfFreeGiftsJS.rewardChoicesEnabledStatus();" type="radio">              
+												<label for="free_item">[PROPERTIES;PROMOTION_FREE_GIFTS_POPUP_PICK_ONE_GIFT;I would like the following free gift]</label>
+									</div>
+									<div id="WC_PromotionChoiceOfFreeGiftsPopupContent_div_3">
+										<input name="choose_gift_type" id="no_gifts" onclick="PromotionChoiceOfFreeGiftsJS.rewardChoicesEnabledStatus();" type="radio"> 
+												<label for="no_gifts">[PROPERTIES;PROMOTION_FREE_GIFTS_POPUP_PICK_NO_GIFT;I do not want the free gift]</label>
+									</div>
+								</div>
+								<div id="free_gifts_table">
+									<div class="gifts_wrapper" id="WC_PromotionChoiceOfFreeGiftsPopupContent_div_4">
+												<div class="gift_item_container" id="WC_PromotionChoiceOfFreeGiftsPopupContent_div_5_1_1">
+													<input name="catalogEntryID" value="10291" id="CatalogEntryID_1" type="hidden">
+													<input name="giftItemQuantity" value="1" id="GiftItemQuantity_1" type="hidden">
+															<div class="selection" id="WC_PromotionChoiceOfFreeGiftsPopupContent_div_6_1_1"><input id="SelectFreeGift_1" name="freeGift" onclick="PromotionChoiceOfFreeGiftsJS.checkNumberOfAllowedItems('1.0');" type="radio"></div>
+													<div class="image" id="WC_PromotionChoiceOfFreeGiftsPopupContent_div_7_1_1">
+																<img src="../../StoreAssets/B2CAssets/images/catalog/apparel/women/womens_dresses_160x160/WD_032_a_blue.jpg" name="catEntryImage" alt="Albini Sleeveless Silk Dress [PROPERTIES;Checkout_ACCE_for;for] " escapexml="false" height="70" width="70">
+													</div>
+													<div class="product_info" id="WC_PromotionChoiceOfFreeGiftsPopupContent_div_8_1_1">        
+														<h2><label for="SelectFreeGift_1">Albini Sleeveless Silk Dress</label></h2>
+														<p>Silk sheath cocktail dress with straight lines and high neck</p>
+															<p class="online_availability">[PROPERTIES;PRODUCT_INV_ONLINE;Online Availability:]</p>
+																	<input name="onlineAvailability" value="Available" id="OnlineAvailability_1" type="hidden">
+															<p class="stock_status"><img id="WC_PromotionChoiceOfFreeGiftsPopupContent_div_8b_1_1" src="../../StoreAssets/B2CAssets/images/Available.gif" alt="[PROPERTIES;INV_STATUS_Available;In-Stock]" border="0">&nbsp;<span>[PROPERTIES;INV_STATUS_Available;In-Stock]</span></p>
+														<div class="price" id="WC_PromotionChoiceOfFreeGiftsPopupContent_div_9_1_1">
+<!-- BEGIN CatalogEntryPriceDisplay.jspf-->
+
+			<span class="price bold">
+				$100.00
+			</span>
+<!-- END CatalogEntryPriceDisplay.jspf-->
+
+														</div>                                               	
+													</div>
+													<br>                                                             
+													<div class="clear_float" id="WC_PromotionChoiceOfFreeGiftsPopupContent_div_10_1_1"></div>
+												</div>                                          
+												<div class="gift_item_container" id="WC_PromotionChoiceOfFreeGiftsPopupContent_div_5_2_1">
+													<input name="catalogEntryID" value="10280" id="CatalogEntryID_2" type="hidden">
+													<input name="giftItemQuantity" value="1" id="GiftItemQuantity_2" type="hidden">
+															<div class="selection" id="WC_PromotionChoiceOfFreeGiftsPopupContent_div_6_2_1"><input id="SelectFreeGift_2" name="freeGift" onclick="PromotionChoiceOfFreeGiftsJS.checkNumberOfAllowedItems('1.0');" type="radio"></div>
+													<div class="image" id="WC_PromotionChoiceOfFreeGiftsPopupContent_div_7_2_1">
+																<img src="../../StoreAssets/B2CAssets/images/catalog/apparel/women/womens_dresses_160x160/WD_002_a_green.jpg" name="catEntryImage" alt="Albini Empire Waist Knit Dress [PROPERTIES;Checkout_ACCE_for;for] " escapexml="false" height="70" width="70">
+													</div>
+													<div class="product_info" id="WC_PromotionChoiceOfFreeGiftsPopupContent_div_8_2_1">        
+														<h2><label for="SelectFreeGift_2">Albini Empire Waist Knit Dress</label></h2>
+														<p>V-necked sleeveless dress with empire waist and belt tie</p>
+															<p class="online_availability">[PROPERTIES;PRODUCT_INV_ONLINE;Online Availability:]</p>
+																	<input name="onlineAvailability" value="Available" id="OnlineAvailability_2" type="hidden">
+															<p class="stock_status"><img id="WC_PromotionChoiceOfFreeGiftsPopupContent_div_8b_2_1" src="../../StoreAssets/B2CAssets/images/Available.gif" alt="[PROPERTIES;INV_STATUS_Available;In-Stock]" border="0">&nbsp;<span>[PROPERTIES;INV_STATUS_Available;In-Stock]</span></p>
+														<div class="price" id="WC_PromotionChoiceOfFreeGiftsPopupContent_div_9_2_1">
+<!-- BEGIN CatalogEntryPriceDisplay.jspf-->
+
+			<span class="price bold">
+				$100.00
+			</span>
+<!-- END CatalogEntryPriceDisplay.jspf-->
+
+														</div>                                               	
+													</div>
+													<br>                                                             
+													<div class="clear_float" id="WC_PromotionChoiceOfFreeGiftsPopupContent_div_10_2_1"></div>
+												</div>                                          
+									</div>
+								</div>      
+								<div id="FreeGiftsMessageArea">
+									<p id="message">&nbsp;</p>                               
+								</div>
+								<div class="clear_float"></div>
+							</div>
+							<div class="footer">
+								<div class="button_container" id="submit_div_1">
+									<a  role="button" aria-labelledby="WC_PromotionChoiceOfFreeGiftsPopupContent_Cancel_ACCE_Label" class="button_secondary button_left_padding" id="cancel" onclick="javascript: document.getElementById('free_gifts_popup').style.display='none';">
+										<div class="left_border"></div>
+										<div class="button_text">[PROPERTIES;CANCEL;Cancel]<span id="WC_PromotionChoiceOfFreeGiftsPopupContent_Cancel_ACCE_Label" class="spanacce">[PROPERTIES;Checkout_ACCE_promo_free_gifts_cancel;cancel to close the pop-up and not apply any selections to the shopping cart]</span></div>
+										<div class="right_border"></div>
+									</a>
+									<a  role="button" aria-labelledby="WC_PromotionChoiceOfFreeGiftsPopupContent_Apply_ACCE_Label" class="button_primary" id="submitChoices" onclick="javascript: document.getElementById('free_gifts_popup').style.display='none';">
+										<div class="left_border"></div>
+										<div class="button_text">[PROPERTIES;APPLY;Apply]<span id="WC_PromotionChoiceOfFreeGiftsPopupContent_Apply_ACCE_Label" class="spanacce">[PROPERTIES;Checkout_ACCE_promo_free_gifts_apply;apply the free gifts selections to the shopping cart]</span></div>
+										<div class="right_border"></div>
+									</a>
+								</div>
+								<div class="clear_float"></div>
+							</div>					
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="clear_float"></div>
+	<div class="bottom">
+		<div class="left_border"></div>
+		<div class="middle"></div>
+		<div class="right_border"></div>
+	</div>
+	<div class="clear_float"></div>
+</div>
+</span>
+<!-- END PromotionChoiceOfFreeGiftsPopupContent.jsp -->
+
+</div>		
+	</div>
+<span class="elementKeyIcon" title="DIALOG_TITLE_MESSAGE=Message Dialog"><img src="../../StoreAssets/B2CAssets/images/pencil_orange.png" class="elementKeyIcon"></span></div>  
+</div>
+<!-- END PromotionChoiceOfFreeGiftsPopup.jspf -->

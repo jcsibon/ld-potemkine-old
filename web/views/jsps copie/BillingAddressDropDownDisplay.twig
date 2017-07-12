@@ -1,0 +1,261 @@
+<!-- BEGIN BillingAddressDropDownDisplay.jsp -->
+<span class="highlight">
+<div class="jspcaption" style="display:none">BillingAddressDropDownDisplay.jsp</div>
+<script type="text/javascript">
+	dojo.addOnLoad(function() { 
+		ServicesDeclarationJS.setCommonParameters('-1','10152','10001');
+		CheckoutPayments.setCommonParameters('-1','10152','10001');
+	});
+</script>
+<div class="billing_address" id="WC_BillingAddressDropDownDisplay_div_1">
+	<p class="title">
+	<label for="billing_address_id_1">
+	Billing Address:
+	</label>
+	</p>
+				<select class="drop_down_billing" name="billing_address_id" id="billing_address_id_1" onchange="JavaScript:MessageHelper.hideAndClearMessage();CheckoutPayments.displayBillingAddressDetails(this,1,'Billing'); CheckoutPayments.removeCreditCardNumberAndCVV(1, true, true);CheckoutPayments.updatePaymentObject(1, 'billing_address_id');">
+									<option selected="selected" value="15277">
+									TestUser</option>
+				</select>
+		<!-- Area where selected billing Address details is showed in short.. Needed only in case of web2.0 -->
+
+			<span class="spanacce" id="billingAddressDisplayArea_1_ACCE_Label">
+				[PROPERTIES;ACCE_Region_Billing;Billing Address 1]
+			</span>
+			<div dojoType="wc.widget.RefreshArea" role="region" objectId="billingAddressDisplayArea_1" aria-labelledby="billingAddressDisplayArea_1_ACCE_Label" id="billingAddressDisplayArea_1" widgetId="billingAddressDisplayArea_1" controllerId="billingAdddressDisplayAreaController" ariaMessage="[PROPERTIES;ACCE_Status_Billing_Updated;Billing Address Updated]" ariaLiveId="ariaMessage">
+				<!-- This value is equal to value in struts-config-ext.xml for view Name AjaxAddressDisplayView -->
+
+<!-- BEGIN AddressDisplay.jsp -->
+<span class="highlight">
+<div class="jspcaption" style="display:none">AddressDisplay.jsp</div>
+	<script type="text/javascript">
+		dojo.addOnLoad(function() {
+			console.debug("addressId= " + "15277");
+			console.debug("mode= " + "");
+		});
+	</script>
+<!-- BEGIN AddressDisplay.jspf -->
+
+<!-- Set the country and state display name to the country and state codes respectively. This is in case the display name is not found. -->
+
+		<!-- Retrieve the country display name from the country code -->
+
+	<!-- Retrieve the state display name from the state code -->
+
+<!-- BEGIN Address.jspf -->
+
+	John Clark<br />
+	122 Fake St&nbsp;<br />
+	Toronto&nbsp;Ontario&nbsp;<br />
+	Canada&nbsp;H0H 0H0&nbsp;<br />
+	905-555-2000<br />
+	john@test.test<br />
+<!-- END Address.jspf -->
+
+<!-- END AddressDisplay.jspf -->
+
+		<input type="hidden" name="billing_address_isValid" id="billing_address_isValid_1" value="true"/>
+</span>
+<!-- END AddressDisplay.jsp -->
+
+			</div>
+			<script type="text/javascript">
+			dojo.addOnLoad(function() { 
+				var widgetText = "billingAddressDisplayArea_" + "1";
+				parseWidget(widgetText);
+				});
+			</script>
+		<!-- If its a non-ajax checkout page, then we should get all the address details during page load and use div show/hide logic -->
+
+			<br/>
+			<div id="editBillingAddressLink_1" class="editAddressLink hover_underline">
+					<a href="ShippingandBillingDisplay_1.html?source=3" id="editBillingAddressLink_a_edit_1">
+					<img src="../../StoreAssets/B2CAssets/images/edit_icon.png" alt="" />
+					Edit Address
+					</a>
+			</div>
+		<!--  create a new address  -->
+
+			<div id="createNewBillingAddress_1" class="newShippingAddressButton hover_underline">
+					<a href="ShippingandBillingDisplay_3.html?source=3" id="editBillingAddressLink_a_create_1">
+						<img src="../../StoreAssets/B2CAssets/images/colors/color1/table_plus_add.png" alt="" />
+						Create Address
+					</a>
+			</div>
+ </div>
+</span>
+<!-- END BillingAddressDropDownDisplay.jsp -->
+<!-- BEGIN BillingAddressDropDownDisplay.jsp -->
+<span class="highlight">
+<div class="jspcaption" style="display:none">BillingAddressDropDownDisplay.jsp</div>
+<script type="text/javascript">
+	dojo.addOnLoad(function() { 
+		ServicesDeclarationJS.setCommonParameters('-1','10152','10001');
+		CheckoutPayments.setCommonParameters('-1','10152','10001');
+	});
+</script>
+<div class="billing_address" id="WC_BillingAddressDropDownDisplay_div_2">
+	<p class="title">
+	<label for="billing_address_id_2">
+	Billing Address:
+	</label>
+	</p>
+				<select class="drop_down_billing" name="billing_address_id" id="billing_address_id_2" onchange="JavaScript:MessageHelper.hideAndClearMessage();CheckoutPayments.displayBillingAddressDetails(this,2,'Billing'); CheckoutPayments.removeCreditCardNumberAndCVV(2, true, true);CheckoutPayments.updatePaymentObject(2, 'billing_address_id');">
+									<option selected="selected" value="15277">
+									TestUser</option>
+				</select>
+		<!-- Area where selected billing Address details is showed in short.. Needed only in case of web2.0 -->
+
+			<span class="spanacce" id="billingAddressDisplayArea_2_ACCE_Label">
+				[PROPERTIES;ACCE_Region_Billing;Billing Address 2]
+			</span>
+			<div dojoType="wc.widget.RefreshArea" role="region" objectId="billingAddressDisplayArea_2" aria-labelledby="billingAddressDisplayArea_2_ACCE_Label" id="billingAddressDisplayArea_2" widgetId="billingAddressDisplayArea_2" controllerId="billingAdddressDisplayAreaController" ariaMessage="[PROPERTIES;ACCE_Status_Billing_Updated;Billing Address Updated]" ariaLiveId="ariaMessage">
+				<!-- This value is equal to value in struts-config-ext.xml for view Name AjaxAddressDisplayView -->
+
+<!-- BEGIN AddressDisplay.jsp -->
+<span class="highlight">
+<div class="jspcaption" style="display:none">AddressDisplay.jsp</div>
+	<script type="text/javascript">
+		dojo.addOnLoad(function() {
+			console.debug("addressId= " + "15277");
+			console.debug("mode= " + "");
+		});
+	</script>
+<!-- BEGIN AddressDisplay.jspf -->
+
+<!-- Set the country and state display name to the country and state codes respectively. This is in case the display name is not found. -->
+
+		<!-- Retrieve the country display name from the country code -->
+
+	<!-- Retrieve the state display name from the state code -->
+
+<!-- BEGIN Address.jspf -->
+
+	John Clark<br />
+	122 Fake St&nbsp;<br />
+	Toronto&nbsp;Ontario&nbsp;<br />
+	Canada&nbsp;H0H 0H0&nbsp;<br />
+	905-555-2000<br />
+	john@test.test<br />
+<!-- END Address.jspf -->
+
+<!-- END AddressDisplay.jspf -->
+
+		<input type="hidden" name="billing_address_isValid" id="billing_address_isValid_2" value="true"/>
+</span>
+<!-- END AddressDisplay.jsp -->
+
+			</div>
+			<script type="text/javascript">
+			dojo.addOnLoad(function() { 
+				var widgetText = "billingAddressDisplayArea_" + "2";
+				parseWidget(widgetText);
+				});
+			</script>
+		<!-- If its a non-ajax checkout page, then we should get all the address details during page load and use div show/hide logic -->
+
+			<br/>
+			<div id="editBillingAddressLink_2" class="editAddressLink hover_underline">
+					<a href="ShippingandBillingDisplay_1.html?source=3" id="editBillingAddressLink_a_edit_2">
+					<img src="../../StoreAssets/B2CAssets/images/edit_icon.png" alt="" />
+					Edit Address
+					</a>
+			</div>
+		<!--  create a new address  -->
+
+			<div id="createNewBillingAddress_2" class="newShippingAddressButton hover_underline">
+					<a href="ShippingandBillingDisplay_3.html?source=3" id="editBillingAddressLink_a_create_2">
+						<img src="../../StoreAssets/B2CAssets/images/colors/color1/table_plus_add.png" alt="" />
+						Create Address
+					</a>
+			</div>
+ </div>
+</span>
+<!-- END BillingAddressDropDownDisplay.jsp -->
+<!-- BEGIN BillingAddressDropDownDisplay.jsp -->
+<span class="highlight">
+<div class="jspcaption" style="display:none">BillingAddressDropDownDisplay.jsp</div>
+<script type="text/javascript">
+	dojo.addOnLoad(function() { 
+		ServicesDeclarationJS.setCommonParameters('-1','10152','10001');
+		CheckoutPayments.setCommonParameters('-1','10152','10001');
+	});
+</script>
+<div class="billing_address" id="WC_BillingAddressDropDownDisplay_div_3">
+	<p class="title">
+	<label for="billing_address_id_3">
+	Billing Address:
+	</label>
+	</p>
+				<select class="drop_down_billing" name="billing_address_id" id="billing_address_id_3" onchange="JavaScript:MessageHelper.hideAndClearMessage();CheckoutPayments.displayBillingAddressDetails(this,3,'Billing'); CheckoutPayments.removeCreditCardNumberAndCVV(3, true, true);CheckoutPayments.updatePaymentObject(3, 'billing_address_id');">
+									<option selected="selected" value="15277">
+									TestUser</option>
+				</select>
+		<!-- Area where selected billing Address details is showed in short.. Needed only in case of web2.0 -->
+
+			<span class="spanacce" id="billingAddressDisplayArea_3_ACCE_Label">
+				[PROPERTIES;ACCE_Region_Billing;Billing Address 3]
+			</span>
+			<div dojoType="wc.widget.RefreshArea" role="region" objectId="billingAddressDisplayArea_3" aria-labelledby="billingAddressDisplayArea_3_ACCE_Label" id="billingAddressDisplayArea_3" widgetId="billingAddressDisplayArea_3" controllerId="billingAdddressDisplayAreaController" ariaMessage="[PROPERTIES;ACCE_Status_Billing_Updated;Billing Address Updated]" ariaLiveId="ariaMessage">
+				<!-- This value is equal to value in struts-config-ext.xml for view Name AjaxAddressDisplayView -->
+
+<!-- BEGIN AddressDisplay.jsp -->
+<span class="highlight">
+<div class="jspcaption" style="display:none">AddressDisplay.jsp</div>
+	<script type="text/javascript">
+		dojo.addOnLoad(function() {
+			console.debug("addressId= " + "15277");
+			console.debug("mode= " + "");
+		});
+	</script>
+<!-- BEGIN AddressDisplay.jspf -->
+
+<!-- Set the country and state display name to the country and state codes respectively. This is in case the display name is not found. -->
+
+		<!-- Retrieve the country display name from the country code -->
+
+	<!-- Retrieve the state display name from the state code -->
+
+<!-- BEGIN Address.jspf -->
+
+	John Clark<br />
+	122 Fake St&nbsp;<br />
+	Toronto&nbsp;Ontario&nbsp;<br />
+	Canada&nbsp;H0H 0H0&nbsp;<br />
+	905-555-2000<br />
+	john@test.test<br />
+<!-- END Address.jspf -->
+
+<!-- END AddressDisplay.jspf -->
+
+		<input type="hidden" name="billing_address_isValid" id="billing_address_isValid_3" value="true"/>
+</span>
+<!-- END AddressDisplay.jsp -->
+
+			</div>
+			<script type="text/javascript">
+			dojo.addOnLoad(function() { 
+				var widgetText = "billingAddressDisplayArea_" + "3";
+				parseWidget(widgetText);
+				});
+			</script>
+		<!-- If its a non-ajax checkout page, then we should get all the address details during page load and use div show/hide logic -->
+
+			<br/>
+			<div id="editBillingAddressLink_3" class="editAddressLink hover_underline">
+					<a href="ShippingandBillingDisplay_1.html?source=3" id="editBillingAddressLink_a_edit_3">
+					<img src="../../StoreAssets/B2CAssets/images/edit_icon.png" alt="" />
+					Edit Address
+					</a>
+			</div>
+		<!--  create a new address  -->
+
+			<div id="createNewBillingAddress_3" class="newShippingAddressButton hover_underline">
+					<a href="ShippingandBillingDisplay_3.html?source=3" id="editBillingAddressLink_a_create_3">
+						<img src="../../StoreAssets/B2CAssets/images/colors/color1/table_plus_add.png" alt="" />
+						Create Address
+					</a>
+			</div>
+ </div>
+</span>
+<!-- END BillingAddressDropDownDisplay.jsp -->

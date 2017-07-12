@@ -16,8 +16,8 @@
 
 
 
-<script type="text/javascript" charset="UTF-8" src="../../StoreAssets/dojo18/dojo/dojo.js" djConfig="parseOnLoad: true, isDebug: false,  modulePaths: {storetext: '../../../StoreAssets/B2CAssets'}, useCommentedJson: true,locale: 'en-us' "></script>
-<script type="text/javascript" charset="UTF-8" src="../../StoreAssets/dojo18/dojo/dojodesktop.js" djConfig="parseOnLoad: true, isDebug: false,  modulePaths: {storetext: '../../../StoreAssets/B2CAssets'}, useCommentedJson: true,locale: 'en-us' "></script>
+<script type="text/javascript" charset="UTF-8" src="../../StoreAssets/dojo18/dojo/dojo.js" djConfig="parseOnLoad: true, isDebug: false,  modulePaths: {storetext: '../../StoreAssets/B2CAssets'}, useCommentedJson: true,locale: 'en-us' "></script>
+<script type="text/javascript" charset="UTF-8" src="../../StoreAssets/dojo18/dojo/dojodesktop.js" djConfig="parseOnLoad: true, isDebug: false,  modulePaths: {storetext: '../../StoreAssets/B2CAssets'}, useCommentedJson: true,locale: 'en-us' "></script>
 
 
 

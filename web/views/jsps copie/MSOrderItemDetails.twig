@@ -1,0 +1,491 @@
+<!-- BEGIN MSOrderItemDetails.jsp -->
+<span class="highlight">
+<div class="jspcaption" style="display:none">MSOrderItemDetails.jsp</div>
+<script type="text/javascript">
+	dojo.addOnLoad(function() { 
+              categoryDisplayJS.setCommonParameters('-1','10152','10001','R');
+	});
+</script>
+<!-- Get order Details using the ORDER SOI -->
+
+<input type="hidden" name="OrderTotalAmount" value="100.00000" id="OrderTotalAmount" />
+<input type="hidden" name="currentPageNumber" value="1" id="currentPageNumber"/>
+<table id="order_details" cellpadding="0" cellspacing="0" border="0" width="100%" summary="[PROPERTIES;SHOPCART_TABLE_SUMMARY;This table contains details about your current order. It contains product details, availability, quantity, unit price and total price of each item in the current order. You can change quantity or remove the item from current order by navigating through this table.]">
+	<tr class="nested">
+		<th class="align_left" id="MultipleShipments_tableCell_productName">[PROPERTIES;PRODUCT;Product]</th>
+		<th class="align_left" id="MultipleShipments_tableCell_shipAddress">[PROPERTIES;SHIP_SHIPPING_ADDRESS;Shipping Address]</th>
+		<th class="align_left" id="MultipleShipments_tableCell_shipMethod">[PROPERTIES;SHIP_SHIPPING_METHOD;Shipping Method]</th>
+		<th class="align_left" id="MultipleShipments_tableCell_availability">[PROPERTIES;AVAILABILITY;Availability]</th>
+		<th class="align_center" id="MultipleShipments_tableCell_quantity" abbr="[PROPERTIES;QUANTITY1;Quantity]">[PROPERTIES;QTY;Qty]</th>
+		<th class="align_right" id="MultipleShipments_tableCell_unitPrice" abbr="[PROPERTIES;UNIT_PRICE;Unit Price]">[PROPERTIES;EACH;Each]</th>
+		<th class="align_right" id="MultipleShipments_tableCell_totalPrie" abbr="[PROPERTIES;TOTAL_PRICE;Total Price]">[PROPERTIES;TOTAL;Total]</th>
+	</tr>
+		<input type="hidden" value='90149' name='orderItem_1' id='orderItem_1'/>
+		<input type="hidden" value='10041' name='catalogId_1' id='catalogId_1'/>
+		<tr>
+			 <th class="th_align_left_normal " id="MultipleShipping_rowHeader_product1" abbr="[PROPERTIES;Checkout_ACCE_for;for] Hermitage Ruched Bodice Cocktail Dress" width="225">
+				<div class="img" id="WC_MSOrderItemDetails_div_1_1">
+					<a href="HermitageRuchedBodiceCocktailDressAuroraESite.html" id="catalogEntry_img_90149" title="Hermitage Ruched Bodice Cocktail Dress">
+						<img alt="Hermitage Ruched Bodice Cocktail Dress" src="../../StoreAssets/B2CAssets/images/catalog/apparel/women/womens_dresses_70x70/WD_028_a_red.jpg"/>
+					</a> 
+				</div>
+				<div class="itemspecs hover_underline" id="WC_MSOrderItemDetails_div_2_1">
+					<p><a class="hover_underline" id="catalogEntry_name_90149" href="HermitageRuchedBodiceCocktailDressAuroraESite.html">Hermitage Ruched Bodice Cocktail Dress</a></p>
+					<span>[PROPERTIES;CurrentOrder_SKU;SKU:] AuroraWMDRS-002</span>
+					<br />
+									<a class="order_link" id="WC_MSOrderItemDetails_link_1_1_"  onclick="javaScript: document.getElementById('quickInfoPopup_1').style.display='block';"> 
+									[PROPERTIES;CHANGE_ATTRIBUTES;Change Attributes]
+									</a>
+								 <input type="hidden" name="selectedAttr" id="selectedAttr_90149" value="Available Sizes|M|Color|Red"/>
+					<br />
+					<br />
+					<p>
+<!-- BEGIN ShoppingList.jsp -->
+<span class="highlight">
+<div class="jspcaption" style="display:none">ShoppingList.jsp</div>
+<script>
+	shoppingListJSOI90149 = new ShoppingListJS({storeId: '10152',catalogId: '10001',langId: '-1'}, {id: '10041', name: 'Hermitage Ruched Bodice Cocktail Dress', image: '../../StoreAssets/B2CAssets/images/catalog/apparel/women/womens_dresses_105x105/WD_028_a_red.jpg', type: 'ItemBean', components: {}, skus: []}, {}, "shoppingListJSOI90149");
+</script>
+<div id="shoppingListScript_OI90149" style="display:none;">
+	if(typeof(shoppingListJSOI90149) == "undefined" || shoppingListJSOI90149 == null || !shoppingListJSOI90149) {
+		shoppingListJSOI90149 = new ShoppingListJS({storeId: '10152',catalogId: '10001',langId: '-1'}, {id: '10041', name: 'Hermitage Ruched Bodice Cocktail Dress', image: '../../StoreAssets/B2CAssets/images/catalog/apparel/women/womens_dresses_105x105/WD_028_a_red.jpg', type: 'ItemBean', components: {}, skus: []}, {}, "shoppingListJSOI90149");
+	}
+</div>
+<img style="display:none;" src="../../StoreAssets/B2CAssets/images/catalog/apparel/women/womens_dresses_105x105/WD_028_a_red.jpg"/>
+<div style="position:relative;">
+	<div id="OI90149addToShoppingListBtn" class="dropdown_primary">
+		<a id="OI90149addToShoppingList" href="
+					javascript:shoppingListJSOI90149.createDefaultListAndAddItem('-1', '90149');
+			" class="button" role="button">
+			<div class="left_border"></div>
+			<div class="content">
+						[PROPERTIES;MOVE_TO_WISH_LIST;Move to Wish List]
+			</div>
+			<div class="right_border"></div>
+		</a>
+			<div class="drop">
+			<div class="white_line"></div>
+				<a id="OI90149addToShoppingListDropdown" onmouseover="javascript: shoppingListJSOI90149.mouseOnArrow = true;" onmouseout="javascript: shoppingListJSOI90149.mouseOnArrow = false;" href="javascript:shoppingListJSOI90149.showDropDown();" class="dropdown_arrow" title="[PROPERTIES;SL_MULTIPLE_SHOPPING_LIST_DD;Multiple wish list drop down. Press enter and tab to display the drop down]" role="button">
+						<img style="margin-top: 10px;" src="../../StoreAssets/B2CAssets/images/colors/color1/widget_quick_info_popup/dropdown_arrow.png" alt="[PROPERTIES;SL_MULTIPLE_SHOPPING_LIST_DD;Multiple wish list drop down. Press enter and tab to display the drop down]"/>
+					</a>
+				<div class="right_border"></div>
+			</div>
+	</div>
+			<div id="OI90149shoppingListDropDown" style="display: none" class="dropdown_list" onmousedown="javascript:shoppingListJSOI90149.hasFocus(event);"
+				onkeydown="javascript:shoppingListJSOI90149.navigateDropDown(event);"
+				onblur="javascript: document.getElementById('OI90149addToShoppingListDropdown').focus();" role="menu">
+				<ul class="wish_order_list">
+								<li role="menuitem" class="message">[PROPERTIES;SL_SELECT_LIST;Select a list to Add to:]</li>
+							<ol role="menuitem" id="OI90149listOfShoppingLists" class="created_list_wrapper" tabindex="-1" onblur="javascript: if(!shoppingListJSOI90149.exceptionFlag){shoppingListJSOI90149.dropDownInFocus = false; shoppingListJSOI90149.hideIfNoFocus();}">														
+							<li style="display:none;" id="OI90149ShoppingListDivider"></li>
+							</ol>
+							<div class="divider"></div>
+							<li role="menuitem" id="OI90149ShoppingList_0" class="created_list" role="link" onfocus="javascript:shoppingListJSOI90149.focusList(0);"
+							onmouseover="javascript: shoppingListJSOI90149.exceptionFlag = true; document.getElementById('OI90149ShoppingListLink_0').focus();"
+							onmouseout="javascript: this.className = 'created_list'; shoppingListJSOI90149.exceptionFlag = false; if(document.getElementById('OI90149shoppingListDropDown').style.display != 'none'){document.getElementById('OI90149listOfShoppingLists').focus();}"
+							onblur="javascript: this.className = 'created_list';"
+							onclick="shoppingListJSOI90149.showPopup('create');">
+									<a id="OI90149ShoppingListLink_0" href="javascript:shoppingListJSOI90149.showPopup('create');"
+										onfocus="javascript:shoppingListJSOI90149.focusListLink(0);"
+										role="menuitem">[PROPERTIES;SL_CREATE_NEW_SHOPPING_LIST;Create a new Wish List]</a>
+							</li>
+				</ul>
+			</div>
+</div>
+<!-- Hidden Fields -->
+
+<input id="OI90149storeParams" type="hidden" value="{storeId: '10152',catalogId: '10001',langId: '-1'}"/>
+<input id="OI90149catEntryParams" type="hidden" value="{id: '10041', name: 'Hermitage Ruched Bodice Cocktail Dress', image: '../../StoreAssets/B2CAssets/images/catalog/apparel/women/womens_dresses_105x105/WD_028_a_red.jpg', type: 'ItemBean', components: {}, skus: []}"/>
+<input id="OI90149shoppingListNames" type="hidden" value="{}"/>
+<div id="OI90149createShoppingListPopup" dojoType="dijit.Dialog" title="[PROPERTIES;DIALOG_TITLE_CREATE_WISHLIST;Create Wish List Dialog]" style="display:none;">
+	<div class="widget_site_popup">
+		<div class="top">
+			<div class="left_border"></div>
+			<div class="middle"></div>
+			<div class="right_border"></div>
+		</div>
+		<div class="clear_float"></div>
+		<div class="middle">
+			<div class="content_left_border">
+				<div class="content_right_border">
+					<div class="content">
+						<div class="header">
+							<span>[PROPERTIES;SL_CREATE_NEW_SHOPPING_LIST;Create a new Wish List]</span>
+							<a role="button" id="OI90149createShoppingListPopup_close" 
+									href="javascript:dijit.byId('OI90149createShoppingListPopup').hide();"
+							class="close" tabindex="4" title="[PROPERTIES;SL_CLOSE;Close]"></a>
+							<div class="clear_float"></div>
+						</div>
+						<div class="body">
+							<div id="OI90149shoppingListErrorMessageArea" style="display:none">
+								<img class="error_icon left" src="../../StoreAssets//images/colors/color1/error_icon.png" alt=""/>
+								<p id="OI90149shoppingListErrorMessageText" class="textinlinewithicon"></p>
+								<div class="clear_float"></div>
+							</div>
+							<div class="item_spacer_10px"></div>
+							<p>[PROPERTIES;SL_NAME_NEW_LIST;Type a name for your new list.]</p>
+							<form>
+								<span class="spanacce">
+									<label for="OI90149newListName">[PROPERTIES;SL_NAME_NEW_LIST;Type a name for your new list.]</label>
+								</span>
+								<input id="OI90149newListName" type="text" size="35" maxlength="64" value="" onkeypress='if(event.keyCode==13){ shoppingListJSOI90149.create(); dojo.stopEvent(event);}' tabindex="1"/>
+							</form>
+							<div class="item_spacer_10px"></div>
+						</div>
+						<div class="footer">
+							<div class="button_container">
+								<a id="OI90149createShoppingListPopup_save" href="javascript: shoppingListJSOI90149.create();" class="button_primary" tabindex="2">
+									<div class="left_border"></div>
+									<span id="OI90149CreateShoppingListPopup_div_create_save" class="button_text">[PROPERTIES;SAVE;Save]</span>
+									<div class="right_border"></div>
+								</a>
+								<a id="OI90149createShoppingListPopup_cancel" 
+										href="javascript:dijit.byId('OI90149createShoppingListPopup').hide();" 
+								class="button_secondary" tabindex="3">
+									<div class="left_border"></div>
+									<span class="button_text">[PROPERTIES;CANCEL;Cancel]</span>
+									<div class="right_border"></div>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="clear_float"></div>
+		<div class="bottom">
+			<div class="left_border"></div>
+			<div class="middle"></div>
+			<div class="right_border"></div>
+		</div>
+		<div class="clear_float"></div>
+	</div>
+</div>
+<div id="OI90149shoppingListCreateSuccessPopup" dojoType="dijit.Dialog" title="[PROPERTIES;DIALOG_TITLE_MESSAGE;Message Dialog]" style="display:none;">
+	<div class="widget_site_popup">
+		<div class="top">
+			<div class="left_border"></div>
+			<div class="middle"></div>
+			<div class="right_border"></div>
+		</div>
+		<div class="clear_float"></div>
+		<div class="middle">
+			<div class="content_left_border">
+				<div class="content_right_border">
+					<div class="content">
+						<a role="button" id="OI90149shoppingListCreateSuccessPopup_close" 
+								href="javascript:dijit.byId('OI90149shoppingListCreateSuccessPopup').hide();"
+						class="close" title="[PROPERTIES;SL_CLOSE;Close]"></a>
+						<div class="body">
+							<div class="item_spacer_10px"></div>
+							<div class="item_spacer_10px"></div>
+							<div class="item_spacer_10px"></div>
+							<div class="item_spacer_10px"></div>
+							<img class="error_icon left" src="../../StoreAssets//images/colors/color1/success_icon.png" alt=""/>
+							<p id="OI90149successMessageAreaText" class="textinlinewithicon">[PROPERTIES;LIST_CREATED;Wish list created successfully.]</p>
+							<div class="clear_float"></div>
+							<div class="item_spacer_10px"></div>
+							<div class="item_spacer_10px"></div>
+							<div class="item_spacer_10px"></div>
+							<div class="item_spacer_10px"></div>
+						</div>
+						<div class="footer">
+							<div class="button_container">
+								<a id="OI90149shoppingListCreateSuccessPopup_continue_shopping" 
+										href="javascript:dijit.byId('OI90149shoppingListCreateSuccessPopup').hide();" 
+								class="button_primary">
+									<div class="left_border"></div>
+									<div class="button_text">[PROPERTIES;CONTINUE_SHOPPING;Continue Shopping]</div>
+									<div class="right_border"></div>
+								</a>
+								<div class="clear_float"></div>
+							</div>
+							<div class="clear_float"></div>
+						</div>
+						<div class="clear_float"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="clear_float"></div>
+		<div class="bottom">
+			<div class="left_border"></div>
+			<div class="middle"></div>
+			<div class="right_border"></div>
+		</div>
+		<div class="clear_float"></div>
+	</div>
+</div>
+</span>
+<!-- END ShoppingList.jsp -->
+
+					</p>
+					<p>
+							<a class="remove_address_link" href="ShippingandBillingDisplay_2.html" onfocus="javascript:CheckoutHelperJS.setLastFocus(this.id);" id="WC_MSOrderItemDetails_link_2_1">
+								<img src="../../StoreAssets/B2CAssets/images/colors/color1/table_x_delete.png" alt=""/>
+								[PROPERTIES;REMOVE;Remove]
+							</a>
+					</p>
+					<br/>
+				</div>
+			</th>
+			<td class=" shippingaddress_nest" width="200" id="WC_MSOrderItemDetails_td_1_1" headers="MultipleShipments_tableCell_shipAddress MultipleShipping_rowHeader_product1">
+				<div class="shipping_address_nester" id="WC_MSOrderItemDetails_div_3_1"> 
+<!-- BEGIN ShippingAddressSelect.jsp -->
+<span class="highlight">
+<div class="jspcaption" style="display:none">ShippingAddressSelect.jsp</div>
+<!-- this context is for dealing with states for the shipping addresses in all shipments -->
+<script type="text/javascript">
+	wc.render.declareContext("shippingAddressContext",{shippingAddress: "0"},"");
+	wc.render.declareRefreshController({
+		id: "shippingAdddressDisplayAreaController",
+		renderContext: wc.render.getContextById("shippingAddressContext"),
+		url: "https:///webapp/wcs/stores/servlet/AjaxAddressDisplayView?catalogId=10001&langId=-1&storeId=10152",
+		formId: ""
+		,renderContextChangedHandler: function(message, widget) {
+			var controller = this;
+			var renderContext = this.renderContext;
+			if (controller.testForChangedRC(["shippingAddress"])) {
+				var addressId = renderContext.properties["shippingAddress"];
+				widget.refresh({"addressId": addressId});
+			}
+			cursor_clear();
+		}
+	});
+</script>
+<div class="shipping_address_MS_shipping_info_page" id="WC_ShippingAddressSelectMultiple_div_90149">
+<div id="MS_ShippingAddress_Section_90149" class="">
+	<p>
+			<label for="MS_ShipmentAddress_90149"><span class="spanacce">[PROPERTIES;SHIP_SHIPPING_ADDRESS;Shipping Address]</span></label>
+				<select class="drop_down_shipping form_input" name="MS_ShipmentAddress_90149" id="MS_ShipmentAddress_90149" onChange="JavaScript:setCurrentId('MS_ShipmentAddress_90149'); CheckoutHelperJS.updateAddressIdForThisItem(this.value,'90149');CheckoutHelperJS.displayAddressDetailsForMS(this.value,'90149','Shipping');CheckoutHelperJS.showHideEditAddressLink(this,'90149')" onkeydown="CheckoutHelperJS.tabPressed(event);">
+						<option value="15277"
+						selected="selected"
+					>
+					TestUser</option>
+				</select>
+	</p>
+		<input type="hidden" id="shippingOrganizationAddressList" value="-2000" name="shippingOrganizationAddressList"/>
+		<!-- Area where selected shipping Address details is showed in short..-->
+
+		<div id="MS_shippingAddressDisplayArea_90149">
+			<!-- This value is equal to value in struts-config-ext.xml for view Name AjaxAddressDisplayView -->
+
+<!-- BEGIN AddressDisplay.jsp -->
+<span class="highlight">
+<div class="jspcaption" style="display:none">AddressDisplay.jsp</div>
+	<script type="text/javascript">
+		dojo.addOnLoad(function() {
+			console.debug("addressId= " + "15277");
+			console.debug("mode= " + "");
+		});
+	</script>
+<!-- BEGIN AddressDisplay.jspf -->
+
+<!-- Set the country and state display name to the country and state codes respectively. This is in case the display name is not found. -->
+
+		<!-- Retrieve the country display name from the country code -->
+
+	<!-- Retrieve the state display name from the state code -->
+
+<!-- BEGIN Address.jspf -->
+
+	John Clark<br />
+	122 Fake St&nbsp;<br />
+	Toronto&nbsp;Ontario&nbsp;<br />
+	Canada&nbsp;H0H 0H0&nbsp;<br />
+	905-555-2000<br />
+	john@test.test<br />
+<!-- END Address.jspf -->
+
+<!-- END AddressDisplay.jspf -->
+
+</span>
+<!-- END AddressDisplay.jsp -->
+
+			<input type="hidden" value="15277" id="addressId_90149" name="addressId_90149"/>
+		</div>
+		<!-- Show Edit button only if there are any valid address.. -->
+
+			<br/>
+			<div class="editAddressLink hover_underline" id="editAddressLink_90149" style="display:block;">
+					<a href="ShippingandBillingDisplay_1.html?source=3" onfocus="javascript:CheckoutHelperJS.setLastFocus(this.id);" id="WC_ShippingAddressSelectMultiple_link_2_90149">
+						<img src="../../StoreAssets/B2CAssets/images/edit_icon.png" alt="" /> 
+						[PROPERTIES;ADDR_EDIT_ADDRESS;Edit Address]
+					</a>
+			</div>
+	<div class="newShippingAddressButton hover_underline" id="newShippingAddressButton_90149">
+			<a href="ShippingandBillingDisplay_3.html?source=3" id="WC_ShippingAddressSelectMultiple_link_3_90149">
+				<img class="nopadding" src="../../StoreAssets/B2CAssets/images/colors/color1/table_plus_add.png" alt="" />
+				[PROPERTIES;ADDR_CREATE_ADDRESS;Create Address]
+			</a>
+	</div>
+<script type="text/javascript">
+			dojo.addOnLoad(function() { 
+				CheckoutHelperJS.showHideEditAddressLink(document.getElementById("MS_ShipmentAddress_90149"),'90149');
+			});
+</script>
+</div>
+</div>
+</span>
+<!-- END ShippingAddressSelect.jsp -->
+
+				</div>
+			</td>
+			<td class=" shippingmethod_nest" id="WC_MSOrderItemDetails_td_2_1" headers="MultipleShipments_tableCell_shipMethod MultipleShipping_rowHeader_product1">
+				<div class="shipping_method_nested" id="WC_MSOrderItemDetails_div_4_1">
+<!-- BEGIN ShippingMethodDetails.jsp -->
+<span class="highlight">
+<div class="jspcaption" style="display:none">ShippingMethodDetails.jsp</div>
+<script type="text/javascript">
+	dojo.addOnLoad(function() { 
+		SBServicesDeclarationJS.setCommonParameters('-1','10152','10001');
+		SBServicesDeclarationJS.setAjaxCheckOut('true');
+	});
+</script>
+<!-- If shipping instructions are empty, then hide the div which displays the date and instructions -->
+
+<!-- this will update the Shipping info(Instructions, shipAsComplete and requested ship date) for each orderItem -->
+
+<div class="shipping_method_MS_shipping_info_page" id="WC_ShippingMethodDetails_div_90149">
+	<p>
+		<label for="MS_ShippingMode_90149"><span class="spanacce">[PROPERTIES;SHIP_SHIPPING_METHOD;Shipping Method]</span></label>
+		<select class="drop_down_shipping" name="MS_ShippingMode_90149" id="MS_ShippingMode_90149" onchange="">
+					<option shipModeCode="Mail" selected="selected" value="10052">
+								Mail
+					</option>						
+					<option shipModeCode="Express"  value="10552">
+								Express
+					</option>						
+					<option shipModeCode="International Priority"  value="10654">
+								International Priority
+					</option>						
+					<option shipModeCode="International Regular"  value="10655">
+								International Regular
+					</option>						
+					<option shipModeCode="US - 2-Day Express Delivery"  value="10653">
+								US - 2-Day Express Delivery
+					</option>						
+					<option shipModeCode="US - Overnight Delivery"  value="10652">
+								US - Overnight Delivery
+					</option>						
+					<option shipModeCode="US Regular Delivery"  value="10651">
+								US - Regular Delivery
+					</option>						
+		</select>
+	</p>
+			<p>
+				<span class="checkbox">
+					<input type="checkbox" class="checkbox" id="MS_shippingInstructionsCheckbox_90149" name="MS_shippingInstructionsCheckbox_90149" 
+					/>
+					<label for="MS_shippingInstructionsCheckbox_90149"><span class="text">Add Shipping Instructions</span></label>
+				</span>
+			</p>
+			<div name = "MS_shippingInstructionsDiv_90149" id = "MS_shippingInstructionsDiv_90149" style="display:none">
+				<span>
+					<p>
+						<label for="MS_shipInstructions_90149">
+							<span class="spanacce">Specify additional shipping instructions</span>
+						</label>
+					</p>
+					<p>
+						<textarea id="MS_shipInstructions_90149" name="MS_shipInstructions_90149" rows="2" ></textarea>
+					</p>
+				</span>
+			</div>
+			<p>
+				<span class="checkbox">
+					<input type="checkbox" class="checkbox" id="MS_requestShippingDateCheckbox_90149" name="MS_requestShippingDateCheckbox_90149" 
+					/>
+					<label for="MS_requestShippingDateCheckbox_90149"><span class="text">Request Shipping Date</span></label>
+				</span>
+			</p>
+			<div name="MS_requestShippingDateDiv_90149" id="MS_requestShippingDateDiv_90149" style="display:none">
+				<div id="MS_requestedShippingDate_90149_label">
+					<label for="MS_requestedShippingDate_90149">
+						<span class="spanacce">The date format should be month/day/year, therefore m m/d d/y y y y</span>
+					</label>
+				</div>
+				<div id="MS_requestedShippingDate_90149_inputField" class="dijitCalendarWidth">
+					<input 
+						id="MS_requestedShippingDate_90149" 
+						name="MS_requestedShippingDate_90149" 
+						size="6" 
+						onChange="JavaScript:setCurrentId(this.id);CheckoutHelperJS.updateRequestedShipDateForThisItem(this, '90149'); " 
+						dojoType="dijit.form.DateTextBox" 
+						invalidMessage="Invalid date. Use mm/dd/yyyy format" 
+						value="" 
+					/>
+					<script type="text/javascript">
+					dojo.addOnLoad(function() { 
+						var widgetText = "MS_requestedShippingDate_" + "90149";
+						parseWidget(widgetText);
+					});
+					</script>
+				</div>
+			</div>
+</div>
+</span>
+<!-- END ShippingMethodDetails.jsp -->
+
+				</div>
+			</td>  
+			<td id="WC_MSOrderItemDetails_td_3_1" class=" avail" headers="MultipleShipments_tableCell_availability MultipleShipping_rowHeader_product1">
+<!-- BEGIN CatalogEntryAvailabilityDisplay.jspf-->
+
+				<p>
+							[PROPERTIES;SHIP_IN_STOCK;In-Stock]
+				</p>
+<!-- END CatalogEntryAvailabilityDisplay.jspf-->
+
+			</td>
+			<td class=" QTY" id="WC_MSOrderItemDetails_td_4_1" class="QTY" headers="MultipleShipments_tableCell_quantity MultipleShipping_rowHeader_product1">
+				<p class="item-quantity">
+							<input type="hidden" value="1" id='qty_1' name='qty_1'/><span>1</span>
+				</p>
+			</td>
+			<td id="WC_MSOrderItemDetails_td_5_1" class=" each" headers="MultipleShipments_tableCell_unitPrice MultipleShipping_rowHeader_product1">
+				<span class="price">
+					$100.00
+				</span>				
+			</td>
+			<td id="WC_MSOrderItemDetails_td_6_1" class=" total" headers="MultipleShipments_tableCell_totalPrice MultipleShipping_rowHeader_product1">
+						<span class="price">
+							$100.00
+						</span>
+			</td>
+		</tr>
+	<input type="hidden" id = "totalNumberOfItems" name="totalNumberOfItems" value='1'/>
+<!-- We need this form in case of non-ajax checkout process... In Non-Ajax checkout process we will submit the entire form 
+	 All the required hidden fields are defined at the end of this page before closing form tag. Update Shopping Cart function will
+	 submit this form.. 
+ -->
+ </table>
+<div class="free_gifts_block">
+<!-- BEGIN PromotionPickYourFreeGift.jsp -->
+<span class="highlight">
+<div class="jspcaption" style="display:none">PromotionPickYourFreeGift.jsp</div>
+<script type="text/javascript">
+	dojo.addOnLoad(function(){
+		CommonControllersDeclarationJS.setControllerURL('PromotionFreeGifts_Controller','');		
+	});
+</script>	
+		<div class="free_gift_container"> 
+				<p>
+				</p>
+			<div class="button_align">
+				<a  role="button" aria-labelledby="PickYourFreeGift_ACCE_Label" class="button_secondary" id="PickYourFreeGift" onclick="javascript: document.getElementById('free_gifts_popup').style.display='block';">
+					<div class="left_border"></div>
+					<div class="button_text">
+								[PROPERTIES;PROMOTION_PICK_FREE_GIFT;Select your free gift]	
+						<span id="PickYourFreeGift_ACCE_Label" class="spanacce">[PROPERTIES;Checkout_ACCE_promo_free_gifts_pick;select to view the free gift choices]</span>
+					</div>
+					<div class="right_border"></div>
+				</a>
+			</div>
+		</div>							
+</span>
+<!-- END PromotionPickYourFreeGift.jsp -->
+
+</div>	
+</span>
+<!-- END MSOrderItemDetails.jsp -->

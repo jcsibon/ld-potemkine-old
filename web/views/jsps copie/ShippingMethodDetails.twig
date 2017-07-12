@@ -1,0 +1,93 @@
+<!-- BEGIN ShippingMethodDetails.jsp -->
+<span class="highlight">
+<div class="jspcaption" style="display:none">ShippingMethodDetails.jsp</div>
+<script type="text/javascript">
+	dojo.addOnLoad(function() { 
+		SBServicesDeclarationJS.setCommonParameters('-1','10152','10001');
+		SBServicesDeclarationJS.setAjaxCheckOut('true');
+	});
+</script>
+<!-- If shipping instructions are empty, then hide the div which displays the date and instructions -->
+
+<!-- this will update the Shipping info(Instructions, shipAsComplete and requested ship date) for each orderItem -->
+
+<div class="shipping_method_MS_shipping_info_page" id="WC_ShippingMethodDetails_div_90149">
+	<p>
+		<label for="MS_ShippingMode_90149"><span class="spanacce">[PROPERTIES;SHIP_SHIPPING_METHOD;Shipping Method]</span></label>
+		<select class="drop_down_shipping" name="MS_ShippingMode_90149" id="MS_ShippingMode_90149" onchange="">
+					<option shipModeCode="Mail" selected="selected" value="10052">
+								Mail
+					</option>						
+					<option shipModeCode="Express"  value="10552">
+								Express
+					</option>						
+					<option shipModeCode="International Priority"  value="10654">
+								International Priority
+					</option>						
+					<option shipModeCode="International Regular"  value="10655">
+								International Regular
+					</option>						
+					<option shipModeCode="US - 2-Day Express Delivery"  value="10653">
+								US - 2-Day Express Delivery
+					</option>						
+					<option shipModeCode="US - Overnight Delivery"  value="10652">
+								US - Overnight Delivery
+					</option>						
+					<option shipModeCode="US Regular Delivery"  value="10651">
+								US - Regular Delivery
+					</option>						
+		</select>
+	</p>
+			<p>
+				<span class="checkbox">
+					<input type="checkbox" class="checkbox" id="MS_shippingInstructionsCheckbox_90149" name="MS_shippingInstructionsCheckbox_90149" 
+					/>
+					<label for="MS_shippingInstructionsCheckbox_90149"><span class="text">Add Shipping Instructions</span></label>
+				</span>
+			</p>
+			<div name = "MS_shippingInstructionsDiv_90149" id = "MS_shippingInstructionsDiv_90149" style="display:none">
+				<span>
+					<p>
+						<label for="MS_shipInstructions_90149">
+							<span class="spanacce">Specify additional shipping instructions</span>
+						</label>
+					</p>
+					<p>
+						<textarea id="MS_shipInstructions_90149" name="MS_shipInstructions_90149" rows="2" ></textarea>
+					</p>
+				</span>
+			</div>
+			<p>
+				<span class="checkbox">
+					<input type="checkbox" class="checkbox" id="MS_requestShippingDateCheckbox_90149" name="MS_requestShippingDateCheckbox_90149" 
+					/>
+					<label for="MS_requestShippingDateCheckbox_90149"><span class="text">Request Shipping Date</span></label>
+				</span>
+			</p>
+			<div name="MS_requestShippingDateDiv_90149" id="MS_requestShippingDateDiv_90149" style="display:none">
+				<div id="MS_requestedShippingDate_90149_label">
+					<label for="MS_requestedShippingDate_90149">
+						<span class="spanacce">The date format should be month/day/year, therefore m m/d d/y y y y</span>
+					</label>
+				</div>
+				<div id="MS_requestedShippingDate_90149_inputField" class="dijitCalendarWidth">
+					<input 
+						id="MS_requestedShippingDate_90149" 
+						name="MS_requestedShippingDate_90149" 
+						size="6" 
+						onChange="JavaScript:setCurrentId(this.id);CheckoutHelperJS.updateRequestedShipDateForThisItem(this, '90149'); " 
+						dojoType="dijit.form.DateTextBox" 
+						invalidMessage="Invalid date. Use mm/dd/yyyy format" 
+						value="" 
+					/>
+					<script type="text/javascript">
+					dojo.addOnLoad(function() { 
+						var widgetText = "MS_requestedShippingDate_" + "90149";
+						parseWidget(widgetText);
+					});
+					</script>
+				</div>
+			</div>
+</div>
+</span>
+<!-- END ShippingMethodDetails.jsp -->
