@@ -12,7 +12,7 @@
 
         
 
-{{ include CommonAssetsForHeader.jspf.twig }}
+{% include 'CommonAssetsForHeader.jspf.twig' %}
 	</head>
 	
 	<body>
@@ -22,7 +22,7 @@
 
 
 
-{{ include HeaderDisplay.jspf.twig }}
+{{ include HeaderDisplay.jspf.twig %}
 
 <!-- END Header.jsp -->
 
@@ -109,7 +109,7 @@
 
 									<div id="mainContents" style="display:block">
 										<div id="box">                                          
-{{ include ShippingDetailsDisplay.jsp.twig }}
+{{ include ShippingDetailsDisplay.jsp.twig %}
 
 												<br/>&nbsp;		
 												<div class="main_header" id="WC_ShipmentDisplay_div_22">
@@ -139,7 +139,7 @@
 												<div class="right_corner" id="WC_ShipmentDisplay_div_29"></div>
 												</div>
 												<div class="body shipping_billing_height" id="WC_ShipmentDisplay_div_30">
-{{ include CheckoutPaymentsAndBillingAddress.jspf.twig }}
+{{ include CheckoutPaymentsAndBillingAddress.jspf.twig %}
 
 												</div>
 											<div class="button_footer_line" id="WC_ShipmentDisplay_div_32_1"> 
@@ -158,7 +158,7 @@
 												</span>
 											</div>
 											<div class="espot_checkout_bottom" id="WC_ShipmentDisplay_div_38">
-{{ include CheckoutBottomESpotDisplay.jspf.twig }}
+{{ include CheckoutBottomESpotDisplay.jspf.twig %}
 
 											</div>
 										</div>
@@ -195,7 +195,7 @@
 	<!-- Footer Start -->
 
 	<div class="footer_wrapper_position">
-{{ include Footer.jsp.twig }}
+{{ include Footer.jsp.twig %}
 
     </div>
 

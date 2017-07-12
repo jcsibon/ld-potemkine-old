@@ -249,7 +249,7 @@ wc.render.declareRefreshController({
 	<script type="text/javascript">dojo.addOnLoad(function() { 
 		parseWidget("orderTotalAmountArea"); 
 	});</script>
-{{ include POSnippet.jspf.twig }}
+{% include 'POSnippet.jspf.twig' %}
 
 	<div id="paymentSection1" style="display:block" >
 		<div id="WC_CheckoutPaymentsAndBillingAddressf_div_1_1">
@@ -269,7 +269,7 @@ wc.render.declareRefreshController({
 					<input type="hidden" name="orderId" value="17087" id="WC_CheckoutPaymentsAndBillingAddressf_orderId_1"/>
 					<div id="billingAddress1" class="billing_address_container">
 						<div dojoType="wc.widget.RefreshArea" id = "billingAddressSelectBoxArea_1" widgetId="billingAddressSelectBoxArea_1" objectId='1' controllerId="billingAddressSelectBoxAreaController" >	
-{{ include BillingAddressDropDownDisplay.jsp.twig }}
+{{ include BillingAddressDropDownDisplay.jsp.twig %}
 
 						</div>
 					</div>
@@ -326,7 +326,7 @@ wc.render.declareRefreshController({
 							<!-- This div is for Web2.0 Style -->
 
 								<div dojoType="wc.widget.RefreshArea" widgetId="paymentArea1" controllerId="paymentAreaController1" id="paymentArea1">
-{{ include Empty.jsp.twig }}
+{{ include Empty.jsp.twig %}
 
 								</div>
 								<script type="text/javascript">
@@ -364,7 +364,7 @@ wc.render.declareRefreshController({
 					<input type="hidden" name="orderId" value="17087" id="WC_CheckoutPaymentsAndBillingAddressf_orderId_2"/>
 					<div id="billingAddress2" class="billing_address_container">
 						<div dojoType="wc.widget.RefreshArea" id = "billingAddressSelectBoxArea_2" widgetId="billingAddressSelectBoxArea_2" objectId='2' controllerId="billingAddressSelectBoxAreaController" >	
-{{ include BillingAddressDropDownDisplay.jsp.twig }}
+{{ include BillingAddressDropDownDisplay.jsp.twig %}
 
 						</div>
 					</div>
@@ -421,7 +421,7 @@ wc.render.declareRefreshController({
 							<!-- This div is for Web2.0 Style -->
 
 								<div dojoType="wc.widget.RefreshArea" widgetId="paymentArea2" controllerId="paymentAreaController2" id="paymentArea2">
-{{ include Empty.jsp.twig }}
+{{ include Empty.jsp.twig %}
 
 								</div>
 								<script type="text/javascript">
@@ -459,7 +459,7 @@ wc.render.declareRefreshController({
 					<input type="hidden" name="orderId" value="17087" id="WC_CheckoutPaymentsAndBillingAddressf_orderId_3"/>
 					<div id="billingAddress3" class="billing_address_container">
 						<div dojoType="wc.widget.RefreshArea" id = "billingAddressSelectBoxArea_3" widgetId="billingAddressSelectBoxArea_3" objectId='3' controllerId="billingAddressSelectBoxAreaController" >	
-{{ include BillingAddressDropDownDisplay.jsp.twig }}
+{{ include BillingAddressDropDownDisplay.jsp.twig %}
 
 						</div>
 					</div>
@@ -516,7 +516,7 @@ wc.render.declareRefreshController({
 							<!-- This div is for Web2.0 Style -->
 
 								<div dojoType="wc.widget.RefreshArea" widgetId="paymentArea3" controllerId="paymentAreaController3" id="paymentArea3">
-{{ include Empty.jsp.twig }}
+{{ include Empty.jsp.twig %}
 
 								</div>
 								<script type="text/javascript">

@@ -11,7 +11,7 @@
 </script>
 <div id="total_breakdown">
 			<div id="promotions">
-{{ include PromotionCodeDisplay.jsp.twig }}
+{% include 'PromotionCodeDisplay.jsp.twig' %}
 
 			</div>
 	<table id="order_total" cellpadding="0" cellspacing="0" border="0" role="presentation">
@@ -46,6 +46,6 @@
 		</tr>
 	</table>
 </div>
-{{ include CouponWalletTable.jsp.twig }}
+{{ include CouponWalletTable.jsp.twig %}
 </span>
  
