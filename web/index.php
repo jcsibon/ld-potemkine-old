@@ -143,6 +143,10 @@ $app->get('tunnel3', function() use($app) {
   return $app['twig']->render('jsps/template2.html');
 });
 
+$app->get('tunnel4', function() use($app) {
+  return $app['twig']->render('jsps/template3.html');
+});
+
 $app->get('/c/h/configurateur-fenetres', function() use($app) {
   return $app['twig']->render('configurateur.twig');
 });
